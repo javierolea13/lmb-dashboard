@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LMB 2025 — Reporte de Liga Boletomóvil</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+:root {
+  --bg:#090d13;--bg2:#101520;--bg3:#161c28;--card:#192030;--card2:#1e273d;
+  --border:#253040;--border2:#2e3d55;
+  --text:#dde4f0;--text2:#7d8faa;--text3:#47556a;
+  --norte:#f5a623;--norte-dim:rgba(245,166,35,.1);
+  --sur:#3ecfbe;--sur-dim:rgba(62,207,190,.1);
+  --accent:#4f7fff;--accent-dim:rgba(79,127,255,.1);
+  --danger:#ff5252;--danger-dim:rgba(255,82,82,.08);
+  --success:#4dca80;--gold:#f5c83a;
+  --vendido:#4f7fff;--promocion:#a78bfa;--cortesia:#f87171;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:14px;line-height:1.5}
+
+/* HEADER */
+.hdr{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 28px;display:flex;align-items:center;justify-content:space-between;height:60px;position:sticky;top:0;z-index:100}
+.hdr-left{display:flex;align-items:center;gap:14px}
+.logo{background:var(--accent);color:#fff;font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:2px;padding:5px 11px;border-radius:5px}
+.hdr-title{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:3px}
+.hdr-sub{font-size:10px;color:var(--text3);font-family:'DM Mono',monospace;letter-spacing:1px;text-transform:uppercase;margin-top:1px}
+.phase{background:var(--danger-dim);border:1px solid rgba(255,82,82,.4);color:var(--danger);font-size:10px;font-family:'DM Mono',monospace;padding:4px 9px;border-radius:4px;letter-spacing:.5px}
+
+/* NAV */
+.nav{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 28px;display:flex;gap:0;overflow-x:auto}
+.nav::-webkit-scrollbar{height:0}
+.ni{padding:13px 18px;font-size:11px;font-weight:600;letter-spacing:.5px;color:var(--text3);cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap;transition:all .2s;text-transform:uppercase}
+.ni:hover{color:var(--text2)}
+.ni.active{color:var(--text);border-bottom-color:var(--accent)}
+.ni.disabled{opacity:.35;pointer-events:none}
+
+/* MAIN */
+.main{padding:24px 28px;max-width:1380px;margin:0 auto}
+.sec{display:none}.sec.active{display:block}
+
+/* GRID */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.g5{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.span2{grid-column:span 2}.span3{grid-column:span 3}.span4{grid-column:span 4}
+.mb{margin-bottom:14px}
+
+/* CARD */
+.card{background:var(--card);border:1px solid var(--border);border-radius:9px;padding:18px}
+.ctitle{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--text3);margin-bottom:14px}
+.chdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+
+/* KPI */
+.kv{font-family:'Bebas Neue',sans-serif;font-size:40px;letter-spacing:1px;line-height:1}
+.kl{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--text3);margin-top:3px}
+.ks{font-size:11px;color:var(--text2);margin-top:5px}
+
+/* ZONE SPLIT */
+.zsplit{display:flex;background:var(--bg3);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-top:10px}
+.zblock{flex:1;padding:16px 18px;display:flex;flex-direction:column;gap:5px}
+.zblock.n{border-right:1px solid var(--border)}
+.zlabel{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase}
+.zlabel.n{color:var(--norte)}.zlabel.s{color:var(--sur)}
+.zval{font-family:'Bebas Neue',sans-serif;font-size:30px;line-height:1}
+.zval.n{color:var(--norte)}.zval.s{color:var(--sur)}
+.zmeta{font-size:11px;color:var(--text3)}
+
+/* CHIPS */
+.chip{display:inline-block;font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 7px;border-radius:3px}
+.chip.n{background:var(--norte-dim);color:var(--norte);border:1px solid rgba(245,166,35,.25)}
+.chip.s{background:var(--sur-dim);color:var(--sur);border:1px solid rgba(62,207,190,.25)}
+.chip.warn{background:rgba(248,113,113,.1);color:#f87171;border:1px solid rgba(248,113,113,.3)}
+.chip.ok{background:rgba(77,202,128,.1);color:var(--success);border:1px solid rgba(77,202,128,.3)}
+
+/* BARS */
+.brow{display:flex;flex-direction:column;gap:4px;margin-bottom:10px}
+.brow:last-child{margin-bottom:0}
+.blabels{display:flex;justify-content:space-between;align-items:center}
+.bteam{font-size:12px;font-weight:600;display:flex;align-items:center;gap:7px}
+.bdot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.bdot.n{background:var(--norte)}.bdot.s{background:var(--sur)}
+.bpct{font-family:'DM Mono',monospace;font-size:11px;color:var(--text2)}
+.btrack{height:5px;background:var(--bg3);border-radius:3px;overflow:hidden;position:relative}
+.btrack2{height:5px;background:var(--bg3);border-radius:3px;overflow:hidden;margin-top:2px}
+.bfill{height:100%;border-radius:3px;transition:width .8s ease}
+.bfill2{height:100%;border-radius:3px;opacity:.4}
+
+/* TABLE */
+.twrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse}
+th{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text3);padding:8px 12px;text-align:left;border-bottom:1px solid var(--border);white-space:nowrap}
+th.sort{cursor:pointer;user-select:none}
+th.sort:hover{color:var(--text2)}
+td{padding:9px 12px;font-size:13px;border-bottom:1px solid rgba(37,48,64,.6);vertical-align:middle}
+tr:hover td{background:rgba(79,127,255,.03)}
+tr:last-child td{border-bottom:none}
+.mono{font-family:'DM Mono',monospace;font-size:12px}
+.dim{color:var(--text3)}
+
+/* NOTA */
+.nota{background:rgba(245,200,60,.06);border:1px solid rgba(245,200,60,.2);border-radius:6px;padding:9px 13px;font-size:11px;color:#e8c347;display:flex;gap:8px;align-items:flex-start;margin-top:12px;line-height:1.6}
+
+/* DONUT */
+.donut-wrap{display:flex;align-items:center;gap:20px}
+.donut-legend{display:flex;flex-direction:column;gap:8px;flex:1}
+.dl-row{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.dl-dot{width:8px;height:8px;border-radius:2px;flex-shrink:0}
+.dl-label{font-size:11px;color:var(--text2);flex:1}
+.dl-val{font-family:'DM Mono',monospace;font-size:12px;color:var(--text)}
+
+/* PLACEHOLDER */
+.ph{background:var(--bg3);border:1px dashed var(--border2);border-radius:8px;padding:36px 20px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:9px}
+.ph-icon{font-size:28px;opacity:.35}
+.ph-title{font-size:13px;font-weight:600;color:var(--text2)}
+.ph-text{font-size:11px;color:var(--text3);max-width:280px;line-height:1.6}
+.ph-tag{background:var(--accent-dim);border:1px solid rgba(79,127,255,.3);color:var(--accent);font-size:10px;font-family:'DM Mono',monospace;padding:3px 9px;border-radius:3px;letter-spacing:.5px}
+
+/* SECTION HEADER */
+.shdr{display:flex;align-items:baseline;gap:10px;margin-bottom:18px}
+.stitle{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:2px}
+.sdesc{font-size:11px;color:var(--text3)}
+
+/* FILTERS */
+.frow{display:flex;gap:7px;margin-bottom:14px;flex-wrap:wrap;align-items:center}
+.fl{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:1px;margin-right:3px}
+.fb{padding:4px 13px;font-size:10px;font-weight:700;letter-spacing:.5px;border-radius:4px;border:1px solid var(--border2);background:transparent;color:var(--text3);cursor:pointer;transition:all .15s;text-transform:uppercase}
+.fb:hover{border-color:var(--accent);color:var(--text2)}
+.fb.active{background:var(--accent-dim);border-color:var(--accent);color:var(--accent)}
+.fb.n.active{background:var(--norte-dim);border-color:var(--norte);color:var(--norte)}
+.fb.s.active{background:var(--sur-dim);border-color:var(--sur);color:var(--sur)}
+
+/* TEAM CARD */
+.tcard{background:var(--card);border:1px solid var(--border);border-radius:9px;overflow:hidden}
+.tcard-hdr{padding:14px 18px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border)}
+.tname{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:2px}
+.tsgrid{display:grid;grid-template-columns:repeat(4,1fr)}
+.tstat{padding:12px 15px;border-right:1px solid var(--border);display:flex;flex-direction:column;gap:2px}
+.tstat:last-child{border-right:none}
+.tsval{font-family:'DM Mono',monospace;font-size:16px;font-weight:500}
+.tslbl{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--text3);margin-top:1px}
+.minibar{height:3px;background:var(--bg3);border-radius:2px;margin-top:5px;overflow:hidden}
+.minibar-fill{height:100%;border-radius:2px}
+
+/* OCUP TOGGLE */
+.ocup-toggle{display:flex;gap:6px;align-items:center}
+.ot-btn{padding:3px 10px;font-size:9px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;border-radius:3px;border:1px solid var(--border2);background:transparent;color:var(--text3);cursor:pointer;transition:all .15s}
+.ot-btn.active{background:var(--accent-dim);border-color:var(--accent);color:var(--accent)}
+
+/* SCROLLBAR */
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-track{background:var(--bg2)}
+::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px}
+
+/* ANIM */
+@keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.card,.tcard{animation:fi .25s ease both}
+
+@media(max-width:860px){
+  .g4,.g5{grid-template-columns:1fr 1fr}
+  .g3{grid-template-columns:1fr 1fr}
+  .g2{grid-template-columns:1fr}
+  .span2,.span3,.span4{grid-column:span 1}
+  .tsgrid{grid-template-columns:1fr 1fr}
+  .main{padding:14px}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="hdr">
+  <div class="hdr-left">
+    <div class="logo">BM</div>
+    <div>
+      <div class="hdr-title">LMB 2025 — Reporte de Liga</div>
+      <div class="hdr-sub">Boletomóvil · Temporada 2025 · Confidencial</div>
+    </div>
+  </div>
+  <div style="display:flex;align-items:center;gap:14px">
+    <div style="font-size:10px;color:var(--text3);font-family:'DM Mono',monospace">v2 · 10 equipos</div>
+    <div class="phase" style="background:rgba(77,202,128,.1);border-color:rgba(77,202,128,.4);color:var(--success)">✓ Liga completa — 10/10 equipos</div>
+  </div>
+</div>
+
+<!-- NAV -->
+<div class="nav">
+  <div class="ni active" onclick="show('overview')">Vista General</div>
+  <div class="ni" onclick="show('equipos')">Por Equipo</div>
+  <div class="ni" onclick="show('asistencia')">Asistencia</div>
+  <div class="ni" onclick="show('ventas')">Ventas <span id="ventas-badge" style="background:rgba(77,202,128,.15);color:var(--success);border-radius:3px;padding:1px 5px;font-size:9px;margin-left:4px">10/10 ✓</span></div>
+  <div class="ni" onclick="show('fans')">Fans Online <span style="background:rgba(77,202,128,.15);color:var(--success);border-radius:3px;padding:1px 5px;font-size:9px;margin-left:4px">✓</span></div>
+  <div class="ni" onclick="show('outliers')">Outliers <span id="ob" style="background:var(--danger-dim);color:var(--danger);border-radius:3px;padding:1px 6px;font-size:9px;margin-left:3px"></span></div>
+  <div class="ni disabled">Simulador ⏳</div>
+</div>
+
+<div class="main">
+
+<!-- ══ OVERVIEW ══ -->
+<div id="overview" class="sec active">
+  <div class="shdr"><div class="stitle">Vista General de Liga</div><div class="sdesc">10 equipos · Temporada 2025 · Boletomóvil</div></div>
+
+  <!-- VENTAS LIGA -->
+  <div class="g5 mb">
+    <div class="card"><div class="ctitle">Ingreso Total Liga</div><div class="kv" style="color:var(--gold)">$266M</div><div class="kl">Pesos MX · 10 equipos</div></div>
+    <div class="card"><div class="ctitle">Boletos Emitidos</div><div class="kv">2.12M</div><div class="kl">Total liga</div></div>
+    <div class="card"><div class="ctitle">Vendidos</div><div class="kv" style="color:var(--vendido)">877k</div><div class="kl">41.4% del total</div></div>
+    <div class="card"><div class="ctitle">Cortesías</div><div class="kv" style="color:var(--cortesia)">810k</div><div class="kl">38.3% del total</div></div>
+    <div class="card"><div class="ctitle">Promociones</div><div class="kv" style="color:var(--promocion)">430k</div><div class="kl">20.3% del total</div></div>
+  </div>
+
+  <!-- CHARTS VENTAS CLICKEABLES -->
+  <div class="g2 mb">
+    <div class="card">
+      <div class="chdr">
+        <div class="ctitle" style="margin-bottom:0">Ingresos por Equipo</div>
+        <div style="font-size:10px;color:var(--text3)">← Clic en barra para ver mejores partidos</div>
+      </div>
+      <div style="height:260px;position:relative"><canvas id="chartIngresos"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="chdr">
+        <div class="ctitle" style="margin-bottom:0">Boletos Emitidos por Equipo</div>
+        <div style="font-size:10px;color:var(--text3)">← Clic en barra para ver mejores partidos</div>
+      </div>
+      <div style="height:260px;position:relative"><canvas id="chartBoletos"></canvas></div>
+    </div>
+  </div>
+
+  <!-- GAME PANEL -->
+  <div id="game-panel" style="display:none;margin-bottom:14px">
+    <div class="card" style="border-color:var(--accent)">
+      <div class="chdr">
+        <div style="display:flex;align-items:center;gap:10px">
+          <div class="ctitle" style="margin-bottom:0" id="panel-title">Mejores Partidos</div>
+          <span id="panel-chip" class="chip n"></span>
+        </div>
+        <div style="display:flex;gap:6px;align-items:center">
+          <button class="fb active" onclick="filterGames('Todos',this)">Todos</button>
+          <button class="fb" onclick="filterGames('TR',this)">Temp. Regular</button>
+          <button class="fb" onclick="filterGames('Playoffs',this)">Playoffs</button>
+          <button class="fb" style="margin-left:6px;border-color:var(--danger);color:var(--danger)" onclick="closePanel()">✕</button>
+        </div>
+      </div>
+      <div class="twrap">
+        <table><thead><tr>
+          <th>#</th><th>Partido</th><th>Fecha</th>
+          <th class="s-col" data-col="ing" data-label="Ingreso" style="cursor:pointer" onclick="sortPanel('ing')">Ingreso ↓</th>
+          <th>Categoría</th>
+        </tr></thead>
+        <tbody id="panel-tbody"></tbody></table>
+      </div>
+    </div>
+  </div>
+
+  <!-- ASISTENCIA KPIS -->
+  <div class="g5 mb">
+    <div class="card"><div class="ctitle">Total Asistentes</div><div class="kv" id="k-asis">—</div><div class="kl">Escaneados · sin outliers</div></div>
+    <div class="card"><div class="ctitle">Promedio / Juego</div><div class="kv" id="k-avg">—</div><div class="kl">Liga completa</div></div>
+    <div class="card"><div class="ctitle">Ocupación Real</div><div class="kv" style="color:var(--success)" id="k-ocupprom">—</div><div class="kl">vs aforo por partido</div></div>
+    <div class="card"><div class="ctitle">Ocup. Aforo Máx</div><div class="kv" id="k-ocupmax">—</div><div class="kl">vs aforo máximo</div></div>
+    <div class="card"><div class="ctitle">Partidos</div><div class="kv" id="k-juegos">—</div><div class="kl">Sin outliers</div></div>
+  </div>
+
+  <div class="g2 mb">
+    <div class="card">
+      <div class="chdr">
+        <div class="ctitle" style="margin-bottom:0">Norte vs Sur</div>
+        <div class="ocup-toggle">
+          <div class="ot-btn active" id="ot-max" onclick="toggleZoneOcup('max')">Aforo Máx</div>
+          <div class="ot-btn" id="ot-prom" onclick="toggleZoneOcup('prom')">Aforo Real</div>
+        </div>
+      </div>
+      <div class="zsplit">
+        <div class="zblock n"><div class="zlabel n">▲ Zona Norte</div><div class="zval n" id="norte-asis">—</div><div class="zmeta" id="norte-meta"></div><div class="zmeta" id="norte-ocup" style="margin-top:6px"></div></div>
+        <div class="zblock s"><div class="zlabel s">▲ Zona Sur</div><div class="zval s" id="sur-asis">—</div><div class="zmeta" id="sur-meta"></div><div class="zmeta" id="sur-ocup" style="margin-top:6px"></div></div>
+      </div>
+      <div class="nota" style="margin-top:10px"><span>ℹ</span><span>Zona Sur = Bravos de León + Guerreros de Oaxaca.</span></div>
+    </div>
+    <div class="card">
+      <div class="chdr">
+        <div class="ctitle" style="margin-bottom:0">Ocupación por Equipo</div>
+        <div class="ocup-toggle">
+          <div class="ot-btn active" id="ob-max" onclick="toggleBarOcup('max')">Aforo Máx</div>
+          <div class="ot-btn" id="ob-prom" onclick="toggleBarOcup('prom')">Aforo Real</div>
+        </div>
+      </div>
+      <div id="ocup-bars"></div>
+    </div>
+  </div>
+
+  <div class="g2 mb">
+    <div class="card"><div class="ctitle">🏆 Top Ingreso por Equipo</div><div id="top3-ingreso"></div></div>
+    <div class="card"><div class="ctitle">📊 Top % Ocupación (aforo real)</div><div id="top3-ocup"></div></div>
+  </div>
+</div>
+
+<!-- ══ EQUIPOS ══ -->
+<div id="equipos" class="sec">
+  <div class="shdr"><div class="stitle">Por Equipo</div><div class="sdesc">Estadísticas individuales · sin outliers en promedios</div></div>
+
+  <div class="frow">
+    <span class="fl">Zona:</span>
+    <button class="fb active" onclick="fEq('todos',this)">Todos</button>
+    <button class="fb n" onclick="fEq('Norte',this)">Norte</button>
+    <button class="fb s" onclick="fEq('Sur',this)">Sur</button>
+    <div style="margin-left:auto;display:flex;gap:6px">
+      <div class="ot-btn active" id="et-max" onclick="toggleTblOcup('max')">Aforo Máx</div>
+      <div class="ot-btn" id="et-prom" onclick="toggleTblOcup('prom')">Aforo Real</div>
+    </div>
+  </div>
+
+  <div class="card mb">
+    <div class="twrap">
+      <table>
+        <thead><tr>
+          <th>Equipo</th><th>Zona</th>
+          <th class="sort" onclick="srt('aforo_max')">Aforo Máx ↕</th>
+          <th class="sort" onclick="srt('aforo_prom')">Aforo Prom ↕</th>
+          <th class="sort" onclick="srt('juegos_normales')">Partidos ↕</th>
+          <th class="sort" onclick="srt('avg_asistencia')">Prom Asistencia ↕</th>
+          <th id="th-ocup" class="sort" onclick="srt('ocup_aforo_max')">% Ocup (Máx) ↕</th>
+          <th class="sort" onclick="srt('total_asistencia')">Total Asist ↕</th>
+          <th>Notas</th>
+        </tr></thead>
+        <tbody id="eq-tbody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div id="team-cards" style="display:grid;grid-template-columns:1fr 1fr;gap:14px"></div>
+</div>
+
+<!-- ══ ASISTENCIA ══ -->
+<div id="asistencia" class="sec">
+  <div class="shdr"><div class="stitle">Asistencia</div><div class="sdesc">Comparativa por equipo</div></div>
+
+  <div class="g2 mb">
+    <div class="card span2">
+      <div class="chdr">
+        <div class="ctitle" style="margin-bottom:0">Asistencia Promedio vs Aforo Máximo vs Aforo Promedio</div>
+      </div>
+      <div style="height:300px;position:relative"><canvas id="chartAsist"></canvas></div>
+    </div>
+  </div>
+
+  <div class="g2 mb">
+    <div class="card">
+      <div class="ctitle">Total Asistentes por Equipo (temporada)</div>
+      <div style="height:280px;position:relative"><canvas id="chartTotal"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="ctitle">% Ocupación: Aforo Máx vs Aforo Real</div>
+      <div style="height:280px;position:relative"><canvas id="chartOcup"></canvas></div>
+    </div>
+  </div>
+
+  <div class="nota mb">
+    <span>⚠</span>
+    <span><strong>Tecos</strong> juega en dos estadios (diferente aforo por evento), por lo que el aforo real difiere considerablemente del máximo. <strong>Sultanes</strong> tiene aforo mayor declarado que asistencia por la emisión masiva de cortesías/abonos. Estos equipos deben interpretarse con la métrica de aforo real.</span>
+  </div>
+</div>
+
+<!-- ══ VENTAS ══ -->
+<div id="ventas" class="sec">
+  <div class="shdr"><div class="stitle">Ventas y Boletos</div><div class="sdesc">10 de 10 equipos · Liga completa ✓</div></div>
+
+  <!-- LIGA SUMMARY (10 eq) -->
+  <div class="g5 mb">
+    <div class="card"><div class="ctitle">Boletos Liga</div><div class="kv">2.12M</div><div class="kl">Total emitidos</div></div>
+    <div class="card"><div class="ctitle">Vendidos</div><div class="kv" style="color:var(--vendido)">877k</div><div class="kl">41.4% del total</div></div>
+    <div class="card"><div class="ctitle">Promociones</div><div class="kv" style="color:var(--promocion)">430k</div><div class="kl">20.3% del total</div></div>
+    <div class="card"><div class="ctitle">Cortesías</div><div class="kv" style="color:var(--cortesia)">810k</div><div class="kl">38.3% del total</div></div>
+    <div class="card"><div class="ctitle">Ingreso Liga</div><div class="kv" style="color:var(--gold)">$266M</div><div class="kl">Pesos MX</div></div>
+  </div>
+
+  <!-- EQUIPO SELECTOR -->
+  <div class="frow mb" style="margin-bottom:14px">
+    <span class="fl">Equipo:</span>
+    <button class="fb active" onclick="selEq('Charros',this)">Charros</button>
+    <button class="fb" onclick="selEq('Bravos',this)">Bravos</button>
+    <button class="fb" onclick="selEq('Sultanes',this)">Sultanes</button>
+    <button class="fb" onclick="selEq('Toros',this)">Toros</button>
+    <button class="fb" onclick="selEq('Saraperos',this)">Saraperos</button>
+    <button class="fb" onclick="selEq('Dorados',this)">Dorados</button>
+    <button class="fb" onclick="selEq('Rieleros',this)">Rieleros</button>
+    <button class="fb" onclick="selEq('Guerreros',this)">Guerreros</button>
+    <button class="fb" onclick="selEq('Caliente',this)">Caliente</button>
+    <button class="fb" onclick="selEq('Tecos',this)">Tecos</button>
+  </div>
+
+  <!-- EQUIPO DETAIL -->
+  <div id="eq-detail"></div>
+
+  <!-- COMPARATIVA CHART -->
+  <div class="card mb">
+    <div class="ctitle">Comparativa % Distribución Boletos (3 equipos)</div>
+    <div style="height:200px;position:relative"><canvas id="chartComp"></canvas></div>
+  </div>
+
+</div>
+
+<!-- ══ FANS ══ -->
+<div id="fans" class="sec">
+  <div class="shdr"><div class="stitle">Comportamiento Fans Online</div><div class="sdesc">Únicos por equipo · segmentación por frecuencia · solo boletos en línea</div></div>
+
+  <!-- LIGA KPIs -->
+  <div class="g5 mb">
+    <div class="card"><div class="ctitle">Total Fans Online Liga</div><div class="kv" id="f-total">—</div><div class="kl">Usuarios únicos por correo</div></div>
+    <div class="card"><div class="ctitle">Van 1 vez</div><div class="kv" style="color:var(--cortesia)" id="f-1">—</div><div class="kl">% del total online</div></div>
+    <div class="card"><div class="ctitle">Van 2-5 veces</div><div class="kv" style="color:var(--norte)" id="f-25">—</div><div class="kl">Fans recurrentes</div></div>
+    <div class="card"><div class="ctitle">Van 6-10 veces</div><div class="kv" style="color:var(--success)" id="f-610">—</div><div class="kl">Fans frecuentes</div></div>
+    <div class="card"><div class="ctitle">Van +10 veces</div><div class="kv" style="color:var(--gold)" id="f-10">—</div><div class="kl">Fans leales</div></div>
+  </div>
+
+  <!-- EQUIPO SELECTOR -->
+  <div class="frow mb">
+    <span class="fl">Equipo:</span>
+    <button class="fb active" onclick="selFansEq('Liga',this)">Liga</button>
+    <button class="fb" onclick="selFansEq('Sultanes',this)">Sultanes</button>
+    <button class="fb" onclick="selFansEq('Charros',this)">Charros</button>
+    <button class="fb" onclick="selFansEq('Toros',this)">Toros</button>
+    <button class="fb" onclick="selFansEq('Saraperos',this)">Saraperos</button>
+    <button class="fb" onclick="selFansEq('Bravos',this)">Bravos</button>
+    <button class="fb" onclick="selFansEq('Dorados',this)">Dorados</button>
+    <button class="fb" onclick="selFansEq('Guerreros',this)">Guerreros</button>
+    <button class="fb" onclick="selFansEq('Rieleros',this)">Rieleros</button>
+    <button class="fb" onclick="selFansEq('Caliente',this)">Caliente</button>
+    <button class="fb" onclick="selFansEq('Tecos',this)">Tecos</button>
+  </div>
+
+  <div class="g2 mb">
+    <div class="card">
+      <div class="ctitle" id="fans-chart-title">Segmentación por Frecuencia — Liga</div>
+      <div style="height:240px;position:relative"><canvas id="chartFansDonut"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="ctitle">Comparativa Fans Online por Equipo</div>
+      <div style="height:240px;position:relative"><canvas id="chartFansBar"></canvas></div>
+    </div>
+  </div>
+
+  <!-- RETENTION INSIGHT -->
+  <div class="card mb">
+    <div class="ctitle">📊 Oportunidad de Retención — ¿Qué pasa si subimos el % de fans recurrentes?</div>
+    <div id="retention-table" style="margin-top:8px"></div>
+  </div>
+
+  <div class="nota">
+    <span>ℹ</span>
+    <span>Análisis basado exclusivamente en boletos comprados en línea con correo registrado. Fans de taquilla sin correo no están incluidos. La frecuencia es por partidos distintos (ID_EVENTO único) en la temporada 2025.</span>
+  </div>
+</div>
+
+<!-- ══ OUTLIERS ══ -->
+<div id="outliers" class="sec">
+  <div class="shdr"><div class="stitle">Outliers Detectados</div><div class="sdesc">Excluidos de promedios · método IQR por equipo</div></div>
+
+  <div class="card mb" style="background:var(--danger-dim);border-color:rgba(255,82,82,.2)">
+    <div style="font-size:12px;color:var(--text2);line-height:1.8">
+      <strong style="color:var(--danger)">Metodología IQR:</strong> Para cada equipo se calculan Q1 y Q3 de asistencia.
+      Partidos fuera del rango <code style="background:var(--bg3);padding:1px 5px;border-radius:3px">Q1 − 1.5×IQR</code> a <code style="background:var(--bg3);padding:1px 5px;border-radius:3px">Q3 + 1.5×IQR</code> se marcan como outlier.
+      Los inaugurales suelen aparecer aquí por asistencia excepcional. <strong>No afectan los promedios del dashboard.</strong>
+    </div>
+  </div>
+
+  <div class="frow mb">
+    <span class="fl">Filtrar equipo:</span>
+    <button class="fb" onclick="filterOutliers('todos',this)" style="color:var(--text2)">Todos</button>
+    <div id="out-team-filter" style="display:flex;gap:6px;flex-wrap:wrap"></div>
+  </div>
+
+  <div class="card">
+    <div class="twrap">
+      <table>
+        <thead><tr>
+          <th>Equipo</th><th>Partido</th><th>Fecha</th><th>Boletos</th><th>Escaneados</th><th>Motivo</th>
+        </tr></thead>
+        <tbody id="out-tbody"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+</div><!-- /main -->
+
+<script>
+// ══ DATOS LMB 2025 — Temporada completa ══
+const STATS = [{"equipo": "Charros", "zona": "Norte", "aforo_max": 14887, "aforo_prom": 6949, "juegos": 43, "juegos_normales": 42, "outliers": 1, "avg_asistencia": 2646, "total_asistencia": 111132, "ocup_aforo_max": 17.8, "ocup_aforo_prom": 38.9, "nota": "", "doble_estadio": false}, {"equipo": "Bravos", "zona": "Sur", "aforo_max": 6556, "aforo_prom": 6400, "juegos": 48, "juegos_normales": 48, "outliers": 0, "avg_asistencia": 2849, "total_asistencia": 136729, "ocup_aforo_max": 43.5, "ocup_aforo_prom": 44.6, "nota": "", "doble_estadio": false}, {"equipo": "Dorados", "zona": "Norte", "aforo_max": 14402, "aforo_prom": 7879, "juegos": 44, "juegos_normales": 40, "outliers": 4, "avg_asistencia": 1715, "total_asistencia": 68598, "ocup_aforo_max": 11.9, "ocup_aforo_prom": 22.2, "nota": "", "doble_estadio": false}, {"equipo": "Guerreros", "zona": "Sur", "aforo_max": 4800, "aforo_prom": 4720, "juegos": 54, "juegos_normales": 51, "outliers": 3, "avg_asistencia": 1450, "total_asistencia": 73967, "ocup_aforo_max": 30.2, "ocup_aforo_prom": 30.7, "nota": "", "doble_estadio": false}, {"equipo": "Saraperos", "zona": "Norte", "aforo_max": 12381, "aforo_prom": 11578, "juegos": 44, "juegos_normales": 42, "outliers": 2, "avg_asistencia": 3976, "total_asistencia": 167003, "ocup_aforo_max": 32.1, "ocup_aforo_prom": 34.2, "nota": "", "doble_estadio": false}, {"equipo": "Rieleros", "zona": "Norte", "aforo_max": 6954, "aforo_prom": 5546, "juegos": 46, "juegos_normales": 38, "outliers": 8, "avg_asistencia": 1954, "total_asistencia": 74245, "ocup_aforo_max": 28.1, "ocup_aforo_prom": 35.9, "nota": "", "doble_estadio": false}, {"equipo": "Sultanes", "zona": "Norte", "aforo_max": 26590, "aforo_prom": 22749, "juegos": 57, "juegos_normales": 57, "outliers": 0, "avg_asistencia": 8586, "total_asistencia": 489382, "ocup_aforo_max": 32.3, "ocup_aforo_prom": 37.7, "nota": "Sultanes emite masivamente cortes\u00edas/abonos (hasta 105k boletos/juego vs aforo de 22k). Datos de boletos excluidos; se usa aforo como referencia.", "doble_estadio": false}, {"equipo": "Caliente", "zona": "Norte", "aforo_max": 6833, "aforo_prom": 6833, "juegos": 46, "juegos_normales": 45, "outliers": 1, "avg_asistencia": 1446, "total_asistencia": 65055, "ocup_aforo_max": 21.2, "ocup_aforo_prom": 21.2, "nota": "", "doble_estadio": false}, {"equipo": "Toros", "zona": "Norte", "aforo_max": 20947, "aforo_prom": 16089, "juegos": 51, "juegos_normales": 48, "outliers": 3, "avg_asistencia": 3160, "total_asistencia": 151667, "ocup_aforo_max": 15.1, "ocup_aforo_prom": 19.8, "nota": "", "doble_estadio": false}, {"equipo": "Tecos", "zona": "Norte", "aforo_max": 10718, "aforo_prom": 7386, "juegos": 51, "juegos_normales": 47, "outliers": 4, "avg_asistencia": 1665, "total_asistencia": 78269, "ocup_aforo_max": 15.5, "ocup_aforo_prom": 25.5, "nota": "", "doble_estadio": true}];
+const OUTLIERS = [{"EQUIPO": "Charros", "EVENTOS": "Juego Inaugural: Uni\u00f3n Laguna vs Charros", "FECHA EVENTO": "2025-04-22", "Boletos": 8480, "Escaneados": 7018, "outlier_reason": "Asistencia at\u00edpicamente alta (7,018)"}, {"EQUIPO": "Dorados", "EVENTOS": "Juego Inaugural: Saraperos vs Dorados", "FECHA EVENTO": "2025-04-25", "Boletos": 7938, "Escaneados": 6433, "outlier_reason": "Asistencia at\u00edpicamente alta (6,433)"}, {"EQUIPO": "Dorados", "EVENTOS": "J3: Caliente de Durango vs Dorados", "FECHA EVENTO": "2025-05-01", "Boletos": 6266, "Escaneados": 5317, "outlier_reason": "Asistencia at\u00edpicamente alta (5,317)"}, {"EQUIPO": "Dorados", "EVENTOS": "J1: Acereros vs Dorados", "FECHA EVENTO": "2025-05-09", "Boletos": 5683, "Escaneados": 4579, "outlier_reason": "Asistencia at\u00edpicamente alta (4,579)"}, {"EQUIPO": "Dorados", "EVENTOS": "J3: Acereros vs Dorados", "FECHA EVENTO": "2025-07-31", "Boletos": 5377, "Escaneados": 4235, "outlier_reason": "Asistencia at\u00edpicamente alta (4,235)"}, {"EQUIPO": "Guerreros", "EVENTOS": "Juego Inaugural: Conspiradores vs Guerreros", "FECHA EVENTO": "2025-04-22", "Boletos": 3474, "Escaneados": 3125, "outlier_reason": "Asistencia at\u00edpicamente alta (3,125)"}, {"EQUIPO": "Guerreros", "EVENTOS": "J2: Diablos vs Guerreros", "FECHA EVENTO": "2025-05-28", "Boletos": 3523, "Escaneados": 3058, "outlier_reason": "Asistencia at\u00edpicamente alta (3,058)"}, {"EQUIPO": "Guerreros", "EVENTOS": "J1: Pericos vs Guerreros", "FECHA EVENTO": "2025-08-05", "Boletos": 3724, "Escaneados": 3254, "outlier_reason": "Asistencia at\u00edpicamente alta (3,254)"}, {"EQUIPO": "Saraperos", "EVENTOS": "Juego Inaugural: Acereros vs Saraperos ", "FECHA EVENTO": "2025-04-22", "Boletos": 9679, "Escaneados": 8286, "outlier_reason": "Asistencia at\u00edpicamente alta (8,286)"}, {"EQUIPO": "Saraperos", "EVENTOS": "J2: Sultanes vs Saraperos", "FECHA EVENTO": "2025-07-22", "Boletos": 6472, "Escaneados": 0, "outlier_reason": "Sin escaneados (posible error de datos)"}, {"EQUIPO": "Rieleros", "EVENTOS": "Juego Inaugural: Dorados vs Rieleros", "FECHA EVENTO": "2025-04-22", "Boletos": 4111, "Escaneados": 3753, "outlier_reason": "Asistencia at\u00edpicamente alta (3,753)"}, {"EQUIPO": "Rieleros", "EVENTOS": "J3: Charros vs Rieleros", "FECHA EVENTO": "2025-05-29", "Boletos": 4660, "Escaneados": 3713, "outlier_reason": "Asistencia at\u00edpicamente alta (3,713)"}, {"EQUIPO": "Rieleros", "EVENTOS": "J3: Tecos vs Rieleros", "FECHA EVENTO": "2025-07-24", "Boletos": 5495, "Escaneados": 4348, "outlier_reason": "Asistencia at\u00edpicamente alta (4,348)"}, {"EQUIPO": "Rieleros", "EVENTOS": "J1: Caliente vs Rieleros", "FECHA EVENTO": "2025-07-25", "Boletos": 366, "Escaneados": 0, "outlier_reason": "Sin escaneados (posible error de datos)"}, {"EQUIPO": "Rieleros", "EVENTOS": "J2: Caliente vs Rieleros", "FECHA EVENTO": "2025-07-26", "Boletos": 378, "Escaneados": 0, "outlier_reason": "Sin escaneados (posible error de datos)"}, {"EQUIPO": "Rieleros", "EVENTOS": "J3: Caliente vs Rieleros", "FECHA EVENTO": "2025-07-27", "Boletos": 396, "Escaneados": 0, "outlier_reason": "Sin escaneados (posible error de datos)"}, {"EQUIPO": "Rieleros", "EVENTOS": "J2: Saraperos vs Rieleros", "FECHA EVENTO": "2025-07-30", "Boletos": 4697, "Escaneados": 3664, "outlier_reason": "Asistencia at\u00edpicamente alta (3,664)"}, {"EQUIPO": "Rieleros", "EVENTOS": "J3: Saraperos vs Rieleros", "FECHA EVENTO": "2025-07-31", "Boletos": 5522, "Escaneados": 4565, "outlier_reason": "Asistencia at\u00edpicamente alta (4,565)"}, {"EQUIPO": "Caliente", "EVENTOS": "Juego Inaugural: Saraperos vs Caliente de Durango", "FECHA EVENTO": "2025-04-18", "Boletos": 5440, "Escaneados": 4753, "outlier_reason": "Asistencia at\u00edpicamente alta (4,753)"}, {"EQUIPO": "Toros", "EVENTOS": "Juego Inaugural: Rieleros vs Toros", "FECHA EVENTO": "2025-04-18", "Boletos": 15305, "Escaneados": 13236, "outlier_reason": "Asistencia at\u00edpicamente alta (13,236)"}, {"EQUIPO": "Toros", "EVENTOS": "J1: Sultanes vs Toros", "FECHA EVENTO": "2025-05-24", "Boletos": 7939, "Escaneados": 6610, "outlier_reason": "Asistencia at\u00edpicamente alta (6,610)"}, {"EQUIPO": "Toros", "EVENTOS": "J2: Diablos vs Toros", "FECHA EVENTO": "2025-06-14", "Boletos": 15345, "Escaneados": 7959, "outlier_reason": "Asistencia at\u00edpicamente alta (7,959)"}, {"EQUIPO": "Tecos", "EVENTOS": "J3: Dorados vs Tecos", "FECHA EVENTO": "2025-05-08", "Boletos": 1737, "Escaneados": 0, "outlier_reason": "Sin escaneados (posible error de datos)"}, {"EQUIPO": "Tecos", "EVENTOS": "J1: Charros vs Tecos", "FECHA EVENTO": "2025-06-24", "Boletos": 4487, "Escaneados": 3694, "outlier_reason": "Asistencia at\u00edpicamente alta (3,694)"}, {"EQUIPO": "Tecos", "EVENTOS": "J1: Sultanes vs Tecos", "FECHA EVENTO": "2025-07-04", "Boletos": 6442, "Escaneados": 5455, "outlier_reason": "Asistencia at\u00edpicamente alta (5,455)"}, {"EQUIPO": "Tecos", "EVENTOS": "Semifinal de Zona J1: Sultanes vs Tecos", "FECHA EVENTO": "2025-08-20", "Boletos": 3905, "Escaneados": 3619, "outlier_reason": "Asistencia at\u00edpicamente alta (3,619)"}];
+const VENTAS = {"Charros": {"equipo": "Charros", "total_boletos": 223034, "vendidos": 119325, "promociones": 58362, "cortesias": 45347, "ingreso_total": 29843464, "ingreso_vendidos": 25380512, "ingreso_promociones": 4461970, "online": 120861, "taquilla": 102173, "fans_unicos_online": 20377, "frecuencia": {"1 juego": 14288, "2-5 juegos": 5310, "6-10 juegos": 587, "+10 juegos": 192}, "zonas": [{"ZONA": "Premier", "boletos": 33381, "ingreso": 9167731.0}, {"ZONA": "Planta Baja", "boletos": 29576, "ingreso": 4838287.5}, {"ZONA": "Planta Alta", "boletos": 17942, "ingreso": 3948235.0}, {"ZONA": "Lateral 1era y 3era", "boletos": 30887, "ingreso": 3177910.0}, {"ZONA": "Butaca Preferente", "boletos": 15321, "ingreso": 1811148.0}, {"ZONA": "Premier 1era", "boletos": 5831, "ingreso": 1645275.0}, {"ZONA": "Premier 3era", "boletos": 4421, "ingreso": 1258056.0}, {"ZONA": "Lateral Preferente", "boletos": 19776, "ingreso": 1150727.0}], "tipo_cortesia": {"Cortesia": 35809, "Canje": 5283, "Cup\u00f3n cerveza": 1172, "Quema": 845, "CANJE SEGURO DE LLUVIA ": 802, "Liga Bravos $0": 598, "Adulto": 167, "Precio especial $50": 142}, "pct_cortesia": 20.3, "pct_promocion": 26.2, "pct_vendido": 53.5}, "Bravos": {"equipo": "Bravos", "total_boletos": 155940, "vendidos": 48281, "promociones": 7029, "cortesias": 100630, "ingreso_total": 12087240, "ingreso_vendidos": 11179070, "ingreso_promociones": 908170, "online": 27517, "taquilla": 128423, "fans_unicos_online": 5302, "frecuencia": {"1 juego": 3852, "2-5 juegos": 1338, "6-10 juegos": 89, "+10 juegos": 23}, "zonas": [{"ZONA": "Butaca Central", "boletos": 19510, "ingreso": 4781526.0}, {"ZONA": "Butaca 1ra Base", "boletos": 14967, "ingreso": 2310958.0}, {"ZONA": "Butaca 3ra Base", "boletos": 6466, "ingreso": 1687525.0}, {"ZONA": "VIP", "boletos": 2290, "ingreso": 1471188.0}, {"ZONA": "General 3ra Base", "boletos": 7542, "ingreso": 734340.0}, {"ZONA": "Parrilladas", "boletos": 746, "ingreso": 607200.0}, {"ZONA": "General 1ra Base", "boletos": 3599, "ingreso": 312030.0}, {"ZONA": "Palcos", "boletos": 39, "ingreso": 171406.0}], "tipo_cortesia": {"Cortes\u00eda": 96461, "Damas Gratis": 1880, "Compas Gratis": 785, "Jersey": 648, "Caballeros Gratis": 392, "Universitario Gratis": 243, "Ni\u00f1os Gratis": 161, "SECTOR SALUD": 41}, "pct_cortesia": 64.5, "pct_promocion": 4.5, "pct_vendido": 31.0}, "Sultanes": {"equipo": "Sultanes", "total_boletos": 688260, "vendidos": 62951, "promociones": 243959, "cortesias": 381350, "ingreso_total": 64893054, "ingreso_vendidos": 18855187, "ingreso_promociones": 35287817, "online": 282924, "taquilla": 405336, "fans_unicos_online": 48036, "frecuencia": {"1 juego": 33488, "2-5 juegos": 12747, "6-10 juegos": 1404, "+10 juegos": 397}, "zonas": [{"ZONA": "Primer Nivel", "boletos": 182142, "ingreso": 26381719.6}, {"ZONA": "Parrilladas", "boletos": 14060, "ingreso": 9520100.3}, {"ZONA": "Segundo Nivel", "boletos": 36975, "ingreso": 5120823.5}, {"ZONA": "Bleachers", "boletos": 36126, "ingreso": 3814402.0}, {"ZONA": "Palco Rojo", "boletos": 10111, "ingreso": 3106502.7}, {"ZONA": "Tercer Nivel", "boletos": 11383, "ingreso": 1604118.0}, {"ZONA": "Palco Azul", "boletos": 8532, "ingreso": 1445208.0}], "tipo_cortesia": {"COMERCIAL": 115772, "Giveaway": 71396, "CORTESIA": 67596, "DIRECCION": 11772, "DEPORTIVO": 9002, "RESPONSABILIDAD SOCIAL": 6731, "MERCADOTECNIA": 3206, "FORMS": 38815}, "pct_cortesia": 55.4, "pct_promocion": 35.4, "pct_vendido": 9.1}, "Dorados": {"equipo": "Dorados", "total_boletos": 106702, "vendidos": 63608, "promociones": 5694, "cortesias": 37400, "ingreso_total": 11429669, "ingreso_vendidos": 11429669, "ingreso_promociones": 0, "online": 32887, "taquilla": 73815, "fans_unicos_online": 5831, "frecuencia": {"1 juego": 3944, "2-5 juegos": 1640, "6-10 juegos": 183, "+10 juegos": 64}, "zonas": [{"ZONA": "Plata", "boletos": 23550, "ingreso": 4785900.0}, {"ZONA": "Preferente", "boletos": 26005, "ingreso": 2536220.0}, {"ZONA": "Palcos Dorados", "boletos": 72, "ingreso": 1086000.0}, {"ZONA": "Palcos Morados", "boletos": 184, "ingreso": 945999.01}, {"ZONA": "Numerado Derecho", "boletos": 12005, "ingreso": 917160.0}, {"ZONA": "Oro", "boletos": 1500, "ingreso": 732750.0}, {"ZONA": "Numerado Izquierdo", "boletos": 5194, "ingreso": 386240.0}, {"ZONA": "Grada Sol", "boletos": 792, "ingreso": 39400.0}], "tipo_cortesia": {"Cortesia": 35787, "Canje": 1170, "CANJE POR LLUVIA": 352, "Adulto": 91}, "pct_cortesia": 35.1, "pct_promocion": 5.3, "pct_vendido": 59.6}, "Tecos": {"equipo": "Tecos", "total_boletos": 92277, "vendidos": 61589, "promociones": 7, "cortesias": 30681, "ingreso_total": 9097255, "ingreso_vendidos": 9097185, "ingreso_promociones": 70, "online": 24931, "taquilla": 67346, "fans_unicos_online": 4736, "frecuencia": {"1 juego": 3155, "2-5 juegos": 1370, "6-10 juegos": 166, "+10 juegos": 45}, "zonas": [{"ZONA": "Butaca General", "boletos": 9040, "ingreso": 3138950.0}, {"ZONA": "Gradas", "boletos": 9748, "ingreso": 2213800.0}, {"ZONA": "Butaca Preferente", "boletos": 4382, "ingreso": 1874450.0}, {"ZONA": "Box Seat", "boletos": 23403, "ingreso": 575301.0}, {"ZONA": "Asadores", "boletos": 2350, "ingreso": 517500.0}, {"ZONA": "Palcos 3ra", "boletos": 714, "ingreso": 306750.0}, {"ZONA": "Palcos 1ra", "boletos": 572, "ingreso": 238200.0}, {"ZONA": "Reserved Seat", "boletos": 8281, "ingreso": 160527.0}], "tipo_cortesia": {"Convenio": 27570, "Cortesia": 3102, "Adulto": 9}, "pct_cortesia": 33.2, "pct_promocion": 0.0, "pct_vendido": 66.7}, "Rieleros": {"equipo": "Rieleros", "total_boletos": 121083, "vendidos": 32996, "promociones": 10069, "cortesias": 78018, "ingreso_total": 7409992, "ingreso_vendidos": 6166360, "ingreso_promociones": 1243632, "online": 17646, "taquilla": 103437, "fans_unicos_online": 3432, "frecuencia": {"1 juego": 2498, "2-5 juegos": 840, "6-10 juegos": 77, "+10 juegos": 17}, "zonas": [{"ZONA": "Butaca Num. L", "boletos": 8621, "ingreso": 1487985.0}, {"ZONA": "Palco Plus", "boletos": 5216, "ingreso": 1093300.0}, {"ZONA": "Terreno VIP", "boletos": 3266, "ingreso": 998704.0}, {"ZONA": "Zona VIP", "boletos": 2383, "ingreso": 816200.0}, {"ZONA": "Palco Terr. 1era.", "boletos": 4878, "ingreso": 750100.0}, {"ZONA": "Preferente 1ra", "boletos": 7644, "ingreso": 708600.0}, {"ZONA": "Palco Terr. 3ra.", "boletos": 3648, "ingreso": 534750.0}, {"ZONA": "Suite", "boletos": 75, "ingreso": 387940.0}], "tipo_cortesia": {"Cortes\u00eda": 34581, "CORTESIA PASES DOBLES": 19584, "CORTESIA PASE PREMIUM": 11734, "CORTESIA PASE VIP": 4545, "VIERNES DE COMPAS": 2685, "DAMAS GRATIS": 1880, "CANJE POR LLUVIA": 1339, "AFTER OFFICE": 1047}, "pct_cortesia": 64.4, "pct_promocion": 8.3, "pct_vendido": 27.3}, "Saraperos": {"equipo": "Saraperos", "total_boletos": 130640, "vendidos": 63168, "promociones": 43011, "cortesias": 24461, "ingreso_total": 29287768, "ingreso_vendidos": 15962671, "ingreso_promociones": 13325096, "online": 65559, "taquilla": 65081, "fans_unicos_online": 13025, "frecuencia": {"1 juego": 8736, "2-5 juegos": 3853, "6-10 juegos": 349, "+10 juegos": 87}, "zonas": [{"ZONA": "Butaca Central B", "boletos": 38732, "ingreso": 9879520.0}, {"ZONA": "Butaca Lateral C", "boletos": 27892, "ingreso": 4842300.0}, {"ZONA": "Butaca Lateral A", "boletos": 23194, "ingreso": 4215320.0}, {"ZONA": "Palco Nivel 3", "boletos": 378, "ingreso": 3103397.6999999997}, {"ZONA": "Suite Terraza", "boletos": 128, "ingreso": 1857600.0}, {"ZONA": "Palco Nivel 2", "boletos": 170, "ingreso": 1345398.92}, {"ZONA": "General-Gradas", "boletos": 14183, "ingreso": 1247685.0}, {"ZONA": "Suite Cerrada", "boletos": 96, "ingreso": 1111996.7999999998}], "tipo_cortesia": {"Cortesia": 21364, "Patrocinio": 1700, "Boletos Gratis Abonados": 617, "Canje": 561, "2x1": 147, "Adulto": 72}, "pct_cortesia": 18.7, "pct_promocion": 32.9, "pct_vendido": 48.4}, "Caliente": {"equipo": "Caliente", "total_boletos": 86733, "vendidos": 29742, "promociones": 23459, "cortesias": 33532, "ingreso_total": 6843280, "ingreso_vendidos": 5480141, "ingreso_promociones": 1363138, "online": 8640, "taquilla": 78093, "fans_unicos_online": 1767, "frecuencia": {"1 juego": 1338, "2-5 juegos": 381, "6-10 juegos": 38, "+10 juegos": 10}, "zonas": [{"ZONA": "Central", "boletos": 31212, "ingreso": 4781090.0}, {"ZONA": "Lateral Preferente", "boletos": 9005, "ingreso": 952800.0}, {"ZONA": "Lateral", "boletos": 10623, "ingreso": 692008.0}, {"ZONA": "Palco Plata 3ra", "boletos": 1029, "ingreso": 197004.0}, {"ZONA": "Palco Plata 1ra", "boletos": 803, "ingreso": 156165.0}, {"ZONA": "Palco Bronce 3ra", "boletos": 312, "ingreso": 36062.5}, {"ZONA": "Palco Bronce 1ra", "boletos": 211, "ingreso": 25750.0}, {"ZONA": "Palco Platino", "boletos": 6, "ingreso": 2400.0}], "tipo_cortesia": {"cortes\u00eda ": 26752, "Canje de Cup\u00f3n": 5911, "Jueves de Ladies Night Lateral": 380, "Canje": 231, "Ni\u00f1os menores 7 a\u00f1os": 118, "Mujeres Gratis": 81, "Canje Flexible": 19, "Cortes\u00eda Juego Doble": 14}, "pct_cortesia": 38.7, "pct_promocion": 27.0, "pct_vendido": 34.3}, "Toros": {"equipo": "Toros", "total_boletos": 407776, "vendidos": 344417, "promociones": 14094, "cortesias": 49265, "ingreso_total": 83920721, "ingreso_vendidos": 75459456, "ingreso_promociones": 5732305, "online": 49196, "taquilla": 358580, "fans_unicos_online": 9296, "frecuencia": {"1 juego": 7125, "2-5 juegos": 1948, "6-10 juegos": 173, "+10 juegos": 50}, "zonas": [{"ZONA": "Superior", "boletos": 69305, "ingreso": 16729157.9}, {"ZONA": "Preferente", "boletos": 45759, "ingreso": 14342924.65}, {"ZONA": "FAMILIA JUGADORES", "boletos": 7650, "ingreso": 7250500.0}, {"ZONA": "ToroBar", "boletos": 7409, "ingreso": 6689750.0}, {"ZONA": "General Preferente", "boletos": 51700, "ingreso": 5299976.0}, {"ZONA": "General Superior", "boletos": 48591, "ingreso": 4676260.0}, {"ZONA": "Preferente3raBase", "boletos": 21130, "ingreso": 4167839.0}, {"ZONA": "Superior3raBase", "boletos": 19964, "ingreso": 3530063.89}], "tipo_cortesia": {"Cortes\u00eda": 37934, "UPGRADE ": 5264, "Dama": 1953, "Canje": 1089, "Adulto": 1014, "ABONADO": 848, "ESTUDIANTE": 403, "Canje $0": 196}, "pct_cortesia": 12.1, "pct_promocion": 3.5, "pct_vendido": 84.5}, "Guerreros": {"equipo": "Guerreros", "total_boletos": 104810, "vendidos": 50868, "promociones": 24749, "cortesias": 29193, "ingreso_total": 11088766, "ingreso_vendidos": 9354790, "ingreso_promociones": 1733976, "online": 30936, "taquilla": 73874, "fans_unicos_online": 5039, "frecuencia": {"1 juego": 3100, "2-5 juegos": 1618, "6-10 juegos": 258, "+10 juegos": 63}, "zonas": [{"ZONA": "Central", "boletos": 43512, "ingreso": 7260605.0}, {"ZONA": "Lateral Izquierdo", "boletos": 17948, "ingreso": 1708700.0}, {"ZONA": "Lateral Derecho", "boletos": 12249, "ingreso": 1516491.0}, {"ZONA": "Palcos Central", "boletos": 1818, "ingreso": 540850.0}, {"ZONA": "Palco Terr Izquierdo", "boletos": 74, "ingreso": 34320.0}, {"ZONA": "Palco Terr Derecho", "boletos": 16, "ingreso": 27800.0}], "tipo_cortesia": {"Cortes\u00eda": 25781, "Adulto": 1874, "Canje Lluvia": 1241, "Dia del Ni\u00f1o": 207, "Canje": 83, "Escuelita Guerreros": 4, "Hombres Gratis": 3}, "pct_cortesia": 27.9, "pct_promocion": 23.6, "pct_vendido": 48.5}};
+const JUEGOS2 = {"Sultanes": [{"n": "Juego Inaugural: Charros vs Sultanes", "f": "2025-04-18", "id": 1, "ing": 3478597, "ing_onl": 2490590, "ing_taq": 988006, "c": "TR"}, {"n": "Final de Zona J4: Jalisco vs Sultanes", "f": "2025-09-04", "id": 58, "ing": 1746100, "ing_onl": 1356050, "ing_taq": 390050, "c": "Playoffs"}, {"n": "Playoffs J1: Jalisco vs Sultanes", "f": "2025-08-09", "id": 49, "ing": 1730140, "ing_onl": 1262240, "ing_taq": 467900, "c": "Playoffs"}, {"n": "J2: Chihuahua vs Sultanes", "f": "2025-08-02", "id": 47, "ing": 1700090, "ing_onl": 1085420, "ing_taq": 614670, "c": "TR"}, {"n": "Playoffs J6: Jalisco vs Sultanes", "f": "2025-08-16", "id": 51, "ing": 1657170, "ing_onl": 1280850, "ing_taq": 376320, "c": "Playoffs"}, {"n": "Final de Zona J3: Jalisco vs Sultanes", "f": "2025-09-03", "id": 57, "ing": 1597500, "ing_onl": 1169100, "ing_taq": 428400, "c": "Playoffs"}, {"n": "Semifinal De Zona J3: Laredo vs Sultanes", "f": "2025-08-23", "id": 53, "ing": 1536710, "ing_onl": 1192280, "ing_taq": 344430, "c": "Playoffs"}, {"n": "Final de Zona J5: Jalisco vs Sultanes", "f": "2025-09-05", "id": 59, "ing": 1523775, "ing_onl": 1155875, "ing_taq": 367900, "c": "Playoffs"}, {"n": "J3: Saraperos vs Sultanes", "f": "2025-04-30", "id": 6, "ing": 1423504, "ing_onl": 959724, "ing_taq": 463780, "c": "TR"}, {"n": "Playoffs J2: Jalisco vs Sultanes", "f": "2025-08-10", "id": 50, "ing": 1415260, "ing_onl": 1059100, "ing_taq": 356160, "c": "Playoffs"}, {"n": "J3: Diablos vs Sultanes", "f": "2025-06-12", "id": 27, "ing": 1360361, "ing_onl": 837776, "ing_taq": 522585, "c": "TR"}, {"n": "J2: Conspiradores vs Sultanes", "f": "2025-06-14", "id": 29, "ing": 1353054, "ing_onl": 888034, "ing_taq": 465020, "c": "TR"}, {"n": "Playoffs J7: Jalisco vs Sultanes", "f": "2025-08-17", "id": 52, "ing": 1345170, "ing_onl": 965110, "ing_taq": 380060, "c": "Playoffs"}, {"n": "J2: Charros vs Sultanes", "f": "2025-04-19", "id": 2, "ing": 1308639, "ing_onl": 855259, "ing_taq": 453380, "c": "TR"}, {"n": "J2: Durango vs Sultanes", "f": "2025-06-25", "id": 32, "ing": 1238850, "ing_onl": 808460, "ing_taq": 430390, "c": "TR"}, {"n": "Semifinal De Zona J4: Laredo vs Sultanes", "f": "2025-08-25", "id": 54, "ing": 1237840, "ing_onl": 902080, "ing_taq": 335760, "c": "Playoffs"}, {"n": "J2: Acereros vs Sultanes", "f": "2025-05-28", "id": 20, "ing": 1219531, "ing_onl": 717186, "ing_taq": 502345, "c": "TR"}, {"n": "J2: Saraperos vs Sultanes", "f": "2025-06-04", "id": 23, "ing": 1152710, "ing_onl": 685250, "ing_taq": 467460, "c": "TR"}, {"n": "J2: Aguascalientes vs Sultanes", "f": "2025-07-19", "id": 41, "ing": 1131224, "ing_onl": 775274, "ing_taq": 355950, "c": "TR"}, {"n": "J2: Diablos vs Sultanes", "f": "2025-06-11", "id": 26, "ing": 1125976, "ing_onl": 674906, "ing_taq": 451070, "c": "TR"}], "Charros": [{"n": "Serie del Rey J4: Diablos vs Charros", "f": "2025-09-14", "id": 63, "ing": 3028800, "ing_onl": 2710000, "ing_taq": 318800, "c": "Playoffs"}, {"n": "Serie del Rey J3: Diablos vs Charros", "f": "2025-09-13", "id": 62, "ing": 3024900, "ing_onl": 2698800, "ing_taq": 326100, "c": "Playoffs"}, {"n": "Final de Zona J1: Charros vs Sultanes", "f": "2025-08-31", "id": 56, "ing": 1648370, "ing_onl": 1444775, "ing_taq": 203595, "c": "Playoffs"}, {"n": "Final de Zona J2: Charros vs Sultanes", "f": "2025-09-01", "id": 57, "ing": 1379245, "ing_onl": 1178150, "ing_taq": 201095, "c": "Playoffs"}, {"n": "Juego Inaugural: Uni\u00f3n Laguna vs Charros", "f": "2025-04-22", "id": 1, "ing": 1321602, "ing_onl": 1030500, "ing_taq": 291102, "c": "TR"}, {"n": "Semifinal J3: Charros vs Uni\u00f3n Laguna", "f": "2025-08-23", "id": 52, "ing": 1173700, "ing_onl": 975550, "ing_taq": 198150, "c": "Playoffs"}, {"n": "Semifinal J4: Charros vs Uni\u00f3n Laguna", "f": "2025-08-25", "id": 53, "ing": 1018635, "ing_onl": 825700, "ing_taq": 192935, "c": "Playoffs"}, {"n": "Playoffs J4: Sultanes vs Charros", "f": "2025-08-13", "id": 48, "ing": 709960, "ing_onl": 559600, "ing_taq": 150360, "c": "Playoffs"}, {"n": "Playoffs J5: Sultanes vs Charros", "f": "2025-08-14", "id": 49, "ing": 596030, "ing_onl": 487300, "ing_taq": 108730, "c": "Playoffs"}, {"n": "J2: Saraperos vs Charros", "f": "2025-05-31", "id": 21, "ing": 558441, "ing_onl": 425488, "ing_taq": 132953, "c": "TR"}, {"n": "Playoffs J3: Sultanes vs Charros", "f": "2025-08-12", "id": 47, "ing": 519310, "ing_onl": 408650, "ing_taq": 110660, "c": "Playoffs"}, {"n": "J2: Uni\u00f3n Laguna vs Charros", "f": "2025-07-13", "id": 36, "ing": 509983, "ing_onl": 392278, "ing_taq": 117704, "c": "TR"}, {"n": "Paquete Serie del Rey (Incluye 3 juegos)", "f": "2025-09-09", "id": 61, "ing": 502606, "ing_onl": 0, "ing_taq": 502606, "c": "Playoffs"}, {"n": "J2: Acereros vs Charros", "f": "2025-06-07", "id": 24, "ing": 474311, "ing_onl": 388690, "ing_taq": 85621, "c": "TR"}, {"n": "J3: Toros vs Charros", "f": "2025-05-01", "id": 10, "ing": 466161, "ing_onl": 362976, "ing_taq": 103185, "c": "TR"}, {"n": "J2: Dorados vs Charros", "f": "2025-05-17", "id": 15, "ing": 450483, "ing_onl": 337520, "ing_taq": 112962, "c": "TR"}, {"n": "J1: Dorados vs Charros", "f": "2025-05-16", "id": 14, "ing": 425325, "ing_onl": 346168, "ing_taq": 79157, "c": "TR"}, {"n": "J3: Dorados vs Charros", "f": "2025-08-07", "id": 46, "ing": 410626, "ing_onl": 311882, "ing_taq": 98744, "c": "TR"}, {"n": "J1: Uni\u00f3n Laguna vs Charros", "f": "2025-07-11", "id": 35, "ing": 410048, "ing_onl": 336076, "ing_taq": 73972, "c": "TR"}, {"n": "Semifinal J5: Charros vs Uni\u00f3n Laguna", "f": "2025-08-26", "id": 54, "ing": 392365, "ing_onl": 302700, "ing_taq": 89665, "c": "Playoffs"}], "Bravos": [{"n": "J3: Diablos vs Bravos", "f": "2025-08-07", "id": 63, "ing": 857660, "ing_onl": 634540, "ing_taq": 223120, "c": "TR"}, {"n": "J2: Diablos vs Bravos", "f": "2025-08-06", "id": 62, "ing": 735405, "ing_onl": 460510, "ing_taq": 274895, "c": "TR"}, {"n": "J1: Diablos vs Bravos", "f": "2025-08-05", "id": 61, "ing": 574565, "ing_onl": 339170, "ing_taq": 235395, "c": "TR"}, {"n": "J2: Diablos vs Bravos", "f": "2025-05-17", "id": 23, "ing": 541970, "ing_onl": 379220, "ing_taq": 162750, "c": "TR"}, {"n": "J1: Diablos vs Bravos", "f": "2025-05-16", "id": 22, "ing": 530985, "ing_onl": 372120, "ing_taq": 158865, "c": "TR"}, {"n": "J3: Diablos vs Bravos", "f": "2025-05-18", "id": 24, "ing": 463390, "ing_onl": 274170, "ing_taq": 189220, "c": "TR"}, {"n": "Juego Inaugural: El \u00c1guila vs Bravos", "f": "2025-04-22", "id": 2, "ing": 437570, "ing_onl": 286880, "ing_taq": 150690, "c": "TR"}, {"n": "J2: Pericos vs Bravos", "f": "2025-05-03", "id": 11, "ing": 305340, "ing_onl": 194150, "ing_taq": 111190, "c": "TR"}, {"n": "J3: El \u00c1guila vs Bravos", "f": "2025-04-24", "id": 4, "ing": 299790, "ing_onl": 192700, "ing_taq": 107090, "c": "TR"}, {"n": "J2: Rieleros vs Bravos", "f": "2025-06-14", "id": 39, "ing": 281280, "ing_onl": 179970, "ing_taq": 101310, "c": "TR"}, {"n": "J2: Guerreros vs Bravos", "f": "2025-08-02", "id": 59, "ing": 274310, "ing_onl": 170040, "ing_taq": 104270, "c": "TR"}, {"n": "J2: Leones vs Bravos", "f": "2025-05-31", "id": 31, "ing": 267135, "ing_onl": 159930, "ing_taq": 107205, "c": "TR"}, {"n": "J2: Tigres vs Bravos", "f": "2025-04-30", "id": 6, "ing": 265285, "ing_onl": 145490, "ing_taq": 119795, "c": "TR"}, {"n": "J3: Tigres vs Bravos", "f": "2025-05-01", "id": 7, "ing": 249640, "ing_onl": 152240, "ing_taq": 97400, "c": "TR"}, {"n": "J2: El \u00c1guila vs Bravos", "f": "2025-04-23", "id": 3, "ing": 233850, "ing_onl": 123500, "ing_taq": 110350, "c": "TR"}, {"n": "J2: Pericos vs Bravos", "f": "2025-07-19", "id": 55, "ing": 226280, "ing_onl": 135440, "ing_taq": 90840, "c": "TR"}, {"n": "J3: Saraperos vs Bravos", "f": "2025-06-12", "id": 36, "ing": 219090, "ing_onl": 100960, "ing_taq": 118130, "c": "TR"}, {"n": "J3: Leones vs Bravos", "f": "2025-07-10", "id": 48, "ing": 217775, "ing_onl": 121780, "ing_taq": 95995, "c": "TR"}, {"n": "J1: Rieleros vs Bravos", "f": "2025-06-13", "id": 38, "ing": 206600, "ing_onl": 149950, "ing_taq": 56650, "c": "TR"}, {"n": "J1: Guerreros vs Bravos", "f": "2025-08-01", "id": 58, "ing": 206470, "ing_onl": 120590, "ing_taq": 85880, "c": "TR"}], "Dorados": [{"n": "Abono Combo Dorados (LMB y LEB) 2025", "f": "2025-09-19", "id": 50, "ing": 2314399, "ing_onl": 85400, "ing_taq": 2228999, "c": "TR"}, {"n": "Juego Inaugural: Saraperos vs Dorados", "f": "2025-04-25", "id": 1, "ing": 618340, "ing_onl": 472630, "ing_taq": 145710, "c": "TR"}, {"n": "Abono Dorados LMB 2025", "f": "2025-08-31", "id": 47, "ing": 578100, "ing_onl": 460700, "ing_taq": 117400, "c": "TR"}, {"n": "J3: Caliente de Durango vs Dorados", "f": "2025-05-01", "id": 6, "ing": 522230, "ing_onl": 326370, "ing_taq": 195860, "c": "TR"}, {"n": "J1: Acereros vs Dorados", "f": "2025-05-09", "id": 7, "ing": 435780, "ing_onl": 265130, "ing_taq": 170650, "c": "TR"}, {"n": "J2: Saraperos vs Dorados", "f": "2025-04-26", "id": 2, "ing": 409840, "ing_onl": 279940, "ing_taq": 129900, "c": "TR"}, {"n": "J2: Caliente de Durango vs Dorados", "f": "2025-04-30", "id": 5, "ing": 367850, "ing_onl": 201410, "ing_taq": 166440, "c": "TR"}, {"n": "J3: Acereros vs Dorados", "f": "2025-07-31", "id": 46, "ing": 344760, "ing_onl": 200780, "ing_taq": 143980, "c": "TR"}, {"n": "Juego Doble J1 Toros vs Dorados + J2 Toros vs Dora", "f": "2025-05-31", "id": 16, "ing": 260650, "ing_onl": 142790, "ing_taq": 117860, "c": "TR"}, {"n": "J1: Tecos Dos Laredos vs Dorados", "f": "2025-06-06", "id": 21, "ing": 235170, "ing_onl": 109120, "ing_taq": 126050, "c": "TR"}, {"n": "J1: Rieleros vs Dorados", "f": "2025-05-23", "id": 13, "ing": 234180, "ing_onl": 130400, "ing_taq": 103780, "c": "TR"}, {"n": "J2: Rieleros vs Dorados", "f": "2025-05-24", "id": 14, "ing": 231280, "ing_onl": 125230, "ing_taq": 106050, "c": "TR"}, {"n": "J2: Charros vs Dorados", "f": "2025-07-05", "id": 33, "ing": 231270, "ing_onl": 104140, "ing_taq": 127130, "c": "TR"}, {"n": "J2: Tecos Dos Laredos vs Dorados", "f": "2025-06-07", "id": 22, "ing": 218170, "ing_onl": 102470, "ing_taq": 115700, "c": "TR"}, {"n": "Juego Doble: Sultanes vs Dorados", "f": "2025-07-03", "id": 31, "ing": 215560, "ing_onl": 112970, "ing_taq": 102590, "c": "TR"}, {"n": "J2: Acereros vs Dorados", "f": "2025-05-10", "id": 8, "ing": 205430, "ing_onl": 95130, "ing_taq": 110300, "c": "TR"}, {"n": "J3: Saraperos vs Dorados", "f": "2025-04-27", "id": 3, "ing": 203380, "ing_onl": 109420, "ing_taq": 93960, "c": "TR"}, {"n": "J1: Guerreros vs Dorados", "f": "2025-06-20", "id": 27, "ing": 203030, "ing_onl": 89230, "ing_taq": 113800, "c": "TR"}, {"n": "Juego Doble :J3 Toros vs Dorados LMB +J1 Venados v", "f": "2025-06-01", "id": 19, "ing": 187140, "ing_onl": 69630, "ing_taq": 117510, "c": "TR"}, {"n": "J3: Acereros vs Dorados", "f": "2025-05-11", "id": 9, "ing": 175530, "ing_onl": 96810, "ing_taq": 78720, "c": "TR"}], "Rieleros": [{"n": "Juego Inaugural: Dorados vs Rieleros", "f": "2025-04-22", "id": 1, "ing": 584780, "ing_onl": 384920, "ing_taq": 199860, "c": "TR"}, {"n": "J2: Sultanes vs Rieleros", "f": "2025-05-31", "id": 20, "ing": 334770, "ing_onl": 177230, "ing_taq": 157540, "c": "TR"}, {"n": "J1: Sultanes vs Rieleros", "f": "2025-05-30", "id": 19, "ing": 274260, "ing_onl": 198170, "ing_taq": 76090, "c": "TR"}, {"n": "J3: Tecos vs Rieleros", "f": "2025-05-01", "id": 6, "ing": 231470, "ing_onl": 106440, "ing_taq": 125030, "c": "TR"}, {"n": "J3: Sultanes vs Rieleros", "f": "2025-06-01", "id": 21, "ing": 214950, "ing_onl": 86580, "ing_taq": 128370, "c": "TR"}, {"n": "J3: Charros vs Rieleros", "f": "2025-05-29", "id": 18, "ing": 211020, "ing_onl": 111500, "ing_taq": 99520, "c": "TR"}, {"n": "J3: Saraperos vs Rieleros", "f": "2025-07-31", "id": 47, "ing": 207154, "ing_onl": 148020, "ing_taq": 59134, "c": "TR"}, {"n": "J2: Dorados vs Rieleros", "f": "2025-04-23", "id": 2, "ing": 204230, "ing_onl": 110640, "ing_taq": 93590, "c": "TR"}, {"n": "J1: Toros vs Rieleros", "f": "2025-05-20", "id": 13, "ing": 184800, "ing_onl": 90830, "ing_taq": 93970, "c": "TR"}, {"n": "J3: Dorados vs Rieleros", "f": "2025-04-24", "id": 3, "ing": 180440, "ing_onl": 97280, "ing_taq": 83160, "c": "TR"}, {"n": "J1: Saraperos vs Rieleros", "f": "2025-05-09", "id": 10, "ing": 162900, "ing_onl": 86900, "ing_taq": 76000, "c": "TR"}, {"n": "J2: Tecos vs Rieleros", "f": "2025-04-30", "id": 5, "ing": 158890, "ing_onl": 61750, "ing_taq": 97140, "c": "TR"}, {"n": "J1: Charros vs Rieleros", "f": "2025-05-27", "id": 16, "ing": 155070, "ing_onl": 74640, "ing_taq": 80430, "c": "TR"}, {"n": "J1: Pericos vs Rieleros", "f": "2025-06-17", "id": 25, "ing": 151220, "ing_onl": 67060, "ing_taq": 84160, "c": "TR"}, {"n": "J1: Caliente vs Rieleros", "f": "2025-06-06", "id": 22, "ing": 146540, "ing_onl": 78460, "ing_taq": 68080, "c": "TR"}, {"n": "J1: Saraperos vs Rieleros", "f": "2025-07-29", "id": 45, "ing": 145900, "ing_onl": 87560, "ing_taq": 58340, "c": "TR"}, {"n": "J2: Toros vs Rieleros", "f": "2025-05-21", "id": 14, "ing": 143600, "ing_onl": 68620, "ing_taq": 74980, "c": "TR"}, {"n": "J2: Caliente vs Rieleros", "f": "2025-06-07", "id": 23, "ing": 133250, "ing_onl": 64740, "ing_taq": 68510, "c": "TR"}, {"n": "J3: Caliente vs Rieleros", "f": "2025-06-08", "id": 24, "ing": 133000, "ing_onl": 50510, "ing_taq": 82490, "c": "TR"}, {"n": "J2: Charros vs Rieleros", "f": "2025-05-28", "id": 17, "ing": 132710, "ing_onl": 65630, "ing_taq": 67080, "c": "TR"}], "Saraperos": [{"n": "22/04/25", "f": "", "id": 1, "ing": 1683800, "ing_onl": 1239250, "ing_taq": 444550, "c": "TR"}, {"n": "24/04/25", "f": "", "id": 3, "ing": 1140400, "ing_onl": 743950, "ing_taq": 396450, "c": "TR"}, {"n": "12/07/25", "f": "", "id": 34, "ing": 724220, "ing_onl": 472380, "ing_taq": 251840, "c": "TR"}, {"n": "23/04/25", "f": "", "id": 2, "ing": 535700, "ing_onl": 362400, "ing_taq": 173300, "c": "TR"}, {"n": "11/07/25", "f": "", "id": 33, "ing": 531210, "ing_onl": 381150, "ing_taq": 150060, "c": "TR"}, {"n": "03/05/25", "f": "", "id": 5, "ing": 524870, "ing_onl": 333040, "ing_taq": 191830, "c": "TR"}, {"n": "02/05/25", "f": "", "id": 4, "ing": 480200, "ing_onl": 348290, "ing_taq": 131910, "c": "TR"}, {"n": "04/05/25", "f": "", "id": 6, "ing": 476200, "ing_onl": 313560, "ing_taq": 162640, "c": "TR"}, {"n": "02/08/26", "f": "", "id": 44, "ing": 465500, "ing_onl": 343100, "ing_taq": 122400, "c": "TR"}, {"n": "23/07/25", "f": "", "id": 41, "ing": 457660, "ing_onl": 367440, "ing_taq": 90220, "c": "TR"}, {"n": "01/08/25", "f": "", "id": 42, "ing": 454200, "ing_onl": 333200, "ing_taq": 121000, "c": "TR"}, {"n": "02/08/25", "f": "", "id": 43, "ing": 437000, "ing_onl": 327600, "ing_taq": 109400, "c": "TR"}, {"n": "21/07/25", "f": "", "id": 39, "ing": 405280, "ing_onl": 283100, "ing_taq": 122180, "c": "TR"}, {"n": "08/06/25", "f": "", "id": 20, "ing": 362360, "ing_onl": 228010, "ing_taq": 134350, "c": "TR"}, {"n": "07/06/25", "f": "", "id": 19, "ing": 350160, "ing_onl": 207720, "ing_taq": 142440, "c": "TR"}, {"n": "16/05/25", "f": "", "id": 13, "ing": 343580, "ing_onl": 227760, "ing_taq": 115820, "c": "TR"}, {"n": "06/06/25", "f": "", "id": 18, "ing": 303970, "ing_onl": 209060, "ing_taq": 94910, "c": "TR"}, {"n": "19/07/25", "f": "", "id": 37, "ing": 301280, "ing_onl": 197180, "ing_taq": 104100, "c": "TR"}, {"n": "20/07/25", "f": "", "id": 38, "ing": 293600, "ing_onl": 185130, "ing_taq": 108470, "c": "TR"}, {"n": "21/06/25", "f": "", "id": 25, "ing": 287220, "ing_onl": 177800, "ing_taq": 109420, "c": "TR"}], "Caliente": [{"n": "Juego Inaugural: Saraperos vs Caliente de Durango", "f": "2025-04-18", "id": 2, "ing": 452692, "ing_onl": 197308, "ing_taq": 255384, "c": "TR"}, {"n": "J2: Uni\u00f3n Laguna vs Caliente de Durango", "f": "2025-04-26", "id": 5, "ing": 350306, "ing_onl": 116144, "ing_taq": 234162, "c": "TR"}, {"n": "J3: Sultanes vs Caliente de Durango", "f": "2025-05-11", "id": 12, "ing": 291630, "ing_onl": 49315, "ing_taq": 242315, "c": "TR"}, {"n": "J1: Saraperos vs Caliente de Durango", "f": "2025-05-20", "id": 16, "ing": 283379, "ing_onl": 111825, "ing_taq": 171554, "c": "TR"}, {"n": "J1: Sultanes vs Caliente de Durango", "f": "2025-05-09", "id": 10, "ing": 268057, "ing_onl": 73875, "ing_taq": 194182, "c": "TR"}, {"n": "J2: Saraperos vs Caliente de Durango", "f": "2025-04-19", "id": 3, "ing": 242377, "ing_onl": 65145, "ing_taq": 177232, "c": "TR"}, {"n": "Paquete Serie Inaugural: Saraperos vs Caliente de ", "f": "2025-04-18", "id": 1, "ing": 232221, "ing_onl": 103605, "ing_taq": 128616, "c": "TR"}, {"n": "J2: Sultanes vs Caliente de Durango", "f": "2025-05-10", "id": 11, "ing": 206250, "ing_onl": 34020, "ing_taq": 172230, "c": "TR"}, {"n": "Juego Doble: Uni\u00f3n Laguna vs Caliente de Durango", "f": "2025-04-27", "id": 6, "ing": 199737, "ing_onl": 55192, "ing_taq": 144545, "c": "TR"}, {"n": "J3: Saraperos vs Caliente de Durango", "f": "2025-04-20", "id": 4, "ing": 193689, "ing_onl": 50339, "ing_taq": 143350, "c": "TR"}, {"n": "J1: Acereros vs Caliente de Durango", "f": "2025-05-02", "id": 7, "ing": 176388, "ing_onl": 39176, "ing_taq": 137212, "c": "TR"}, {"n": "J2: Tigres vs Caliente de Durango", "f": "2025-06-14", "id": 29, "ing": 175138, "ing_onl": 29908, "ing_taq": 145230, "c": "TR"}, {"n": "J1: Tigres vs Caliente de Durango", "f": "2025-06-13", "id": 28, "ing": 169082, "ing_onl": 24078, "ing_taq": 145004, "c": "TR"}, {"n": "J2: Tecolotes vs Caliente de Durango", "f": "2025-05-24", "id": 20, "ing": 164262, "ing_onl": 28260, "ing_taq": 136002, "c": "TR"}, {"n": "J3: Tigres vs Caliente de Durango", "f": "2025-06-15", "id": 30, "ing": 162124, "ing_onl": 19710, "ing_taq": 142414, "c": "TR"}, {"n": "J3: Sultanes vs Caliente de Durango", "f": "2025-07-31", "id": 45, "ing": 147802, "ing_onl": 19140, "ing_taq": 128662, "c": "TR"}, {"n": "J1:Tecolotes vs Caliente de Durango", "f": "2025-05-23", "id": 19, "ing": 144266, "ing_onl": 29778, "ing_taq": 114488, "c": "TR"}, {"n": "J2: Acereros vs Caliente de Durango", "f": "2025-05-03", "id": 8, "ing": 134346, "ing_onl": 33963, "ing_taq": 100383, "c": "TR"}, {"n": "J3: Dorados vs Caliente de Durango", "f": "2025-06-05", "id": 24, "ing": 129602, "ing_onl": 17102, "ing_taq": 112500, "c": "TR"}, {"n": "J1: Dorados vs Caliente de Durango", "f": "2025-06-03", "id": 22, "ing": 126205, "ing_onl": 19744, "ing_taq": 106461, "c": "TR"}], "Toros": [{"n": "Torobono 2025", "f": "2025-08-15", "id": 68, "ing": 9784914, "ing_onl": 139480, "ing_taq": 9645434, "c": "Playoffs"}, {"n": "Paquete Inaugural: Rieleros vs Toros (Incluye 3 ju", "f": "2025-04-18", "id": 2, "ing": 4437490, "ing_onl": 2677110, "ing_taq": 1760380, "c": "TR"}, {"n": "J2: Dorados vs Toros", "f": "2025-07-19", "id": 48, "ing": 2481686, "ing_onl": 313064, "ing_taq": 2168622, "c": "TR"}, {"n": "J3: Diablos vs Toros", "f": "2025-06-15", "id": 39, "ing": 2421138, "ing_onl": 276485, "ing_taq": 2144653, "c": "TR"}, {"n": "J3: Rieleros vs Toros", "f": "2025-07-10", "id": 46, "ing": 2377260, "ing_onl": 96364, "ing_taq": 2280896, "c": "TR"}, {"n": "J3: Dorados vs Toros", "f": "2025-07-20", "id": 49, "ing": 2376247, "ing_onl": 92227, "ing_taq": 2284020, "c": "TR"}, {"n": "J2: Saraperos vs Toros", "f": "2025-07-26", "id": 54, "ing": 2243289, "ing_onl": 327982, "ing_taq": 1915307, "c": "TR"}, {"n": "J2: Acereros vs Toros", "f": "2025-08-02", "id": 57, "ing": 2168795, "ing_onl": 339784, "ing_taq": 1829011, "c": "TR"}, {"n": "J1: Rieleros vs Toros", "f": "2025-07-08", "id": 44, "ing": 2145485, "ing_onl": 46470, "ing_taq": 2099015, "c": "TR"}, {"n": "J2: Rieleros vs Toros", "f": "2025-07-09", "id": 45, "ing": 2126110, "ing_onl": 65600, "ing_taq": 2060510, "c": "TR"}, {"n": "J6 Playoffs: Algodoneros vs Toros", "f": "2025-08-16", "id": 69, "ing": 2118294, "ing_onl": 719450, "ing_taq": 1398844, "c": "Playoffs"}, {"n": "J2: Diablos vs Toros", "f": "2025-06-14", "id": 37, "ing": 2093510, "ing_onl": 637936, "ing_taq": 1455574, "c": "TR"}, {"n": "J1: Dorados vs Toros", "f": "2025-07-18", "id": 47, "ing": 2065418, "ing_onl": 187717, "ing_taq": 1877701, "c": "TR"}, {"n": "J1: Acereros vs Toros", "f": "2025-08-01", "id": 56, "ing": 1986924, "ing_onl": 211744, "ing_taq": 1775180, "c": "TR"}, {"n": "J1: Saraperos vs Toros", "f": "2025-07-25", "id": 53, "ing": 1932264, "ing_onl": 126678, "ing_taq": 1805586, "c": "TR"}, {"n": "J3: Acereros vs Toros", "f": "2025-08-03", "id": 59, "ing": 1885795, "ing_onl": 102947, "ing_taq": 1782848, "c": "TR"}, {"n": "J3: Charros vs Toros", "f": "2025-07-24", "id": 52, "ing": 1856678, "ing_onl": 88780, "ing_taq": 1767898, "c": "TR"}, {"n": "J3: Saraperos vs Toros", "f": "2025-07-27", "id": 55, "ing": 1845518, "ing_onl": 96452, "ing_taq": 1749066, "c": "TR"}, {"n": "J2: Charros vs Toros", "f": "2025-07-23", "id": 51, "ing": 1833255, "ing_onl": 74790, "ing_taq": 1758465, "c": "TR"}, {"n": "J2: Caliente Durango vs Toros", "f": "2025-08-06", "id": 61, "ing": 1798700, "ing_onl": 72930, "ing_taq": 1725770, "c": "TR"}], "Tecos": [{"n": "Semifinal de Zona J2: Sultanes vs Tecos", "f": "2025-08-21", "id": 55, "ing": 1185650, "ing_onl": 640750, "ing_taq": 544900, "c": "Playoffs"}, {"n": "Playoffs J2: Acereros vs Tecos", "f": "2025-08-13", "id": 52, "ing": 924900, "ing_onl": 479950, "ing_taq": 444950, "c": "Playoffs"}, {"n": "Juego Inaugural: Caliente vs Tecos", "f": "2025-04-22", "id": 1, "ing": 509900, "ing_onl": 322200, "ing_taq": 187700, "c": "TR"}, {"n": "J1: Charros vs Tecos", "f": "2025-06-24", "id": 25, "ing": 501700, "ing_onl": 305550, "ing_taq": 196150, "c": "TR"}, {"n": "J2: Sultanes vs Tecos", "f": "2025-07-05", "id": 32, "ing": 451050, "ing_onl": 266600, "ing_taq": 184450, "c": "TR"}, {"n": "J3: Toros vs Tecos", "f": "2025-04-27", "id": 6, "ing": 447750, "ing_onl": 247950, "ing_taq": 199800, "c": "TR"}, {"n": "Doble Juego: Dorados vs Tecos", "f": "2025-07-27", "id": 42, "ing": 438600, "ing_onl": 237900, "ing_taq": 200700, "c": "TR"}, {"n": "J1: Sultanes vs Tecos", "f": "2025-08-05", "id": 46, "ing": 397750, "ing_onl": 221300, "ing_taq": 176450, "c": "TR"}, {"n": "J3: Algodoneros vs Tecos", "f": "2025-06-01", "id": 15, "ing": 341550, "ing_onl": 178150, "ing_taq": 163400, "c": "TR"}, {"n": "J3: Acereros vs Tecos", "f": "2025-05-22", "id": 12, "ing": 312500, "ing_onl": 171100, "ing_taq": 141400, "c": "TR"}, {"n": "J3: Sultanes vs Tecos", "f": "2025-07-06", "id": 33, "ing": 298250, "ing_onl": 169850, "ing_taq": 128400, "c": "TR"}, {"n": "J3: Caliente vs Tecos", "f": "2025-04-24", "id": 3, "ing": 256250, "ing_onl": 135750, "ing_taq": 120500, "c": "TR"}, {"n": "J3: Charros vs Tecos", "f": "2025-06-26", "id": 27, "ing": 253150, "ing_onl": 157750, "ing_taq": 95400, "c": "TR"}, {"n": "J3: Toros vs Tecos", "f": "2025-07-17", "id": 39, "ing": 237900, "ing_onl": 111050, "ing_taq": 126850, "c": "TR"}, {"n": "J1: Acereros vs Tecos", "f": "2025-05-20", "id": 10, "ing": 218450, "ing_onl": 84950, "ing_taq": 133500, "c": "TR"}, {"n": "J2: Rieleros vs Tecos", "f": "2025-06-04", "id": 17, "ing": 217700, "ing_onl": 100950, "ing_taq": 116750, "c": "TR"}, {"n": "J1: Olmecas vs Tecos", "f": "2025-06-13", "id": 22, "ing": 212750, "ing_onl": 118300, "ing_taq": 94450, "c": "TR"}, {"n": "J3: Saraperos vs Tecos", "f": "2025-07-03", "id": 30, "ing": 182750, "ing_onl": 85600, "ing_taq": 97150, "c": "TR"}, {"n": "J1: Dorados vs Tecos", "f": "2025-05-06", "id": 7, "ing": 175185, "ing_onl": 81085, "ing_taq": 94100, "c": "TR"}, {"n": "J3: Olmecas vs Tecos", "f": "2025-06-15", "id": 24, "ing": 172650, "ing_onl": 89450, "ing_taq": 83200, "c": "TR"}], "Guerreros": [{"n": "20/08/25", "f": "", "id": 63, "ing": 973400, "ing_onl": 743150, "ing_taq": 230250, "c": "Playoffs"}, {"n": "27/08/25", "f": "", "id": 67, "ing": 959120, "ing_onl": 629780, "ing_taq": 329340, "c": "Playoffs"}, {"n": "21/08/25", "f": "", "id": 65, "ing": 935950, "ing_onl": 695580, "ing_taq": 240370, "c": "Playoffs"}, {"n": "22/04/25", "f": "", "id": 1, "ing": 882580, "ing_onl": 632230, "ing_taq": 250350, "c": "TR"}, {"n": "09/08/25", "f": "", "id": 57, "ing": 719700, "ing_onl": 557600, "ing_taq": 162100, "c": "Playoffs"}, {"n": "10/08/25", "f": "", "id": 58, "ing": 715000, "ing_onl": 527200, "ing_taq": 187800, "c": "Playoffs"}, {"n": "28/08/25", "f": "", "id": 68, "ing": 666480, "ing_onl": 423920, "ing_taq": 242560, "c": "Playoffs"}, {"n": "28/05/25", "f": "", "id": 19, "ing": 336185, "ing_onl": 232260, "ing_taq": 103925, "c": "TR"}, {"n": "27/05/25", "f": "", "id": 18, "ing": 333860, "ing_onl": 242700, "ing_taq": 91160, "c": "TR"}, {"n": "29/05/25", "f": "", "id": 21, "ing": 329450, "ing_onl": 262750, "ing_taq": 66700, "c": "TR"}, {"n": "07/08/25", "f": "", "id": 54, "ing": 202375, "ing_onl": 85550, "ing_taq": 116825, "c": "TR"}, {"n": "24/04/25", "f": "", "id": 5, "ing": 189400, "ing_onl": 82350, "ing_taq": 107050, "c": "TR"}, {"n": "25/07/25", "f": "", "id": 49, "ing": 182325, "ing_onl": 66000, "ing_taq": 116325, "c": "TR"}, {"n": "22/04/25", "f": "", "id": 2, "ing": 181840, "ing_onl": 155030, "ing_taq": 26810, "c": "TR"}, {"n": "05/08/25", "f": "", "id": 52, "ing": 172050, "ing_onl": 103100, "ing_taq": 68950, "c": "TR"}, {"n": "27/07/25", "f": "", "id": 51, "ing": 170060, "ing_onl": 48900, "ing_taq": 121160, "c": "TR"}, {"n": "17/05/25", "f": "", "id": 13, "ing": 165175, "ing_onl": 47750, "ing_taq": 117425, "c": "TR"}, {"n": "16/05/25", "f": "", "id": 12, "ing": 147975, "ing_onl": 45350, "ing_taq": 102625, "c": "TR"}, {"n": "18/05/25", "f": "", "id": 14, "ing": 131810, "ing_onl": 34500, "ing_taq": 97310, "c": "TR"}, {"n": "06/08/25", "f": "", "id": 53, "ing": 121075, "ing_onl": 76700, "ing_taq": 44375, "c": "TR"}]};
+const FANS = {"Sultanes": {"total_fans_online": 48036, "freq": {"1": 33488, "2-5": 12747, "6-10": 1404, "+10": 397}, "rev_por_cat": {"+10": 1357985.0, "1": 15038500.3, "2-5": 12165460.9, "6-10": 2865600.9}, "avg_gasto": 654}, "Charros": {"total_fans_online": 20377, "freq": {"1": 14288, "2-5": 5310, "6-10": 587, "+10": 192}, "rev_por_cat": {"+10": 1204107.5, "1": 9492165.0, "2-5": 9500415.0, "6-10": 2606350.0}, "avg_gasto": 1119}, "Bravos": {"total_fans_online": 5302, "freq": {"1": 3852, "2-5": 1338, "6-10": 89, "+10": 23}, "rev_por_cat": {"+10": 238700.0, "1": 3051144.0, "2-5": 2664950.0, "6-10": 461130.0}, "avg_gasto": 1210}, "Dorados": {"total_fans_online": 5831, "freq": {"1": 3944, "2-5": 1640, "6-10": 183, "+10": 64}, "rev_por_cat": {"+10": 477460.0, "1": 1969920.0, "2-5": 2100730.0, "6-10": 521790.0}, "avg_gasto": 869}, "Rieleros": {"total_fans_online": 3432, "freq": {"1": 2498, "2-5": 840, "6-10": 77, "+10": 17}, "rev_por_cat": {"+10": 92142.5, "1": 1563962.5, "2-5": 1154322.5, "6-10": 295675.0}, "avg_gasto": 905}, "Saraperos": {"total_fans_online": 13025, "freq": {"1": 8736, "2-5": 3853, "6-10": 349, "+10": 87}, "rev_por_cat": {"+10": 415405.0, "1": 3880340.0, "2-5": 4237560.0, "6-10": 886860.0}, "avg_gasto": 723}, "Caliente": {"total_fans_online": 1767, "freq": {"1": 1338, "2-5": 381, "6-10": 38, "+10": 10}, "rev_por_cat": {"+10": 32296.0, "1": 795888.0, "2-5": 537674.0, "6-10": 105357.0}, "avg_gasto": 833}, "Toros": {"total_fans_online": 9296, "freq": {"1": 7125, "2-5": 1948, "6-10": 173, "+10": 50}, "rev_por_cat": {"+10": 280695.0, "1": 6625610.03, "2-5": 3879842.57, "6-10": 851526.0}, "avg_gasto": 1252}, "Tecos": {"total_fans_online": 4736, "freq": {"1": 3155, "2-5": 1370, "6-10": 166, "+10": 45}, "rev_por_cat": {"+10": 352674.0, "1": 1487975.0, "2-5": 2132535.0, "6-10": 793532.0}, "avg_gasto": 1006}, "Guerreros": {"total_fans_online": 5039, "freq": {"1": 3100, "2-5": 1618, "6-10": 258, "+10": 63}, "rev_por_cat": {"+10": 503440.0, "1": 1889960.0, "2-5": 2756336.0, "6-10": 1184920.0}, "avg_gasto": 1257}};
+
+// ── HELPERS ──
+const fmt = n => n>=1e6?(n/1e6).toFixed(1)+'M':n>=1000?(n/1000).toFixed(1)+'k':Math.round(n).toLocaleString('es-MX');
+const fmtF = n => Math.round(n).toLocaleString('es-MX');
+
+let ocupMode = 'max'; // 'max' or 'prom'
+let tblOcupMode = 'max';
+let barOcupMode = 'max';
+let eqZone = 'todos';
+let sortKey = 'avg_asistencia', sortDir = -1;
+
+// ── NAV ──
+function show(id) {
+  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.ni').forEach(n=>n.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  const ids = ['overview','equipos','asistencia','ventas','fans','outliers'];
+  const niAll = document.querySelectorAll('.ni');
+  // find matching nav item by text content pattern
+  niAll.forEach(n => { if(n.onclick && n.onclick.toString().includes(`'${id}'`)) n.classList.add('active'); });
+  if(id==='asistencia') renderAsistCharts();
+  if(id==='ventas') renderVentasCharts();
+}
+
+// ── INIT OVERVIEW ──
+function initOverview() {
+  const norte = STATS.filter(s=>s.zona==='Norte');
+  const sur   = STATS.filter(s=>s.zona==='Sur');
+  const totalJ = STATS.reduce((a,s)=>a+s.juegos_normales,0);
+  const totalA = STATS.reduce((a,s)=>a+s.total_asistencia,0);
+  const avgA = Math.round(totalA/totalJ);
+  const avgOM = (STATS.reduce((a,s)=>a+s.ocup_aforo_max,0)/STATS.length).toFixed(1);
+  const avgOP = (STATS.reduce((a,s)=>a+s.ocup_aforo_prom,0)/STATS.length).toFixed(1);
+
+  document.getElementById('k-juegos').textContent = fmtF(totalJ);
+  document.getElementById('k-asis').textContent = fmt(totalA);
+  document.getElementById('k-avg').textContent = fmtF(avgA);
+  document.getElementById('k-ocupmax').textContent = avgOM+'%';
+  document.getElementById('k-ocupprom').textContent = avgOP+'%';
+  document.getElementById('ob').textContent = OUTLIERS.length;
+
+  renderZoneSplit('max');
+  renderOcupBars('max');
+  renderSalesCharts();
+  renderTop3();
+}
+
+function renderZoneSplit(mode) {
+  const norte = STATS.filter(s=>s.zona==='Norte');
+  const sur   = STATS.filter(s=>s.zona==='Sur');
+  const ocupKey = mode==='max'?'ocup_aforo_max':'ocup_aforo_prom';
+  const label = mode==='max'?'aforo máximo':'aforo real';
+  ['norte','sur'].forEach(z => {
+    const arr = z==='norte'?norte:sur;
+    const totalA = arr.reduce((a,s)=>a+s.total_asistencia,0);
+    const avgO = (arr.reduce((a,s)=>a+s[ocupKey],0)/arr.length).toFixed(1);
+    document.getElementById(`${z}-asis`).textContent = fmt(totalA);
+    document.getElementById(`${z}-meta`).textContent = `${arr.length} equipo${arr.length>1?'s':''} · ${arr.reduce((a,s)=>a+s.juegos_normales,0)} juegos`;
+    document.getElementById(`${z}-ocup`).innerHTML = `<span style="color:var(--${z==='norte'?'norte':'sur'});font-weight:600">${avgO}%</span> ocupación (${label})`;
+  });
+}
+
+function toggleZoneOcup(mode) {
+  ocupMode = mode;
+  document.getElementById('ot-max').classList.toggle('active', mode==='max');
+  document.getElementById('ot-prom').classList.toggle('active', mode==='prom');
+  renderZoneSplit(mode);
+}
+
+function renderOcupBars(mode) {
+  const key = mode==='max'?'ocup_aforo_max':'ocup_aforo_prom';
+  const wrap = document.getElementById('ocup-bars');
+  wrap.innerHTML = '';
+  [...STATS].sort((a,b)=>b[key]-a[key]).forEach(s => {
+    const color = s.zona==='Norte'?'#f5a623':'#3ecfbe';
+    const pct = s[key];
+    wrap.innerHTML += `<div class="brow">
+      <div class="blabels">
+        <div class="bteam"><div class="bdot ${s.zona==='Norte'?'n':'s'}"></div>${s.equipo}${s.doble_estadio?' <span style="font-size:9px;color:var(--text3)">(2 est.)</span>':''}</div>
+        <div class="bpct" style="color:${color}">${pct}%</div>
+      </div>
+      <div class="btrack"><div class="bfill" style="width:${Math.min(pct,100)}%;background:${color}"></div></div>
+    </div>`;
+  });
+}
+
+function toggleBarOcup(mode) {
+  barOcupMode = mode;
+  document.getElementById('ob-max').classList.toggle('active',mode==='max');
+  document.getElementById('ob-prom').classList.toggle('active',mode==='prom');
+  renderOcupBars(mode);
+}
+
+// ── JUEGOS DATA ──
+const JUEGOS = {"Charros":[{"n":"Juego Inaugural: Unión Laguna vs Charros","f":"2025-04-22","e":7018,"b":8480,"o":47.1,"c":"TR"},{"n":"J2: Saraperos vs Charros","f":"2025-05-31","e":4595,"b":5942,"o":58.9,"c":"TR"},{"n":"J1: Tecolotes vs Charros","f":"2025-07-29","e":4483,"b":6036,"o":56.8,"c":"TR"},{"n":"J3: Dorados vs Charros","f":"2025-08-07","e":3990,"b":5777,"o":50.6,"c":"TR"},{"n":"J2: Dorados vs Charros","f":"2025-08-06","e":3767,"b":5427,"o":47.7,"c":"TR"},{"n":"J2: Toros vs Charros","f":"2025-04-30","e":3721,"b":5226,"o":47.2,"c":"TR"},{"n":"J3: Toros vs Charros","f":"2025-05-01","e":3655,"b":4921,"o":46.3,"c":"TR"},{"n":"J3: Tecolotes vs Charros","f":"2025-07-31","e":3633,"b":4996,"o":46.0,"c":"TR"},{"n":"J2: Acereros vs Charros","f":"2025-06-07","e":3462,"b":4790,"o":53.3,"c":"TR"},{"n":"J2: Tecolotes vs Charros","f":"2025-07-30","e":3410,"b":4808,"o":43.2,"c":"TR"}],"Bravos":[{"n":"J2: Diablos vs Bravos","f":"2025-08-06","e":5234,"b":6037,"o":79.8,"c":"TR"},{"n":"J1: Diablos vs Bravos","f":"2025-05-16","e":5040,"b":6001,"o":76.9,"c":"TR"},{"n":"J3: Diablos vs Bravos","f":"2025-08-07","e":4893,"b":6291,"o":74.6,"c":"TR"},{"n":"J2: Diablos vs Bravos","f":"2025-05-17","e":4839,"b":5750,"o":73.8,"c":"TR"},{"n":"J3: El Águila vs Bravos","f":"2025-04-24","e":4612,"b":5649,"o":76.2,"c":"TR"},{"n":"Juego Inaugural: El Águila vs Bravos","f":"2025-04-22","e":4460,"b":5388,"o":73.6,"c":"TR"},{"n":"J3: Olmecas vs Bravos","f":"2025-06-26","e":4005,"b":4940,"o":61.1,"c":"TR"},{"n":"J1: Conspiradores vs Bravos","f":"2025-05-20","e":3884,"b":4892,"o":59.2,"c":"TR"},{"n":"J1: Diablos vs Bravos","f":"2025-08-05","e":3847,"b":4529,"o":58.7,"c":"TR"},{"n":"J3: Tigres vs Bravos","f":"2025-05-01","e":3800,"b":4494,"o":62.7,"c":"TR"}],"Dorados":[{"n":"Juego Inaugural: Saraperos vs Dorados","f":"2025-04-25","e":6433,"b":7938,"o":44.7,"c":"TR"},{"n":"J3: Caliente de Durango vs Dorados","f":"2025-05-01","e":5317,"b":6266,"o":71.8,"c":"TR"},{"n":"J1: Acereros vs Dorados","f":"2025-05-09","e":4579,"b":5683,"o":61.9,"c":"TR"},{"n":"J3: Acereros vs Dorados","f":"2025-07-31","e":4235,"b":5377,"o":57.2,"c":"TR"},{"n":"J2: Saraperos vs Dorados","f":"2025-04-26","e":3691,"b":4787,"o":25.6,"c":"TR"},{"n":"J2: Caliente de Durango vs Dorados","f":"2025-04-30","e":3454,"b":4510,"o":46.7,"c":"TR"},{"n":"J1: Tecos Dos Laredos vs Dorados","f":"2025-06-06","e":2502,"b":3617,"o":33.8,"c":"TR"},{"n":"J2: Acereros vs Dorados","f":"2025-05-10","e":2461,"b":3644,"o":33.2,"c":"TR"},{"n":"Juego Doble: Sultanes vs Dorados","f":"2025-07-03","e":2380,"b":3925,"o":32.1,"c":"TR"},{"n":"J2: Toros vs Dorados","f":"2025-05-31","e":2345,"b":5698,"o":31.7,"c":"TR"}],"Guerreros":[{"n":"J1: Pericos vs Guerreros","f":"2025-08-05","e":3254,"b":3724,"o":69.2,"c":"TR"},{"n":"Juego Inaugural: Conspiradores vs Guerreros","f":"2025-04-22","e":3125,"b":3474,"o":65.1,"c":"TR"},{"n":"J2: Diablos vs Guerreros","f":"2025-05-28","e":3058,"b":3523,"o":65.1,"c":"TR"},{"n":"Serie de Zona J1: Piratas vs Guerreros","f":"2025-08-20","e":2975,"b":3264,"o":63.0,"c":"Playoffs"},{"n":"J1: Diablos vs Guerreros","f":"2025-05-27","e":2966,"b":3387,"o":63.1,"c":"TR"},{"n":"Serie de Zona J6: Piratas vs Guerreros","f":"2025-08-27","e":2923,"b":3129,"o":61.6,"c":"Playoffs"},{"n":"Serie de Zona J2: Piratas vs Guerreros","f":"2025-08-21","e":2806,"b":3101,"o":59.1,"c":"Playoffs"},{"n":"J3: Diablos vs Guerreros","f":"2025-05-29","e":2787,"b":3514,"o":59.3,"c":"TR"},{"n":"Playoffs J2: Guerreros de Oaxaca","f":"2025-08-10","e":2693,"b":2958,"o":57.5,"c":"Playoffs"},{"n":"Playoffs J1: Guerreros de Oaxaca","f":"2025-08-09","e":2692,"b":2970,"o":57.8,"c":"Playoffs"}],"Saraperos":[{"n":"Juego Inaugural: Acereros vs Saraperos","f":"2025-04-22","e":8286,"b":9679,"o":77.8,"c":"TR"},{"n":"J3: Sultanes vs Saraperos (Juego Doble)","f":"2025-07-23","e":7676,"b":11153,"o":65.6,"c":"TR"},{"n":"J1: Charros vs Saraperos","f":"2025-05-02","e":6526,"b":10144,"o":56.7,"c":"TR"},{"n":"J1: Tecos vs Saraperos","f":"2025-08-01","e":6503,"b":10568,"o":55.6,"c":"TR"},{"n":"J3: Charros vs Saraperos","f":"2025-05-04","e":6233,"b":10100,"o":54.4,"c":"TR"},{"n":"J1: Sultanes vs Saraperos","f":"2025-07-21","e":5959,"b":10183,"o":50.9,"c":"TR"},{"n":"J2: Tecos vs Saraperos","f":"2025-08-02","e":5900,"b":10388,"o":50.4,"c":"TR"},{"n":"J3: Acereros vs Saraperos","f":"2025-04-24","e":5763,"b":8725,"o":46.5,"c":"TR"},{"n":"J2: Acereros vs Saraperos","f":"2025-07-12","e":5463,"b":9574,"o":46.6,"c":"TR"},{"n":"J3: Toros vs Saraperos","f":"2025-06-08","e":4767,"b":9147,"o":41.6,"c":"TR"}],"Rieleros":[{"n":"J3: Saraperos vs Rieleros","f":"2025-07-31","e":4565,"b":5522,"o":65.6,"c":"TR"},{"n":"J3: Tecos vs Rieleros","f":"2025-07-24","e":4348,"b":5495,"o":77.6,"c":"TR"},{"n":"Juego Inaugural: Dorados vs Rieleros","f":"2025-04-22","e":3753,"b":4111,"o":67.0,"c":"TR"},{"n":"J3: Charros vs Rieleros","f":"2025-05-29","e":3713,"b":4660,"o":68.7,"c":"TR"},{"n":"J2: Saraperos vs Rieleros","f":"2025-07-30","e":3664,"b":4697,"o":68.7,"c":"TR"},{"n":"J1: Saraperos vs Rieleros","f":"2025-07-29","e":3395,"b":4399,"o":63.0,"c":"TR"},{"n":"J1: Sultanes vs Rieleros","f":"2025-05-30","e":3321,"b":4015,"o":61.4,"c":"TR"},{"n":"J1: Caliente vs Rieleros","f":"2025-06-06","e":2819,"b":3579,"o":50.3,"c":"TR"},{"n":"J2: Sultanes vs Rieleros","f":"2025-05-31","e":2651,"b":3410,"o":49.0,"c":"TR"},{"n":"J3: Tecos vs Rieleros","f":"2025-05-01","e":2423,"b":3149,"o":44.8,"c":"TR"}],"Sultanes":[{"n":"Juego Inaugural: Charros vs Sultanes","f":"2025-04-18","e":16578,"b":89225,"o":74.0,"c":"TR"},{"n":"J2: Chihuahua vs Sultanes","f":"2025-08-02","e":15422,"b":105080,"o":65.5,"c":"TR"},{"n":"Final de Zona J4: Jalisco vs Sultanes","f":"2025-09-04","e":15035,"b":20475,"o":66.6,"c":"Playoffs"},{"n":"Playoffs J2: Jalisco vs Sultanes","f":"2025-08-10","e":14446,"b":104967,"o":63.9,"c":"Playoffs"},{"n":"J3: Diablos vs Sultanes","f":"2025-06-12","e":13825,"b":99111,"o":61.7,"c":"TR"},{"n":"Playoffs J1: Jalisco vs Sultanes","f":"2025-08-09","e":13735,"b":104741,"o":58.3,"c":"Playoffs"},{"n":"Final de Zona J5: Jalisco vs Sultanes","f":"2025-09-05","e":13198,"b":103699,"o":58.4,"c":"Playoffs"},{"n":"Playoffs J7: Jalisco vs Sultanes","f":"2025-08-17","e":12958,"b":103512,"o":57.4,"c":"Playoffs"},{"n":"J3: Saraperos vs Sultanes","f":"2025-04-30","e":12665,"b":87881,"o":56.6,"c":"TR"},{"n":"Playoffs J6: Jalisco vs Sultanes","f":"2025-08-16","e":11914,"b":103138,"o":52.7,"c":"Playoffs"}],"Caliente":[{"n":"Juego Inaugural: Saraperos vs Caliente","f":"2025-04-18","e":4753,"b":5440,"o":69.6,"c":"TR"},{"n":"J2: Unión Laguna vs Caliente de Durango","f":"2025-04-26","e":2424,"b":2836,"o":35.5,"c":"TR"},{"n":"J2: Saraperos vs Caliente de Durango","f":"2025-04-19","e":2156,"b":2738,"o":31.6,"c":"TR"},{"n":"J1: Tigres vs Caliente de Durango","f":"2025-06-13","e":1973,"b":2465,"o":28.9,"c":"TR"},{"n":"J3: Charros vs Caliente de Durango","f":"2025-08-03","e":1969,"b":2758,"o":28.8,"c":"TR"},{"n":"J3: Sultanes vs Caliente de Durango","f":"2025-07-31","e":1934,"b":2490,"o":28.3,"c":"TR"},{"n":"J3: Leones vs Caliente de Durango","f":"2025-06-12","e":1799,"b":2288,"o":26.3,"c":"TR"},{"n":"J3: Saraperos vs Caliente de Durango","f":"2025-04-20","e":1784,"b":2239,"o":26.1,"c":"TR"},{"n":"J3: Tigres vs Caliente de Durango","f":"2025-06-15","e":1750,"b":2253,"o":25.6,"c":"TR"},{"n":"J2: Tigres vs Caliente de Durango","f":"2025-06-14","e":1728,"b":2220,"o":25.3,"c":"TR"}],"Toros":[{"n":"Juego Inaugural: Rieleros vs Toros","f":"2025-04-18","e":13236,"b":15305,"o":63.2,"c":"TR"},{"n":"J2: Diablos vs Toros","f":"2025-06-14","e":7959,"b":15345,"o":49.5,"c":"TR"},{"n":"J1: Sultanes vs Toros","f":"2025-05-24","e":6610,"b":7939,"o":41.4,"c":"TR"},{"n":"J6 Playoffs: Algodoneros vs Toros","f":"2025-08-16","e":6124,"b":12558,"o":38.1,"c":"Playoffs"},{"n":"J1: Diablos vs Toros","f":"2025-06-13","e":5784,"b":9805,"o":36.0,"c":"TR"},{"n":"J3: Diablos vs Toros","f":"2025-06-15","e":4989,"b":15881,"o":31.1,"c":"TR"},{"n":"J2: Rieleros vs Toros","f":"2025-04-19","e":4594,"b":10968,"o":29.0,"c":"TR"},{"n":"J1: Dorados vs Toros","f":"2025-05-02","e":4593,"b":5841,"o":29.2,"c":"TR"},{"n":"J2: Caliente Durango vs Toros","f":"2025-05-17","e":4501,"b":6032,"o":28.6,"c":"TR"},{"n":"J1 Playoffs: Algodoneros vs Toros","f":"2025-08-09","e":3911,"b":7356,"o":24.3,"c":"Playoffs"}],"Tecos":[{"n":"J1: Sultanes vs Tecos","f":"2025-07-04","e":5455,"b":6442,"o":56.0,"c":"TR"},{"n":"J1: Charros vs Tecos","f":"2025-06-24","e":3694,"b":4487,"o":73.6,"c":"TR"},{"n":"Semifinal de Zona J1: Sultanes vs Tecos","f":"2025-08-20","e":3619,"b":3905,"o":37.2,"c":"Playoffs"},{"n":"Semifinal de Zona J2: Sultanes vs Tecos","f":"2025-08-21","e":3115,"b":3421,"o":62.1,"c":"Playoffs"},{"n":"Juego Inaugural: Caliente vs Tecos","f":"2025-04-22","e":2627,"b":3066,"o":52.4,"c":"TR"},{"n":"J2: Caliente vs Tecos","f":"2025-04-23","e":2464,"b":3123,"o":23.0,"c":"TR"},{"n":"J3: Toros vs Tecos","f":"2025-04-27","e":2300,"b":2881,"o":45.8,"c":"TR"},{"n":"J2: Sultanes vs Tecos","f":"2025-07-05","e":2287,"b":2883,"o":45.6,"c":"TR"},{"n":"Playoffs J2: Acereros vs Tecos","f":"2025-08-13","e":2230,"b":2554,"o":44.4,"c":"Playoffs"},{"n":"J1: Sultanes vs Tecos","f":"2025-08-05","e":2217,"b":2739,"o":44.2,"c":"TR"}]};
+
+
+function renderTop3() {
+  const medals = ['🥇','🥈','🥉'];
+  const t3i = Object.entries(VENTAS).sort((a,b)=>b[1].ingreso_total-a[1].ingreso_total).slice(0,3);
+  const t3o = [...STATS].sort((a,b)=>b.ocup_aforo_prom-a.ocup_aforo_prom).slice(0,3);
+
+  const el1 = document.getElementById('top3-ingreso');
+  t3i.forEach(([eq,v],i)=>{
+    const s = STATS.find(s=>s.equipo===eq);
+    const color = s?.zona==='Norte'?'var(--norte)':'var(--sur)';
+    el1.innerHTML += `<div style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;${i<2?'border-bottom:1px solid var(--border)':''}">
+      <div style="display:flex;align-items:center;gap:9px">
+        <span style="font-size:17px">${medals[i]}</span>
+        <div><div style="font-weight:600">${eq}</div>
+        <span class="chip ${s?.zona==='Norte'?'n':'s'}" style="margin-top:3px">${s?.zona||''}</span></div>
+      </div>
+      <div style="text-align:right">
+        <div style="font-family:'DM Mono',monospace;font-size:16px;font-weight:500;color:${color}">$${fmt(v.ingreso_total)}</div>
+        <div style="font-size:10px;color:var(--text3)">ingreso total</div>
+      </div></div>`;
+  });
+
+  const el2 = document.getElementById('top3-ocup');
+  t3o.forEach((s,i)=>{
+    const color = s.zona==='Norte'?'var(--norte)':'var(--sur)';
+    el2.innerHTML += `<div style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;${i<2?'border-bottom:1px solid var(--border)':''}">
+      <div style="display:flex;align-items:center;gap:9px">
+        <span style="font-size:17px">${medals[i]}</span>
+        <div><div style="font-weight:600">${s.equipo}</div>
+        <span class="chip ${s.zona==='Norte'?'n':'s'}" style="margin-top:3px">${s.zona}</span></div>
+      </div>
+      <div style="text-align:right">
+        <div style="font-family:'DM Mono',monospace;font-size:16px;font-weight:500;color:${color}">${s.ocup_aforo_prom}%</div>
+        <div style="font-size:10px;color:var(--text3)">aforo real</div>
+      </div></div>`;
+  });
+}
+
+// ── EQUIPOS ──
+function initEquipos() { renderEqTable(); renderTeamCards(); }
+
+function renderEqTable() {
+  const key = tblOcupMode==='max'?'ocup_aforo_max':'ocup_aforo_prom';
+  document.getElementById('th-ocup').textContent = `% Ocup (${tblOcupMode==='max'?'Máx':'Real'}) ↕`;
+  let data = eqZone==='todos'?[...STATS]:STATS.filter(s=>s.zona===eqZone);
+  data.sort((a,b)=>sortDir*(a[sortKey]-b[sortKey]));
+  const tbody = document.getElementById('eq-tbody');
+  tbody.innerHTML = '';
+  data.forEach(s => {
+    const ocup = s[key];
+    const pc = ocup>=40?'var(--success)':ocup>=25?'var(--norte)':'var(--text2)';
+    tbody.innerHTML += `<tr>
+      <td style="font-weight:600">${s.equipo}${s.doble_estadio?' <span class="chip warn" style="margin-left:4px">2 est.</span>':''}</td>
+      <td><span class="chip ${s.zona==='Norte'?'n':'s'}">${s.zona}</span></td>
+      <td class="mono">${fmtF(s.aforo_max)}</td>
+      <td class="mono">${fmtF(s.aforo_prom)}</td>
+      <td class="mono">${s.juegos_normales}</td>
+      <td class="mono">${fmtF(s.avg_asistencia)}</td>
+      <td><span class="mono" style="color:${pc}">${ocup}%</span>
+        <div style="width:60px;height:3px;background:var(--bg3);border-radius:2px;display:inline-block;margin-left:6px;vertical-align:middle;overflow:hidden">
+          <div style="width:${Math.min(ocup,100)}%;height:100%;background:${pc}"></div>
+        </div>
+      </td>
+      <td class="mono">${fmtF(s.total_asistencia)}</td>
+      <td style="font-size:11px">${s.nota?'<span style="color:#e8c347">⚠ Ver nota</span>':s.doble_estadio?'<span style="color:var(--text3)">Dos estadios</span>':'<span class="dim">—</span>'}</td>
+    </tr>`;
+  });
+}
+
+function renderTeamCards() {
+  let data = eqZone==='todos'?[...STATS]:STATS.filter(s=>s.zona===eqZone);
+  data.sort((a,b)=>b.avg_asistencia-a.avg_asistencia);
+  const wrap = document.getElementById('team-cards');
+  wrap.innerHTML = '';
+  data.forEach(s => {
+    const color = s.zona==='Norte'?'var(--norte)':'var(--sur)';
+    const pc = s.ocup_aforo_prom>=40?'var(--success)':s.ocup_aforo_prom>=25?'var(--norte)':'var(--text2)';
+    // Outliers for this team
+    const teamOutliers = OUTLIERS.filter(o=>o.EQUIPO===s.equipo);
+    const outHtml = teamOutliers.length ? `
+      <div style="padding:10px 15px;border-top:1px solid var(--border)">
+        <div style="font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--danger);margin-bottom:6px">⚠ Partidos Outlier (${teamOutliers.length})</div>
+        ${teamOutliers.map(o=>`
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;border-bottom:1px solid rgba(37,48,64,.4);font-size:11px">
+            <span style="color:var(--text2);flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${o.EVENTOS}</span>
+            <span style="color:var(--text3);margin:0 8px;flex-shrink:0">${o['FECHA EVENTO']}</span>
+            <span class="chip ${o.outlier_reason.includes('Sin')?'warn':'ok'}" style="flex-shrink:0">${o.outlier_reason.replace(/Asistencia atípicamente /,'')}</span>
+          </div>`).join('')}
+      </div>` : '';
+    // Tecos USA/MX toggle
+    const tecosToggle = s.equipo==='Tecos' ? `
+      <div style="padding:8px 15px;border-top:1px solid var(--border);display:flex;align-items:center;gap:8px">
+        <span style="font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--text3)">Estadio:</span>
+        <button class="ot-btn active" onclick="filterTecos('todos',this,this.parentElement)">Todos</button>
+        <button class="ot-btn" onclick="filterTecos('mx',this,this.parentElement)">🇲🇽 Nuevo Laredo MX</button>
+        <button class="ot-btn" onclick="filterTecos('usa',this,this.parentElement)">🇺🇸 Laredo TX USA</button>
+      </div>` : '';
+
+    const card = document.createElement('div');
+    card.className = 'tcard';
+    card.innerHTML = `
+      <div class="tcard-hdr">
+        <div>
+          <div class="tname" style="color:${color}">${s.equipo}</div>
+          <div style="font-size:10px;color:var(--text3);margin-top:2px">${s.juegos} partidos · Temporada 2025${s.doble_estadio?' · <span style="color:var(--danger)">2 estadios</span>':''}</div>
+        </div>
+        <span class="chip ${s.zona==='Norte'?'n':'s'}">${s.zona}</span>
+      </div>
+      <div class="tsgrid">
+        <div class="tstat">
+          <div class="tsval">${fmtF(s.aforo_max)}</div>
+          <div class="tslbl">Aforo Máx</div>
+        </div>
+        <div class="tstat">
+          <div class="tsval">${fmtF(s.aforo_prom)}</div>
+          <div class="tslbl">Aforo Prom</div>
+        </div>
+        <div class="tstat">
+          <div class="tsval" style="color:${color}">${fmtF(s.avg_asistencia)}</div>
+          <div class="tslbl">Prom Asistencia</div>
+          <div class="minibar"><div class="minibar-fill" style="width:${(s.avg_asistencia/s.aforo_max*100).toFixed(0)}%;background:${color}"></div></div>
+        </div>
+        <div class="tstat">
+          <div class="tsval" style="color:${pc}">${s.ocup_aforo_prom}%</div>
+          <div class="tslbl">Ocup Real</div>
+        </div>
+      </div>
+      ${s.nota?`<div class="nota" style="margin:10px;margin-top:0"><span>⚠</span><span>${s.nota}</span></div>`:''}
+      <div style="padding:10px 15px;border-top:1px solid var(--border);display:flex;gap:12px">
+        <div style="flex:1">
+          <div style="font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--text3);margin-bottom:3px">Total Asistentes</div>
+          <div class="mono" style="font-size:14px">${fmtF(s.total_asistencia)}</div>
+        </div>
+        <div style="flex:1">
+          <div style="font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--text3);margin-bottom:3px">Ocup Aforo Máx</div>
+          <div class="mono" style="font-size:14px;color:var(--text3)">${s.ocup_aforo_max}%</div>
+        </div>
+        <div style="flex:1;border-left:1px solid var(--border);padding-left:12px">
+          <div style="font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--text3);margin-bottom:3px">Outliers</div>
+          <div class="mono" style="font-size:14px;color:${s.outliers>0?'var(--danger)':'var(--text3)'}">${s.outliers}</div>
+        </div>
+      </div>
+      ${tecosToggle}
+      ${outHtml}`;
+    wrap.appendChild(card);
+  });
+}
+
+// Tecos USA/MX filter — filters the outliers section by stadium type
+// MX = Nuevo Laredo (aforo ~5,000), USA = Laredo TX (aforo ~10,000+)
+function filterTecos(mode, btn, parent) {
+  parent.querySelectorAll('.ot-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  // Show note about filter
+  let noteEl = parent.nextElementSibling;
+  if(noteEl && noteEl.classList.contains('tecos-filter-note')) noteEl.remove();
+  if(mode !== 'todos') {
+    const note = document.createElement('div');
+    note.className = 'tecos-filter-note nota';
+    note.style.margin = '0 10px 10px';
+    const labels = {
+      mx: '🇲🇽 Nuevo Laredo MX — Aforo ~5,000. Partidos donde el rival local es equipo mexicano.',
+      usa: '🇺🇸 Laredo TX USA — Aforo ~10,718. Partidos con rival de la división norte de USA.',
+    };
+    note.innerHTML = `<span>ℹ</span><span style="font-size:11px">${labels[mode]}</span>`;
+    btn.closest('.tcard').appendChild(note);
+  }
+}
+
+function fEq(zona,btn) {
+  document.querySelectorAll('#equipos .fb').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active'); eqZone=zona; renderEqTable(); renderTeamCards();
+}
+function srt(key) { if(sortKey===key)sortDir*=-1;else{sortKey=key;sortDir=-1;} renderEqTable(); }
+function toggleTblOcup(mode) {
+  tblOcupMode=mode;
+  document.getElementById('et-max').classList.toggle('active',mode==='max');
+  document.getElementById('et-prom').classList.toggle('active',mode==='prom');
+  renderEqTable();
+}
+
+// ── OUTLIERS ──
+let outFilterEq = 'todos';
+function initOutliers() {
+  document.getElementById('ob').textContent = OUTLIERS.length;
+  // Build team filter buttons
+  const wrap = document.getElementById('out-team-filter');
+  if(wrap) {
+    const teams = [...new Set(OUTLIERS.map(o=>o.EQUIPO))];
+    teams.forEach(eq=>{
+      const btn = document.createElement('button');
+      btn.className='fb'; btn.textContent=eq;
+      btn.onclick=()=>filterOutliers(eq,btn);
+      wrap.appendChild(btn);
+    });
+  }
+  renderOutliersTable();
+}
+function filterOutliers(eq, btn) {
+  outFilterEq = outFilterEq===eq?'todos':eq;
+  document.querySelectorAll('#out-team-filter .fb').forEach(b=>b.classList.remove('active'));
+  if(outFilterEq!=='todos') btn.classList.add('active');
+  renderOutliersTable();
+}
+function renderOutliersTable() {
+  const tbody = document.getElementById('out-tbody');
+  tbody.innerHTML = '';
+  const filtered = outFilterEq==='todos'?OUTLIERS:OUTLIERS.filter(o=>o.EQUIPO===outFilterEq);
+  filtered.forEach(o => {
+    const zona = STATS.find(s=>s.equipo===o.EQUIPO)?.zona||'';
+    const noData = o.outlier_reason.includes('Sin');
+    tbody.innerHTML += `<tr>
+      <td><span style="font-weight:600;display:flex;align-items:center;gap:6px">
+        <div class="bdot ${zona==='Norte'?'n':'s'}"></div>${o.EQUIPO}
+      </span></td>
+      <td style="font-size:11px;max-width:260px">${o.EVENTOS}</td>
+      <td class="mono dim">${o['FECHA EVENTO']}</td>
+      <td class="mono">${fmtF(o.Boletos)}</td>
+      <td class="mono" style="color:${noData?'var(--danger)':'var(--norte)'}">${fmtF(o.Escaneados)}</td>
+      <td><span class="chip ${noData?'warn':'ok'}">${o.outlier_reason}</span></td>
+    </tr>`;
+  });
+}
+
+// ── ASISTENCIA CHARTS ──
+let asistRendered = false;
+function renderAsistCharts() {
+  if(asistRendered) return; asistRendered = true;
+  const sorted = [...STATS].sort((a,b)=>b.avg_asistencia-a.avg_asistencia);
+  const colors = sorted.map(s=>s.zona==='Norte'?'rgba(245,166,35,.7)':'rgba(62,207,190,.7)');
+
+  new Chart(document.getElementById('chartAsist'),{type:'bar',
+    data:{labels:sorted.map(s=>s.equipo),datasets:[
+      {label:'Asistencia promedio',data:sorted.map(s=>s.avg_asistencia),backgroundColor:colors,borderRadius:4},
+      {label:'Aforo máximo',data:sorted.map(s=>s.aforo_max),backgroundColor:'rgba(255,255,255,.04)',borderColor:'rgba(255,255,255,.1)',borderWidth:1,borderRadius:4},
+      {label:'Aforo promedio',data:sorted.map(s=>s.aforo_prom),backgroundColor:'rgba(79,127,255,.08)',borderColor:'rgba(79,127,255,.25)',borderWidth:1,borderRadius:4}
+    ]},
+    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{labels:{color:'#7d8faa',font:{size:10}}}},
+      scales:{x:{grid:{color:'rgba(37,48,64,.5)'},ticks:{color:'#7d8faa'}},y:{grid:{color:'rgba(37,48,64,.5)'},ticks:{color:'#7d8faa',callback:v=>fmt(v)}}}}
+  });
+
+  new Chart(document.getElementById('chartTotal'),{type:'bar',
+    data:{labels:sorted.map(s=>s.equipo),datasets:[{
+      label:'Total asistentes',data:sorted.map(s=>s.total_asistencia),
+      backgroundColor:sorted.map(s=>s.zona==='Norte'?'rgba(245,166,35,.7)':'rgba(62,207,190,.7)'),borderRadius:4
+    }]},
+    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
+      scales:{x:{grid:{color:'rgba(37,48,64,.5)'},ticks:{color:'#7d8faa'}},y:{grid:{color:'rgba(37,48,64,.5)'},ticks:{color:'#7d8faa',callback:v=>fmt(v)}}}}
+  });
+
+  new Chart(document.getElementById('chartOcup'),{type:'bar',
+    data:{labels:STATS.map(s=>s.equipo),datasets:[
+      {label:'Ocup. Aforo Máx %',data:STATS.map(s=>s.ocup_aforo_max),backgroundColor:'rgba(255,255,255,.15)',borderRadius:4},
+      {label:'Ocup. Aforo Real %',data:STATS.map(s=>s.ocup_aforo_prom),backgroundColor:STATS.map(s=>s.zona==='Norte'?'rgba(245,166,35,.7)':'rgba(62,207,190,.7)'),borderRadius:4}
+    ]},
+    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{labels:{color:'#7d8faa',font:{size:10}}}},
+      scales:{x:{grid:{color:'rgba(37,48,64,.5)'},ticks:{color:'#7d8faa'}},y:{grid:{color:'rgba(37,48,64,.5)'},ticks:{color:'#7d8faa',callback:v=>v+'%',max:100}}}}
+  });
+}
+
+
+let activeEqPanel = null, activeFilter = 'Todos', panelSortCol = 'ing', panelSortDir = -1;
+
+function renderSalesCharts() {
+  const sortedI = Object.entries(VENTAS).sort((a,b)=>b[1].ingreso_total-a[1].ingreso_total);
+  const sortedB = Object.entries(VENTAS).sort((a,b)=>b[1].total_boletos-a[1].total_boletos);
+  const gc = eq => { const s=STATS.find(s=>s.equipo===eq); return s?.zona==='Norte'; };
+  const scaleOpts = (stacked=false) => ({
+    x:{grid:{color:'rgba(37,48,64,.4)'},ticks:{color:'#7d8faa',font:{size:10}},stacked},
+    y:{grid:{color:'rgba(37,48,64,.4)'},ticks:{color:'#7d8faa'},stacked}
+  });
+
+  // ── INGRESOS: stacked Taquilla + Línea con label total ──
+  const dataLabel_ing = {
+    id:'dataLabel_ing',
+    afterDatasetsDraw(chart){
+      const {ctx,data,scales:{x,y}} = chart;
+      ctx.save();
+      // draw total on top of each bar stack
+      data.labels.forEach((lbl,i)=>{
+        const total = data.datasets.reduce((s,ds)=>s+(ds.data[i]||0),0);
+        const xPos = x.getPixelForValue(i);
+        const yPos = y.getPixelForValue(total);
+        ctx.fillStyle='#dde4f0'; ctx.font='bold 10px DM Sans,sans-serif';
+        ctx.textAlign='center'; ctx.textBaseline='bottom';
+        ctx.fillText('$'+fmt(total), xPos, yPos-3);
+      });
+      ctx.restore();
+    }
+  };
+
+  new Chart(document.getElementById('chartIngresos'),{type:'bar',
+    plugins:[dataLabel_ing],
+    data:{labels:sortedI.map(([e])=>e),datasets:[
+      {label:'Taquilla',
+        data:sortedI.map(([,v])=>v.ingreso_taquilla||0),
+        backgroundColor:sortedI.map(([e])=>gc(e)?'rgba(245,166,35,.45)':'rgba(62,207,190,.45)'),
+        borderRadius:0, stack:'s'},
+      {label:'Línea/App',
+        data:sortedI.map(([,v])=>v.ingreso_online||0),
+        backgroundColor:sortedI.map(([e])=>gc(e)?'rgba(245,166,35,.9)':'rgba(62,207,190,.9)'),
+        borderRadius:4, stack:'s'},
+    ]},
+    options:{responsive:true,maintainAspectRatio:false,
+      onClick:(e,els,chart)=>{if(els.length)openPanel(sortedI[els[0].index][0]);},
+      plugins:{legend:{labels:{color:'#7d8faa',font:{size:10},boxWidth:12}},
+        tooltip:{callbacks:{
+          label:c=>` ${c.dataset.label}: $${fmt(c.raw)}`,
+          footer:items=>`Total: $${fmt(items.reduce((s,i)=>s+i.raw,0))}`
+        }}},
+      scales:{...scaleOpts(true), y:{...scaleOpts(true).y, ticks:{color:'#7d8faa',callback:v=>'$'+fmt(v)}}}}
+  });
+
+  // ── BOLETOS: stacked Vendidos + Promociones + Cortesías con label total ──
+  const dataLabel_bol = {
+    id:'dataLabel_bol',
+    afterDatasetsDraw(chart){
+      const {ctx,data,scales:{x,y}} = chart;
+      ctx.save();
+      data.labels.forEach((lbl,i)=>{
+        const total = data.datasets.reduce((s,ds)=>s+(ds.data[i]||0),0);
+        const xPos = x.getPixelForValue(i);
+        const yPos = y.getPixelForValue(total);
+        ctx.fillStyle='#dde4f0'; ctx.font='bold 10px DM Sans,sans-serif';
+        ctx.textAlign='center'; ctx.textBaseline='bottom';
+        ctx.fillText(fmt(total), xPos, yPos-3);
+      });
+      ctx.restore();
+    }
+  };
+
+  new Chart(document.getElementById('chartBoletos'),{type:'bar',
+    plugins:[dataLabel_bol],
+    data:{labels:sortedB.map(([e])=>e),datasets:[
+      {label:'Cortesías',
+        data:sortedB.map(([,v])=>v.cortesias||0),
+        backgroundColor:'rgba(248,113,113,.75)',borderRadius:0,stack:'s'},
+      {label:'Promociones',
+        data:sortedB.map(([,v])=>v.promociones||0),
+        backgroundColor:'rgba(167,139,250,.75)',borderRadius:0,stack:'s'},
+      {label:'Vendidos',
+        data:sortedB.map(([,v])=>v.vendidos||0),
+        backgroundColor:'rgba(79,127,255,.85)',borderRadius:4,stack:'s'},
+    ]},
+    options:{responsive:true,maintainAspectRatio:false,
+      onClick:(e,els,chart)=>{if(els.length)openPanel(sortedB[els[0].index][0]);},
+      plugins:{legend:{labels:{color:'#7d8faa',font:{size:10},boxWidth:12}},
+        tooltip:{callbacks:{
+          label:c=>` ${c.dataset.label}: ${fmt(c.raw)} (${sortedB[c.dataIndex][1]['pct_'+c.dataset.label.toLowerCase().replace('ó','o').replace('é','e')]||''}%)`,
+          footer:items=>`Total: ${fmt(items.reduce((s,i)=>s+i.raw,0))}`
+        }}},
+      scales:{...scaleOpts(true), y:{...scaleOpts(true).y, ticks:{color:'#7d8faa',callback:v=>fmt(v)}}}}
+  });
+}
+
+function openPanel(eq) {
+  activeEqPanel = eq; activeFilter = 'Todos'; panelSortCol = 'ing'; panelSortDir = -1;
+  document.querySelectorAll('#game-panel .fb').forEach((b,i)=>{b.classList.toggle('active',i===0);});
+  const zona = STATS.find(s=>s.equipo===eq)?.zona||'Norte';
+  document.getElementById('panel-title').textContent = `Partidos — ${eq}`;
+  const chip = document.getElementById('panel-chip');
+  chip.textContent = zona; chip.className=`chip ${zona==='Norte'?'n':'s'}`;
+  document.getElementById('game-panel').style.display='block';
+  document.getElementById('game-panel').scrollIntoView({behavior:'smooth',block:'nearest'});
+  renderPanelGames();
+}
+function closePanel(){document.getElementById('game-panel').style.display='none';}
+function filterGames(cat,btn){
+  activeFilter=cat;
+  document.querySelectorAll('#game-panel .fb').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active'); renderPanelGames();
+}
+function sortPanel(col){
+  if(panelSortCol===col) panelSortDir*=-1; else{panelSortCol=col;panelSortDir=-1;}
+  renderPanelGames();
+}
+function renderPanelGames(){
+  const data = (JUEGOS2[activeEqPanel]||[]).filter(g=>activeFilter==='Todos'||g.c===activeFilter);
+  const sorted = [...data].sort((a,b)=>panelSortDir*(a[panelSortCol]||0)-(b[panelSortCol]||0)*panelSortDir);
+  const tbody = document.getElementById('panel-tbody');
+  // Update headers
+  const ths = document.querySelectorAll('#game-panel th.s-col');
+  if(ths.length){ths.forEach(th=>{const c=th.dataset.col;th.textContent=th.dataset.label+(panelSortCol===c?(panelSortDir>0?' ↑':' ↓'):'');});}
+  tbody.innerHTML='';
+  if(!sorted.length){tbody.innerHTML='<tr><td colspan="6" style="text-align:center;color:var(--text3);padding:20px">Sin partidos en esta categoría</td></tr>';return;}
+  sorted.forEach((g,i)=>{
+    const cColor=g.c==='Playoffs'?'var(--gold)':'var(--accent)';
+    const onlPct = g.ing>0?Math.round(g.ing_onl/g.ing*100):0;
+    tbody.innerHTML+=`<tr>
+      <td class="mono dim">${i+1}</td>
+      <td style="font-size:12px;max-width:220px">${g.n}</td>
+      <td class="mono dim">${g.f}</td>
+      <td class="mono" style="color:var(--gold);cursor:pointer" onclick="sortPanel('ing')" title="Clic para ordenar">$${fmt(g.ing)}
+        <div style="font-size:10px;color:var(--text3)">onl: $${fmt(g.ing_onl)} (${onlPct}%)</div>
+      </td>
+      <td><span class="chip" style="background:${g.c==='Playoffs'?'rgba(245,200,60,.1)':'rgba(79,127,255,.1)'};color:${cColor};border-color:${cColor}40">${g.c}</span></td>
+    </tr>`;
+  });
+}
+
+// ── FANS JS ──
+let fansDonutChart=null, fansBarChart=null, activeFansEq='Liga';
+function initFans(){
+  // Liga totals
+  const total = Object.values(FANS).reduce((a,d)=>a+d.total_fans_online,0);
+  const f1 = Object.values(FANS).reduce((a,d)=>a+(d.freq['1']||0),0);
+  const f25 = Object.values(FANS).reduce((a,d)=>a+(d.freq['2-5']||0),0);
+  const f610 = Object.values(FANS).reduce((a,d)=>a+(d.freq['6-10']||0),0);
+  const f10 = Object.values(FANS).reduce((a,d)=>a+(d.freq['+10']||0),0);
+  document.getElementById('f-total').textContent = fmt(total);
+  document.getElementById('f-1').textContent = fmt(f1);
+  document.getElementById('f-25').textContent = fmt(f25);
+  document.getElementById('f-610').textContent = fmt(f610);
+  document.getElementById('f-10').textContent = fmt(f10);
+
+  // Retention table
+  const rows = Object.entries(FANS).sort((a,b)=>b[1].total_fans_online-a[1].total_fans_online).map(([eq,d])=>{
+    const f=d.freq; const t=d.total_fans_online;
+    const pct1=(f['1']||0)/t*100;
+    const avgR = d.avg_gasto;
+    // If all 1-time fans came back once more: extra revenue estimate
+    const extra = Math.round((f['1']||0)*avgR);
+    return `<tr>
+      <td style="font-weight:600">${eq}</td>
+      <td class="mono">${fmtF(t)}</td>
+      <td class="mono" style="color:var(--cortesia)">${pct1.toFixed(1)}%</td>
+      <td class="mono">$${fmtF(avgR)}</td>
+      <td class="mono" style="color:var(--success)">+$${fmt(extra)}</td>
+    </tr>`;
+  }).join('');
+  document.getElementById('retention-table').innerHTML=`<table style="width:100%">
+    <thead><tr><th>Equipo</th><th>Fans Online</th><th>% Van 1 vez</th><th>Gasto Prom</th><th>💡 Si todos vuelven 1x más</th></tr></thead>
+    <tbody>${rows}</tbody>
+  </table>`;
+
+  selFansEq('Liga', document.querySelector('#fans .fb'));
+  renderFansBar();
+}
+
+function selFansEq(eq, btn){
+  activeFansEq=eq;
+  document.querySelectorAll('#fans .frow .fb').forEach(b=>b.classList.remove('active'));
+  if(btn) btn.classList.add('active');
+  document.getElementById('fans-chart-title').textContent=`Segmentación por Frecuencia — ${eq}`;
+  if(fansDonutChart){fansDonutChart.destroy();fansDonutChart=null;}
+  let freq;
+  if(eq==='Liga'){
+    freq={'1':0,'2-5':0,'6-10':0,'+10':0};
+    Object.values(FANS).forEach(d=>{Object.entries(d.freq).forEach(([k,v])=>{freq[k]=(freq[k]||0)+v;});});
+  } else {
+    freq=FANS[eq]?.freq||{};
+  }
+  const cats=['1','2-5','6-10','+10'];
+  const vals=cats.map(c=>freq[c]||0);
+  fansDonutChart=new Chart(document.getElementById('chartFansDonut'),{type:'doughnut',
+    data:{labels:['1 juego','2-5 juegos','6-10 juegos','+10 juegos'],
+      datasets:[{data:vals,backgroundColor:['rgba(248,113,113,.8)','rgba(245,166,35,.8)','rgba(79,127,255,.8)','rgba(77,202,128,.8)'],borderColor:'transparent'}]},
+    options:{responsive:true,maintainAspectRatio:false,cutout:'60%',
+      plugins:{legend:{position:'right',labels:{color:'#7d8faa',font:{size:11},generateLabels:chart=>chart.data.labels.map((l,i)=>({text:`${l}: ${fmtF(vals[i])} (${vals.reduce((a,b)=>a+b,0)>0?(vals[i]/vals.reduce((a,b)=>a+b,0)*100).toFixed(1)+'%':'0%'})`,fillStyle:chart.data.datasets[0].backgroundColor[i],hidden:false,index:i}))}}}}
+  });
+}
+
+function renderFansBar(){
+  const eqs=Object.keys(FANS);
+  const colors=eqs.map(e=>{const s=STATS.find(s=>s.equipo===e);return s?.zona==='Norte'?'rgba(245,166,35,.7)':'rgba(62,207,190,.7)';});
+  fansBarChart=new Chart(document.getElementById('chartFansBar'),{type:'bar',
+    data:{labels:eqs,datasets:[
+      {label:'1 juego',data:eqs.map(e=>FANS[e].freq['1']||0),backgroundColor:'rgba(248,113,113,.7)',stack:'s'},
+      {label:'2-5 juegos',data:eqs.map(e=>FANS[e].freq['2-5']||0),backgroundColor:'rgba(245,166,35,.7)',stack:'s'},
+      {label:'6-10 juegos',data:eqs.map(e=>FANS[e].freq['6-10']||0),backgroundColor:'rgba(79,127,255,.8)',stack:'s'},
+      {label:'+10 juegos',data:eqs.map(e=>FANS[e].freq['+10']||0),backgroundColor:'rgba(77,202,128,.9)',stack:'s'},
+    ]},
+    options:{responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{labels:{color:'#7d8faa',font:{size:10}}}},
+      scales:{x:{grid:{color:'rgba(37,48,64,.4)'},ticks:{color:'#7d8faa',font:{size:10}},stacked:true},
+        y:{grid:{color:'rgba(37,48,64,.4)'},ticks:{color:'#7d8faa',callback:v=>fmt(v)},stacked:true}}}
+  });
+}
+
+// ── BOOT ──
+// Inicializar dashboard
+initOverview();
+initEquipos();
+initOutliers();
+initFans();
+</script>
+</body>
+</html>
