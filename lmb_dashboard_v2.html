@@ -8,15 +8,15 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
 :root {
-  --bg:#090d13;--bg2:#101520;--bg3:#161c28;--card:#192030;--card2:#1e273d;
-  --border:#253040;--border2:#2e3d55;
-  --text:#dde4f0;--text2:#7d8faa;--text3:#47556a;
+  --bg:#0E1423;--bg2:#111827;--bg3:#172033;--card:#1a2538;--card2:#1f2d44;
+  --border:#263348;--border2:#304060;
+  --text:#e0e7f1;--text2:#8298b5;--text3:#4a5f7a;
   --norte:#f5a623;--norte-dim:rgba(245,166,35,.1);
   --sur:#3ecfbe;--sur-dim:rgba(62,207,190,.1);
-  --accent:#4f7fff;--accent-dim:rgba(79,127,255,.1);
+  --accent:#00c677;--accent-dim:rgba(0,198,119,.12);
   --danger:#ff5252;--danger-dim:rgba(255,82,82,.08);
-  --success:#4dca80;--gold:#f5c83a;
-  --vendido:#4f7fff;--promocion:#a78bfa;--cortesia:#f87171;
+  --success:#00c677;--gold:#f5c83a;
+  --vendido:#00c677;--promocion:#a78bfa;--cortesia:#f87171;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:14px;line-height:1.5}
@@ -24,7 +24,7 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;fon
 /* HEADER */
 .hdr{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 28px;display:flex;align-items:center;justify-content:space-between;height:60px;position:sticky;top:0;z-index:100}
 .hdr-left{display:flex;align-items:center;gap:14px}
-.logo{background:var(--accent);color:#fff;font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:2px;padding:5px 11px;border-radius:5px}
+.logo{background:#00c677;color:#fff;font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:2px;padding:5px 11px;border-radius:5px}
 .hdr-title{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:3px}
 .hdr-sub{font-size:10px;color:var(--text3);font-family:'DM Mono',monospace;letter-spacing:1px;text-transform:uppercase;margin-top:1px}
 .phase{background:var(--danger-dim);border:1px solid rgba(255,82,82,.4);color:var(--danger);font-size:10px;font-family:'DM Mono',monospace;padding:4px 9px;border-radius:4px;letter-spacing:.5px}
@@ -482,6 +482,45 @@ tr:last-child td{border-bottom:none}
         <tbody id="out-tbody"></tbody>
       </table>
     </div>
+  </div>
+</div>
+
+
+<!-- ══ MULTI-EQUIPO ══ -->
+<div id="multiequipo" class="sec">
+  <div class="shdr"><div class="stitle">Fans Multi-Equipo</div><div class="sdesc">Fans online que compraron boletos para más de un equipo · Viajeros de béisbol</div></div>
+
+  <div class="g4 mb">
+    <div class="card"><div class="ctitle">Fans Multi-Equipo</div><div class="kv" style="color:var(--accent)" id="me-total">—</div><div class="kl">Compraron en 2+ equipos</div></div>
+    <div class="card"><div class="ctitle">Equipos Promedio</div><div class="kv" id="me-avg-eq">—</div><div class="kl">Equipos por fan multi</div></div>
+    <div class="card"><div class="ctitle">Gasto Promedio</div><div class="kv" style="color:var(--gold)" id="me-avg-gasto">—</div><div class="kl">Total across equipos</div></div>
+    <div class="card"><div class="ctitle">Max Equipos</div><div class="kv" style="color:var(--danger)" id="me-max-eq">—</div><div class="kl">Récord de un solo fan</div></div>
+  </div>
+
+  <div class="g2 mb">
+    <div class="card">
+      <div class="ctitle">Distribución: ¿Cuántos equipos visitan?</div>
+      <div id="me-dist-bars"></div>
+    </div>
+    <div class="card">
+      <div class="ctitle">Combinaciones más frecuentes</div>
+      <div id="me-combos"></div>
+    </div>
+  </div>
+
+  <div class="card mb">
+    <div class="ctitle">🏆 Top 20 Fans Viajeros — Más equipos visitados</div>
+    <div class="twrap" id="me-top-fans"></div>
+  </div>
+
+  <div class="card mb">
+    <div class="ctitle">Red de Equipos — ¿Qué equipos comparten más fans?</div>
+    <div id="me-network"></div>
+  </div>
+
+  <div class="nota">
+    <span>ℹ</span>
+    <span>Análisis basado en correos electrónicos únicos que aparecen en órdenes online de más de un equipo. Un fan que compró boletos para Charros y Sultanes cuenta como "multi-equipo" con 2 equipos.</span>
   </div>
 </div>
 
@@ -1162,6 +1201,63 @@ initOverview();
 initEquipos();
 initOutliers();
 initFans();
+
+// ── MULTI-EQUIPO ──
+var MULTI_EQ = null;
+function loadMultiEquipo(){
+  fetch('data/fans_multiequipo.json').then(r=>r.json()).then(function(d){
+    MULTI_EQ=d; initMultiEquipo();
+  }).catch(function(){
+    var sec=document.getElementById('multiequipo');
+    if(sec){var c=sec.querySelector('.g4');if(c)c.insertAdjacentHTML('afterend','<div class="nota mb"><span>⚠</span><span>Requiere generar fans_multiequipo.json: <code>python3 generar_fans_detalle.py</code></span></div>');}
+  });
+}
+function initMultiEquipo(){
+  if(!MULTI_EQ) return;
+  var d=MULTI_EQ;
+  var el=function(id){return document.getElementById(id);};
+  if(el('me-total')) el('me-total').textContent=fmtF(d.total_multi);
+  if(el('me-avg-eq')) el('me-avg-eq').textContent=d.avg_equipos.toFixed(1);
+  if(el('me-avg-gasto')) el('me-avg-gasto').textContent='$'+fmt(d.avg_gasto);
+  if(el('me-max-eq')) el('me-max-eq').textContent=d.max_equipos;
+  // Distribution bars
+  var distEl=el('me-dist-bars');
+  if(distEl&&d.distribucion){
+    var maxV=Math.max.apply(null,d.distribucion.map(function(x){return x.fans;}));
+    distEl.innerHTML=d.distribucion.map(function(x){
+      return '<div class="brow" style="margin-bottom:8px"><div class="blabels"><div class="bteam">'+x.equipos+' equipos</div><div class="bpct" style="color:var(--accent)">'+fmtF(x.fans)+' fans</div></div><div class="btrack"><div class="bfill" style="width:'+(x.fans/maxV*100)+'%;background:var(--accent)"></div></div></div>';
+    }).join('');
+  }
+  // Top combos
+  var comboEl=el('me-combos');
+  if(comboEl&&d.top_combos){
+    var maxC=d.top_combos.length>0?d.top_combos[0].fans:1;
+    comboEl.innerHTML=d.top_combos.slice(0,12).map(function(x){
+      return '<div class="brow" style="margin-bottom:6px"><div class="blabels"><div class="bteam" style="font-size:11px">'+x.combo+'</div><div class="bpct" style="color:var(--gold)">'+fmtF(x.fans)+' fans</div></div><div class="btrack"><div class="bfill" style="width:'+(x.fans/maxC*100)+'%;background:var(--gold)"></div></div></div>';
+    }).join('');
+  }
+  // Top fans table
+  var topEl=el('me-top-fans');
+  if(topEl&&d.top_fans){
+    var medals=['🥇','🥈','🥉'];
+    topEl.innerHTML='<table style="width:100%"><thead><tr><th>#</th><th>Fan</th><th>Equipos</th><th>Detalle Equipos</th><th>Gasto Total</th><th>Órdenes</th></tr></thead><tbody>'+
+      d.top_fans.map(function(f,i){
+        return '<tr><td>'+(i<3?medals[i]:(i+1))+'</td><td class="mono" style="font-size:11px">'+f.correo+'</td><td class="mono" style="color:var(--accent);font-weight:600">'+f.n_equipos+'</td><td style="font-size:11px">'+f.equipos.join(', ')+'</td><td class="mono" style="color:var(--gold)">$'+fmt(f.gasto)+'</td><td class="mono">'+fmtF(f.ordenes)+'</td></tr>';
+      }).join('')+'</tbody></table>';
+  }
+  // Network: shared fans between team pairs
+  var netEl=el('me-network');
+  if(netEl&&d.network){
+    var maxN=d.network.length>0?d.network[0].shared:1;
+    netEl.innerHTML='<div style="display:grid;grid-template-columns:1fr 1fr;gap:6px 16px">'+
+      d.network.slice(0,20).map(function(x){
+        return '<div class="brow" style="margin-bottom:4px"><div class="blabels"><div class="bteam" style="font-size:11px">'+x.pair+'</div><div class="bpct" style="color:var(--accent)">'+fmtF(x.shared)+' fans</div></div><div class="btrack"><div class="bfill" style="width:'+(x.shared/maxN*100)+'%;background:var(--accent)"></div></div></div>';
+      }).join('')+'</div>';
+  }
+}
+if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',loadMultiEquipo);}
+else{loadMultiEquipo();}
+
 </script>
 </body>
 </html>
