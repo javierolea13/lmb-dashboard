@@ -1,0 +1,523 @@
+{
+  "total_multi": 2029,
+  "total_fans": 115083,
+  "avg_equipos": 2.07,
+  "avg_gasto": 2424.8,
+  "max_equipos": 6,
+  "distribucion": [
+    {
+      "equipos": 2,
+      "fans": 1922
+    },
+    {
+      "equipos": 3,
+      "fans": 89
+    },
+    {
+      "equipos": 4,
+      "fans": 9
+    },
+    {
+      "equipos": 5,
+      "fans": 8
+    },
+    {
+      "equipos": 6,
+      "fans": 1
+    }
+  ],
+  "top_combos": [
+    {
+      "combo": "Saraperos + Sultanes",
+      "fans": 857
+    },
+    {
+      "combo": "Charros + Sultanes",
+      "fans": 263
+    },
+    {
+      "combo": "Sultanes + Tecos",
+      "fans": 205
+    },
+    {
+      "combo": "Bravos + Charros",
+      "fans": 127
+    },
+    {
+      "combo": "Charros + Rieleros",
+      "fans": 82
+    },
+    {
+      "combo": "Charros + Toros",
+      "fans": 77
+    },
+    {
+      "combo": "Bravos + Sultanes",
+      "fans": 62
+    },
+    {
+      "combo": "Dorados + Sultanes",
+      "fans": 57
+    },
+    {
+      "combo": "Caliente + Sultanes",
+      "fans": 54
+    },
+    {
+      "combo": "Sultanes + Toros",
+      "fans": 50
+    },
+    {
+      "combo": "Charros + Saraperos",
+      "fans": 43
+    },
+    {
+      "combo": "Guerreros + Sultanes",
+      "fans": 41
+    },
+    {
+      "combo": "Rieleros + Sultanes",
+      "fans": 40
+    },
+    {
+      "combo": "Bravos + Rieleros",
+      "fans": 35
+    },
+    {
+      "combo": "Charros + Guerreros",
+      "fans": 34
+    }
+  ],
+  "top_fans": [
+    {
+      "correo": "ito***@mail4.uk",
+      "n_equipos": 6,
+      "equipos": [
+        "Bravos",
+        "Dorados",
+        "Guerreros",
+        "Rieleros",
+        "Saraperos",
+        "Toros"
+      ],
+      "gasto": 15070.0,
+      "ordenes": 230
+    },
+    {
+      "correo": "ped***@hotmail.com",
+      "n_equipos": 5,
+      "equipos": [
+        "Charros",
+        "Dorados",
+        "Saraperos",
+        "Sultanes",
+        "Tecos"
+      ],
+      "gasto": 22245.0,
+      "ordenes": 172
+    },
+    {
+      "correo": "ros***@gmail.com",
+      "n_equipos": 5,
+      "equipos": [
+        "Bravos",
+        "Caliente",
+        "Rieleros",
+        "Saraperos",
+        "Sultanes"
+      ],
+      "gasto": 16284.0,
+      "ordenes": 77
+    },
+    {
+      "correo": "ale***@hotmail.com",
+      "n_equipos": 5,
+      "equipos": [
+        "Rieleros",
+        "Saraperos",
+        "Sultanes",
+        "Tecos",
+        "Toros"
+      ],
+      "gasto": 14705.0,
+      "ordenes": 59
+    },
+    {
+      "correo": "mar***@gmail.com",
+      "n_equipos": 5,
+      "equipos": [
+        "Bravos",
+        "Charros",
+        "Saraperos",
+        "Sultanes",
+        "Tecos"
+      ],
+      "gasto": 10300.0,
+      "ordenes": 50
+    },
+    {
+      "correo": "cas***@hotmail.com",
+      "n_equipos": 5,
+      "equipos": [
+        "Charros",
+        "Saraperos",
+        "Sultanes",
+        "Tecos",
+        "Toros"
+      ],
+      "gasto": 9281.0,
+      "ordenes": 43
+    },
+    {
+      "correo": "ana***@gmail.com",
+      "n_equipos": 5,
+      "equipos": [
+        "Bravos",
+        "Charros",
+        "Saraperos",
+        "Sultanes",
+        "Toros"
+      ],
+      "gasto": 7960.0,
+      "ordenes": 31
+    },
+    {
+      "correo": "lui***@gmail.com",
+      "n_equipos": 5,
+      "equipos": [
+        "Dorados",
+        "Guerreros",
+        "Rieleros",
+        "Sultanes",
+        "Toros"
+      ],
+      "gasto": 6260.0,
+      "ordenes": 197
+    },
+    {
+      "correo": "rod***@outlook.com",
+      "n_equipos": 5,
+      "equipos": [
+        "Bravos",
+        "Charros",
+        "Rieleros",
+        "Sultanes",
+        "Toros"
+      ],
+      "gasto": 3760.0,
+      "ordenes": 56
+    },
+    {
+      "correo": "cac***@hotmail.com",
+      "n_equipos": 4,
+      "equipos": [
+        "Bravos",
+        "Charros",
+        "Saraperos",
+        "Sultanes"
+      ],
+      "gasto": 9090.0,
+      "ordenes": 39
+    },
+    {
+      "correo": "ger***@hotmail.com",
+      "n_equipos": 4,
+      "equipos": [
+        "Charros",
+        "Saraperos",
+        "Sultanes",
+        "Tecos"
+      ],
+      "gasto": 4930.0,
+      "ordenes": 26
+    },
+    {
+      "correo": "jor***@hotmail.com",
+      "n_equipos": 4,
+      "equipos": [
+        "Rieleros",
+        "Saraperos",
+        "Sultanes",
+        "Tecos"
+      ],
+      "gasto": 4290.0,
+      "ordenes": 22
+    },
+    {
+      "correo": "mip***@gmail.com",
+      "n_equipos": 4,
+      "equipos": [
+        "Bravos",
+        "Charros",
+        "Rieleros",
+        "Sultanes"
+      ],
+      "gasto": 3950.0,
+      "ordenes": 15
+    },
+    {
+      "correo": "jua***@gmail.com",
+      "n_equipos": 4,
+      "equipos": [
+        "Charros",
+        "Rieleros",
+        "Saraperos",
+        "Sultanes"
+      ],
+      "gasto": 3580.0,
+      "ordenes": 19
+    },
+    {
+      "correo": "ren***@hotmail.com",
+      "n_equipos": 4,
+      "equipos": [
+        "Bravos",
+        "Charros",
+        "Guerreros",
+        "Toros"
+      ],
+      "gasto": 2695.0,
+      "ordenes": 11
+    },
+    {
+      "correo": "lui***@hotmail.com",
+      "n_equipos": 4,
+      "equipos": [
+        "Charros",
+        "Saraperos",
+        "Sultanes",
+        "Tecos"
+      ],
+      "gasto": 2598.0,
+      "ordenes": 12
+    },
+    {
+      "correo": "jos***@gmail.com",
+      "n_equipos": 4,
+      "equipos": [
+        "Caliente",
+        "Charros",
+        "Sultanes",
+        "Tecos"
+      ],
+      "gasto": 2352.0,
+      "ordenes": 18
+    },
+    {
+      "correo": "pac***@gmail.com",
+      "n_equipos": 4,
+      "equipos": [
+        "Rieleros",
+        "Saraperos",
+        "Sultanes",
+        "Tecos"
+      ],
+      "gasto": 2200.0,
+      "ordenes": 10
+    },
+    {
+      "correo": "dam***@gmail.com",
+      "n_equipos": 3,
+      "equipos": [
+        "Charros",
+        "Guerreros",
+        "Sultanes"
+      ],
+      "gasto": 21650.0,
+      "ordenes": 84
+    },
+    {
+      "correo": "g.p***@hotmail.com",
+      "n_equipos": 3,
+      "equipos": [
+        "Caliente",
+        "Sultanes",
+        "Tecos"
+      ],
+      "gasto": 20238.0,
+      "ordenes": 8
+    }
+  ],
+  "network": [
+    {
+      "pair": "Saraperos <-> Sultanes",
+      "shared": 857
+    },
+    {
+      "pair": "Charros <-> Sultanes",
+      "shared": 263
+    },
+    {
+      "pair": "Sultanes <-> Tecos",
+      "shared": 205
+    },
+    {
+      "pair": "Bravos <-> Charros",
+      "shared": 127
+    },
+    {
+      "pair": "Charros <-> Rieleros",
+      "shared": 82
+    },
+    {
+      "pair": "Charros <-> Toros",
+      "shared": 77
+    },
+    {
+      "pair": "Bravos <-> Sultanes",
+      "shared": 62
+    },
+    {
+      "pair": "Dorados <-> Sultanes",
+      "shared": 57
+    },
+    {
+      "pair": "Caliente <-> Sultanes",
+      "shared": 54
+    },
+    {
+      "pair": "Sultanes <-> Toros",
+      "shared": 50
+    },
+    {
+      "pair": "Charros <-> Saraperos",
+      "shared": 43
+    },
+    {
+      "pair": "Guerreros <-> Sultanes",
+      "shared": 41
+    },
+    {
+      "pair": "Rieleros <-> Sultanes",
+      "shared": 40
+    },
+    {
+      "pair": "Bravos <-> Rieleros",
+      "shared": 35
+    },
+    {
+      "pair": "Charros <-> Guerreros",
+      "shared": 34
+    },
+    {
+      "pair": "Charros <-> Dorados",
+      "shared": 32
+    },
+    {
+      "pair": "Saraperos <-> Tecos",
+      "shared": 29
+    },
+    {
+      "pair": "Caliente <-> Saraperos",
+      "shared": 24
+    },
+    {
+      "pair": "Rieleros <-> Saraperos",
+      "shared": 24
+    },
+    {
+      "pair": "Bravos <-> Saraperos",
+      "shared": 20
+    },
+    {
+      "pair": "Bravos <-> Toros",
+      "shared": 16
+    },
+    {
+      "pair": "Caliente <-> Charros",
+      "shared": 16
+    },
+    {
+      "pair": "Charros <-> Tecos",
+      "shared": 14
+    },
+    {
+      "pair": "Guerreros <-> Toros",
+      "shared": 13
+    },
+    {
+      "pair": "Saraperos <-> Toros",
+      "shared": 13
+    },
+    {
+      "pair": "Bravos <-> Guerreros",
+      "shared": 11
+    },
+    {
+      "pair": "Dorados <-> Toros",
+      "shared": 11
+    },
+    {
+      "pair": "Dorados <-> Saraperos",
+      "shared": 9
+    },
+    {
+      "pair": "Rieleros <-> Toros",
+      "shared": 9
+    },
+    {
+      "pair": "Dorados <-> Rieleros",
+      "shared": 8
+    },
+    {
+      "pair": "Caliente <-> Rieleros",
+      "shared": 7
+    },
+    {
+      "pair": "Guerreros <-> Rieleros",
+      "shared": 7
+    },
+    {
+      "pair": "Caliente <-> Dorados",
+      "shared": 6
+    },
+    {
+      "pair": "Guerreros <-> Saraperos",
+      "shared": 6
+    },
+    {
+      "pair": "Bravos <-> Dorados",
+      "shared": 5
+    },
+    {
+      "pair": "Dorados <-> Guerreros",
+      "shared": 5
+    },
+    {
+      "pair": "Bravos <-> Caliente",
+      "shared": 4
+    },
+    {
+      "pair": "Bravos <-> Tecos",
+      "shared": 4
+    },
+    {
+      "pair": "Rieleros <-> Tecos",
+      "shared": 4
+    },
+    {
+      "pair": "Tecos <-> Toros",
+      "shared": 4
+    },
+    {
+      "pair": "Caliente <-> Guerreros",
+      "shared": 3
+    },
+    {
+      "pair": "Caliente <-> Tecos",
+      "shared": 3
+    },
+    {
+      "pair": "Caliente <-> Toros",
+      "shared": 2
+    },
+    {
+      "pair": "Dorados <-> Tecos",
+      "shared": 1
+    },
+    {
+      "pair": "Guerreros <-> Tecos",
+      "shared": 1
+    }
+  ]
+}
