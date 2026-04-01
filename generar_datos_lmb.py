@@ -75,16 +75,28 @@ def limpiar_dinero(val):
     except:
         return 0.0
 
+def es_promocion(tipo):
+    """Clasifica si un boleto es promoción (descuento/incentivo comercial)."""
+    tipo_lower = str(tipo).lower().strip()
+    keywords = ['2x1', '3x1', 'dama', 'ladies', 'compas', 'hombres',
+                'niño', 'niños', 'promo', 'after office', 'sabado de',
+                'martes', 'viernes de compas', 'dia del niño',
+                'boletos gratis abonados', 'jersey']
+    return any(kw in tipo_lower for kw in keywords)
+
 def es_cortesia(tipo, subtotal):
-    """Clasifica si un boleto es cortesía."""
+    """Clasifica si un boleto es cortesía (gratis, sin promoción comercial)."""
+    tipo_lower = str(tipo).lower().strip()
+    # Primero verificar si es promoción — tiene prioridad
+    if es_promocion(tipo):
+        return False
     if subtotal == 0:
         return True
-    tipo_lower = str(tipo).lower()
     keywords = ['cortesi', 'canje', 'staff', 'direcci', 'mercadotecnia',
-                'giveaway', 'comercial', 'deportivo', 'forms', 'gratis',
+                'giveaway', 'comercial', 'deportivo', 'forms',
                 'responsabilidad', 'convenio', 'pase', 'upgrade',
-                'dama', 'ladies', 'compas', 'hombres', 'universitario',
-                'ni\u00f1o', 'sector salud', 'escuelita', 'dia del']
+                'sector salud', 'escuelita', 'patrocinio', 'quema',
+                'liga bravos', 'cupón cerveza', 'gratis']
     return any(kw in tipo_lower for kw in keywords)
 
 def es_vendido(tipo):
@@ -94,14 +106,15 @@ def es_vendido(tipo):
 
 def clasificar_boleto(tipo, subtotal):
     """Retorna 'vendido', 'cortesia' o 'promocion'."""
+    if es_promocion(tipo):
+        return 'promocion'
     if es_cortesia(tipo, subtotal):
         return 'cortesia'
     if es_vendido(tipo):
         return 'vendido'
-    # Check subtotal = 0 catch-all
     if subtotal == 0:
         return 'cortesia'
-    return 'vendido'  # default: si paga algo y no es cortesía/promo conocida
+    return 'vendido'
 
 def parse_fecha_evento(fecha_str):
     """Parsea fecha en formato DD/MM/YY o MM/DD/YY."""
@@ -318,6 +331,14 @@ for eq in EQUIPOS:
     else:
         tipo_cortesia = {}
     
+    # Tipos de promoción (top 8)
+    promo_orders = eq_ord[eq_ord['CLASIFICACION'] == 'promocion']
+    if len(promo_orders) > 0:
+        tipo_promo = promo_orders.groupby('TIPO').size().sort_values(ascending=False).head(8)
+        tipo_promocion = tipo_promo.to_dict()
+    else:
+        tipo_promocion = {}
+    
     pct_vendido = round(vendidos / total_boletos * 100, 1) if total_boletos > 0 else 0
     pct_promocion = round(promociones / total_boletos * 100, 1) if total_boletos > 0 else 0
     pct_cortesia = round(cortesias / total_boletos * 100, 1) if total_boletos > 0 else 0
@@ -344,6 +365,7 @@ for eq in EQUIPOS:
         },
         'zonas': zonas_list,
         'tipo_cortesia': tipo_cortesia,
+        'tipo_promocion': tipo_promocion,
         'pct_vendido': pct_vendido,
         'pct_promocion': pct_promocion,
         'pct_cortesia': pct_cortesia,

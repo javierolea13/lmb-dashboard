@@ -3,8 +3,8 @@
     "equipo": "Bravos",
     "total_boletos": 155940,
     "vendidos": 48408,
-    "promociones": 0,
-    "cortesias": 107532,
+    "promociones": 8746,
+    "cortesias": 98786,
     "ingreso_total": 12087240.0,
     "ingreso_vendidos": 12087240.0,
     "ingreso_promociones": 0.0,
@@ -63,27 +63,32 @@
     ],
     "tipo_cortesia": {
       "Cortesía": 97848,
+      "Caballeros Gratis": 577,
+      "Universitario Gratis": 271,
+      "SECTOR SALUD": 71,
+      "Canje Abonado": 19
+    },
+    "tipo_promocion": {
       "Damas Gratis": 3530,
       "2x1": 2596,
       "Compas Gratis": 1186,
       "Jersey": 777,
-      "Caballeros Gratis": 577,
       "Niños Gratis": 380,
       "Martes_2x1": 277
     },
     "pct_vendido": 31.0,
-    "pct_promocion": 0.0,
-    "pct_cortesia": 69.0
+    "pct_promocion": 5.6,
+    "pct_cortesia": 63.3
   },
   "Caliente": {
     "equipo": "Caliente",
     "total_boletos": 86733,
     "vendidos": 42285,
-    "promociones": 0,
-    "cortesias": 44448,
+    "promociones": 10213,
+    "cortesias": 34235,
     "ingreso_total": 6843279.5,
     "ingreso_vendidos": 6646144.0,
-    "ingreso_promociones": 0.0,
+    "ingreso_promociones": 197135.5,
     "ingreso_online": 1472675.0,
     "ingreso_taquilla": 5370604.5,
     "online": 8640,
@@ -140,26 +145,36 @@
     "tipo_cortesia": {
       "cortesía ": 26752,
       "Canje de Cupón": 5911,
+      "3x2 Domingo Familiar": 682,
+      "3X2 Domingo Familiar": 364,
+      "Mujeres Gratis": 247,
+      "Canje": 231,
+      "Canje Flexible": 19,
+      "Cortesía Juego Doble": 14
+    },
+    "tipo_promocion": {
       "2x1 Martes Beisbolero": 3335,
       "3x1": 2624,
       "Jueves de Ladies Night ": 1274,
       "Sabado de 2x1": 836,
       "Jueves de Ladies Night Central ": 732,
-      "Jueves de Ladies Night Lateral": 723
+      "Jueves de Ladies Night Lateral": 723,
+      "Niños menores 7 años": 347,
+      "2x1": 327
     },
     "pct_vendido": 48.8,
-    "pct_promocion": 0.0,
-    "pct_cortesia": 51.2
+    "pct_promocion": 11.8,
+    "pct_cortesia": 39.5
   },
   "Charros": {
     "equipo": "Charros",
     "total_boletos": 223034,
-    "vendidos": 173298,
-    "promociones": 0,
-    "cortesias": 49736,
+    "vendidos": 172509,
+    "promociones": 4182,
+    "cortesias": 46343,
     "ingreso_total": 29843464.1,
-    "ingreso_vendidos": 29842482.5,
-    "ingreso_promociones": 0.0,
+    "ingreso_vendidos": 29780320.0,
+    "ingreso_promociones": 62162.5,
     "ingreso_online": 23396194.1,
     "ingreso_taquilla": 6447270.0,
     "online": 123610,
@@ -216,23 +231,33 @@
     "tipo_cortesia": {
       "Cortesia": 35809,
       "Canje": 5283,
-      "Niños Gratis": 2331,
       "Cupón cerveza": 1275,
       "Quema": 845,
       "CANJE SEGURO DE LLUVIA ": 802,
       "Liga Bravos $0": 612,
-      "2X1 Estudiantes": 563
+      "3x2": 556,
+      "Mamás ": 338
     },
-    "pct_vendido": 77.7,
-    "pct_promocion": 0.0,
-    "pct_cortesia": 22.3
+    "tipo_promocion": {
+      "Niños Gratis": 2331,
+      "Martes 50% OFF": 753,
+      "2X1 Estudiantes": 563,
+      "2x1 Mujeres": 372,
+      "Damas 2X1": 54,
+      "2X1 Mueres Taquilla": 27,
+      "2X1 Mujeres Taquilla": 24,
+      "Códigos Promocionales 15%": 19
+    },
+    "pct_vendido": 77.3,
+    "pct_promocion": 1.9,
+    "pct_cortesia": 20.8
   },
   "Dorados": {
     "equipo": "Dorados",
     "total_boletos": 106702,
     "vendidos": 63608,
-    "promociones": 0,
-    "cortesias": 43094,
+    "promociones": 5694,
+    "cortesias": 37400,
     "ingreso_total": 11429669.01,
     "ingreso_vendidos": 11429669.01,
     "ingreso_promociones": 0.0,
@@ -291,25 +316,27 @@
     ],
     "tipo_cortesia": {
       "Cortesia": 35787,
-      "2x1 Tienda Santa Fe": 4192,
-      "2x1": 1502,
       "Canje": 1170,
       "CANJE POR LLUVIA": 352,
       "Adulto": 91
     },
+    "tipo_promocion": {
+      "2x1 Tienda Santa Fe": 4192,
+      "2x1": 1502
+    },
     "pct_vendido": 59.6,
-    "pct_promocion": 0.0,
-    "pct_cortesia": 40.4
+    "pct_promocion": 5.3,
+    "pct_cortesia": 35.1
   },
   "Guerreros": {
     "equipo": "Guerreros",
     "total_boletos": 104810,
     "vendidos": 66342,
-    "promociones": 0,
-    "cortesias": 38468,
+    "promociones": 9359,
+    "cortesias": 29109,
     "ingreso_total": 11088766.0,
     "ingreso_vendidos": 10965056.0,
-    "ingreso_promociones": 0.0,
+    "ingreso_promociones": 123710.0,
     "ingreso_online": 6334656.0,
     "ingreso_taquilla": 4754110.0,
     "online": 30936,
@@ -365,24 +392,32 @@
     ],
     "tipo_cortesia": {
       "Cortesía": 25847,
-      "Hombres $10 peso. ": 4780,
-      "2x1": 2305,
       "Adulto": 1874,
       "Canje Lluvia": 1241,
+      "Canje": 83,
+      "Escuelita Guerreros": 42,
+      "G500": 22
+    },
+    "tipo_promocion": {
+      "Hombres $10 peso. ": 4780,
+      "2x1": 2305,
       "Niños $50 pesos": 1230,
       "Niños $10 pesos.": 641,
-      "Dia del Niño": 269
+      "Dia del Niño": 269,
+      "Niño $100": 80,
+      "2x1 UABJO": 31,
+      "Colaboradores Toyota 2x1 Toyota": 19
     },
     "pct_vendido": 63.3,
-    "pct_promocion": 0.0,
-    "pct_cortesia": 36.7
+    "pct_promocion": 8.9,
+    "pct_cortesia": 27.8
   },
   "Rieleros": {
     "equipo": "Rieleros",
     "total_boletos": 121083,
     "vendidos": 33361,
-    "promociones": 0,
-    "cortesias": 87722,
+    "promociones": 15118,
+    "cortesias": 72604,
     "ingreso_total": 7409991.5,
     "ingreso_vendidos": 7409991.5,
     "ingreso_promociones": 0.0,
@@ -444,21 +479,29 @@
       "CORTESIA PASES DOBLES": 19584,
       "CORTESIA PASE PREMIUM": 11734,
       "CORTESIA PASE VIP": 4545,
+      "CANJE POR LLUVIA": 1339,
+      "Mujeres Gratis": 377,
+      "DISFRAZ": 200,
+      "Adulto": 141
+    },
+    "tipo_promocion": {
       "VIERNES DE COMPAS": 4414,
       "DAMAS GRATIS": 4285,
       "2X1": 4137,
-      "AFTER OFFICE": 1387
+      "AFTER OFFICE": 1387,
+      "NIÑOS GRATIS": 880,
+      "2x1 Descuento Rayo🔥": 15
     },
     "pct_vendido": 27.6,
-    "pct_promocion": 0.0,
-    "pct_cortesia": 72.4
+    "pct_promocion": 12.5,
+    "pct_cortesia": 60.0
   },
   "Saraperos": {
     "equipo": "Saraperos",
     "total_boletos": 130640,
     "vendidos": 93255,
-    "promociones": 0,
-    "cortesias": 37385,
+    "promociones": 13688,
+    "cortesias": 23697,
     "ingreso_total": 29287767.64,
     "ingreso_vendidos": 29287767.64,
     "ingreso_promociones": 0.0,
@@ -517,23 +560,25 @@
     ],
     "tipo_cortesia": {
       "Cortesia": 21364,
-      "2x1": 12963,
       "Patrocinio": 1700,
-      "Boletos Gratis Abonados": 617,
       "Canje": 561,
-      "2x1 ": 108,
       "Adulto": 72
     },
+    "tipo_promocion": {
+      "2x1": 12963,
+      "Boletos Gratis Abonados": 617,
+      "2x1 ": 108
+    },
     "pct_vendido": 71.4,
-    "pct_promocion": 0.0,
-    "pct_cortesia": 28.6
+    "pct_promocion": 10.5,
+    "pct_cortesia": 18.1
   },
   "Sultanes": {
     "equipo": "Sultanes",
     "total_boletos": 688260,
     "vendidos": 302374,
-    "promociones": 0,
-    "cortesias": 385886,
+    "promociones": 37043,
+    "cortesias": 348843,
     "ingreso_total": 64893054.4,
     "ingreso_vendidos": 54143004.4,
     "ingreso_promociones": 0.0,
@@ -595,14 +640,20 @@
       "Giveaway": 71396,
       "CORTESIA": 67596,
       "FORMS ": 38815,
-      "PROMO DEL DIA": 22990,
       "DIRECCION": 11772,
       "PASE DOBLE": 9823,
-      "DEPORTIVO": 9002
+      "DEPORTIVO": 9002,
+      "RESPONSABILIDAD SOCIAL": 6731
+    },
+    "tipo_promocion": {
+      "PROMO DEL DIA": 22990,
+      "SÁBADO DE JERSEY ": 6337,
+      "LADIES NIGHT  ": 6272,
+      "MARTES DE GORRA": 1444
     },
     "pct_vendido": 43.9,
-    "pct_promocion": 0.0,
-    "pct_cortesia": 56.1
+    "pct_promocion": 5.4,
+    "pct_cortesia": 50.7
   },
   "Tecos": {
     "equipo": "Tecos",
@@ -671,6 +722,7 @@
       "Cortesia": 3102,
       "Adulto": 9
     },
+    "tipo_promocion": {},
     "pct_vendido": 66.8,
     "pct_promocion": 0.0,
     "pct_cortesia": 33.2
@@ -679,11 +731,11 @@
     "equipo": "Toros",
     "total_boletos": 407776,
     "vendidos": 347719,
-    "promociones": 0,
-    "cortesias": 60057,
+    "promociones": 7728,
+    "cortesias": 52329,
     "ingreso_total": 83920721.44,
     "ingreso_vendidos": 80436176.44,
-    "ingreso_promociones": 0.0,
+    "ingreso_promociones": 333094.0,
     "ingreso_online": 11781649.6,
     "ingreso_taquilla": 72139071.84,
     "online": 50005,
@@ -740,15 +792,21 @@
     "tipo_cortesia": {
       "Cortesía": 38330,
       "UPGRADE ": 9847,
-      "Dama": 4460,
-      "Niño": 3115,
       "Canje": 1089,
       "Adulto": 1024,
       "ABONADO": 853,
-      "ESTUDIANTE": 484
+      "ESTUDIANTE": 484,
+      "Canje $0": 196,
+      "Comercial": 195
+    },
+    "tipo_promocion": {
+      "Dama": 4460,
+      "Niño": 3115,
+      "Niños gratis 15Junio": 132,
+      "Niños": 21
     },
     "pct_vendido": 85.3,
-    "pct_promocion": 0.0,
-    "pct_cortesia": 14.7
+    "pct_promocion": 1.9,
+    "pct_cortesia": 12.8
   }
 }
