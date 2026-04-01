@@ -1,0 +1,1729 @@
+{
+  "Bravos": {
+    "total_fans_online": 5302,
+    "total_ordenes_online": 27517,
+    "avg_gasto": 1210.1,
+    "median_gasto": 750.0,
+    "frecuencia": {
+      "1": {
+        "fans": 3852,
+        "pct": 72.7,
+        "gasto_total": 3051144.0,
+        "gasto_promedio": 792.09,
+        "ordenes": 13266
+      },
+      "2-5": {
+        "fans": 1338,
+        "pct": 25.2,
+        "gasto_total": 2664950.0,
+        "gasto_promedio": 1991.74,
+        "ordenes": 11530
+      },
+      "6-10": {
+        "fans": 89,
+        "pct": 1.7,
+        "gasto_total": 461130.0,
+        "gasto_promedio": 5181.24,
+        "ordenes": 1916
+      },
+      "+10": {
+        "fans": 23,
+        "pct": 0.4,
+        "gasto_total": 238700.0,
+        "gasto_promedio": 10378.26,
+        "ordenes": 805
+      }
+    },
+    "plataformas": [
+      {
+        "nombre": "Web Mobile",
+        "ordenes": 13526,
+        "pct_ordenes": 49.2,
+        "ingreso": 3057950.0,
+        "fans_unicos": 3066
+      },
+      {
+        "nombre": "iOS",
+        "ordenes": 5608,
+        "pct_ordenes": 20.4,
+        "ingreso": 1395880.0,
+        "fans_unicos": 944
+      },
+      {
+        "nombre": "Web Desktop",
+        "ordenes": 5351,
+        "pct_ordenes": 19.4,
+        "ingreso": 1267474.0,
+        "fans_unicos": 1076
+      },
+      {
+        "nombre": "Android",
+        "ordenes": 3032,
+        "pct_ordenes": 11.0,
+        "ingreso": 694620.0,
+        "fans_unicos": 548
+      }
+    ],
+    "top_fans": [
+      {
+        "correo": "lui***@gmail.com",
+        "eventos": 25,
+        "ordenes": 55,
+        "gasto": 24850.0,
+        "plataforma": "iOS"
+      },
+      {
+        "correo": "edg***@live.com.mx",
+        "eventos": 22,
+        "ordenes": 83,
+        "gasto": 23950.0,
+        "plataforma": "iOS"
+      },
+      {
+        "correo": "mon***@hotmail.com",
+        "eventos": 14,
+        "ordenes": 77,
+        "gasto": 21700.0,
+        "plataforma": "iOS"
+      },
+      {
+        "correo": "pas***@gmail.com",
+        "eventos": 15,
+        "ordenes": 47,
+        "gasto": 15350.0,
+        "plataforma": "iOS"
+      },
+      {
+        "correo": "vic***@gmail.com",
+        "eventos": 1,
+        "ordenes": 2,
+        "gasto": 14024.0,
+        "plataforma": "Web Desktop"
+      },
+      {
+        "correo": "lui***@gmail.com",
+        "eventos": 9,
+        "ordenes": 18,
+        "gasto": 13600.0,
+        "plataforma": "Android"
+      },
+      {
+        "correo": "roj***@hotmail.com",
+        "eventos": 13,
+        "ordenes": 29,
+        "gasto": 13300.0,
+        "plataforma": "Web Desktop"
+      },
+      {
+        "correo": "man***@gmail.com",
+        "eventos": 7,
+        "ordenes": 42,
+        "gasto": 12100.0,
+        "plataforma": "Web Desktop"
+      },
+      {
+        "correo": "jua***@gmail.com",
+        "eventos": 6,
+        "ordenes": 31,
+        "gasto": 11600.0,
+        "plataforma": "Web Desktop"
+      },
+      {
+        "correo": "isc***@gmail.com",
+        "eventos": 7,
+        "ordenes": 26,
+        "gasto": 10850.0,
+        "plataforma": "Web Mobile"
+      }
+    ],
+    "compras_por_dia": {
+      "Lunes": 4301,
+      "Martes": 5084,
+      "Miércoles": 4351,
+      "Jueves": 4821,
+      "Viernes": 3600,
+      "Sábado": 3221,
+      "Domingo": 2139
+    },
+    "compras_por_hora": {
+      "0": 240,
+      "1": 77,
+      "2": 34,
+      "3": 8,
+      "4": 9,
+      "5": 15,
+      "6": 89,
+      "7": 279,
+      "8": 520,
+      "9": 894,
+      "10": 1402,
+      "11": 1751,
+      "12": 2002,
+      "13": 2086,
+      "14": 2115,
+      "15": 2315,
+      "16": 2303,
+      "17": 2280,
+      "18": 2261,
+      "19": 2165,
+      "20": 1568,
+      "21": 1348,
+      "22": 1015,
+      "23": 741
+    },
+    "metodos_pago": {
+      "fiserv-3ds": 17731,
+      "visa-cybersource": 7441,
+      "conekta-oxxo-pay": 1328,
+      "conekta-spei": 499,
+      "bmpay": 422,
+      "kueski-pay": 96
+    }
+  },
+  "Caliente": {
+    "total_fans_online": 1767,
+    "total_ordenes_online": 8628,
+    "avg_gasto": 832.61,
+    "median_gasto": 480.0,
+    "frecuencia": {
+      "1": {
+        "fans": 1338,
+        "pct": 75.7,
+        "gasto_total": 795888.0,
+        "gasto_promedio": 594.83,
+        "ordenes": 4568
+      },
+      "2-5": {
+        "fans": 381,
+        "pct": 21.6,
+        "gasto_total": 537674.0,
+        "gasto_promedio": 1411.22,
+        "ordenes": 3075
+      },
+      "6-10": {
+        "fans": 38,
+        "pct": 2.2,
+        "gasto_total": 105357.0,
+        "gasto_promedio": 2772.55,
+        "ordenes": 684
+      },
+      "+10": {
+        "fans": 10,
+        "pct": 0.6,
+        "gasto_total": 32296.0,
+        "gasto_promedio": 3229.6,
+        "ordenes": 301
+      }
+    },
+    "plataformas": [
+      {
+        "nombre": "Web Mobile",
+        "ordenes": 4136,
+        "pct_ordenes": 47.9,
+        "ingreso": 708375.0,
+        "fans_unicos": 1114
+      },
+      {
+        "nombre": "iOS",
+        "ordenes": 1969,
+        "pct_ordenes": 22.8,
+        "ingreso": 327223.0,
+        "fans_unicos": 373
+      },
+      {
+        "nombre": "Android",
+        "ordenes": 1437,
+        "pct_ordenes": 16.7,
+        "ingreso": 218241.0,
+        "fans_unicos": 294
+      },
+      {
+        "nombre": "Web Desktop",
+        "ordenes": 1086,
+        "pct_ordenes": 12.6,
+        "ingreso": 217376.0,
+        "fans_unicos": 255
+      }
+    ],
+    "top_fans": [
+      {
+        "correo": "ant***@hotmail.com",
+        "eventos": 16,
+        "ordenes": 43,
+        "gasto": 9020.0,
+        "plataforma": "iOS"
+      },
+      {
+        "correo": "190***@itdurango.edu.mx",
+        "eventos": 7,
+        "ordenes": 28,
+        "gasto": 7913.0,
+        "plataforma": "iOS"
+      },
+      {
+        "correo": "bet***@gmail.com",
+        "eventos": 17,
+        "ordenes": 51,
+        "gasto": 7480.0,
+        "plataforma": "iOS"
+      },
+      {
+        "correo": "Jai***@hotmail.com",
+        "eventos": 17,
+        "ordenes": 40,
+        "gasto": 7260.0,
+        "plataforma": "Android"
+      },
+      {
+        "correo": "and***@gmail.com",
+        "eventos": 4,
+        "ordenes": 23,
+        "gasto": 6820.0,
+        "plataforma": "Web Desktop"
+      },
+      {
+        "correo": "cpd***@hotmail.com",
+        "eventos": 2,
+        "ordenes": 16,
+        "gasto": 6600.0,
+        "plataforma": "iOS"
+      },
+      {
+        "correo": "ern***@hotmail.com",
+        "eventos": 8,
+        "ordenes": 38,
+        "gasto": 6600.0,
+        "plataforma": "iOS"
+      },
+      {
+        "correo": "rog***@icloud.com",
+        "eventos": 8,
+        "ordenes": 33,
+        "gasto": 6380.0,
+        "plataforma": "Web Mobile"
+      },
+      {
+        "correo": "cla***@hotmail.com",
+        "eventos": 8,
+        "ordenes": 25,
+        "gasto": 5280.0,
+        "plataforma": "Web Mobile"
+      },
+      {
+        "correo": "isr***@hotmail.com",
+        "eventos": 1,
+        "ordenes": 8,
+        "gasto": 5280.0,
+        "plataforma": "Android"
+      }
+    ],
+    "compras_por_dia": {},
+    "compras_por_hora": {},
+    "metodos_pago": {
+      "visa-cybersource": 6843,
+      "fiserv-3ds": 1161,
+      "conekta-oxxo-pay": 294,
+      "bmpay": 214,
+      "conekta-spei": 92,
+      "kueski-pay": 24
+    }
+  },
+  "Charros": {
+    "total_fans_online": 20735,
+    "total_ordenes_online": 123564,
+    "avg_gasto": 1128.31,
+    "median_gasto": 600.0,
+    "frecuencia": {
+      "1": {
+        "fans": 14479,
+        "pct": 69.8,
+        "gasto_total": 9647139.2,
+        "gasto_promedio": 666.28,
+        "ordenes": 50820
+      },
+      "2-5": {
+        "fans": 5442,
+        "pct": 26.2,
+        "gasto_total": 9739067.2,
+        "gasto_promedio": 1789.61,
+        "ordenes": 48369
+      },
+      "6-10": {
+        "fans": 617,
+        "pct": 3.0,
+        "gasto_total": 2768950.0,
+        "gasto_promedio": 4487.76,
+        "ordenes": 14463
+      },
+      "+10": {
+        "fans": 197,
+        "pct": 1.0,
+        "gasto_total": 1240280.1,
+        "gasto_promedio": 6295.84,
+        "ordenes": 9912
+      }
+    },
+    "plataformas": [
+      {
+        "nombre": "iOS",
+        "ordenes": 45138,
+        "pct_ordenes": 36.5,
+        "ingreso": 8888863.3,
+        "fans_unicos": 7183
+      },
+      {
+        "nombre": "Web Mobile",
+        "ordenes": 30818,
+        "pct_ordenes": 24.9,
+        "ingreso": 5861297.2,
+        "fans_unicos": 8041
+      },
+      {
+        "nombre": "Android",
+        "ordenes": 29218,
+        "pct_ordenes": 23.6,
+        "ingreso": 5420681.8,
+        "fans_unicos": 4345
+      },
+      {
+        "nombre": "Web Desktop",
+        "ordenes": 18390,
+        "pct_ordenes": 14.9,
+        "ingreso": 3224594.2,
+        "fans_unicos": 3697
+      }
+    ],
+    "top_fans": [
+      {
+        "correo": "amm***@live.com.mx",
+        "eventos": 3,
+        "ordenes": 16,
+        "gasto": 91200.0,
+        "plataforma": "Web Mobile"
+      },
+      {
+        "correo": "edu***@acesta.mx",
+        "eventos": 1,
+        "ordenes": 4,
+        "gasto": 43200.0,
+        "plataforma": "Web Mobile"
+      },
+      {
+        "correo": "rio***@gmail.com",
+        "eventos": 30,
+        "ordenes": 84,
+        "gasto": 28920.0,
+        "plataforma": "iOS"
+      },
+      {
+        "correo": "leu***@gmail.com",
+        "eventos": 15,
+        "ordenes": 78,
+        "gasto": 26235.0,
+        "plataforma": "iOS"
+      },
+      {
+        "correo": "vic***@hotmail.com",
+        "eventos": 12,
+        "ordenes": 78,
+        "gasto": 23820.0,
+        "plataforma": "Android"
+      },
+      {
+        "correo": "eri***@hotmail.com",
+        "eventos": 17,
+        "ordenes": 37,
+        "gasto": 22400.0,
+        "plataforma": "iOS"
+      },
+      {
+        "correo": "Ros***@icloud.com",
+        "eventos": 3,
+        "ordenes": 4,
+        "gasto": 22200.0,
+        "plataforma": "iOS"
+      },
+      {
+        "correo": "par***@gmail.com",
+        "eventos": 7,
+        "ordenes": 47,
+        "gasto": 22050.0,
+        "plataforma": "iOS"
+      },
+      {
+        "correo": "sal***@gmail.com",
+        "eventos": 22,
+        "ordenes": 65,
+        "gasto": 21650.0,
+        "plataforma": "Web Mobile"
+      },
+      {
+        "correo": "san***@hotmail.com",
+        "eventos": 14,
+        "ordenes": 51,
+        "gasto": 20900.0,
+        "plataforma": "Web Desktop"
+      }
+    ],
+    "compras_por_dia": {
+      "Lunes": 18049,
+      "Martes": 16715,
+      "Miércoles": 16611,
+      "Jueves": 14732,
+      "Viernes": 15047,
+      "Sábado": 28347,
+      "Domingo": 14063
+    },
+    "compras_por_hora": {},
+    "metodos_pago": {
+      "fiserv-3ds": 94082,
+      "visa-cybersource": 14818,
+      "bmpay": 6596,
+      "conekta-oxxo-pay": 3929,
+      "conekta-spei": 3422,
+      "kueski-pay": 717
+    }
+  },
+  "Dorados": {
+    "total_fans_online": 5831,
+    "total_ordenes_online": 32887,
+    "avg_gasto": 869.47,
+    "median_gasto": 400.0,
+    "frecuencia": {
+      "1": {
+        "fans": 3944,
+        "pct": 67.6,
+        "gasto_total": 1969920.0,
+        "gasto_promedio": 499.47,
+        "ordenes": 12997
+      },
+      "2-5": {
+        "fans": 1640,
+        "pct": 28.1,
+        "gasto_total": 2100730.0,
+        "gasto_promedio": 1280.93,
+        "ordenes": 13777
+      },
+      "6-10": {
+        "fans": 183,
+        "pct": 3.1,
+        "gasto_total": 521790.0,
+        "gasto_promedio": 2851.31,
+        "ordenes": 3730
+      },
+      "+10": {
+        "fans": 64,
+        "pct": 1.1,
+        "gasto_total": 477460.0,
+        "gasto_promedio": 7460.31,
+        "ordenes": 2383
+      }
+    },
+    "plataformas": [
+      {
+        "nombre": "iOS",
+        "ordenes": 13444,
+        "pct_ordenes": 40.9,
+        "ingreso": 2086820.0,
+        "fans_unicos": 2301
+      },
+      {
+        "nombre": "Android",
+        "ordenes": 9513,
+        "pct_ordenes": 28.9,
+        "ingreso": 1408270.0,
+        "fans_unicos": 1510
+      },
+      {
+        "nombre": "Web Mobile",
+        "ordenes": 6882,
+        "pct_ordenes": 20.9,
+        "ingreso": 1041680.0,
+        "fans_unicos": 1997
+      },
+      {
+        "nombre": "Web Desktop",
+        "ordenes": 3048,
+        "pct_ordenes": 9.3,
+        "ingreso": 533130.0,
+        "fans_unicos": 635
+      }
+    ],
+    "top_fans": [
+      {
+        "correo": "oma***@hotmail.com",
+        "eventos": 2,
+        "ordenes": 9,
+        "gasto": 81000.0,
+        "plataforma": "Android"
+      },
+      {
+        "correo": "agr***@gmail.com",
+        "eventos": 11,
+        "ordenes": 15,
+        "gasto": 65000.0,
+        "plataforma": "Android"
+      },
+      {
+        "correo": "cpa***@ic3industrial.com",
+        "eventos": 1,
+        "ordenes": 6,
+        "gasto": 60600.0,
+        "plataforma": "iOS"
+      },
+      {
+        "correo": "mem***@gmail.com",
+        "eventos": 1,
+        "ordenes": 4,
+        "gasto": 50000.0,
+        "plataforma": "Web Mobile"
+      },
+      {
+        "correo": "eze***@hotmail.com",
+        "eventos": 3,
+        "ordenes": 7,
+        "gasto": 33500.0,
+        "plataforma": "iOS"
+      },
+      {
+        "correo": "raf***@yahoo.com",
+        "eventos": 1,
+        "ordenes": 2,
+        "gasto": 32500.0,
+        "plataforma": "iOS"
+      },
+      {
+        "correo": "HOL***@GMAIL.COM",
+        "eventos": 39,
+        "ordenes": 156,
+        "gasto": 31200.0,
+        "plataforma": "Web Desktop"
+      },
+      {
+        "correo": "ric***@gmail.com",
+        "eventos": 2,
+        "ordenes": 6,
+        "gasto": 30900.0,
+        "plataforma": "Web Desktop"
+      },
+      {
+        "correo": "ger***@gmail.com",
+        "eventos": 2,
+        "ordenes": 4,
+        "gasto": 30500.0,
+        "plataforma": "iOS"
+      },
+      {
+        "correo": "nes***@yahoo.com.mx",
+        "eventos": 1,
+        "ordenes": 2,
+        "gasto": 25000.0,
+        "plataforma": "Web Desktop"
+      }
+    ],
+    "compras_por_dia": {
+      "Lunes": 3166,
+      "Martes": 4263,
+      "Miércoles": 4758,
+      "Jueves": 7499,
+      "Viernes": 5165,
+      "Sábado": 5596,
+      "Domingo": 2440
+    },
+    "compras_por_hora": {
+      "0": 597,
+      "1": 166,
+      "2": 44,
+      "3": 19,
+      "4": 28,
+      "5": 24,
+      "6": 84,
+      "7": 251,
+      "8": 660,
+      "9": 1211,
+      "10": 1501,
+      "11": 1964,
+      "12": 2384,
+      "13": 2637,
+      "14": 2651,
+      "15": 2653,
+      "16": 2770,
+      "17": 2878,
+      "18": 2936,
+      "19": 2838,
+      "20": 1534,
+      "21": 1159,
+      "22": 1192,
+      "23": 706
+    },
+    "metodos_pago": {
+      "visa-cybersource": 27094,
+      "fiserv-3ds": 2931,
+      "bmpay": 1468,
+      "conekta-oxxo-pay": 733,
+      "conekta-spei": 637,
+      "kueski-pay": 23
+    }
+  },
+  "Guerreros": {
+    "total_fans_online": 5039,
+    "total_ordenes_online": 30936,
+    "avg_gasto": 1257.13,
+    "median_gasto": 700.0,
+    "frecuencia": {
+      "1": {
+        "fans": 3100,
+        "pct": 61.5,
+        "gasto_total": 1889960.0,
+        "gasto_promedio": 609.66,
+        "ordenes": 9318
+      },
+      "2-5": {
+        "fans": 1618,
+        "pct": 32.1,
+        "gasto_total": 2756336.0,
+        "gasto_promedio": 1703.55,
+        "ordenes": 13555
+      },
+      "6-10": {
+        "fans": 258,
+        "pct": 5.1,
+        "gasto_total": 1184920.0,
+        "gasto_promedio": 4592.71,
+        "ordenes": 5619
+      },
+      "+10": {
+        "fans": 63,
+        "pct": 1.3,
+        "gasto_total": 503440.0,
+        "gasto_promedio": 7991.11,
+        "ordenes": 2444
+      }
+    },
+    "plataformas": [
+      {
+        "nombre": "Web Mobile",
+        "ordenes": 20687,
+        "pct_ordenes": 66.9,
+        "ingreso": 4166210.0,
+        "fans_unicos": 3823
+      },
+      {
+        "nombre": "Web Desktop",
+        "ordenes": 4231,
+        "pct_ordenes": 13.7,
+        "ingreso": 900530.0,
+        "fans_unicos": 852
+      },
+      {
+        "nombre": "iOS",
+        "ordenes": 3202,
+        "pct_ordenes": 10.4,
+        "ingreso": 687286.0,
+        "fans_unicos": 436
+      },
+      {
+        "nombre": "Android",
+        "ordenes": 2816,
+        "pct_ordenes": 9.1,
+        "ingreso": 580630.0,
+        "fans_unicos": 370
+      }
+    ],
+    "top_fans": [
+      {
+        "correo": "ada***@outlook.com",
+        "eventos": 5,
+        "ordenes": 76,
+        "gasto": 24920.0,
+        "plataforma": "Web Desktop"
+      },
+      {
+        "correo": "gza***@hotmail.com",
+        "eventos": 12,
+        "ordenes": 55,
+        "gasto": 19810.0,
+        "plataforma": "iOS"
+      },
+      {
+        "correo": "dam***@gmail.com",
+        "eventos": 24,
+        "ordenes": 75,
+        "gasto": 19450.0,
+        "plataforma": "Web Mobile"
+      },
+      {
+        "correo": "wep***@hotmail.com",
+        "eventos": 12,
+        "ordenes": 74,
+        "gasto": 18310.0,
+        "plataforma": "Web Mobile"
+      },
+      {
+        "correo": "rol***@hotmail.com",
+        "eventos": 25,
+        "ordenes": 70,
+        "gasto": 16200.0,
+        "plataforma": "iOS"
+      },
+      {
+        "correo": "mar***@gmail.com",
+        "eventos": 22,
+        "ordenes": 53,
+        "gasto": 15500.0,
+        "plataforma": "Web Mobile"
+      },
+      {
+        "correo": "iik***@hotmail.com",
+        "eventos": 15,
+        "ordenes": 46,
+        "gasto": 14950.0,
+        "plataforma": "iOS"
+      },
+      {
+        "correo": "rsa***@gmail.com",
+        "eventos": 20,
+        "ordenes": 46,
+        "gasto": 13590.0,
+        "plataforma": "Web Desktop"
+      },
+      {
+        "correo": "gua***@gmail.com",
+        "eventos": 8,
+        "ordenes": 42,
+        "gasto": 13120.0,
+        "plataforma": "Android"
+      },
+      {
+        "correo": "mav***@hotmail.com",
+        "eventos": 14,
+        "ordenes": 65,
+        "gasto": 12720.0,
+        "plataforma": "Web Desktop"
+      }
+    ],
+    "compras_por_dia": {
+      "Lunes": 3247,
+      "Martes": 5393,
+      "Miércoles": 4811,
+      "Jueves": 4740,
+      "Viernes": 5517,
+      "Sábado": 4030,
+      "Domingo": 3198
+    },
+    "compras_por_hora": {},
+    "metodos_pago": {
+      "visa-cybersource": 27349,
+      "fiserv-3ds": 1197,
+      "bmpay": 1143,
+      "conekta-oxxo-pay": 795,
+      "conekta-spei": 328,
+      "kueski-pay": 124
+    }
+  },
+  "Rieleros": {
+    "total_fans_online": 3432,
+    "total_ordenes_online": 17638,
+    "avg_gasto": 905.04,
+    "median_gasto": 600.0,
+    "frecuencia": {
+      "1": {
+        "fans": 2498,
+        "pct": 72.8,
+        "gasto_total": 1563962.5,
+        "gasto_promedio": 626.09,
+        "ordenes": 8503
+      },
+      "2-5": {
+        "fans": 840,
+        "pct": 24.5,
+        "gasto_total": 1154322.5,
+        "gasto_promedio": 1374.19,
+        "ordenes": 6852
+      },
+      "6-10": {
+        "fans": 77,
+        "pct": 2.2,
+        "gasto_total": 295675.0,
+        "gasto_promedio": 3839.94,
+        "ordenes": 1714
+      },
+      "+10": {
+        "fans": 17,
+        "pct": 0.5,
+        "gasto_total": 92142.5,
+        "gasto_promedio": 5420.15,
+        "ordenes": 569
+      }
+    },
+    "plataformas": [
+      {
+        "nombre": "Web Mobile",
+        "ordenes": 8164,
+        "pct_ordenes": 46.3,
+        "ingreso": 1460715.0,
+        "fans_unicos": 1875
+      },
+      {
+        "nombre": "iOS",
+        "ordenes": 4346,
+        "pct_ordenes": 24.6,
+        "ingreso": 764772.5,
+        "fans_unicos": 732
+      },
+      {
+        "nombre": "Android",
+        "ordenes": 3112,
+        "pct_ordenes": 17.6,
+        "ingreso": 505560.0,
+        "fans_unicos": 560
+      },
+      {
+        "nombre": "Web Desktop",
+        "ordenes": 2016,
+        "pct_ordenes": 11.4,
+        "ingreso": 375055.0,
+        "fans_unicos": 468
+      }
+    ],
+    "top_fans": [
+      {
+        "correo": "g.p***@outlook.es",
+        "eventos": 7,
+        "ordenes": 76,
+        "gasto": 21280.0,
+        "plataforma": "Web Desktop"
+      },
+      {
+        "correo": "edu***@icloud.com",
+        "eventos": 22,
+        "ordenes": 51,
+        "gasto": 10920.0,
+        "plataforma": "iOS"
+      },
+      {
+        "correo": "edg***@outlook.com",
+        "eventos": 8,
+        "ordenes": 53,
+        "gasto": 9660.0,
+        "plataforma": "Android"
+      },
+      {
+        "correo": "raf***@hotmail.com",
+        "eventos": 10,
+        "ordenes": 41,
+        "gasto": 9460.0,
+        "plataforma": "iOS"
+      },
+      {
+        "correo": "hec***@gmail.com",
+        "eventos": 12,
+        "ordenes": 50,
+        "gasto": 8690.0,
+        "plataforma": "Android"
+      },
+      {
+        "correo": "lic***@gmail.com",
+        "eventos": 11,
+        "ordenes": 36,
+        "gasto": 8680.0,
+        "plataforma": "Android"
+      },
+      {
+        "correo": "ven***@metpro.com.mx",
+        "eventos": 8,
+        "ordenes": 31,
+        "gasto": 8680.0,
+        "plataforma": "Web Mobile"
+      },
+      {
+        "correo": "jas***@hotmail.con",
+        "eventos": 7,
+        "ordenes": 52,
+        "gasto": 8280.0,
+        "plataforma": "iOS"
+      },
+      {
+        "correo": "ros***@gmail.com",
+        "eventos": 16,
+        "ordenes": 33,
+        "gasto": 7710.0,
+        "plataforma": "Android"
+      },
+      {
+        "correo": "jor***@gmail.com",
+        "eventos": 10,
+        "ordenes": 27,
+        "gasto": 7560.0,
+        "plataforma": "Android"
+      }
+    ],
+    "compras_por_dia": {
+      "Lunes": 2410,
+      "Martes": 3880,
+      "Miércoles": 2982,
+      "Jueves": 2791,
+      "Viernes": 2234,
+      "Sábado": 1898,
+      "Domingo": 1443
+    },
+    "compras_por_hora": {
+      "0": 156,
+      "1": 46,
+      "2": 29,
+      "3": 23,
+      "4": 18,
+      "5": 18,
+      "6": 58,
+      "7": 144,
+      "8": 316,
+      "9": 487,
+      "10": 752,
+      "11": 876,
+      "12": 1070,
+      "13": 1107,
+      "14": 1239,
+      "15": 1464,
+      "16": 1642,
+      "17": 1565,
+      "18": 1672,
+      "19": 2263,
+      "20": 958,
+      "21": 727,
+      "22": 626,
+      "23": 382
+    },
+    "metodos_pago": {
+      "visa-cybersource": 14464,
+      "fiserv-3ds": 1465,
+      "conekta-oxxo-pay": 751,
+      "bmpay": 701,
+      "conekta-spei": 236,
+      "kueski-pay": 21
+    }
+  },
+  "Saraperos": {
+    "total_fans_online": 13025,
+    "total_ordenes_online": 65531,
+    "avg_gasto": 723.24,
+    "median_gasto": 440.0,
+    "frecuencia": {
+      "1": {
+        "fans": 8736,
+        "pct": 67.1,
+        "gasto_total": 3880340.0,
+        "gasto_promedio": 444.18,
+        "ordenes": 25904
+      },
+      "2-5": {
+        "fans": 3853,
+        "pct": 29.6,
+        "gasto_total": 4237560.0,
+        "gasto_promedio": 1099.81,
+        "ordenes": 29828
+      },
+      "6-10": {
+        "fans": 349,
+        "pct": 2.7,
+        "gasto_total": 886860.0,
+        "gasto_promedio": 2541.15,
+        "ordenes": 6644
+      },
+      "+10": {
+        "fans": 87,
+        "pct": 0.7,
+        "gasto_total": 415405.0,
+        "gasto_promedio": 4774.77,
+        "ordenes": 3155
+      }
+    },
+    "plataformas": [
+      {
+        "nombre": "Web Mobile",
+        "ordenes": 32961,
+        "pct_ordenes": 50.3,
+        "ingreso": 4568720.0,
+        "fans_unicos": 7552
+      },
+      {
+        "nombre": "iOS",
+        "ordenes": 13944,
+        "pct_ordenes": 21.3,
+        "ingreso": 2030205.0,
+        "fans_unicos": 2517
+      },
+      {
+        "nombre": "Android",
+        "ordenes": 10214,
+        "pct_ordenes": 15.6,
+        "ingreso": 1366400.0,
+        "fans_unicos": 1812
+      },
+      {
+        "nombre": "Web Desktop",
+        "ordenes": 8412,
+        "pct_ordenes": 12.8,
+        "ingreso": 1454840.0,
+        "fans_unicos": 2019
+      }
+    ],
+    "top_fans": [
+      {
+        "correo": "efr***@gmail.com",
+        "eventos": 1,
+        "ordenes": 4,
+        "gasto": 21600.0,
+        "plataforma": "iOS"
+      },
+      {
+        "correo": "moy***@hotmail.com",
+        "eventos": 11,
+        "ordenes": 32,
+        "gasto": 21055.0,
+        "plataforma": "Android"
+      },
+      {
+        "correo": "liz***@hotmail.com",
+        "eventos": 1,
+        "ordenes": 4,
+        "gasto": 20480.0,
+        "plataforma": "Web Desktop"
+      },
+      {
+        "correo": "mar***@hotmail.com",
+        "eventos": 2,
+        "ordenes": 12,
+        "gasto": 19600.0,
+        "plataforma": "Web Desktop"
+      },
+      {
+        "correo": "dav***@hotmail.com",
+        "eventos": 1,
+        "ordenes": 3,
+        "gasto": 18000.0,
+        "plataforma": "Web Desktop"
+      },
+      {
+        "correo": "Glo***@gmail.com",
+        "eventos": 3,
+        "ordenes": 7,
+        "gasto": 17070.0,
+        "plataforma": "Web Mobile"
+      },
+      {
+        "correo": "ray***@gmail.com",
+        "eventos": 1,
+        "ordenes": 4,
+        "gasto": 16800.0,
+        "plataforma": "Web Mobile"
+      },
+      {
+        "correo": "adr***@gmail.com",
+        "eventos": 11,
+        "ordenes": 32,
+        "gasto": 16545.0,
+        "plataforma": "iOS"
+      },
+      {
+        "correo": "iva***@gmail.com",
+        "eventos": 9,
+        "ordenes": 23,
+        "gasto": 15760.0,
+        "plataforma": "Web Mobile"
+      },
+      {
+        "correo": "rey***@gmail.com",
+        "eventos": 2,
+        "ordenes": 4,
+        "gasto": 13790.0,
+        "plataforma": "Web Desktop"
+      }
+    ],
+    "compras_por_dia": {
+      "Lunes": 10333,
+      "Martes": 8785,
+      "Miércoles": 9550,
+      "Jueves": 9105,
+      "Viernes": 11518,
+      "Sábado": 7826,
+      "Domingo": 8414
+    },
+    "compras_por_hora": {
+      "0": 810,
+      "1": 382,
+      "2": 192,
+      "3": 157,
+      "4": 41,
+      "5": 100,
+      "6": 226,
+      "7": 558,
+      "8": 1166,
+      "9": 1886,
+      "10": 3431,
+      "11": 3689,
+      "12": 7058,
+      "13": 5290,
+      "14": 5070,
+      "15": 5107,
+      "16": 5439,
+      "17": 5533,
+      "18": 4809,
+      "19": 4243,
+      "20": 3261,
+      "21": 2820,
+      "22": 2570,
+      "23": 1693
+    },
+    "metodos_pago": {
+      "visa-cybersource": 54903,
+      "bmpay": 4578,
+      "conekta-oxxo-pay": 3489,
+      "conekta-spei": 1321,
+      "fiserv-3ds": 1083,
+      "kueski-pay": 157
+    }
+  },
+  "Sultanes": {
+    "total_fans_online": 48036,
+    "total_ordenes_online": 282911,
+    "avg_gasto": 826.19,
+    "median_gasto": 480.0,
+    "frecuencia": {
+      "1": {
+        "fans": 33488,
+        "pct": 69.7,
+        "gasto_total": 16853200.3,
+        "gasto_promedio": 503.26,
+        "ordenes": 118353
+      },
+      "2-5": {
+        "fans": 12747,
+        "pct": 26.5,
+        "gasto_total": 15761260.9,
+        "gasto_promedio": 1236.47,
+        "ordenes": 114597
+      },
+      "6-10": {
+        "fans": 1404,
+        "pct": 2.9,
+        "gasto_total": 4672650.9,
+        "gasto_promedio": 3328.1,
+        "ordenes": 32613
+      },
+      "+10": {
+        "fans": 397,
+        "pct": 0.8,
+        "gasto_total": 2399585.0,
+        "gasto_promedio": 6044.29,
+        "ordenes": 17348
+      }
+    },
+    "plataformas": [
+      {
+        "nombre": "Web Mobile",
+        "ordenes": 109723,
+        "pct_ordenes": 38.8,
+        "ingreso": 14898094.4,
+        "fans_unicos": 25084
+      },
+      {
+        "nombre": "iOS",
+        "ordenes": 76052,
+        "pct_ordenes": 26.9,
+        "ingreso": 10567269.0,
+        "fans_unicos": 11935
+      },
+      {
+        "nombre": "Web Desktop",
+        "ordenes": 53892,
+        "pct_ordenes": 19.0,
+        "ingreso": 8165090.2,
+        "fans_unicos": 10563
+      },
+      {
+        "nombre": "Android",
+        "ordenes": 43244,
+        "pct_ordenes": 15.3,
+        "ingreso": 6056243.5,
+        "fans_unicos": 6436
+      }
+    ],
+    "top_fans": [
+      {
+        "correo": "jgu***@sytguerra.com",
+        "eventos": 2,
+        "ordenes": 10,
+        "gasto": 95495.0,
+        "plataforma": "iOS"
+      },
+      {
+        "correo": "gio***@segamac.com",
+        "eventos": 1,
+        "ordenes": 10,
+        "gasto": 92250.0,
+        "plataforma": "Web Desktop"
+      },
+      {
+        "correo": "dan***@gmail.com",
+        "eventos": 1,
+        "ordenes": 12,
+        "gasto": 84120.0,
+        "plataforma": "Web Mobile"
+      },
+      {
+        "correo": "tor***@gmail.com",
+        "eventos": 1,
+        "ordenes": 10,
+        "gasto": 70100.0,
+        "plataforma": "Web Desktop"
+      },
+      {
+        "correo": "rod***@gmail.com",
+        "eventos": 1,
+        "ordenes": 4,
+        "gasto": 69996.0,
+        "plataforma": "Web Mobile"
+      },
+      {
+        "correo": "hug***@himexko.com",
+        "eventos": 1,
+        "ordenes": 4,
+        "gasto": 57996.0,
+        "plataforma": "Web Mobile"
+      },
+      {
+        "correo": "Ern***@hotmail.com",
+        "eventos": 1,
+        "ordenes": 4,
+        "gasto": 54360.0,
+        "plataforma": "Web Desktop"
+      },
+      {
+        "correo": "rub***@gmail.com",
+        "eventos": 2,
+        "ordenes": 7,
+        "gasto": 47695.0,
+        "plataforma": "iOS"
+      },
+      {
+        "correo": "edg***@hotmail.com",
+        "eventos": 3,
+        "ordenes": 12,
+        "gasto": 47516.0,
+        "plataforma": "Web Desktop"
+      },
+      {
+        "correo": "jos***@grupozavala.com",
+        "eventos": 1,
+        "ordenes": 4,
+        "gasto": 45596.0,
+        "plataforma": "Web Desktop"
+      }
+    ],
+    "compras_por_dia": {
+      "Lunes": 47029,
+      "Martes": 39250,
+      "Miércoles": 41664,
+      "Jueves": 41599,
+      "Viernes": 45804,
+      "Sábado": 37002,
+      "Domingo": 30563
+    },
+    "compras_por_hora": {
+      "0": 7348,
+      "1": 2676,
+      "2": 1277,
+      "3": 647,
+      "4": 455,
+      "5": 658,
+      "6": 1387,
+      "7": 2895,
+      "8": 5736,
+      "9": 9291,
+      "10": 19030,
+      "11": 18786,
+      "12": 20744,
+      "13": 20156,
+      "14": 20513,
+      "15": 20204,
+      "16": 20038,
+      "17": 18777,
+      "18": 16686,
+      "19": 16122,
+      "20": 13885,
+      "21": 17461,
+      "22": 15314,
+      "23": 12825
+    },
+    "metodos_pago": {
+      "fiserv-3ds": 214623,
+      "visa-cybersource": 47540,
+      "conekta-spei": 8901,
+      "conekta-oxxo-pay": 8627,
+      "kueski-pay": 1362,
+      "openpay-3ds": 1335
+    }
+  },
+  "Tecos": {
+    "total_fans_online": 4736,
+    "total_ordenes_online": 24931,
+    "avg_gasto": 1006.49,
+    "median_gasto": 397.5,
+    "frecuencia": {
+      "1": {
+        "fans": 3155,
+        "pct": 66.6,
+        "gasto_total": 1487975.0,
+        "gasto_promedio": 471.62,
+        "ordenes": 9220
+      },
+      "2-5": {
+        "fans": 1370,
+        "pct": 28.9,
+        "gasto_total": 2132535.0,
+        "gasto_promedio": 1556.59,
+        "ordenes": 10785
+      },
+      "6-10": {
+        "fans": 166,
+        "pct": 3.5,
+        "gasto_total": 793532.0,
+        "gasto_promedio": 4780.31,
+        "ordenes": 3321
+      },
+      "+10": {
+        "fans": 45,
+        "pct": 1.0,
+        "gasto_total": 352674.0,
+        "gasto_promedio": 7837.2,
+        "ordenes": 1605
+      }
+    },
+    "plataformas": [
+      {
+        "nombre": "Web Mobile",
+        "ordenes": 13718,
+        "pct_ordenes": 55.0,
+        "ingreso": 2291478.0,
+        "fans_unicos": 3121
+      },
+      {
+        "nombre": "iOS",
+        "ordenes": 4687,
+        "pct_ordenes": 18.8,
+        "ingreso": 1080718.0,
+        "fans_unicos": 755
+      },
+      {
+        "nombre": "Web Desktop",
+        "ordenes": 3873,
+        "pct_ordenes": 15.5,
+        "ingreso": 664772.0,
+        "fans_unicos": 776
+      },
+      {
+        "nombre": "Android",
+        "ordenes": 2653,
+        "pct_ordenes": 10.6,
+        "ingreso": 729748.0,
+        "fans_unicos": 431
+      }
+    ],
+    "top_fans": [
+      {
+        "correo": "abr***@hotmail.com",
+        "eventos": 12,
+        "ordenes": 72,
+        "gasto": 25300.0,
+        "plataforma": "Web Mobile"
+      },
+      {
+        "correo": "and***@hotmail.com",
+        "eventos": 13,
+        "ordenes": 55,
+        "gasto": 19810.0,
+        "plataforma": "iOS"
+      },
+      {
+        "correo": "Exp***@gmail.com",
+        "eventos": 16,
+        "ordenes": 53,
+        "gasto": 18020.0,
+        "plataforma": "Web Mobile"
+      },
+      {
+        "correo": "mal***@gmail.com",
+        "eventos": 19,
+        "ordenes": 52,
+        "gasto": 17750.0,
+        "plataforma": "Web Mobile"
+      },
+      {
+        "correo": "mir***@gmail.com",
+        "eventos": 9,
+        "ordenes": 48,
+        "gasto": 17250.0,
+        "plataforma": "iOS"
+      },
+      {
+        "correo": "nor***@outlook.com",
+        "eventos": 18,
+        "ordenes": 53,
+        "gasto": 14900.0,
+        "plataforma": "Android"
+      },
+      {
+        "correo": "pat***@gmail.com",
+        "eventos": 9,
+        "ordenes": 46,
+        "gasto": 14750.0,
+        "plataforma": "Web Mobile"
+      },
+      {
+        "correo": "mik***@gmail.com",
+        "eventos": 19,
+        "ordenes": 43,
+        "gasto": 14550.0,
+        "plataforma": "iOS"
+      },
+      {
+        "correo": "Ern***@hotmail.com",
+        "eventos": 3,
+        "ordenes": 30,
+        "gasto": 14500.0,
+        "plataforma": "Web Desktop"
+      },
+      {
+        "correo": "Ben***@gmail.com",
+        "eventos": 10,
+        "ordenes": 33,
+        "gasto": 13825.0,
+        "plataforma": "Web Mobile"
+      }
+    ],
+    "compras_por_dia": {
+      "Lunes": 3502,
+      "Martes": 3931,
+      "Miércoles": 5230,
+      "Jueves": 3807,
+      "Viernes": 3790,
+      "Sábado": 2695,
+      "Domingo": 1976
+    },
+    "compras_por_hora": {
+      "0": 282,
+      "1": 127,
+      "2": 33,
+      "3": 34,
+      "4": 21,
+      "5": 76,
+      "6": 177,
+      "7": 388,
+      "8": 617,
+      "9": 975,
+      "10": 1375,
+      "11": 1509,
+      "12": 1709,
+      "13": 1900,
+      "14": 1867,
+      "15": 2062,
+      "16": 2271,
+      "17": 2339,
+      "18": 2319,
+      "19": 1622,
+      "20": 1133,
+      "21": 992,
+      "22": 680,
+      "23": 423
+    },
+    "metodos_pago": {
+      "visa-cybersource": 10651,
+      "openpay-3ds": 8235,
+      "openpay-api": 2318,
+      "conekta-oxxo-pay": 1359,
+      "stripe-3ds": 1116,
+      "fiserv-3ds": 688
+    }
+  },
+  "Toros": {
+    "total_fans_online": 9398,
+    "total_ordenes_online": 49953,
+    "avg_gasto": 1252.64,
+    "median_gasto": 870.0,
+    "frecuencia": {
+      "1": {
+        "fans": 7175,
+        "pct": 76.3,
+        "gasto_total": 6650993.03,
+        "gasto_promedio": 926.97,
+        "ordenes": 25557
+      },
+      "2-5": {
+        "fans": 1990,
+        "pct": 21.2,
+        "gasto_total": 3945432.57,
+        "gasto_promedio": 1982.63,
+        "ordenes": 17877
+      },
+      "6-10": {
+        "fans": 180,
+        "pct": 1.9,
+        "gasto_total": 879693.0,
+        "gasto_promedio": 4887.18,
+        "ordenes": 4052
+      },
+      "+10": {
+        "fans": 53,
+        "pct": 0.6,
+        "gasto_total": 296181.0,
+        "gasto_promedio": 5588.32,
+        "ordenes": 2467
+      }
+    },
+    "plataformas": [
+      {
+        "nombre": "Web Mobile",
+        "ordenes": 29565,
+        "pct_ordenes": 59.2,
+        "ingreso": 7040207.69,
+        "fans_unicos": 6493
+      },
+      {
+        "nombre": "Web Desktop",
+        "ordenes": 8103,
+        "pct_ordenes": 16.2,
+        "ingreso": 2225922.94,
+        "fans_unicos": 1750
+      },
+      {
+        "nombre": "iOS",
+        "ordenes": 7682,
+        "pct_ordenes": 15.4,
+        "ingreso": 1651088.64,
+        "fans_unicos": 1112
+      },
+      {
+        "nombre": "Android",
+        "ordenes": 4603,
+        "pct_ordenes": 9.2,
+        "ingreso": 855080.33,
+        "fans_unicos": 639
+      }
+    ],
+    "top_fans": [
+      {
+        "correo": "iza***@gmail.com",
+        "eventos": 10,
+        "ordenes": 58,
+        "gasto": 102691.0,
+        "plataforma": "iOS"
+      },
+      {
+        "correo": "jos***@gmail.com",
+        "eventos": 9,
+        "ordenes": 21,
+        "gasto": 26002.0,
+        "plataforma": "iOS"
+      },
+      {
+        "correo": "mar***@gmail.com",
+        "eventos": 1,
+        "ordenes": 2,
+        "gasto": 18500.0,
+        "plataforma": "Web Desktop"
+      },
+      {
+        "correo": "fus***@gmail.com",
+        "eventos": 25,
+        "ordenes": 79,
+        "gasto": 18343.0,
+        "plataforma": "Web Mobile"
+      },
+      {
+        "correo": "ing***@gmail.com",
+        "eventos": 12,
+        "ordenes": 41,
+        "gasto": 15746.0,
+        "plataforma": "iOS"
+      },
+      {
+        "correo": "pas***@rocketmail.com",
+        "eventos": 10,
+        "ordenes": 46,
+        "gasto": 15655.0,
+        "plataforma": "iOS"
+      },
+      {
+        "correo": "mor***@gmail.com",
+        "eventos": 15,
+        "ordenes": 47,
+        "gasto": 15244.0,
+        "plataforma": "iOS"
+      },
+      {
+        "correo": "Sia***@gmail.com",
+        "eventos": 5,
+        "ordenes": 29,
+        "gasto": 14388.0,
+        "plataforma": "Web Mobile"
+      },
+      {
+        "correo": "lui***@hotmail.com",
+        "eventos": 8,
+        "ordenes": 63,
+        "gasto": 14250.0,
+        "plataforma": "Android"
+      },
+      {
+        "correo": "lis***@hotmail.com",
+        "eventos": 16,
+        "ordenes": 97,
+        "gasto": 14139.0,
+        "plataforma": "Android"
+      }
+    ],
+    "compras_por_dia": {
+      "Lunes": 3669,
+      "Martes": 5877,
+      "Miércoles": 8349,
+      "Jueves": 7118,
+      "Viernes": 8971,
+      "Sábado": 10409,
+      "Domingo": 5560
+    },
+    "compras_por_hora": {
+      "0": 853,
+      "1": 816,
+      "2": 242,
+      "3": 108,
+      "4": 64,
+      "5": 61,
+      "6": 151,
+      "7": 342,
+      "8": 622,
+      "9": 1139,
+      "10": 1604,
+      "11": 2213,
+      "12": 2902,
+      "13": 2984,
+      "14": 3640,
+      "15": 3993,
+      "16": 4301,
+      "17": 4527,
+      "18": 4486,
+      "19": 4881,
+      "20": 3641,
+      "21": 2543,
+      "22": 2109,
+      "23": 1731
+    },
+    "metodos_pago": {
+      "visa-cybersource": 43729,
+      "fiserv-3ds": 2926,
+      "conekta-oxxo-pay": 1867,
+      "bmpay": 767,
+      "conekta-spei": 590,
+      "kueski-pay": 74
+    }
+  }
+}
