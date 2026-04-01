@@ -83,15 +83,9 @@ function renderFansDetEq(eq) {
         <div id="fd-plat-bars"></div>
       </div>
     </div>
-    <div class="g2 mb">
-      <div class="card" style="border-color:rgba(245,166,35,.3);background:linear-gradient(135deg,var(--card) 0%,rgba(245,166,35,.03) 100%)">
-        <div class="ctitle" style="color:var(--norte)">🎯 Oportunidad de Conversión — Fans Cortesía</div>
-        <div id="fd-cortesia-card"></div>
-      </div>
-      <div class="card">
-        <div class="ctitle">🏟 Gasto por Zona — Fans Online${eq==='Liga'?' (Liga)':' ('+eq+')'}</div>
-        <div id="fd-zonas-fans"></div>
-      </div>
+    <div class="card mb">
+      <div class="ctitle">🏟 Gasto por Zona — Fans Online${eq==='Liga'?' (Liga)':' ('+eq+')'}</div>
+      <div id="fd-zonas-fans"></div>
     </div>
     <div class="g2 mb">
       <div class="card">
@@ -140,7 +134,6 @@ function renderFansDetEq(eq) {
   renderFreqDonut(data);
   renderFreqTable(data);
   renderPlatBars(data);
-  renderCortesiaCard(data, eq);
   renderZonasFans(data, eq);
   renderDiaBars(data, eq);
   renderHoraBars(data, 'Todos');
