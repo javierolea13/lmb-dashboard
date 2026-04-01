@@ -194,6 +194,7 @@ tr:last-child td{border-bottom:none}
   <div class="ni" onclick="show('ventas')">Ventas <span id="ventas-badge" style="background:rgba(77,202,128,.15);color:var(--success);border-radius:3px;padding:1px 5px;font-size:9px;margin-left:4px">10/10 ✓</span></div>
   <div class="ni" onclick="show('fans')">Fans Online <span style="background:rgba(77,202,128,.15);color:var(--success);border-radius:3px;padding:1px 5px;font-size:9px;margin-left:4px">✓</span></div>
   <div class="ni" onclick="show('outliers')">Outliers <span id="ob" style="background:var(--danger-dim);color:var(--danger);border-radius:3px;padding:1px 6px;font-size:9px;margin-left:3px"></span></div>
+  <div class="ni" onclick="show('multiequipo')">Multi-Equipo</div>
   <div class="ni disabled">Simulador ⏳</div>
 </div>
 
@@ -207,9 +208,9 @@ tr:last-child td{border-bottom:none}
   <div class="g5 mb">
     <div class="card"><div class="ctitle">Ingreso Total Liga</div><div class="kv" style="color:var(--gold)">$266M</div><div class="kl">Pesos MX · 10 equipos</div></div>
     <div class="card"><div class="ctitle">Boletos Emitidos</div><div class="kv">2.12M</div><div class="kl">Total liga</div></div>
-    <div class="card"><div class="ctitle">Vendidos</div><div class="kv" style="color:var(--vendido)">877k</div><div class="kl">41.4% del total</div></div>
+    <div class="card"><div class="ctitle">Vendidos</div><div class="kv" style="color:var(--vendido)" id="vk-vend">877k</div><div class="kl">41.4% del total</div></div>
     <div class="card"><div class="ctitle">Cortesías</div><div class="kv" style="color:var(--cortesia)">810k</div><div class="kl">38.3% del total</div></div>
-    <div class="card"><div class="ctitle">Promociones</div><div class="kv" style="color:var(--promocion)">430k</div><div class="kl">20.3% del total</div></div>
+    <div class="card"><div class="ctitle">Promociones</div><div class="kv" style="color:var(--promocion)" id="vk-prom">430k</div><div class="kl">20.3% del total</div></div>
   </div>
 
   <!-- CHARTS VENTAS CLICKEABLES -->
@@ -370,9 +371,9 @@ tr:last-child td{border-bottom:none}
 
   <!-- LIGA SUMMARY (10 eq) -->
   <div class="g5 mb">
-    <div class="card"><div class="ctitle">Boletos Liga</div><div class="kv">2.12M</div><div class="kl">Total emitidos</div></div>
-    <div class="card"><div class="ctitle">Vendidos</div><div class="kv" style="color:var(--vendido)">877k</div><div class="kl">41.4% del total</div></div>
-    <div class="card"><div class="ctitle">Promociones</div><div class="kv" style="color:var(--promocion)">430k</div><div class="kl">20.3% del total</div></div>
+    <div class="card"><div class="ctitle" id="vk-bol-title">Boletos Liga</div><div class="kv" id="vk-bol">2.12M</div><div class="kl">Total emitidos</div></div>
+    <div class="card"><div class="ctitle">Vendidos</div><div class="kv" style="color:var(--vendido)" id="vk-vend">877k</div><div class="kl">41.4% del total</div></div>
+    <div class="card"><div class="ctitle">Promociones</div><div class="kv" style="color:var(--promocion)" id="vk-prom">430k</div><div class="kl">20.3% del total</div></div>
     <div class="card"><div class="ctitle">Cortesías</div><div class="kv" style="color:var(--cortesia)">810k</div><div class="kl">38.3% del total</div></div>
     <div class="card"><div class="ctitle">Ingreso Liga</div><div class="kv" style="color:var(--gold)">$266M</div><div class="kl">Pesos MX</div></div>
   </div>
@@ -380,6 +381,7 @@ tr:last-child td{border-bottom:none}
   <!-- EQUIPO SELECTOR -->
   <div class="frow mb" style="margin-bottom:14px">
     <span class="fl">Equipo:</span>
+    <button class="fb" onclick="selEq('Liga',this)">Liga</button>
     <button class="fb active" onclick="selEq('Charros',this)">Charros</button>
     <button class="fb" onclick="selEq('Bravos',this)">Bravos</button>
     <button class="fb" onclick="selEq('Sultanes',this)">Sultanes</button>
@@ -419,6 +421,7 @@ tr:last-child td{border-bottom:none}
   <!-- EQUIPO SELECTOR -->
   <div class="frow mb">
     <span class="fl">Equipo:</span>
+    <button class="fb" onclick="selEq('Liga',this)">Liga</button>
     <button class="fb active" onclick="selFansEq('Liga',this)">Liga</button>
     <button class="fb" onclick="selFansEq('Sultanes',this)">Sultanes</button>
     <button class="fb" onclick="selFansEq('Charros',this)">Charros</button>
@@ -549,7 +552,7 @@ function show(id) {
   document.querySelectorAll('.sec').forEach(s=>s.classList.remove('active'));
   document.querySelectorAll('.ni').forEach(n=>n.classList.remove('active'));
   document.getElementById(id).classList.add('active');
-  const ids = ['overview','equipos','asistencia','ventas','fans','outliers'];
+  const ids = ['overview','equipos','asistencia','ventas','fans','outliers','multiequipo','multiequipo','multiequipo'];
   const niAll = document.querySelectorAll('.ni');
   // find matching nav item by text content pattern
   niAll.forEach(n => { if(n.onclick && n.onclick.toString().includes(`'${id}'`)) n.classList.add('active'); });
