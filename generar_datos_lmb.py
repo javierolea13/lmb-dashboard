@@ -536,7 +536,7 @@ for eq in EQUIPOS:
     ing_ev['ing_onl'] = ing_ev['ing_onl'].fillna(0)
     ing_ev['ing_taq'] = ing_ev['ing'] - ing_ev['ing_onl']
     
-    ing_ev = ing_ev.sort_values('ing', ascending=False).head(20)
+    ing_ev = ing_ev.sort_values('ing', ascending=False)
     
     games = []
     for _, row in ing_ev.iterrows():

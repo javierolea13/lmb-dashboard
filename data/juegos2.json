@@ -179,6 +179,411 @@
       "ing_onl": 149950.0,
       "ing_taq": 56650.0,
       "c": "TR"
+    },
+    {
+      "n": "J1: Guerreros vs Bravos",
+      "f": "2025-08-01",
+      "id": 58,
+      "ing": 206470.0,
+      "ing_onl": 120590.0,
+      "ing_taq": 85880.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Pericos vs Bravos",
+      "f": "2025-05-02",
+      "id": 9,
+      "ing": 206440.0,
+      "ing_onl": 146030.0,
+      "ing_taq": 60410.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Olmecas vs Bravos",
+      "f": "2025-06-26",
+      "id": 44,
+      "ing": 188855.0,
+      "ing_onl": 91420.0,
+      "ing_taq": 97435.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Saraperos vs Bravos",
+      "f": "2025-06-10",
+      "id": 34,
+      "ing": 188415.0,
+      "ing_onl": 48250.0,
+      "ing_taq": 140165.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Pericos vs Bravos",
+      "f": "2025-07-18",
+      "id": 54,
+      "ing": 178645.0,
+      "ing_onl": 91500.0,
+      "ing_taq": 87145.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Leones vs Bravos",
+      "f": "2025-05-30",
+      "id": 30,
+      "ing": 178580.0,
+      "ing_onl": 104680.0,
+      "ing_taq": 73900.0,
+      "c": "TR"
+    },
+    {
+      "n": "Paquete Inaugural: El Águila vs Bravos",
+      "f": "2025-04-22",
+      "id": 1,
+      "ing": 163440.0,
+      "ing_onl": 106980.0,
+      "ing_taq": 56460.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Rieleros vs Bravos",
+      "f": "2025-06-15",
+      "id": 40,
+      "ing": 156630.0,
+      "ing_onl": 81570.0,
+      "ing_taq": 75060.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Pericos vs Bravos",
+      "f": "2025-05-04",
+      "id": 12,
+      "ing": 155070.0,
+      "ing_onl": 86790.0,
+      "ing_taq": 68280.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Guerreros vs Bravos",
+      "f": "2025-05-15",
+      "id": 20,
+      "ing": 151205.0,
+      "ing_onl": 63680.0,
+      "ing_taq": 87525.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Guerreros vs Bravos",
+      "f": "2025-08-03",
+      "id": 60,
+      "ing": 142470.0,
+      "ing_onl": 70460.0,
+      "ing_taq": 72010.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Pericos vs Bravos",
+      "f": "2025-07-20",
+      "id": 56,
+      "ing": 140270.0,
+      "ing_onl": 58450.0,
+      "ing_taq": 81820.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Tigres vs Bravos",
+      "f": "2025-07-17",
+      "id": 52,
+      "ing": 130050.0,
+      "ing_onl": 62750.0,
+      "ing_taq": 67300.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Tigres vs Bravos",
+      "f": "2025-04-29",
+      "id": 5,
+      "ing": 122980.0,
+      "ing_onl": 43450.0,
+      "ing_taq": 79530.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Piratas vs Bravos",
+      "f": "2025-05-08",
+      "id": 16,
+      "ing": 118420.0,
+      "ing_onl": 61390.0,
+      "ing_taq": 57030.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Leones vs Bravos",
+      "f": "2025-07-08",
+      "id": 46,
+      "ing": 114690.0,
+      "ing_onl": 41450.0,
+      "ing_taq": 73240.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Guerreros vs Bravos",
+      "f": "2025-05-14",
+      "id": 19,
+      "ing": 106010.0,
+      "ing_onl": 46350.0,
+      "ing_taq": 59660.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Guerreros vs Bravos",
+      "f": "2025-05-13",
+      "id": 18,
+      "ing": 104390.0,
+      "ing_onl": 22720.0,
+      "ing_taq": 81670.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Leones vs Bravos",
+      "f": "2025-06-01",
+      "id": 32,
+      "ing": 101150.0,
+      "ing_onl": 48590.0,
+      "ing_taq": 52560.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Olmecas vs Bravos",
+      "f": "2025-06-24",
+      "id": 42,
+      "ing": 98665.0,
+      "ing_onl": 27180.0,
+      "ing_taq": 71485.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Leones vs Bravos",
+      "f": "2025-07-09",
+      "id": 47,
+      "ing": 97750.0,
+      "ing_onl": 44400.0,
+      "ing_taq": 53350.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Olmecas vs Bravos",
+      "f": "2025-06-25",
+      "id": 43,
+      "ing": 94755.0,
+      "ing_onl": 33130.0,
+      "ing_taq": 61625.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Piratas vs Bravos",
+      "f": "2025-05-06",
+      "id": 13,
+      "ing": 90285.0,
+      "ing_onl": 24030.0,
+      "ing_taq": 66255.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Conspiradores vs Bravos",
+      "f": "2025-05-22",
+      "id": 28,
+      "ing": 89790.0,
+      "ing_onl": 50520.0,
+      "ing_taq": 39270.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Saraperos vs Bravos",
+      "f": "2025-06-11",
+      "id": 35,
+      "ing": 88880.0,
+      "ing_onl": 29570.0,
+      "ing_taq": 59310.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Conspiradores vs Bravos",
+      "f": "2025-05-20",
+      "id": 26,
+      "ing": 81500.0,
+      "ing_onl": 18330.0,
+      "ing_taq": 63170.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Conspiradores vs Bravos",
+      "f": "2025-05-21",
+      "id": 27,
+      "ing": 78215.0,
+      "ing_onl": 35230.0,
+      "ing_taq": 42985.0,
+      "c": "TR"
+    },
+    {
+      "n": "Paquete | Diablos vs Bravos",
+      "f": "2025-05-16",
+      "id": 21,
+      "ing": 77410.0,
+      "ing_onl": 63010.0,
+      "ing_taq": 14400.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Piratas vs Bravos",
+      "f": "2025-05-07",
+      "id": 15,
+      "ing": 77040.0,
+      "ing_onl": 34600.0,
+      "ing_taq": 42440.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Tigres vs Bravos",
+      "f": "2025-07-16",
+      "id": 51,
+      "ing": 65670.0,
+      "ing_onl": 23750.0,
+      "ing_taq": 41920.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Tigres vs Bravos",
+      "f": "2025-07-16",
+      "id": 50,
+      "ing": 47590.0,
+      "ing_onl": 14960.0,
+      "ing_taq": 32630.0,
+      "c": "TR"
+    },
+    {
+      "n": "Paquete | Pericos vs Bravos",
+      "f": "2025-05-02",
+      "id": 10,
+      "ing": 11280.0,
+      "ing_onl": 9480.0,
+      "ing_taq": 1800.0,
+      "c": "TR"
+    },
+    {
+      "n": "Paquete | Tigres vs Bravos",
+      "f": "2025-07-15",
+      "id": 49,
+      "ing": 6720.0,
+      "ing_onl": 6000.0,
+      "ing_taq": 720.0,
+      "c": "TR"
+    },
+    {
+      "n": "Paquete | Saraperos vs Bravos",
+      "f": "2025-06-10",
+      "id": 33,
+      "ing": 5640.0,
+      "ing_onl": 5640.0,
+      "ing_taq": 0.0,
+      "c": "TR"
+    },
+    {
+      "n": "Paquete | Guerreros vs Bravos",
+      "f": "2025-08-01",
+      "id": 57,
+      "ing": 3600.0,
+      "ing_onl": 3000.0,
+      "ing_taq": 600.0,
+      "c": "TR"
+    },
+    {
+      "n": "Paquete | Pericos vs Bravos",
+      "f": "2025-07-18",
+      "id": 53,
+      "ing": 3480.0,
+      "ing_onl": 1680.0,
+      "ing_taq": 1800.0,
+      "c": "TR"
+    },
+    {
+      "n": "Paquete | Tigres vs Bravos",
+      "f": "2025-05-02",
+      "id": 8,
+      "ing": 3240.0,
+      "ing_onl": 2520.0,
+      "ing_taq": 720.0,
+      "c": "TR"
+    },
+    {
+      "n": "Paquete | Leones vs Bravos",
+      "f": "2025-05-30",
+      "id": 29,
+      "ing": 3090.0,
+      "ing_onl": 1290.0,
+      "ing_taq": 1800.0,
+      "c": "TR"
+    },
+    {
+      "n": "Paquete | Leones vs Bravos",
+      "f": "2025-07-08",
+      "id": 45,
+      "ing": 2280.0,
+      "ing_onl": 1200.0,
+      "ing_taq": 1080.0,
+      "c": "TR"
+    },
+    {
+      "n": "Paquete | Piratas vs Bravos",
+      "f": "2025-05-06",
+      "id": 14,
+      "ing": 2160.0,
+      "ing_onl": 360.0,
+      "ing_taq": 1800.0,
+      "c": "TR"
+    },
+    {
+      "n": "Paquete | Diablos vs Bravos",
+      "f": "2025-08-09",
+      "id": 64,
+      "ing": 1800.0,
+      "ing_onl": 0.0,
+      "ing_taq": 1800.0,
+      "c": "TR"
+    },
+    {
+      "n": "Paquete | Guerreros vs Bravos",
+      "f": "2025-05-13",
+      "id": 17,
+      "ing": 1080.0,
+      "ing_onl": 1080.0,
+      "ing_taq": 0.0,
+      "c": "TR"
+    },
+    {
+      "n": "Paquete | Conspiradores vs Bravos",
+      "f": "2025-05-20",
+      "id": 25,
+      "ing": 960.0,
+      "ing_onl": 360.0,
+      "ing_taq": 600.0,
+      "c": "TR"
+    },
+    {
+      "n": "Paquete | Rieleros vs Bravos",
+      "f": "2025-06-13",
+      "id": 37,
+      "ing": 600.0,
+      "ing_onl": 360.0,
+      "ing_taq": 240.0,
+      "c": "TR"
+    },
+    {
+      "n": "Paquete | Olmecas vs Bravos",
+      "f": "2025-06-24",
+      "id": 41,
+      "ing": 360.0,
+      "ing_onl": 360.0,
+      "ing_taq": 0.0,
+      "c": "TR"
     }
   ],
   "Caliente": [
@@ -360,6 +765,249 @@
       "ing": 126205.0,
       "ing_onl": 19744.0,
       "ing_taq": 106461.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Unión Laguna vs Caliente de Durango",
+      "f": "2025-07-17",
+      "id": 36,
+      "ing": 125188.0,
+      "ing_onl": 12014.0,
+      "ing_taq": 113174.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Charros vs Caliente de Durango",
+      "f": "2025-05-15",
+      "id": 15,
+      "ing": 123858.0,
+      "ing_onl": 17628.0,
+      "ing_taq": 106230.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Leones vs Caliente de Durango",
+      "f": "2025-06-12",
+      "id": 27,
+      "ing": 119683.0,
+      "ing_onl": 9620.0,
+      "ing_taq": 110063.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Toros vs Caliente de Durango",
+      "f": "2025-07-04",
+      "id": 31,
+      "ing": 119148.0,
+      "ing_onl": 20648.0,
+      "ing_taq": 98500.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Charros vs Caliente de Durango",
+      "f": "2025-05-14",
+      "id": 14,
+      "ing": 115985.0,
+      "ing_onl": 11792.0,
+      "ing_taq": 104193.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Charros vs Caliente de Durango",
+      "f": "2025-08-03",
+      "id": 48,
+      "ing": 115917.0,
+      "ing_onl": 31290.0,
+      "ing_taq": 84627.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Leones vs Caliente de Durango",
+      "f": "2025-06-10",
+      "id": 25,
+      "ing": 112166.0,
+      "ing_onl": 13958.0,
+      "ing_taq": 98208.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Tecolotes vs Caliente de Durango",
+      "f": "2025-05-25",
+      "id": 21,
+      "ing": 110799.0,
+      "ing_onl": 17704.0,
+      "ing_taq": 93095.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Unión Laguna vs Caliente de Durango",
+      "f": "2025-07-16",
+      "id": 35,
+      "ing": 110292.0,
+      "ing_onl": 11484.0,
+      "ing_taq": 98808.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Charros vs Caliente de Durango",
+      "f": "2025-08-01",
+      "id": 46,
+      "ing": 109923.0,
+      "ing_onl": 13297.0,
+      "ing_taq": 96626.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Unión Laguna vs Caliente de Durango",
+      "f": "2025-07-15",
+      "id": 34,
+      "ing": 108707.0,
+      "ing_onl": 17076.0,
+      "ing_taq": 91631.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Sultanes vs Caliente de Durango",
+      "f": "2025-07-29",
+      "id": 43,
+      "ing": 105143.0,
+      "ing_onl": 22148.0,
+      "ing_taq": 82995.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Sultanes vs Caliente de Durango",
+      "f": "2025-07-30",
+      "id": 44,
+      "ing": 102237.0,
+      "ing_onl": 12926.0,
+      "ing_taq": 89311.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Leones vs Caliente de Durango",
+      "f": "2025-06-11",
+      "id": 26,
+      "ing": 100413.0,
+      "ing_onl": 4823.0,
+      "ing_taq": 95590.0,
+      "c": "TR"
+    },
+    {
+      "n": "Juego Doble: Acereros vs Caliente de Durango",
+      "f": "2025-07-19",
+      "id": 38,
+      "ing": 96634.0,
+      "ing_onl": 18284.0,
+      "ing_taq": 78350.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Acereros vs Caliente de Durango",
+      "f": "2025-07-21",
+      "id": 39,
+      "ing": 95800.0,
+      "ing_onl": 15896.0,
+      "ing_taq": 79904.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Dorados vs Caliente de Durango",
+      "f": "2025-06-04",
+      "id": 23,
+      "ing": 91346.0,
+      "ing_onl": 5280.0,
+      "ing_taq": 86066.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Toros vs Caliente de Durango",
+      "f": "2025-07-05",
+      "id": 32,
+      "ing": 88304.0,
+      "ing_onl": 9488.0,
+      "ing_taq": 78816.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Acereros vs Caliente de Durango",
+      "f": "2025-05-04",
+      "id": 9,
+      "ing": 87868.0,
+      "ing_onl": 19452.0,
+      "ing_taq": 68416.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Charros vs Caliente de Durango",
+      "f": "2025-08-02",
+      "id": 47,
+      "ing": 86408.0,
+      "ing_onl": 13938.0,
+      "ing_taq": 72470.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Charros vs Caliente de Durango",
+      "f": "2025-05-13",
+      "id": 13,
+      "ing": 85078.0,
+      "ing_onl": 14046.0,
+      "ing_taq": 71032.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Toros vs Caliente de Durango",
+      "f": "2025-07-06",
+      "id": 33,
+      "ing": 80372.0,
+      "ing_onl": 9798.0,
+      "ing_taq": 70574.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Saraperos vs Caliente de Durango",
+      "f": "2025-05-22",
+      "id": 18,
+      "ing": 76832.0,
+      "ing_onl": 4368.0,
+      "ing_taq": 72464.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Saraperos vs Caliente de Durango",
+      "f": "2025-05-21",
+      "id": 17,
+      "ing": 73745.0,
+      "ing_onl": 8492.0,
+      "ing_taq": 65253.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Rieleros vs Caliente de Durango",
+      "f": "2025-07-25",
+      "id": 40,
+      "ing": 55678.0,
+      "ing_onl": 1232.0,
+      "ing_taq": 54446.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Rieleros vs Caliente de Durango",
+      "f": "2025-07-27",
+      "id": 42,
+      "ing": 48985.0,
+      "ing_onl": 11766.0,
+      "ing_taq": 37219.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Rieleros vs Caliente de Durango",
+      "f": "2025-07-26",
+      "id": 41,
+      "ing": 47218.0,
+      "ing_onl": 6600.0,
+      "ing_taq": 40618.0,
       "c": "TR"
     }
   ],
@@ -543,6 +1191,402 @@
       "ing_onl": 341476.0,
       "ing_taq": 68572.0,
       "c": "TR"
+    },
+    {
+      "n": "Semifinal J5: Charros vs Unión Laguna",
+      "f": "2025-08-26",
+      "id": 54,
+      "ing": 392365.0,
+      "ing_onl": 320750.0,
+      "ing_taq": 71615.0,
+      "c": "Playoffs"
+    },
+    {
+      "n": "J2: Leones vs Charros",
+      "f": "2025-06-14",
+      "id": 30,
+      "ing": 384223.0,
+      "ing_onl": 299672.0,
+      "ing_taq": 84551.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Saraperos vs Charros",
+      "f": "2025-05-30",
+      "id": 20,
+      "ing": 378447.0,
+      "ing_onl": 308429.0,
+      "ing_taq": 70018.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Leones vs Charros",
+      "f": "2025-06-15",
+      "id": 31,
+      "ing": 361667.0,
+      "ing_onl": 284720.0,
+      "ing_taq": 76947.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Tecolotes vs Charros",
+      "f": "2025-07-31",
+      "id": 43,
+      "ing": 361211.0,
+      "ing_onl": 256884.0,
+      "ing_taq": 104327.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Acereros vs Charros",
+      "f": "2025-06-06",
+      "id": 23,
+      "ing": 357837.0,
+      "ing_onl": 280232.0,
+      "ing_taq": 77604.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Tecolotes vs Charros",
+      "f": "2025-05-09",
+      "id": 11,
+      "ing": 336762.0,
+      "ing_onl": 284531.0,
+      "ing_taq": 52231.0,
+      "c": "TR"
+    },
+    {
+      "n": "Paquete Serie Inaugural: Unión Laguna vs Charros (Incluye 3 eventos)",
+      "f": "2025-04-22",
+      "id": 2,
+      "ing": 328804.0,
+      "ing_onl": 282660.0,
+      "ing_taq": 46144.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Rieleros vs Charros",
+      "f": "2025-04-26",
+      "id": 6,
+      "ing": 327502.0,
+      "ing_onl": 238523.0,
+      "ing_taq": 88978.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Acereros vs Charros",
+      "f": "2025-06-08",
+      "id": 25,
+      "ing": 322645.0,
+      "ing_onl": 232326.0,
+      "ing_taq": 90319.0,
+      "c": "TR"
+    },
+    {
+      "n": "Paquete Semifinales: Charros vs Unión Laguna (Incluye 3 juegos)",
+      "f": "2025-08-23",
+      "id": 51,
+      "ing": 307501.0,
+      "ing_onl": 179160.0,
+      "ing_taq": 128341.0,
+      "c": "Playoffs"
+    },
+    {
+      "n": "J3: Unión Laguna vs Charros",
+      "f": "2025-07-13",
+      "id": 37,
+      "ing": 295818.0,
+      "ing_onl": 217123.0,
+      "ing_taq": 78694.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Caliente vs Charros",
+      "f": "2025-07-03",
+      "id": 34,
+      "ing": 289822.0,
+      "ing_onl": 212619.0,
+      "ing_taq": 77203.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Leones vs Charros",
+      "f": "2025-06-13",
+      "id": 29,
+      "ing": 284172.0,
+      "ing_onl": 227872.0,
+      "ing_taq": 56300.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Sultanes vs Charros",
+      "f": "2025-05-22",
+      "id": 19,
+      "ing": 279531.0,
+      "ing_onl": 220224.0,
+      "ing_taq": 59307.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Dorados vs Charros",
+      "f": "2025-05-18",
+      "id": 16,
+      "ing": 268947.0,
+      "ing_onl": 184577.0,
+      "ing_taq": 84370.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Tecolotes vs Charros",
+      "f": "2025-07-30",
+      "id": 42,
+      "ing": 249058.0,
+      "ing_onl": 189159.0,
+      "ing_taq": 59899.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Tecolotes vs Charros",
+      "f": "2025-07-29",
+      "id": 41,
+      "ing": 247250.0,
+      "ing_onl": 192971.0,
+      "ing_taq": 54279.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Tecolotes vs Charros",
+      "f": "2025-05-11",
+      "id": 13,
+      "ing": 246069.0,
+      "ing_onl": 179369.0,
+      "ing_taq": 66700.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Saraperos vs Charros",
+      "f": "2025-06-01",
+      "id": 22,
+      "ing": 245831.0,
+      "ing_onl": 184777.0,
+      "ing_taq": 61054.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Dorados vs Charros",
+      "f": "2025-08-06",
+      "id": 45,
+      "ing": 220739.0,
+      "ing_onl": 188079.0,
+      "ing_taq": 32660.0,
+      "c": "TR"
+    },
+    {
+      "n": "Paquete Playoffs: Sultanes vs Charros (incluye 3 juegos)",
+      "f": "2025-08-14",
+      "id": 50,
+      "ing": 220022.0,
+      "ing_onl": 124920.0,
+      "ing_taq": 95102.0,
+      "c": "Playoffs"
+    },
+    {
+      "n": "J3: Rieleros vs Charros",
+      "f": "2025-04-27",
+      "id": 7,
+      "ing": 217470.0,
+      "ing_onl": 153469.0,
+      "ing_taq": 64002.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Rieleros vs Charros",
+      "f": "2025-04-25",
+      "id": 5,
+      "ing": 211381.0,
+      "ing_onl": 136813.0,
+      "ing_taq": 74568.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Toros vs Charros",
+      "f": "2025-04-30",
+      "id": 9,
+      "ing": 197882.0,
+      "ing_onl": 167928.0,
+      "ing_taq": 29954.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Tecolotes vs Charros",
+      "f": "2025-05-10",
+      "id": 12,
+      "ing": 192938.0,
+      "ing_onl": 148769.0,
+      "ing_taq": 44168.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Sultanes vs Charros",
+      "f": "2025-05-20",
+      "id": 17,
+      "ing": 192282.0,
+      "ing_onl": 166584.0,
+      "ing_taq": 25698.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Sultanes vs Charros",
+      "f": "2025-05-21",
+      "id": 18,
+      "ing": 191468.0,
+      "ing_onl": 166013.0,
+      "ing_taq": 25455.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Dorados vs Charros",
+      "f": "2025-08-05",
+      "id": 44,
+      "ing": 184363.0,
+      "ing_onl": 155970.0,
+      "ing_taq": 28393.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Unión Laguna vs Charros",
+      "f": "2025-04-24",
+      "id": 4,
+      "ing": 181243.0,
+      "ing_onl": 114611.0,
+      "ing_taq": 66632.0,
+      "c": "TR"
+    },
+    {
+      "n": "Abono Flexible: Charro Pass LMB 2025",
+      "f": "2025-06-21",
+      "id": 67,
+      "ing": 179010.0,
+      "ing_onl": 62985.0,
+      "ing_taq": 116025.0,
+      "c": "Abono"
+    },
+    {
+      "n": "J3: Rieleros vs Charros",
+      "f": "2025-07-17",
+      "id": 40,
+      "ing": 177098.0,
+      "ing_onl": 142567.0,
+      "ing_taq": 34532.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Tigres vs Charros",
+      "f": "2025-06-11",
+      "id": 28,
+      "ing": 172173.0,
+      "ing_onl": 142912.0,
+      "ing_taq": 29261.0,
+      "c": "TR"
+    },
+    {
+      "n": "Paquete Final de Zona: Charros vs Sultanes (Incluye 2 juegos)",
+      "f": "2025-08-31",
+      "id": 55,
+      "ing": 161666.0,
+      "ing_onl": 0.0,
+      "ing_taq": 161666.0,
+      "c": "Playoffs"
+    },
+    {
+      "n": "J1: Caliente vs Charros",
+      "f": "2025-07-01",
+      "id": 32,
+      "ing": 145604.0,
+      "ing_onl": 126324.0,
+      "ing_taq": 19280.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Caliente vs Charros",
+      "f": "2025-07-02",
+      "id": 33,
+      "ing": 139589.0,
+      "ing_onl": 114360.0,
+      "ing_taq": 25229.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Rieleros vs Charros",
+      "f": "2025-07-16",
+      "id": 39,
+      "ing": 130059.0,
+      "ing_onl": 97505.0,
+      "ing_taq": 32554.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Tigres vs Charros",
+      "f": "2025-06-10",
+      "id": 27,
+      "ing": 127315.0,
+      "ing_onl": 102758.0,
+      "ing_taq": 24557.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Toros vs Charros",
+      "f": "2025-04-29",
+      "id": 8,
+      "ing": 122470.0,
+      "ing_onl": 100359.0,
+      "ing_taq": 22111.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Tigres vs Charros",
+      "f": "2025-06-09",
+      "id": 26,
+      "ing": 116408.0,
+      "ing_onl": 81963.0,
+      "ing_taq": 34445.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Rieleros vs Charros",
+      "f": "2025-07-16",
+      "id": 38,
+      "ing": 111409.0,
+      "ing_onl": 95718.0,
+      "ing_taq": 15691.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Unión Laguna vs Charros",
+      "f": "2025-04-23",
+      "id": 3,
+      "ing": 102827.0,
+      "ing_onl": 71703.0,
+      "ing_taq": 31124.0,
+      "c": "TR"
+    },
+    {
+      "n": "Serie del Rey J5: Diablos vs Charros (En caso de ser necesario)",
+      "f": "2025-09-15",
+      "id": 64,
+      "ing": 68800.0,
+      "ing_onl": 600.0,
+      "ing_taq": 68200.0,
+      "c": "Playoffs"
+    },
+    {
+      "n": "Abonos Compromisos y Cortesías LMB 2025",
+      "f": "2025-10-31",
+      "id": 66,
+      "ing": 625.0,
+      "ing_onl": 0.0,
+      "ing_taq": 625.0,
+      "c": "Cortesías"
     }
   ],
   "Dorados": [
@@ -724,6 +1768,276 @@
       "ing": 175530.0,
       "ing_onl": 96810.0,
       "ing_taq": 78720.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Guerreros vs Dorados",
+      "f": "2025-06-21",
+      "id": 28,
+      "ing": 174550.0,
+      "ing_onl": 80320.0,
+      "ing_taq": 94230.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Algodoneros vs Dorados",
+      "f": "2025-05-22",
+      "id": 12,
+      "ing": 165820.0,
+      "ing_onl": 81630.0,
+      "ing_taq": 84190.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Algodoneros vs Dorados",
+      "f": "2025-07-10",
+      "id": 37,
+      "ing": 163650.0,
+      "ing_onl": 63860.0,
+      "ing_taq": 99790.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Charros vs Dorados",
+      "f": "2025-07-04",
+      "id": 32,
+      "ing": 159940.0,
+      "ing_onl": 72310.0,
+      "ing_taq": 87630.0,
+      "c": "TR"
+    },
+    {
+      "n": "Abono Amarillo Flexible (15 Boletos)",
+      "f": "2025-09-19",
+      "id": 51,
+      "ing": 154200.0,
+      "ing_onl": 150700.0,
+      "ing_taq": 3500.0,
+      "c": "Abonos"
+    },
+    {
+      "n": "J2: Algodoneros vs Dorados",
+      "f": "2025-05-21",
+      "id": 11,
+      "ing": 154020.0,
+      "ing_onl": 76620.0,
+      "ing_taq": 77400.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Caliente de Durango vs Dorados",
+      "f": "2025-07-24",
+      "id": 43,
+      "ing": 149670.0,
+      "ing_onl": 59220.0,
+      "ing_taq": 90450.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Sultanes vs Dorados",
+      "f": "2025-07-01",
+      "id": 30,
+      "ing": 149580.0,
+      "ing_onl": 72090.0,
+      "ing_taq": 77490.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Caliente de Durango vs Dorados",
+      "f": "2025-04-29",
+      "id": 4,
+      "ing": 144670.0,
+      "ing_onl": 70440.0,
+      "ing_taq": 74230.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Toros vs Dorados",
+      "f": "2025-05-31",
+      "id": 18,
+      "ing": 143680.0,
+      "ing_onl": 63410.0,
+      "ing_taq": 80270.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Saraperos vs Dorados",
+      "f": "2025-07-17",
+      "id": 40,
+      "ing": 140870.0,
+      "ing_onl": 56000.0,
+      "ing_taq": 84870.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Acereros vs Dorados",
+      "f": "2025-07-30",
+      "id": 45,
+      "ing": 131980.0,
+      "ing_onl": 52560.0,
+      "ing_taq": 79420.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Acereros vs Dorados",
+      "f": "2025-07-29",
+      "id": 44,
+      "ing": 123350.0,
+      "ing_onl": 36920.0,
+      "ing_taq": 86430.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Rieleros vs Dorados",
+      "f": "2025-05-25",
+      "id": 15,
+      "ing": 110380.0,
+      "ing_onl": 46360.0,
+      "ing_taq": 64020.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Algodoneros vs Dorados",
+      "f": "2025-05-20",
+      "id": 10,
+      "ing": 101610.0,
+      "ing_onl": 45760.0,
+      "ing_taq": 55850.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Bravos vs Dorados",
+      "f": "2025-06-19",
+      "id": 26,
+      "ing": 97790.0,
+      "ing_onl": 36410.0,
+      "ing_taq": 61380.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Caliente de Durango vs Dorados",
+      "f": "2025-07-23",
+      "id": 42,
+      "ing": 96910.0,
+      "ing_onl": 38880.0,
+      "ing_taq": 58030.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Charros vs Dorados",
+      "f": "2025-07-06",
+      "id": 34,
+      "ing": 91910.0,
+      "ing_onl": 35810.0,
+      "ing_taq": 56100.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Saraperos vs Dorados",
+      "f": "2025-07-16",
+      "id": 39,
+      "ing": 91370.0,
+      "ing_onl": 32950.0,
+      "ing_taq": 58420.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Tecos Dos Laredos vs Dorados",
+      "f": "2025-06-08",
+      "id": 23,
+      "ing": 84340.0,
+      "ing_onl": 29750.0,
+      "ing_taq": 54590.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Guerreros vs Dorados",
+      "f": "2025-06-22",
+      "id": 29,
+      "ing": 80480.0,
+      "ing_onl": 27990.0,
+      "ing_taq": 52490.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Algodoneros vs Dorados",
+      "f": "2025-07-09",
+      "id": 36,
+      "ing": 72840.0,
+      "ing_onl": 27390.0,
+      "ing_taq": 45450.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Bravos vs Dorados",
+      "f": "2025-06-18",
+      "id": 25,
+      "ing": 72590.0,
+      "ing_onl": 26120.0,
+      "ing_taq": 46470.0,
+      "c": "TR"
+    },
+    {
+      "n": "Abono Naranja Flexible (25 Boletos)",
+      "f": "2025-08-31",
+      "id": 49,
+      "ing": 69500.0,
+      "ing_onl": 58500.0,
+      "ing_taq": 11000.0,
+      "c": "Abonos"
+    },
+    {
+      "n": "J1: Bravos vs Dorados",
+      "f": "2025-06-17",
+      "id": 24,
+      "ing": 68090.0,
+      "ing_onl": 24820.0,
+      "ing_taq": 43270.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Saraperos vs Dorados",
+      "f": "2025-07-15",
+      "id": 38,
+      "ing": 66410.0,
+      "ing_onl": 25320.0,
+      "ing_taq": 41090.0,
+      "c": "TR"
+    },
+    {
+      "n": "Abono Morado Flexible (35 Boletos)",
+      "f": "2025-08-31",
+      "id": 48,
+      "ing": 64500.0,
+      "ing_onl": 56500.0,
+      "ing_taq": 8000.0,
+      "c": "Abonos"
+    },
+    {
+      "n": "J1: Caliente de Durango vs Dorados",
+      "f": "2025-07-22",
+      "id": 41,
+      "ing": 60930.0,
+      "ing_onl": 22700.0,
+      "ing_taq": 38230.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Algodoneros vs Dorados",
+      "f": "2025-07-08",
+      "id": 35,
+      "ing": 50050.0,
+      "ing_onl": 18060.0,
+      "ing_taq": 31990.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Toros vs Dorados",
+      "f": "2025-06-01",
+      "id": 20,
+      "ing": 1900.0,
+      "ing_onl": 800.0,
+      "ing_taq": 1100.0,
       "c": "TR"
     }
   ],
@@ -907,6 +2221,429 @@
       "ing_onl": 76700.0,
       "ing_taq": 44375.0,
       "c": "TR"
+    },
+    {
+      "n": "11/05/25",
+      "f": "J3: Tigres vs Guerreros",
+      "id": 11,
+      "ing": 120110.0,
+      "ing_onl": 27750.0,
+      "ing_taq": 92360.0,
+      "c": "TR"
+    },
+    {
+      "n": "23/04/25",
+      "f": "J2: Conspiradores vs Guerreros",
+      "id": 3,
+      "ing": 114900.0,
+      "ing_onl": 62200.0,
+      "ing_taq": 52700.0,
+      "c": "TR"
+    },
+    {
+      "n": "26/07/25",
+      "f": "J2: Leones vs Guerreros",
+      "id": 50,
+      "ing": 112700.0,
+      "ing_onl": 33850.0,
+      "ing_taq": 78850.0,
+      "c": "TR"
+    },
+    {
+      "n": "13/07/25",
+      "f": "J3: Conspiradores vs Guerreros",
+      "id": 48,
+      "ing": 107471.0,
+      "ing_onl": 25006.0,
+      "ing_taq": 82465.0,
+      "c": "TR"
+    },
+    {
+      "n": "10/05/25",
+      "f": "J2: Tigres vs Guerreros",
+      "id": 10,
+      "ing": 106980.0,
+      "ing_onl": 18350.0,
+      "ing_taq": 88630.0,
+      "c": "TR"
+    },
+    {
+      "n": "14/06/25",
+      "f": "J2: Saraperos vs Guerreros",
+      "id": 35,
+      "ing": 104500.0,
+      "ing_onl": 25000.0,
+      "ing_taq": 79500.0,
+      "c": "TR"
+    },
+    {
+      "n": "15/06/25",
+      "f": "J3: Saraperos vs Guerreros",
+      "id": 36,
+      "ing": 100165.0,
+      "ing_onl": 20650.0,
+      "ing_taq": 79515.0,
+      "c": "TR"
+    },
+    {
+      "n": "09/05/25",
+      "f": "J1: Tigres vs Guerreros",
+      "id": 9,
+      "ing": 90950.0,
+      "ing_onl": 32650.0,
+      "ing_taq": 58300.0,
+      "c": "TR"
+    },
+    {
+      "n": "06/05/25",
+      "f": "J1: Leones vs Guerreros",
+      "id": 6,
+      "ing": 87030.0,
+      "ing_onl": 18000.0,
+      "ing_taq": 69030.0,
+      "c": "TR"
+    },
+    {
+      "n": "08/05/25",
+      "f": "J3: Leones vs Guerreros",
+      "id": 8,
+      "ing": 85760.0,
+      "ing_onl": 19750.0,
+      "ing_taq": 66010.0,
+      "c": "TR"
+    },
+    {
+      "n": "25/06/25",
+      "f": "J2: Tigres vs Guerreros",
+      "id": 38,
+      "ing": 82930.0,
+      "ing_onl": 19450.0,
+      "ing_taq": 63480.0,
+      "c": "TR"
+    },
+    {
+      "n": "21/05/25",
+      "f": "J2: El Águila vs Guerreros",
+      "id": 16,
+      "ing": 76185.0,
+      "ing_onl": 15500.0,
+      "ing_taq": 60685.0,
+      "c": "TR"
+    },
+    {
+      "n": "03/07/25",
+      "f": "J3: Bravos vs Guerreros ",
+      "id": 42,
+      "ing": 72145.0,
+      "ing_onl": 15100.0,
+      "ing_taq": 57045.0,
+      "c": "TR"
+    },
+    {
+      "n": "26/06/25",
+      "f": "J3: Tigres vs Guerreros",
+      "id": 39,
+      "ing": 71540.0,
+      "ing_onl": 17300.0,
+      "ing_taq": 54240.0,
+      "c": "TR"
+    },
+    {
+      "n": "09/07/25",
+      "f": "J2: El Águila vs Guerreros",
+      "id": 44,
+      "ing": 70150.0,
+      "ing_onl": 18100.0,
+      "ing_taq": 52050.0,
+      "c": "TR"
+    },
+    {
+      "n": "11/07/25",
+      "f": "J1: Conspiradores vs Guerreros",
+      "id": 46,
+      "ing": 68525.0,
+      "ing_onl": 15100.0,
+      "ing_taq": 53425.0,
+      "c": "TR"
+    },
+    {
+      "n": "02/07/25",
+      "f": "J2: Bravos vs Guerreros ",
+      "id": 41,
+      "ing": 68300.0,
+      "ing_onl": 13450.0,
+      "ing_taq": 54850.0,
+      "c": "TR"
+    },
+    {
+      "n": "12/07/25",
+      "f": "J2: Conspiradores vs Guerreros",
+      "id": 47,
+      "ing": 66250.0,
+      "ing_onl": 15350.0,
+      "ing_taq": 50900.0,
+      "c": "TR"
+    },
+    {
+      "n": "07/05/25",
+      "f": "J2: Leones vs Guerreros",
+      "id": 7,
+      "ing": 65325.0,
+      "ing_onl": 15900.0,
+      "ing_taq": 49425.0,
+      "c": "TR"
+    },
+    {
+      "n": "30/05/25",
+      "f": "J1: Olmecas vs Guerreros",
+      "id": 24,
+      "ing": 62300.0,
+      "ing_onl": 15800.0,
+      "ing_taq": 46500.0,
+      "c": "TR"
+    },
+    {
+      "n": "01/06/25",
+      "f": "J3: Olmecas vs Guerreros",
+      "id": 27,
+      "ing": 59640.0,
+      "ing_onl": 15150.0,
+      "ing_taq": 44490.0,
+      "c": "TR"
+    },
+    {
+      "n": "22/05/25",
+      "f": "J3: El Águila vs Guerreros",
+      "id": 17,
+      "ing": 59410.0,
+      "ing_onl": 15450.0,
+      "ing_taq": 43960.0,
+      "c": "TR"
+    },
+    {
+      "n": "05/06/25",
+      "f": "J3: Piratas vs Guerreros",
+      "id": 30,
+      "ing": 58225.0,
+      "ing_onl": 12300.0,
+      "ing_taq": 45925.0,
+      "c": "TR"
+    },
+    {
+      "n": "31/05/25",
+      "f": "J2: Olmecas vs Guerreros",
+      "id": 26,
+      "ing": 58200.0,
+      "ing_onl": 14850.0,
+      "ing_taq": 43350.0,
+      "c": "TR"
+    },
+    {
+      "n": "13/06/25",
+      "f": "J1: Saraperos vs Guerreros",
+      "id": 34,
+      "ing": 57850.0,
+      "ing_onl": 13450.0,
+      "ing_taq": 44400.0,
+      "c": "TR"
+    },
+    {
+      "n": "10/07/25",
+      "f": "J3: El Águila vs Guerreros",
+      "id": 45,
+      "ing": 56945.0,
+      "ing_onl": 16300.0,
+      "ing_taq": 40645.0,
+      "c": "TR"
+    },
+    {
+      "n": "20/05/25",
+      "f": "J1: El Águila vs Guerreros",
+      "id": 15,
+      "ing": 56765.0,
+      "ing_onl": 18900.0,
+      "ing_taq": 37865.0,
+      "c": "TR"
+    },
+    {
+      "n": "12/06/25",
+      "f": "J3: Rieleros vs Guerreros",
+      "id": 33,
+      "ing": 54575.0,
+      "ing_onl": 12600.0,
+      "ing_taq": 41975.0,
+      "c": "TR"
+    },
+    {
+      "n": "08/07/25",
+      "f": "J1: El Águila vs Guerreros",
+      "id": 43,
+      "ing": 54160.0,
+      "ing_onl": 11500.0,
+      "ing_taq": 42660.0,
+      "c": "TR"
+    },
+    {
+      "n": "24/06/25",
+      "f": "J1: Tigres vs Guerreros",
+      "id": 37,
+      "ing": 53290.0,
+      "ing_onl": 14050.0,
+      "ing_taq": 39240.0,
+      "c": "TR"
+    },
+    {
+      "n": "11/06/25",
+      "f": "J2: Rieleros vs Guerreros",
+      "id": 32,
+      "ing": 52795.0,
+      "ing_onl": 11750.0,
+      "ing_taq": 41045.0,
+      "c": "TR"
+    },
+    {
+      "n": "10/06/25",
+      "f": "J1: Rieleros vs Guerreros",
+      "id": 31,
+      "ing": 51375.0,
+      "ing_onl": 12600.0,
+      "ing_taq": 38775.0,
+      "c": "TR"
+    },
+    {
+      "n": "04/06/25",
+      "f": "J2: Piratas vs Guerreros",
+      "id": 29,
+      "ing": 51245.0,
+      "ing_onl": 10800.0,
+      "ing_taq": 40445.0,
+      "c": "TR"
+    },
+    {
+      "n": "03/06/25",
+      "f": "J1: Piratas vs Guerreros",
+      "id": 28,
+      "ing": 45280.0,
+      "ing_onl": 6550.0,
+      "ing_taq": 38730.0,
+      "c": "TR"
+    },
+    {
+      "n": "01/07/25",
+      "f": "J1: Bravos vs Guerreros ",
+      "id": 40,
+      "ing": 41185.0,
+      "ing_onl": 11750.0,
+      "ing_taq": 29435.0,
+      "c": "TR"
+    },
+    {
+      "n": "19/08/25",
+      "f": "Palcos Serie de Zona: Guerreros de Oaxaca",
+      "id": 62,
+      "ing": 15000.0,
+      "ing_onl": 0.0,
+      "ing_taq": 15000.0,
+      "c": "Playoffs"
+    },
+    {
+      "n": "10/08/25",
+      "f": "Palcos Playoffs S1: Guerreros de Oaxaca",
+      "id": 59,
+      "ing": 12800.0,
+      "ing_onl": 0.0,
+      "ing_taq": 12800.0,
+      "c": "Playoffs"
+    },
+    {
+      "n": "14/04/24",
+      "f": "GUERREROBONO VIP 2025",
+      "id": 56,
+      "ing": 0.0,
+      "ing_onl": 0.0,
+      "ing_taq": 0.0,
+      "c": "Abono"
+    },
+    {
+      "n": "13/04/24",
+      "f": "GUERREROBONO 2025",
+      "id": 55,
+      "ing": 0.0,
+      "ing_onl": 0.0,
+      "ing_taq": 0.0,
+      "c": "Abono"
+    },
+    {
+      "n": "28/05/25",
+      "f": "Canje Diablos Central",
+      "id": 20,
+      "ing": 0.0,
+      "ing_onl": 0.0,
+      "ing_taq": 0.0,
+      "c": "TR"
+    },
+    {
+      "n": "16/08/25",
+      "f": "Playoffs J6: Guerreros de Oaxaca",
+      "id": 60,
+      "ing": 0.0,
+      "ing_onl": 0.0,
+      "ing_taq": 0.0,
+      "c": "Playoffs"
+    },
+    {
+      "n": "17/08/25",
+      "f": "Playoffs J7: Guerreros de Oaxaca",
+      "id": 61,
+      "ing": 0.0,
+      "ing_onl": 0.0,
+      "ing_taq": 0.0,
+      "c": "Playoffs"
+    },
+    {
+      "n": "29/05/25",
+      "f": "Canje Diablos Lateral Derecho",
+      "id": 22,
+      "ing": 0.0,
+      "ing_onl": 0.0,
+      "ing_taq": 0.0,
+      "c": "TR"
+    },
+    {
+      "n": "29/05/25",
+      "f": "Canje Diablos Palco Central",
+      "id": 23,
+      "ing": 0.0,
+      "ing_onl": 0.0,
+      "ing_taq": 0.0,
+      "c": "TR"
+    },
+    {
+      "n": "30/05/25",
+      "f": "Canje Diablos Lateral Izquierdo",
+      "id": 25,
+      "ing": 0.0,
+      "ing_onl": 0.0,
+      "ing_taq": 0.0,
+      "c": "TR"
+    },
+    {
+      "n": "01/09/25",
+      "f": "Palcos Serie de Campeonato: Diablos vs Guerreros de Oaxaca (Incluye 3 juegos)",
+      "id": 69,
+      "ing": 0.0,
+      "ing_onl": 0.0,
+      "ing_taq": 0.0,
+      "c": "Playoffs"
+    },
+    {
+      "n": "04/09/25",
+      "f": "Serie de Campeonato J5: Diablos vs Guerreros",
+      "id": 73,
+      "ing": 0.0,
+      "ing_onl": 0.0,
+      "ing_taq": 0.0,
+      "c": "Playoffs"
     }
   ],
   "Rieleros": [
@@ -1088,6 +2825,249 @@
       "ing": 133000.0,
       "ing_onl": 50510.0,
       "ing_taq": 82490.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Charros vs Rieleros",
+      "f": "2025-05-28",
+      "id": 17,
+      "ing": 132710.0,
+      "ing_onl": 65630.0,
+      "ing_taq": 67080.0,
+      "c": "TR"
+    },
+    {
+      "n": "Juego Doble: Tecos vs Rieleros",
+      "f": "2025-07-23",
+      "id": 40,
+      "ing": 128900.0,
+      "ing_onl": 61650.0,
+      "ing_taq": 67250.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Tecos vs Rieleros",
+      "f": "2025-07-24",
+      "id": 41,
+      "ing": 125430.0,
+      "ing_onl": 65210.0,
+      "ing_taq": 60220.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Acereros vs Rieleros",
+      "f": "2025-07-05",
+      "id": 35,
+      "ing": 122640.0,
+      "ing_onl": 38430.0,
+      "ing_taq": 84210.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Saraperos vs Rieleros",
+      "f": "2025-05-11",
+      "id": 12,
+      "ing": 120570.0,
+      "ing_onl": 36530.0,
+      "ing_taq": 84040.0,
+      "c": "TR"
+    },
+    {
+      "n": "Juego Doble: Algodoneros vs Rieleros",
+      "f": "2025-07-02",
+      "id": 32,
+      "ing": 119810.0,
+      "ing_onl": 47140.0,
+      "ing_taq": 72670.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Saraperos vs Rieleros",
+      "f": "2025-07-30",
+      "id": 46,
+      "ing": 119510.0,
+      "ing_onl": 61310.0,
+      "ing_taq": 58200.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Caliente vs Rieleros",
+      "f": "2025-05-06",
+      "id": 7,
+      "ing": 114600.0,
+      "ing_onl": 45000.0,
+      "ing_taq": 69600.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Toros vs Rieleros",
+      "f": "2025-05-22",
+      "id": 15,
+      "ing": 109330.0,
+      "ing_onl": 47750.0,
+      "ing_taq": 61580.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Tecos vs Rieleros",
+      "f": "2025-04-29",
+      "id": 4,
+      "ing": 107460.0,
+      "ing_onl": 41230.0,
+      "ing_taq": 66230.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Pericos vs Rieleros",
+      "f": "2025-06-18",
+      "id": 26,
+      "ing": 103568.0,
+      "ing_onl": 36868.0,
+      "ing_taq": 66700.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Saraperos vs Rieleros",
+      "f": "2025-05-10",
+      "id": 11,
+      "ing": 97450.0,
+      "ing_onl": 34410.0,
+      "ing_taq": 63040.0,
+      "c": "TR"
+    },
+    {
+      "n": "Juego Doble: El Águila vs Rieleros [Reprogramado J1]",
+      "f": "2025-06-21",
+      "id": 29,
+      "ing": 91180.0,
+      "ing_onl": 45190.0,
+      "ing_taq": 45990.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Acereros vs Rieleros",
+      "f": "2025-07-04",
+      "id": 34,
+      "ing": 89000.0,
+      "ing_onl": 42850.0,
+      "ing_taq": 46150.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Pericos vs Rieleros",
+      "f": "2025-06-19",
+      "id": 27,
+      "ing": 85360.0,
+      "ing_onl": 32980.0,
+      "ing_taq": 52380.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Caliente vs Rieleros",
+      "f": "2025-05-07",
+      "id": 8,
+      "ing": 78420.0,
+      "ing_onl": 26380.0,
+      "ing_taq": 52040.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Dorados vs Rieleros",
+      "f": "2025-07-12",
+      "id": 38,
+      "ing": 78180.0,
+      "ing_onl": 43950.0,
+      "ing_taq": 34230.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Dorados vs Rieleros",
+      "f": "2025-07-11",
+      "id": 37,
+      "ing": 75540.0,
+      "ing_onl": 29400.0,
+      "ing_taq": 46140.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Caliente vs Rieleros",
+      "f": "2025-05-08",
+      "id": 9,
+      "ing": 67990.0,
+      "ing_onl": 18390.0,
+      "ing_taq": 49600.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Algodoneros vs Rieleros",
+      "f": "2025-07-03",
+      "id": 33,
+      "ing": 66410.0,
+      "ing_onl": 38270.0,
+      "ing_taq": 28140.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Acereros vs Rieleros",
+      "f": "2025-07-06",
+      "id": 36,
+      "ing": 65760.0,
+      "ing_onl": 21000.0,
+      "ing_taq": 44760.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Dorados vs Rieleros",
+      "f": "2025-07-13",
+      "id": 39,
+      "ing": 51030.0,
+      "ing_onl": 22480.0,
+      "ing_taq": 28550.0,
+      "c": "TR"
+    },
+    {
+      "n": "Juego Doble  J1 + J3: El Águila vs Rieleros",
+      "f": "2025-06-22",
+      "id": 30,
+      "ing": 47930.0,
+      "ing_onl": 20610.0,
+      "ing_taq": 27320.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: El Águila vs Rieleros [SUSPENDIDO]",
+      "f": "2025-06-20",
+      "id": 28,
+      "ing": 35035.0,
+      "ing_onl": 32755.0,
+      "ing_taq": 2280.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Caliente vs Rieleros",
+      "f": "2025-07-27",
+      "id": 44,
+      "ing": 4600.0,
+      "ing_onl": 0.0,
+      "ing_taq": 4600.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Caliente vs Rieleros",
+      "f": "2025-07-25",
+      "id": 42,
+      "ing": 0.0,
+      "ing_onl": 0.0,
+      "ing_taq": 0.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Caliente vs Rieleros",
+      "f": "2025-07-26",
+      "id": 43,
+      "ing": 0.0,
+      "ing_onl": 0.0,
+      "ing_taq": 0.0,
       "c": "TR"
     }
   ],
@@ -1271,6 +3251,240 @@
       "ing_onl": 185130.0,
       "ing_taq": 108470.0,
       "c": "TR"
+    },
+    {
+      "n": "21/06/25",
+      "f": "J2: Pericos vs Saraperos",
+      "id": 25,
+      "ing": 287220.0,
+      "ing_onl": 177800.0,
+      "ing_taq": 109420.0,
+      "c": "TR"
+    },
+    {
+      "n": "26/06/25",
+      "f": "J3: Rieleros vs Saraperos",
+      "id": 29,
+      "ing": 286100.0,
+      "ing_onl": 177960.0,
+      "ing_taq": 108140.0,
+      "c": "TR"
+    },
+    {
+      "n": "18/05/25",
+      "f": "J3: Algodoneros vs Saraperos",
+      "id": 14,
+      "ing": 256920.0,
+      "ing_onl": 166270.0,
+      "ing_taq": 90650.0,
+      "c": "TR"
+    },
+    {
+      "n": "29/05/25",
+      "f": "J3: Dorados vs Saraperos",
+      "id": 17,
+      "ing": 232260.0,
+      "ing_onl": 141460.0,
+      "ing_taq": 90800.0,
+      "c": "TR"
+    },
+    {
+      "n": "08/05/25",
+      "f": "J3: Toros vs Saraperos",
+      "id": 9,
+      "ing": 231380.0,
+      "ing_onl": 147740.0,
+      "ing_taq": 83640.0,
+      "c": "TR"
+    },
+    {
+      "n": "19/06/25",
+      "f": "J3: El Águila vs Saraperos",
+      "id": 23,
+      "ing": 221700.0,
+      "ing_onl": 116220.0,
+      "ing_taq": 105480.0,
+      "c": "TR"
+    },
+    {
+      "n": "18/07/25",
+      "f": "J1: Charros vs Saraperos",
+      "id": 36,
+      "ing": 218070.0,
+      "ing_onl": 147570.0,
+      "ing_taq": 70500.0,
+      "c": "TR"
+    },
+    {
+      "n": "15/05/25",
+      "f": "J3: Tecos vs Saraperos",
+      "id": 12,
+      "ing": 178040.0,
+      "ing_onl": 106640.0,
+      "ing_taq": 71400.0,
+      "c": "TR"
+    },
+    {
+      "n": "07/05/25",
+      "f": "J2: Toros vs Saraperos",
+      "id": 8,
+      "ing": 174060.0,
+      "ing_onl": 82600.0,
+      "ing_taq": 91460.0,
+      "c": "TR"
+    },
+    {
+      "n": "06/05/25",
+      "f": "J1: Toros vs Saraperos",
+      "id": 7,
+      "ing": 172260.0,
+      "ing_onl": 89140.0,
+      "ing_taq": 83120.0,
+      "c": "TR"
+    },
+    {
+      "n": "10/07/25",
+      "f": "J3: Caliente de Durango vs Saraperos",
+      "id": 32,
+      "ing": 118240.0,
+      "ing_onl": 61800.0,
+      "ing_taq": 56440.0,
+      "c": "TR"
+    },
+    {
+      "n": "25/06/25",
+      "f": "J2: Rieleros vs Saraperos",
+      "id": 28,
+      "ing": 117980.0,
+      "ing_onl": 64355.0,
+      "ing_taq": 53625.0,
+      "c": "TR"
+    },
+    {
+      "n": "14/07/25",
+      "f": "J3: Acereros vs Saraperos",
+      "id": 35,
+      "ing": 108700.0,
+      "ing_onl": 0.0,
+      "ing_taq": 108700.0,
+      "c": "TR"
+    },
+    {
+      "n": "09/07/25",
+      "f": "J2: Caliente de Durango vs Saraperos",
+      "id": 31,
+      "ing": 102880.0,
+      "ing_onl": 48980.0,
+      "ing_taq": 53900.0,
+      "c": "TR"
+    },
+    {
+      "n": "13/05/25",
+      "f": "J1: Tecos vs Saraperos",
+      "id": 10,
+      "ing": 99050.0,
+      "ing_onl": 58010.0,
+      "ing_taq": 41040.0,
+      "c": "TR"
+    },
+    {
+      "n": "14/05/25",
+      "f": "J2: Tecos vs Saraperos",
+      "id": 11,
+      "ing": 96655.0,
+      "ing_onl": 57695.0,
+      "ing_taq": 38960.0,
+      "c": "TR"
+    },
+    {
+      "n": "24/06/25",
+      "f": "J1: Rieleros vs Saraperos",
+      "id": 27,
+      "ing": 94275.0,
+      "ing_onl": 45490.0,
+      "ing_taq": 48785.0,
+      "c": "TR"
+    },
+    {
+      "n": "22/06/25",
+      "f": "J3: Pericos vs Saraperos",
+      "id": 26,
+      "ing": 87380.0,
+      "ing_onl": 35660.0,
+      "ing_taq": 51720.0,
+      "c": "TR"
+    },
+    {
+      "n": "28/05/25",
+      "f": "J2: Dorados vs Saraperos",
+      "id": 16,
+      "ing": 86510.0,
+      "ing_onl": 55250.0,
+      "ing_taq": 31260.0,
+      "c": "TR"
+    },
+    {
+      "n": "08/07/25",
+      "f": "J1: Caliente de Durango vs Saraperos",
+      "id": 30,
+      "ing": 82660.0,
+      "ing_onl": 44700.0,
+      "ing_taq": 37960.0,
+      "c": "TR"
+    },
+    {
+      "n": "17/06/25",
+      "f": "J1: El Águila vs Saraperos",
+      "id": 21,
+      "ing": 75845.0,
+      "ing_onl": 38720.0,
+      "ing_taq": 37125.0,
+      "c": "TR"
+    },
+    {
+      "n": "18/06/25",
+      "f": "J2: El Águila vs Saraperos",
+      "id": 22,
+      "ing": 73445.0,
+      "ing_onl": 40005.0,
+      "ing_taq": 33440.0,
+      "c": "TR"
+    },
+    {
+      "n": "27/05/25",
+      "f": "J1: Dorados vs Saraperos",
+      "id": 15,
+      "ing": 70835.0,
+      "ing_onl": 42730.0,
+      "ing_taq": 28105.0,
+      "c": "TR"
+    },
+    {
+      "n": "20/06/25",
+      "f": "J1: Pericos vs Saraperos",
+      "id": 24,
+      "ing": 57500.0,
+      "ing_onl": 25600.0,
+      "ing_taq": 31900.0,
+      "c": "TR"
+    },
+    {
+      "n": "22/07/25",
+      "f": "J2: Sultanes vs Saraperos",
+      "id": 40,
+      "ing": 52040.0,
+      "ing_onl": 0.0,
+      "ing_taq": 52040.0,
+      "c": "TR"
+    },
+    {
+      "n": "03/08/25",
+      "f": "Abono 2025 General Cortesias",
+      "id": 46,
+      "ing": 0.0,
+      "ing_onl": 0.0,
+      "ing_taq": 0.0,
+      "c": "Abono"
     }
   ],
   "Sultanes": [
@@ -1453,6 +3667,465 @@
       "ing_onl": 902080.0,
       "ing_taq": 335760.0,
       "c": "Playoffs"
+    },
+    {
+      "n": "J2: Acereros vs Sultanes",
+      "f": "2025-05-28",
+      "id": 20,
+      "ing": 1219531.0,
+      "ing_onl": 717186.0,
+      "ing_taq": 502345.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Saraperos vs Sultanes",
+      "f": "2025-06-04",
+      "id": 23,
+      "ing": 1152710.0,
+      "ing_onl": 685250.0,
+      "ing_taq": 467460.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Aguascalientes vs Sultanes",
+      "f": "2025-07-19",
+      "id": 41,
+      "ing": 1131224.0,
+      "ing_onl": 775274.0,
+      "ing_taq": 355950.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Diablos vs Sultanes",
+      "f": "2025-06-11",
+      "id": 26,
+      "ing": 1125976.0,
+      "ing_onl": 674906.0,
+      "ing_taq": 451070.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Acereros vs Sultanes",
+      "f": "2025-05-29",
+      "id": 21,
+      "ing": 1122030.0,
+      "ing_onl": 704540.0,
+      "ing_taq": 417490.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Aguascalientes vs Sultanes",
+      "f": "2025-07-20",
+      "id": 42,
+      "ing": 1098260.0,
+      "ing_onl": 733450.0,
+      "ing_taq": 364810.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Jalisco vs Sultanes",
+      "f": "2025-07-09",
+      "id": 35,
+      "ing": 1034140.0,
+      "ing_onl": 607280.0,
+      "ing_taq": 426860.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Conspiradores vs Sultanes",
+      "f": "2025-06-13",
+      "id": 28,
+      "ing": 1021085.0,
+      "ing_onl": 710170.0,
+      "ing_taq": 310915.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Jalisco vs Sultanes",
+      "f": "2025-07-10",
+      "id": 36,
+      "ing": 990390.0,
+      "ing_onl": 712965.0,
+      "ing_taq": 277425.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Durango vs Sultanes",
+      "f": "2025-06-26",
+      "id": 33,
+      "ing": 982920.0,
+      "ing_onl": 624515.0,
+      "ing_taq": 358405.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1:Torreon vs Sultanes",
+      "f": "2025-07-25",
+      "id": 43,
+      "ing": 964490.0,
+      "ing_onl": 669305.0,
+      "ing_taq": 295185.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Chihuahua vs Sultanes",
+      "f": "2025-08-01",
+      "id": 46,
+      "ing": 963440.0,
+      "ing_onl": 672235.0,
+      "ing_taq": 291205.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Saraperos vs Sultanes",
+      "f": "2025-06-05",
+      "id": 24,
+      "ing": 958060.0,
+      "ing_onl": 656675.0,
+      "ing_taq": 301385.0,
+      "c": "TR"
+    },
+    {
+      "n": "ABONO BLACK LMB 2025 2DO NIVEL VIP, PALCO ROJO Y PALCO AZUL",
+      "f": "2025-12-31",
+      "id": 64,
+      "ing": 941353.0,
+      "ing_onl": 309050.0,
+      "ing_taq": 632303.0,
+      "c": "Abono"
+    },
+    {
+      "n": "J1: Aguascalientes vs Sultanes",
+      "f": "2025-07-18",
+      "id": 40,
+      "ing": 897760.0,
+      "ing_onl": 609650.0,
+      "ing_taq": 288110.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Tijuana vs Sultanes",
+      "f": "2025-07-12",
+      "id": 38,
+      "ing": 872390.0,
+      "ing_onl": 578940.0,
+      "ing_taq": 293450.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Tijuana vs Sultanes",
+      "f": "2025-07-11",
+      "id": 37,
+      "ing": 861945.0,
+      "ing_onl": 587275.0,
+      "ing_taq": 274670.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Chihuahua vs Sultanes",
+      "f": "2025-08-03",
+      "id": 48,
+      "ing": 829510.0,
+      "ing_onl": 618110.0,
+      "ing_taq": 211400.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Tijuana vs Sultanes",
+      "f": "2025-07-13",
+      "id": 39,
+      "ing": 747840.0,
+      "ing_onl": 511240.0,
+      "ing_taq": 236600.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Torreon vs Sultanes",
+      "f": "2025-07-26",
+      "id": 44,
+      "ing": 728820.0,
+      "ing_onl": 532220.0,
+      "ing_taq": 196600.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Conspiradores vs Sultanes",
+      "f": "2025-06-15",
+      "id": 30,
+      "ing": 727770.0,
+      "ing_onl": 467870.0,
+      "ing_taq": 259900.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Rieleros vs Sultanes",
+      "f": "2025-05-02",
+      "id": 7,
+      "ing": 714275.0,
+      "ing_onl": 394825.0,
+      "ing_taq": 319450.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Torreon vs Sultanes",
+      "f": "2025-07-27",
+      "id": 45,
+      "ing": 702490.0,
+      "ing_onl": 502290.0,
+      "ing_taq": 200200.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Charros vs Sultanes",
+      "f": "2025-04-20",
+      "id": 3,
+      "ing": 696576.0,
+      "ing_onl": 509596.0,
+      "ing_taq": 186980.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Tecos vs Sultanes",
+      "f": "2025-05-18",
+      "id": 17,
+      "ing": 655460.0,
+      "ing_onl": 336360.0,
+      "ing_taq": 319100.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Tecos vs Sultanes",
+      "f": "2025-05-17",
+      "id": 16,
+      "ing": 652246.0,
+      "ing_onl": 411926.0,
+      "ing_taq": 240320.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Diablos vs Sultanes",
+      "f": "2025-06-10",
+      "id": 25,
+      "ing": 606706.0,
+      "ing_onl": 363196.0,
+      "ing_taq": 243510.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Rieleros vs Sultanes",
+      "f": "2025-05-03",
+      "id": 8,
+      "ing": 551760.0,
+      "ing_onl": 351590.0,
+      "ing_taq": 200170.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Saraperos vs Sultanes",
+      "f": "2025-04-28",
+      "id": 4,
+      "ing": 543460.0,
+      "ing_onl": 348310.0,
+      "ing_taq": 195150.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Jalisco vs Sultanes",
+      "f": "2025-07-08",
+      "id": 34,
+      "ing": 537340.0,
+      "ing_onl": 282140.0,
+      "ing_taq": 255200.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Algodoneros vs Sultanes",
+      "f": "2025-05-08",
+      "id": 12,
+      "ing": 531810.0,
+      "ing_onl": 277910.0,
+      "ing_taq": 253900.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Acereros vs Sultanes",
+      "f": "2025-05-27",
+      "id": 19,
+      "ing": 529360.0,
+      "ing_onl": 279760.0,
+      "ing_taq": 249600.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Dorados vs Sultanes",
+      "f": "2025-05-15",
+      "id": 15,
+      "ing": 495250.0,
+      "ing_onl": 222405.0,
+      "ing_taq": 272845.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Saraperos vs Sultanes",
+      "f": "2025-04-29",
+      "id": 5,
+      "ing": 488140.0,
+      "ing_onl": 233890.0,
+      "ing_taq": 254250.0,
+      "c": "TR"
+    },
+    {
+      "n": "ABONO AZUL LMB + LAMP 2025 2DO Y 3ER NIVEL: SIN LUGAR ASIGNADO. *SUJETO A DISPONIBILIDAD",
+      "f": "2025-12-31",
+      "id": 73,
+      "ing": 486854.0,
+      "ing_onl": 270164.0,
+      "ing_taq": 216690.0,
+      "c": "Abono"
+    },
+    {
+      "n": "J1: Durango vs Sultanes",
+      "f": "2025-06-24",
+      "id": 31,
+      "ing": 464230.0,
+      "ing_onl": 225290.0,
+      "ing_taq": 238940.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Saraperos vs Sultanes",
+      "f": "2025-06-03",
+      "id": 22,
+      "ing": 450420.0,
+      "ing_onl": 213370.0,
+      "ing_taq": 237050.0,
+      "c": "TR"
+    },
+    {
+      "n": "ABONO AZUL LMB 2025 2DO Y 3ER NIVEL: SIN LUGAR ASIGNADO. *SUJETO A DISPONIBILIDAD",
+      "f": "2025-12-31",
+      "id": 72,
+      "ing": 436671.0,
+      "ing_onl": 250382.0,
+      "ing_taq": 186289.0,
+      "c": "Abono"
+    },
+    {
+      "n": "ABONO PLATINO LMB + LAMP 2025 SUITES",
+      "f": "2025-12-31",
+      "id": 63,
+      "ing": 395952.0,
+      "ing_onl": 0.0,
+      "ing_taq": 395952.0,
+      "c": "Abono"
+    },
+    {
+      "n": "ABONO DORADO LMB 2025 1ER NIVEL CENTRAL, 1ER NIVEL LATERALES: SIN LUGAR ASIGNADO. *SUJETO A DISPONIBILIDAD",
+      "f": "2025-12-31",
+      "id": 70,
+      "ing": 392404.0,
+      "ing_onl": 230485.0,
+      "ing_taq": 161919.0,
+      "c": "Abono"
+    },
+    {
+      "n": "J2: Dorados vs Sultanes",
+      "f": "2025-05-14",
+      "id": 14,
+      "ing": 391455.0,
+      "ing_onl": 154985.0,
+      "ing_taq": 236470.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Rieleros vs Sultanes",
+      "f": "2025-05-04",
+      "id": 9,
+      "ing": 324830.0,
+      "ing_onl": 208130.0,
+      "ing_taq": 116700.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Algodoneros vs Sultanes",
+      "f": "2025-05-07",
+      "id": 11,
+      "ing": 319585.0,
+      "ing_onl": 111725.0,
+      "ing_taq": 207860.0,
+      "c": "TR"
+    },
+    {
+      "n": "ABONO BLANCO LMB 2025 3ER NIVEL Y BLEACHERS: SIN LUGAR ASIGNADO. *SUJETO A DISPONIBILIDAD",
+      "f": "2025-12-31",
+      "id": 74,
+      "ing": 314614.0,
+      "ing_onl": 177682.0,
+      "ing_taq": 136931.0,
+      "c": "Abono"
+    },
+    {
+      "n": "J1: Dorados vs Sultanes",
+      "f": "2025-05-13",
+      "id": 13,
+      "ing": 259380.0,
+      "ing_onl": 89080.0,
+      "ing_taq": 170300.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Algodoneros vs Sultanes",
+      "f": "2025-05-06",
+      "id": 10,
+      "ing": 246640.0,
+      "ing_onl": 99190.0,
+      "ing_taq": 147450.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Tecos vs Sultanes",
+      "f": "2025-05-19",
+      "id": 18,
+      "ing": 215240.0,
+      "ing_onl": 138540.0,
+      "ing_taq": 76700.0,
+      "c": "TR"
+    },
+    {
+      "n": "ABONO PLATINO LMB 2025 SUITES",
+      "f": "2025-12-31",
+      "id": 62,
+      "ing": 133980.0,
+      "ing_onl": 0.0,
+      "ing_taq": 133980.0,
+      "c": "Abono"
+    },
+    {
+      "n": "Semifinal De Zona J4: Laredo vs Sultanes-Extras",
+      "f": "2025-08-25",
+      "id": 55,
+      "ing": 24700.0,
+      "ing_onl": 0.0,
+      "ing_taq": 24700.0,
+      "c": "Playoffs"
+    },
+    {
+      "n": "ABONO BLACK LMB 2025 2DO NIVEL VIP, PLACO ROJO Y PALCO AZUL: SIN LUGAR ASIGNADO . *SUJETO A DISPONIBILIDAD",
+      "f": "2025-12-31",
+      "id": 68,
+      "ing": 0.0,
+      "ing_onl": 0.0,
+      "ing_taq": 0.0,
+      "c": "Abono"
+    },
+    {
+      "n": "ABONO DORADO LMB + LAMP 2025 1ER NIVEL CENTRAL, 1ER NIVEL LATERALES: SIN LUGAR ASIGNADO. *SUJETO A DISPONIBILIDAD",
+      "f": "2025-12-31",
+      "id": 71,
+      "ing": 0.0,
+      "ing_onl": 0.0,
+      "ing_taq": 0.0,
+      "c": "Abono"
     }
   ],
   "Tecos": [
@@ -1635,6 +4308,303 @@
       "ing_onl": 89450.0,
       "ing_taq": 83200.0,
       "c": "TR"
+    },
+    {
+      "n": "J3: Caliente vs Tecos",
+      "f": "2025-07-13",
+      "id": 36,
+      "ing": 165700.0,
+      "ing_onl": 69450.0,
+      "ing_taq": 96250.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Toros vs Tecos",
+      "f": "2025-07-15",
+      "id": 37,
+      "ing": 150750.0,
+      "ing_onl": 58450.0,
+      "ing_taq": 92300.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Piratas vs Tecos",
+      "f": "2025-06-11",
+      "id": 20,
+      "ing": 127450.0,
+      "ing_onl": 62200.0,
+      "ing_taq": 65250.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Dorados vs Tecos",
+      "f": "2025-05-08",
+      "id": 9,
+      "ing": 110550.0,
+      "ing_onl": 83700.0,
+      "ing_taq": 26850.0,
+      "c": "TR"
+    },
+    {
+      "n": "Semifinal de Zona J1: Sultanes vs Tecos",
+      "f": "2025-08-20",
+      "id": 54,
+      "ing": 94530.0,
+      "ing_onl": 51650.0,
+      "ing_taq": 42880.0,
+      "c": "Playoffs"
+    },
+    {
+      "n": "J1: Sultanes vs Tecos",
+      "f": "2025-07-04",
+      "id": 31,
+      "ing": 88275.0,
+      "ing_onl": 43565.0,
+      "ing_taq": 44710.0,
+      "c": "TR"
+    },
+    {
+      "n": "Playoffs J3: Acereros vs Tecos",
+      "f": "2025-08-14",
+      "id": 53,
+      "ing": 55460.0,
+      "ing_onl": 22270.0,
+      "ing_taq": 33190.0,
+      "c": "Playoffs"
+    },
+    {
+      "n": "J2: Caliente vs Tecos",
+      "f": "2025-04-23",
+      "id": 2,
+      "ing": 43330.0,
+      "ing_onl": 13275.0,
+      "ing_taq": 30055.0,
+      "c": "TR"
+    },
+    {
+      "n": "Playoffs J1: Acereros vs Tecos",
+      "f": "2025-08-12",
+      "id": 51,
+      "ing": 42475.0,
+      "ing_onl": 19085.0,
+      "ing_taq": 23390.0,
+      "c": "Playoffs"
+    },
+    {
+      "n": "J2: Dorados vs Tecos",
+      "f": "2025-05-07",
+      "id": 8,
+      "ing": 42215.0,
+      "ing_onl": 13690.0,
+      "ing_taq": 28525.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Acereros vs Tecos",
+      "f": "2025-05-21",
+      "id": 11,
+      "ing": 37265.0,
+      "ing_onl": 12665.0,
+      "ing_taq": 24600.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Toros vs Tecos",
+      "f": "2025-04-26",
+      "id": 5,
+      "ing": 32765.0,
+      "ing_onl": 10485.0,
+      "ing_taq": 22280.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Sultanes vs Tecos",
+      "f": "2025-08-07",
+      "id": 48,
+      "ing": 31195.0,
+      "ing_onl": 10160.0,
+      "ing_taq": 21035.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Algodoneros vs Tecos",
+      "f": "2025-05-31",
+      "id": 14,
+      "ing": 29840.0,
+      "ing_onl": 8930.0,
+      "ing_taq": 20910.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Charros vs Tecos",
+      "f": "2025-06-25",
+      "id": 26,
+      "ing": 25683.0,
+      "ing_onl": 7661.0,
+      "ing_taq": 18022.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Sultanes vs Tecos",
+      "f": "2025-08-06",
+      "id": 47,
+      "ing": 25460.0,
+      "ing_onl": 8405.0,
+      "ing_taq": 17055.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Algodoneros vs Tecos",
+      "f": "2025-05-30",
+      "id": 13,
+      "ing": 23675.0,
+      "ing_onl": 5715.0,
+      "ing_taq": 17960.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Toros vs Tecos",
+      "f": "2025-04-25",
+      "id": 4,
+      "ing": 23510.0,
+      "ing_onl": 5850.0,
+      "ing_taq": 17660.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Olmecas vs Tecos",
+      "f": "2025-06-14",
+      "id": 23,
+      "ing": 23085.0,
+      "ing_onl": 7180.0,
+      "ing_taq": 15905.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Rieleros vs Tecos",
+      "f": "2025-06-05",
+      "id": 18,
+      "ing": 22901.0,
+      "ing_onl": 7386.0,
+      "ing_taq": 15515.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Toros vs Tecos",
+      "f": "2025-07-16",
+      "id": 38,
+      "ing": 20540.0,
+      "ing_onl": 4630.0,
+      "ing_taq": 15910.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Rieleros vs Tecos",
+      "f": "2025-06-03",
+      "id": 16,
+      "ing": 17647.0,
+      "ing_onl": 4755.0,
+      "ing_taq": 12892.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Piratas vs Tecos",
+      "f": "2025-06-12",
+      "id": 21,
+      "ing": 17615.0,
+      "ing_onl": 5270.0,
+      "ing_taq": 12345.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Dorados vs Tecos",
+      "f": "2025-07-26",
+      "id": 41,
+      "ing": 16555.0,
+      "ing_onl": 4100.0,
+      "ing_taq": 12455.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Dorados vs Tecos",
+      "f": "2025-07-25",
+      "id": 40,
+      "ing": 16385.0,
+      "ing_onl": 5085.0,
+      "ing_taq": 11300.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Dorados vs Tecos",
+      "f": "2025-07-27",
+      "id": 44,
+      "ing": 15200.0,
+      "ing_onl": 1300.0,
+      "ing_taq": 13900.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Caliente vs Tecos",
+      "f": "2025-07-12",
+      "id": 35,
+      "ing": 14477.0,
+      "ing_onl": 3826.0,
+      "ing_taq": 10651.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Caliente vs Tecos",
+      "f": "2025-07-11",
+      "id": 34,
+      "ing": 12797.0,
+      "ing_onl": 3018.0,
+      "ing_taq": 9779.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Piratas vs Tecos",
+      "f": "2025-06-10",
+      "id": 19,
+      "ing": 11945.0,
+      "ing_onl": 3320.0,
+      "ing_taq": 8625.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Saraperos vs Tecos",
+      "f": "2025-07-02",
+      "id": 29,
+      "ing": 11815.0,
+      "ing_onl": 1595.0,
+      "ing_taq": 10220.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Saraperos vs Tecos",
+      "f": "2025-07-01",
+      "id": 28,
+      "ing": 9780.0,
+      "ing_onl": 1860.0,
+      "ing_taq": 7920.0,
+      "c": "TR"
+    },
+    {
+      "n": "TecoPass: Parque La Junta 2025",
+      "f": "2025-03-21",
+      "id": 49,
+      "ing": 0.0,
+      "ing_onl": 0.0,
+      "ing_taq": 0.0,
+      "c": "Abono"
+    },
+    {
+      "n": "Abono Tecos Uni-Trade 2025",
+      "f": "2025-03-21",
+      "id": 50,
+      "ing": 0.0,
+      "ing_onl": 0.0,
+      "ing_taq": 0.0,
+      "c": "Abono"
     }
   ],
   "Toros": [
@@ -1817,6 +4787,348 @@
       "ing_onl": 74980.0,
       "ing_taq": 1723720.0,
       "c": "TR"
+    },
+    {
+      "n": "J1: Charros vs Toros",
+      "f": "2025-07-22",
+      "id": 50,
+      "ing": 1755857.0,
+      "ing_onl": 58203.0,
+      "ing_taq": 1697654.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Caliente Durango vs Toros",
+      "f": "2025-08-05",
+      "id": 60,
+      "ing": 1727395.0,
+      "ing_onl": 45400.0,
+      "ing_taq": 1681995.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Diablos vs Toros",
+      "f": "2025-06-13",
+      "id": 36,
+      "ing": 1675996.0,
+      "ing_onl": 388299.0,
+      "ing_taq": 1287698.0,
+      "c": "TR"
+    },
+    {
+      "n": "Juego Inaugural: Rieleros vs Toros",
+      "f": "2025-04-18",
+      "id": 1,
+      "ing": 1593949.0,
+      "ing_onl": 649078.0,
+      "ing_taq": 944871.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1 Playoffs: Algodoneros vs Toros",
+      "f": "2025-08-09",
+      "id": 66,
+      "ing": 1574110.0,
+      "ing_onl": 297180.0,
+      "ing_taq": 1276930.0,
+      "c": "Playoffs"
+    },
+    {
+      "n": "J2 Playoffs: Algodoneros vs Toros",
+      "f": "2025-08-10",
+      "id": 67,
+      "ing": 1422252.0,
+      "ing_onl": 198270.0,
+      "ing_taq": 1223982.0,
+      "c": "Playoffs"
+    },
+    {
+      "n": "J2: Charros vs Toros",
+      "f": "2025-06-04",
+      "id": 31,
+      "ing": 1275770.0,
+      "ing_onl": 82010.0,
+      "ing_taq": 1193760.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Algodoneros vs Toros",
+      "f": "2025-06-26",
+      "id": 43,
+      "ing": 1272273.0,
+      "ing_onl": 88685.0,
+      "ing_taq": 1183588.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Charros vs Toros",
+      "f": "2025-06-05",
+      "id": 32,
+      "ing": 1231396.0,
+      "ing_onl": 85694.0,
+      "ing_taq": 1145702.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Algodoneros vs Toros",
+      "f": "2025-06-25",
+      "id": 41,
+      "ing": 1228090.0,
+      "ing_onl": 65610.0,
+      "ing_taq": 1162480.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Conspiradores vs Toros",
+      "f": "2025-06-12",
+      "id": 35,
+      "ing": 1213845.0,
+      "ing_onl": 39942.0,
+      "ing_taq": 1173903.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Sultanes vs Toros",
+      "f": "2025-05-26",
+      "id": 18,
+      "ing": 1207357.0,
+      "ing_onl": 64867.0,
+      "ing_taq": 1142490.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Tecos vs Toros",
+      "f": "2025-05-29",
+      "id": 28,
+      "ing": 1176012.0,
+      "ing_onl": 48320.0,
+      "ing_taq": 1127692.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Conspiradores vs Toros",
+      "f": "2025-06-11",
+      "id": 34,
+      "ing": 1169230.0,
+      "ing_onl": 44920.0,
+      "ing_taq": 1124310.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Algodoneros vs Toros",
+      "f": "2025-06-24",
+      "id": 40,
+      "ing": 1157885.0,
+      "ing_onl": 42750.0,
+      "ing_taq": 1115135.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Charros vs Toros",
+      "f": "2025-06-03",
+      "id": 29,
+      "ing": 1126165.0,
+      "ing_onl": 51573.0,
+      "ing_taq": 1074592.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Conspiradores vs Toros",
+      "f": "2025-06-10",
+      "id": 33,
+      "ing": 1114435.0,
+      "ing_onl": 27580.0,
+      "ing_taq": 1086855.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Tecos vs Toros",
+      "f": "2025-05-27",
+      "id": 20,
+      "ing": 1110690.0,
+      "ing_onl": 35257.0,
+      "ing_taq": 1075432.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Tecos vs Toros",
+      "f": "2025-05-28",
+      "id": 26,
+      "ing": 1103586.0,
+      "ing_onl": 34857.0,
+      "ing_taq": 1068729.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Sultanes vs Toros",
+      "f": "2025-05-24",
+      "id": 14,
+      "ing": 904454.0,
+      "ing_onl": 480690.0,
+      "ing_taq": 423764.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Caliente Durango vs Toros",
+      "f": "2025-08-07",
+      "id": 62,
+      "ing": 897035.0,
+      "ing_onl": 147818.0,
+      "ing_taq": 749217.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Caliente Durango vs Toros",
+      "f": "2025-05-17",
+      "id": 12,
+      "ing": 618754.0,
+      "ing_onl": 292178.0,
+      "ing_taq": 326576.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Dorados vs Toros",
+      "f": "2025-05-03",
+      "id": 9,
+      "ing": 582619.0,
+      "ing_onl": 265885.0,
+      "ing_taq": 316734.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Dorados vs Toros",
+      "f": "2025-05-02",
+      "id": 8,
+      "ing": 545422.0,
+      "ing_onl": 216156.0,
+      "ing_taq": 329266.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Caliente Durango vs Toros",
+      "f": "2025-05-16",
+      "id": 11,
+      "ing": 509864.0,
+      "ing_onl": 229856.0,
+      "ing_taq": 280008.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Sultanes vs Toros",
+      "f": "2025-05-25",
+      "id": 16,
+      "ing": 483718.0,
+      "ing_onl": 206511.0,
+      "ing_taq": 277208.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Sultanes vs Toros",
+      "f": "2025-04-23",
+      "id": 7,
+      "ing": 361166.0,
+      "ing_onl": 95817.0,
+      "ing_taq": 265349.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Caliente Durango vs Toros",
+      "f": "2025-05-18",
+      "id": 13,
+      "ing": 304282.0,
+      "ing_onl": 95124.0,
+      "ing_taq": 209158.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Dorados vs Toros",
+      "f": "2025-05-04",
+      "id": 10,
+      "ing": 271864.0,
+      "ing_onl": 116153.0,
+      "ing_taq": 155711.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Rieleros vs Toros",
+      "f": "2025-04-19",
+      "id": 3,
+      "ing": 256995.0,
+      "ing_onl": 99279.0,
+      "ing_taq": 157716.0,
+      "c": "TR"
+    },
+    {
+      "n": "J2: Sultanes vs Toros",
+      "f": "2025-04-22",
+      "id": 6,
+      "ing": 244738.0,
+      "ing_onl": 73688.0,
+      "ing_taq": 171050.0,
+      "c": "TR"
+    },
+    {
+      "n": "J1: Sultanes vs Toros",
+      "f": "2025-04-21",
+      "id": 5,
+      "ing": 231032.0,
+      "ing_onl": 88118.0,
+      "ing_taq": 142914.0,
+      "c": "TR"
+    },
+    {
+      "n": "J3: Rieleros vs Toros",
+      "f": "2025-04-20",
+      "id": 4,
+      "ing": 182880.0,
+      "ing_onl": 61341.0,
+      "ing_taq": 121539.0,
+      "c": "TR"
+    },
+    {
+      "n": "Paquete Playoffs: Algodoneros vs Toros (Incluye 2 juegos)",
+      "f": "2025-08-09",
+      "id": 65,
+      "ing": 157642.0,
+      "ing_onl": 108648.0,
+      "ing_taq": 48994.0,
+      "c": "Playoffs"
+    },
+    {
+      "n": "Torobono Flexible 15",
+      "f": "2025-04-01",
+      "id": 63,
+      "ing": 140465.0,
+      "ing_onl": 52487.0,
+      "ing_taq": 87978.0,
+      "c": "Abono"
+    },
+    {
+      "n": "Torobono Flexible  24",
+      "f": "2025-04-01",
+      "id": 64,
+      "ing": 110050.0,
+      "ing_onl": 12200.0,
+      "ing_taq": 97850.0,
+      "c": "Abono"
+    },
+    {
+      "n": "Paquete: Charros vs Toros (incluye 3 juegos)",
+      "f": "2025-06-03",
+      "id": 30,
+      "ing": 2680.0,
+      "ing_onl": 2680.0,
+      "ing_taq": 0.0,
+      "c": "TR"
+    },
+    {
+      "n": "J7 Playoffs: Algodoneros vs Toros",
+      "f": "2025-08-17",
+      "id": 70,
+      "ing": 0.0,
+      "ing_onl": 0.0,
+      "ing_taq": 0.0,
+      "c": "Playoffs"
     }
   ]
 }
