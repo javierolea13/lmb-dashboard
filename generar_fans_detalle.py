@@ -92,22 +92,10 @@ for eq in EQUIPOS:
         eventos_distintos=('ID_EVENTO', 'nunique'),
         total_ordenes=('NÚMERO DE ORDEN', 'count'),
         gasto_total=('SUBTOTAL', 'sum'),
-        max_subtotal=('SUBTOTAL', 'max'),
         plataforma_principal=('plataforma', lambda x: x.mode().iloc[0] if len(x.mode()) > 0 else 'Otro'),
     ).reset_index()
     
     total_fans = len(fan_stats)
-    
-    # ── SEPARAR COMPRADORES vs CORTESÍA ──
-    # Fan cortesía = TODAS sus órdenes tienen SUBTOTAL=0
-    fan_stats['es_cortesia'] = fan_stats['gasto_total'] == 0
-    fans_cortesia = fan_stats[fan_stats['es_cortesia']]
-    fans_compradores = fan_stats[~fan_stats['es_cortesia']]
-    
-    n_cortesia = int(len(fans_cortesia))
-    n_compradores = int(len(fans_compradores))
-    avg_gasto_compradores = round(float(fans_compradores['gasto_total'].mean()), 2) if n_compradores > 0 else 0
-    median_gasto_compradores = round(float(fans_compradores['gasto_total'].median()), 2) if n_compradores > 0 else 0
     
     # ── SEGMENTACIÓN POR FRECUENCIA ──
     def freq_cat(n):
@@ -146,10 +134,11 @@ for eq in EQUIPOS:
             'fans_unicos': int(row['fans_unicos']),
         })
     
-    # ── TOP 10 FANS POR GASTO (solo compradores) ──
-    top_fans = fans_compradores.nlargest(10, 'gasto_total')
+    # ── TOP 10 FANS POR GASTO ──
+    top_fans = fan_stats.nlargest(10, 'gasto_total')
     top_fans_list = []
     for _, fan in top_fans.iterrows():
+        # Anonimizar correo: mostrar primeros 3 chars + ***@dominio
         correo = fan['CORREO USUARIO']
         parts = correo.split('@')
         if len(parts) == 2:
@@ -164,25 +153,6 @@ for eq in EQUIPOS:
             'gasto': round(float(fan['gasto_total']), 2),
             'plataforma': fan['plataforma_principal'],
         })
-    
-    # ── GASTO POR ZONA/SECCIÓN (solo fans online) ──
-    zonas_fans = []
-    if 'ZONA' in online.columns:
-        zona_stats = online.groupby('ZONA').agg(
-            ordenes=('NÚMERO DE ORDEN', 'count'),
-            ingreso=('SUBTOTAL', 'sum'),
-            fans_unicos=('CORREO USUARIO', 'nunique'),
-        ).sort_values('ingreso', ascending=False).reset_index()
-        
-        for _, row in zona_stats.head(10).iterrows():
-            avg_per_fan = round(float(row['ingreso'] / row['fans_unicos']), 2) if row['fans_unicos'] > 0 else 0
-            zonas_fans.append({
-                'zona': str(row['ZONA']),
-                'ordenes': int(row['ordenes']),
-                'ingreso': round(float(row['ingreso']), 2),
-                'fans_unicos': int(row['fans_unicos']),
-                'gasto_prom_fan': avg_per_fan,
-            })
     
     # ── COMPRAS POR DÍA DE SEMANA ──
     if 'FECHA' in online.columns:
@@ -204,6 +174,7 @@ for eq in EQUIPOS:
         horas = online['HORA'].dropna()
         horas = horas[horas != '-']
         if len(horas) > 0:
+            # Extraer hora del formato HH:MM
             hora_num = horas.str.split(':').str[0].astype(int, errors='ignore')
             if hasattr(hora_num, 'value_counts'):
                 hora_counts = hora_num.value_counts().sort_index()
@@ -223,7 +194,7 @@ for eq in EQUIPOS:
     else:
         metodos_pago = {}
     
-    # ── GASTO PROMEDIO GENERAL (todos los fans) ──
+    # ── GASTO PROMEDIO GENERAL ──
     avg_gasto = round(float(fan_stats['gasto_total'].mean()), 2) if total_fans > 0 else 0
     median_gasto = round(float(fan_stats['gasto_total'].median()), 2) if total_fans > 0 else 0
     
@@ -233,14 +204,6 @@ for eq in EQUIPOS:
         'total_ordenes_online': int(len(online)),
         'avg_gasto': avg_gasto,
         'median_gasto': median_gasto,
-        # Nuevo: split compradores vs cortesía
-        'fans_compradores': n_compradores,
-        'fans_cortesia': n_cortesia,
-        'avg_gasto_compradores': avg_gasto_compradores,
-        'median_gasto_compradores': median_gasto_compradores,
-        'pct_cortesia_fans': round(n_cortesia / total_fans * 100, 1) if total_fans > 0 else 0,
-        # Nuevo: zonas
-        'zonas_fans': zonas_fans,
         'frecuencia': freq_data,
         'plataformas': plataformas,
         'top_fans': top_fans_list,
@@ -249,7 +212,7 @@ for eq in EQUIPOS:
         'metodos_pago': metodos_pago,
     }
     
-    print(f"  ✓ {eq}: {total_fans:,} fans ({n_compradores:,} compradores + {n_cortesia:,} cortesía), avg_comprador=${avg_gasto_compradores:,.0f}, {len(zonas_fans)} zonas")
+    print(f"  ✓ {eq}: {total_fans:,} fans, avg=${avg_gasto:,.0f}, {len(plataformas)} plataformas")
 
 # ── GUARDAR ──
 out_path = os.path.join(OUT_DIR, 'fans_detalle.json')

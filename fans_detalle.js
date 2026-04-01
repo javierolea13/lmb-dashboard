@@ -514,19 +514,17 @@ function renderRetention() {
       const avgGComp=d.avg_gasto_compradores||d.avg_gasto;
       const nCort=d.fans_cortesia||0;
       const pctCort=d.pct_cortesia_fans||0;
-      const extra=Math.round(f1*avgGComp);
       return `<tr><td style="font-weight:600">${eq}</td>
         <td class="mono">${fmtFull(t)}</td>
         <td class="mono" style="color:var(--cortesia)">${pct1}%</td>
         <td class="mono" style="color:var(--success)">${pctRec}%</td>
         <td class="mono">${fmtMoney(avgGComp)}</td>
         <td class="mono">${fmtMoney(d.median_gasto_compradores||d.median_gasto||0)}</td>
-        <td class="mono" style="color:var(--cortesia)">${fmtFull(nCort)}${pctCort?' ('+pctCort+'%)':''}</td>
-        <td class="mono" style="color:var(--success)">+${fmtMoney(extra)}</td></tr>`;
+        <td class="mono" style="color:var(--cortesia)">${fmtFull(nCort)}${pctCort?' ('+pctCort+'%)':''}</td></tr>`;
     }).join('');
   el.innerHTML=`<table style="width:100%"><thead><tr>
     <th>Equipo</th><th>Fans</th><th>% 1 vez</th><th>% Recurrentes</th>
-    <th>Gasto Prom Comprador</th><th>Mediana</th><th>Fans Cortesía</th><th>💡 Si 1-vez vuelven</th></tr></thead><tbody>${rows}</tbody></table>`;
+    <th>Gasto Prom Comprador</th><th>Mediana</th><th>Fans Cortesía</th></tr></thead><tbody>${rows}</tbody></table>`;
 }
 
 if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',loadFansDetalle);}

@@ -4,55 +4,6 @@
     "total_ordenes_online": 27517,
     "avg_gasto": 1210.1,
     "median_gasto": 750.0,
-    "fans_compradores": 5300,
-    "fans_cortesia": 2,
-    "avg_gasto_compradores": 1210.55,
-    "median_gasto_compradores": 750.0,
-    "pct_cortesia_fans": 0.0,
-    "zonas_fans": [
-      {
-        "zona": "Butaca Central",
-        "ordenes": 11280,
-        "ingreso": 2985674.0,
-        "fans_unicos": 2188,
-        "gasto_prom_fan": 1364.57
-      },
-      {
-        "zona": "Butaca 1ra Base",
-        "ordenes": 8807,
-        "ingreso": 1485100.0,
-        "fans_unicos": 1819,
-        "gasto_prom_fan": 816.44
-      },
-      {
-        "zona": "Butaca 3ra Base",
-        "ordenes": 2913,
-        "ingreso": 808650.0,
-        "fans_unicos": 742,
-        "gasto_prom_fan": 1089.82
-      },
-      {
-        "zona": "VIP",
-        "ordenes": 1459,
-        "ingreso": 792500.0,
-        "fans_unicos": 403,
-        "gasto_prom_fan": 1966.5
-      },
-      {
-        "zona": "General 3ra Base",
-        "ordenes": 2220,
-        "ingreso": 268180.0,
-        "fans_unicos": 712,
-        "gasto_prom_fan": 376.66
-      },
-      {
-        "zona": "General 1ra Base",
-        "ordenes": 838,
-        "ingreso": 75820.0,
-        "fans_unicos": 285,
-        "gasto_prom_fan": 266.04
-      }
-    ],
     "frecuencia": {
       "1": {
         "fans": 3852,
@@ -234,62 +185,6 @@
     "total_ordenes_online": 8628,
     "avg_gasto": 832.61,
     "median_gasto": 480.0,
-    "fans_compradores": 1760,
-    "fans_cortesia": 7,
-    "avg_gasto_compradores": 835.92,
-    "median_gasto_compradores": 496.0,
-    "pct_cortesia_fans": 0.4,
-    "zonas_fans": [
-      {
-        "zona": "Central",
-        "ordenes": 5969,
-        "ingreso": 1110120.0,
-        "fans_unicos": 1193,
-        "gasto_prom_fan": 930.53
-      },
-      {
-        "zona": "Lateral Preferente",
-        "ordenes": 905,
-        "ingreso": 128800.0,
-        "fans_unicos": 243,
-        "gasto_prom_fan": 530.04
-      },
-      {
-        "zona": "Lateral",
-        "ordenes": 920,
-        "ingreso": 79288.0,
-        "fans_unicos": 251,
-        "gasto_prom_fan": 315.89
-      },
-      {
-        "zona": "Palco Plata 3ra",
-        "ordenes": 345,
-        "ingreso": 72804.0,
-        "fans_unicos": 81,
-        "gasto_prom_fan": 898.81
-      },
-      {
-        "zona": "Palco Plata 1ra",
-        "ordenes": 261,
-        "ingreso": 52578.0,
-        "fans_unicos": 67,
-        "gasto_prom_fan": 784.75
-      },
-      {
-        "zona": "Palco Bronce 1ra",
-        "ordenes": 117,
-        "ingreso": 14125.0,
-        "fans_unicos": 31,
-        "gasto_prom_fan": 455.65
-      },
-      {
-        "zona": "Palco Bronce 3ra",
-        "ordenes": 111,
-        "ingreso": 13500.0,
-        "fans_unicos": 37,
-        "gasto_prom_fan": 364.86
-      }
-    ],
     "frecuencia": {
       "1": {
         "fans": 1338,
@@ -438,83 +333,6 @@
     "total_ordenes_online": 123564,
     "avg_gasto": 1128.31,
     "median_gasto": 600.0,
-    "fans_compradores": 20690,
-    "fans_cortesia": 45,
-    "avg_gasto_compradores": 1130.76,
-    "median_gasto_compradores": 600.0,
-    "pct_cortesia_fans": 0.2,
-    "zonas_fans": [
-      {
-        "zona": "Premier",
-        "ordenes": 24702,
-        "ingreso": 6899142.4,
-        "fans_unicos": 5264,
-        "gasto_prom_fan": 1310.63
-      },
-      {
-        "zona": "Planta Baja",
-        "ordenes": 30701,
-        "ingreso": 3753411.1,
-        "fans_unicos": 5520,
-        "gasto_prom_fan": 679.97
-      },
-      {
-        "zona": "Planta Alta",
-        "ordenes": 15046,
-        "ingreso": 3409520.0,
-        "fans_unicos": 3174,
-        "gasto_prom_fan": 1074.2
-      },
-      {
-        "zona": "Lateral 1era y 3era",
-        "ordenes": 19592,
-        "ingreso": 2433248.4,
-        "fans_unicos": 4159,
-        "gasto_prom_fan": 585.06
-      },
-      {
-        "zona": "Premier 1era",
-        "ordenes": 5330,
-        "ingreso": 1508373.6,
-        "fans_unicos": 1444,
-        "gasto_prom_fan": 1044.58
-      },
-      {
-        "zona": "Butaca Preferente",
-        "ordenes": 7377,
-        "ingreso": 1185345.6,
-        "fans_unicos": 1978,
-        "gasto_prom_fan": 599.26
-      },
-      {
-        "zona": "Premier 3era",
-        "ordenes": 3801,
-        "ingreso": 1094462.4,
-        "fans_unicos": 1063,
-        "gasto_prom_fan": 1029.6
-      },
-      {
-        "zona": "Lateral Preferente",
-        "ordenes": 4184,
-        "ingreso": 906669.2,
-        "fans_unicos": 1170,
-        "gasto_prom_fan": 774.93
-      },
-      {
-        "zona": "Lateral Alta 1era y 3era",
-        "ordenes": 4563,
-        "ingreso": 851100.0,
-        "fans_unicos": 1177,
-        "gasto_prom_fan": 723.11
-      },
-      {
-        "zona": "Lateral Premier",
-        "ordenes": 4343,
-        "ingreso": 772013.8,
-        "fans_unicos": 1113,
-        "gasto_prom_fan": 693.63
-      }
-    ],
     "frecuencia": {
       "1": {
         "fans": 14479,
@@ -671,48 +489,6 @@
     "total_ordenes_online": 32887,
     "avg_gasto": 869.47,
     "median_gasto": 400.0,
-    "fans_compradores": 5799,
-    "fans_cortesia": 32,
-    "avg_gasto_compradores": 874.27,
-    "median_gasto_compradores": 400.0,
-    "pct_cortesia_fans": 0.5,
-    "zonas_fans": [
-      {
-        "zona": "Plata",
-        "ordenes": 13091,
-        "ingreso": 2905200.0,
-        "fans_unicos": 2601,
-        "gasto_prom_fan": 1116.96
-      },
-      {
-        "zona": "Preferente",
-        "ordenes": 13202,
-        "ingreso": 1342320.0,
-        "fans_unicos": 2662,
-        "gasto_prom_fan": 504.25
-      },
-      {
-        "zona": "Numerado Derecho",
-        "ordenes": 4322,
-        "ingreso": 349480.0,
-        "fans_unicos": 877,
-        "gasto_prom_fan": 398.49
-      },
-      {
-        "zona": "Oro",
-        "ordenes": 358,
-        "ingreso": 320500.0,
-        "fans_unicos": 106,
-        "gasto_prom_fan": 3023.58
-      },
-      {
-        "zona": "Numerado Izquierdo",
-        "ordenes": 1914,
-        "ingreso": 152400.0,
-        "fans_unicos": 507,
-        "gasto_prom_fan": 300.59
-      }
-    ],
     "frecuencia": {
       "1": {
         "fans": 3944,
@@ -894,48 +670,6 @@
     "total_ordenes_online": 30936,
     "avg_gasto": 1257.13,
     "median_gasto": 700.0,
-    "fans_compradores": 5003,
-    "fans_cortesia": 36,
-    "avg_gasto_compradores": 1266.17,
-    "median_gasto_compradores": 700.0,
-    "pct_cortesia_fans": 0.7,
-    "zonas_fans": [
-      {
-        "zona": "Central",
-        "ordenes": 19182,
-        "ingreso": 4361270.0,
-        "fans_unicos": 3473,
-        "gasto_prom_fan": 1255.76
-      },
-      {
-        "zona": "Lateral Izquierdo",
-        "ordenes": 6048,
-        "ingreso": 769880.0,
-        "fans_unicos": 1162,
-        "gasto_prom_fan": 662.55
-      },
-      {
-        "zona": "Lateral Derecho",
-        "ordenes": 4276,
-        "ingreso": 759586.0,
-        "fans_unicos": 823,
-        "gasto_prom_fan": 922.95
-      },
-      {
-        "zona": "Palcos Central",
-        "ordenes": 1392,
-        "ingreso": 425680.0,
-        "fans_unicos": 363,
-        "gasto_prom_fan": 1172.67
-      },
-      {
-        "zona": "Palco Terr Izquierdo",
-        "ordenes": 38,
-        "ingreso": 18240.0,
-        "fans_unicos": 9,
-        "gasto_prom_fan": 2026.67
-      }
-    ],
     "frecuencia": {
       "1": {
         "fans": 3100,
@@ -1092,83 +826,6 @@
     "total_ordenes_online": 17638,
     "avg_gasto": 905.04,
     "median_gasto": 600.0,
-    "fans_compradores": 3423,
-    "fans_cortesia": 9,
-    "avg_gasto_compradores": 907.42,
-    "median_gasto_compradores": 600.0,
-    "pct_cortesia_fans": 0.3,
-    "zonas_fans": [
-      {
-        "zona": "Terreno VIP",
-        "ordenes": 2166,
-        "ingreso": 587230.0,
-        "fans_unicos": 522,
-        "gasto_prom_fan": 1124.96
-      },
-      {
-        "zona": "Butaca Num. L",
-        "ordenes": 3140,
-        "ingreso": 578335.0,
-        "fans_unicos": 716,
-        "gasto_prom_fan": 807.73
-      },
-      {
-        "zona": "Palco Plus",
-        "ordenes": 2724,
-        "ingreso": 444700.0,
-        "fans_unicos": 484,
-        "gasto_prom_fan": 918.8
-      },
-      {
-        "zona": "Palco Terr. 1era.",
-        "ordenes": 2640,
-        "ingreso": 431800.0,
-        "fans_unicos": 640,
-        "gasto_prom_fan": 674.69
-      },
-      {
-        "zona": "Zona VIP",
-        "ordenes": 1611,
-        "ingreso": 427000.0,
-        "fans_unicos": 387,
-        "gasto_prom_fan": 1103.36
-      },
-      {
-        "zona": "Palco Terr. 3ra.",
-        "ordenes": 1811,
-        "ingreso": 288150.0,
-        "fans_unicos": 441,
-        "gasto_prom_fan": 653.4
-      },
-      {
-        "zona": "Preferente 1ra",
-        "ordenes": 1711,
-        "ingreso": 151450.0,
-        "fans_unicos": 406,
-        "gasto_prom_fan": 373.03
-      },
-      {
-        "zona": "Terraza 3ra",
-        "ordenes": 540,
-        "ingreso": 90200.0,
-        "fans_unicos": 118,
-        "gasto_prom_fan": 764.41
-      },
-      {
-        "zona": "Preferente 3ra",
-        "ordenes": 835,
-        "ingreso": 76975.0,
-        "fans_unicos": 212,
-        "gasto_prom_fan": 363.09
-      },
-      {
-        "zona": "Tablitas",
-        "ordenes": 394,
-        "ingreso": 17062.5,
-        "fans_unicos": 76,
-        "gasto_prom_fan": 224.51
-      }
-    ],
     "frecuencia": {
       "1": {
         "fans": 2498,
@@ -1350,48 +1007,6 @@
     "total_ordenes_online": 65531,
     "avg_gasto": 723.24,
     "median_gasto": 440.0,
-    "fans_compradores": 12971,
-    "fans_cortesia": 54,
-    "avg_gasto_compradores": 726.25,
-    "median_gasto_compradores": 440.0,
-    "pct_cortesia_fans": 0.4,
-    "zonas_fans": [
-      {
-        "zona": "Butaca Central B",
-        "ordenes": 26702,
-        "ingreso": 3781095.0,
-        "fans_unicos": 6143,
-        "gasto_prom_fan": 615.51
-      },
-      {
-        "zona": "Butaca Lateral C",
-        "ordenes": 20365,
-        "ingreso": 2913320.0,
-        "fans_unicos": 4826,
-        "gasto_prom_fan": 603.67
-      },
-      {
-        "zona": "Butaca Lateral A",
-        "ordenes": 12891,
-        "ingreso": 1916615.0,
-        "fans_unicos": 3122,
-        "gasto_prom_fan": 613.91
-      },
-      {
-        "zona": "General-Gradas",
-        "ordenes": 4573,
-        "ingreso": 525135.0,
-        "fans_unicos": 1542,
-        "gasto_prom_fan": 340.55
-      },
-      {
-        "zona": "Area Contenedores",
-        "ordenes": 1000,
-        "ingreso": 284000.0,
-        "fans_unicos": 222,
-        "gasto_prom_fan": 1279.28
-      }
-    ],
     "frecuencia": {
       "1": {
         "fans": 8736,
@@ -1573,83 +1188,6 @@
     "total_ordenes_online": 282911,
     "avg_gasto": 826.19,
     "median_gasto": 480.0,
-    "fans_compradores": 48036,
-    "fans_cortesia": 0,
-    "avg_gasto_compradores": 826.19,
-    "median_gasto_compradores": 480.0,
-    "pct_cortesia_fans": 0.0,
-    "zonas_fans": [
-      {
-        "zona": "Primer Nivel",
-        "ordenes": 193189,
-        "ingreso": 26484425.0,
-        "fans_unicos": 33121,
-        "gasto_prom_fan": 799.63
-      },
-      {
-        "zona": "Segundo Nivel",
-        "ordenes": 35338,
-        "ingreso": 4888470.5,
-        "fans_unicos": 9241,
-        "gasto_prom_fan": 529.0
-      },
-      {
-        "zona": "Bleachers",
-        "ordenes": 26835,
-        "ingreso": 3380242.0,
-        "fans_unicos": 7877,
-        "gasto_prom_fan": 429.13
-      },
-      {
-        "zona": "Palco Rojo",
-        "ordenes": 9251,
-        "ingreso": 1499581.0,
-        "fans_unicos": 2404,
-        "gasto_prom_fan": 623.79
-      },
-      {
-        "zona": "Palco Azul",
-        "ordenes": 8597,
-        "ingreso": 1432110.0,
-        "fans_unicos": 2235,
-        "gasto_prom_fan": 640.77
-      },
-      {
-        "zona": "Tercer Nivel",
-        "ordenes": 5595,
-        "ingreso": 836488.0,
-        "fans_unicos": 1915,
-        "gasto_prom_fan": 436.81
-      },
-      {
-        "zona": "2DO NIVEL LATERALES",
-        "ordenes": 1610,
-        "ingreso": 636774.0,
-        "fans_unicos": 666,
-        "gasto_prom_fan": 956.12
-      },
-      {
-        "zona": "1ER NIVEL LATERALES",
-        "ordenes": 95,
-        "ingreso": 139730.1,
-        "fans_unicos": 38,
-        "gasto_prom_fan": 3677.11
-      },
-      {
-        "zona": "3ER NIVEL",
-        "ordenes": 1059,
-        "ingreso": 128606.5,
-        "fans_unicos": 397,
-        "gasto_prom_fan": 323.95
-      },
-      {
-        "zona": "BLEACHERS",
-        "ordenes": 971,
-        "ingreso": 106237.0,
-        "fans_unicos": 346,
-        "gasto_prom_fan": 307.04
-      }
-    ],
     "frecuencia": {
       "1": {
         "fans": 33488,
@@ -1831,83 +1369,6 @@
     "total_ordenes_online": 24931,
     "avg_gasto": 1006.49,
     "median_gasto": 397.5,
-    "fans_compradores": 4736,
-    "fans_cortesia": 0,
-    "avg_gasto_compradores": 1006.49,
-    "median_gasto_compradores": 397.5,
-    "pct_cortesia_fans": 0.0,
-    "zonas_fans": [
-      {
-        "zona": "Butaca General",
-        "ordenes": 5777,
-        "ingreso": 1994950.0,
-        "fans_unicos": 1052,
-        "gasto_prom_fan": 1896.34
-      },
-      {
-        "zona": "Butaca Preferente",
-        "ordenes": 3205,
-        "ingreso": 1326900.0,
-        "fans_unicos": 736,
-        "gasto_prom_fan": 1802.85
-      },
-      {
-        "zona": "Gradas",
-        "ordenes": 3367,
-        "ingreso": 770000.0,
-        "fans_unicos": 877,
-        "gasto_prom_fan": 877.99
-      },
-      {
-        "zona": "Box Seat",
-        "ordenes": 9397,
-        "ingreso": 236348.0,
-        "fans_unicos": 1980,
-        "gasto_prom_fan": 119.37
-      },
-      {
-        "zona": "Palcos 3ra",
-        "ordenes": 505,
-        "ingreso": 214700.0,
-        "fans_unicos": 129,
-        "gasto_prom_fan": 1664.34
-      },
-      {
-        "zona": "Palcos 1ra",
-        "ordenes": 408,
-        "ingreso": 169650.0,
-        "fans_unicos": 108,
-        "gasto_prom_fan": 1570.83
-      },
-      {
-        "zona": "Reserved Seat",
-        "ordenes": 1357,
-        "ingreso": 27046.0,
-        "fans_unicos": 376,
-        "gasto_prom_fan": 71.93
-      },
-      {
-        "zona": "Premium Club Box Seat",
-        "ordenes": 219,
-        "ingreso": 11238.0,
-        "fans_unicos": 56,
-        "gasto_prom_fan": 200.68
-      },
-      {
-        "zona": "Standing General Admission",
-        "ordenes": 423,
-        "ingreso": 6345.0,
-        "fans_unicos": 152,
-        "gasto_prom_fan": 41.74
-      },
-      {
-        "zona": "Club Level Access",
-        "ordenes": 175,
-        "ingreso": 6184.0,
-        "fans_unicos": 55,
-        "gasto_prom_fan": 112.44
-      }
-    ],
     "frecuencia": {
       "1": {
         "fans": 3155,
@@ -2089,83 +1550,6 @@
     "total_ordenes_online": 49953,
     "avg_gasto": 1252.64,
     "median_gasto": 870.0,
-    "fans_compradores": 9379,
-    "fans_cortesia": 19,
-    "avg_gasto_compradores": 1255.18,
-    "median_gasto_compradores": 870.0,
-    "pct_cortesia_fans": 0.2,
-    "zonas_fans": [
-      {
-        "zona": "Preferente",
-        "ordenes": 17631,
-        "ingreso": 4889430.0,
-        "fans_unicos": 3746,
-        "gasto_prom_fan": 1305.24
-      },
-      {
-        "zona": "Superior",
-        "ordenes": 8335,
-        "ingreso": 2407744.0,
-        "fans_unicos": 1747,
-        "gasto_prom_fan": 1378.22
-      },
-      {
-        "zona": "General Preferente",
-        "ordenes": 6278,
-        "ingreso": 1023723.0,
-        "fans_unicos": 1474,
-        "gasto_prom_fan": 694.52
-      },
-      {
-        "zona": "Preferente1raBase",
-        "ordenes": 3558,
-        "ingreso": 749675.0,
-        "fans_unicos": 837,
-        "gasto_prom_fan": 895.67
-      },
-      {
-        "zona": "Preferente3raBase",
-        "ordenes": 3154,
-        "ingreso": 706905.0,
-        "fans_unicos": 691,
-        "gasto_prom_fan": 1023.02
-      },
-      {
-        "zona": "General Superior",
-        "ordenes": 2965,
-        "ingreso": 526730.0,
-        "fans_unicos": 646,
-        "gasto_prom_fan": 815.37
-      },
-      {
-        "zona": "Jardines",
-        "ordenes": 4491,
-        "ingreso": 498268.0,
-        "fans_unicos": 816,
-        "gasto_prom_fan": 610.62
-      },
-      {
-        "zona": "Superior3raBase",
-        "ordenes": 1535,
-        "ingreso": 426126.0,
-        "fans_unicos": 405,
-        "gasto_prom_fan": 1052.16
-      },
-      {
-        "zona": "Superior1raBase",
-        "ordenes": 1490,
-        "ingreso": 359466.0,
-        "fans_unicos": 380,
-        "gasto_prom_fan": 945.96
-      },
-      {
-        "zona": "Palcos Superior",
-        "ordenes": 284,
-        "ingreso": 144500.0,
-        "fans_unicos": 63,
-        "gasto_prom_fan": 2293.65
-      }
-    ],
     "frecuencia": {
       "1": {
         "fans": 7175,

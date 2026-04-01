@@ -242,6 +242,10 @@ tr:last-child td{border-bottom:none}
           <button class="fb active" onclick="filterGames('Todos',this)">Todos</button>
           <button class="fb" onclick="filterGames('TR',this)">Temp. Regular</button>
           <button class="fb" onclick="filterGames('Playoffs',this)">Playoffs</button>
+          <span style="width:1px;height:16px;background:var(--border2);margin:0 4px"></span>
+          <button class="fb active" id="canal-todos" onclick="filterCanal('todos',this)">Todo Canal</button>
+          <button class="fb" id="canal-onl" onclick="filterCanal('online',this)">🌐 Online</button>
+          <button class="fb" id="canal-taq" onclick="filterCanal('taquilla',this)">🏟 Taquilla</button>
           <button class="fb" style="margin-left:6px;border-color:var(--danger);color:var(--danger)" onclick="closePanel()">✕</button>
         </div>
       </div>
@@ -653,12 +657,16 @@ function renderTeamCards() {
     const outHtml = teamOutliers.length ? `
       <div style="padding:10px 15px;border-top:1px solid var(--border)">
         <div style="font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--danger);margin-bottom:6px">⚠ Partidos Outlier (${teamOutliers.length})</div>
-        ${teamOutliers.map(o=>`
+        ${teamOutliers.map(o=>{
+          const isBaja = o.outlier_reason.includes('baja');
+          const chipClass = o.outlier_reason.includes('Sin')?'warn':isBaja?'warn':'ok';
+          const chipStyle = isBaja?'background:rgba(255,82,82,.1);color:var(--danger);border:1px solid rgba(255,82,82,.3)':'';
+          return `
           <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;border-bottom:1px solid rgba(37,48,64,.4);font-size:11px">
             <span style="color:var(--text2);flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${o.EVENTOS}</span>
             <span style="color:var(--text3);margin:0 8px;flex-shrink:0">${o['FECHA EVENTO']}</span>
-            <span class="chip ${o.outlier_reason.includes('Sin')?'warn':'ok'}" style="flex-shrink:0">${o.outlier_reason.replace(/Asistencia atípicamente /,'')}</span>
-          </div>`).join('')}
+            <span class="chip ${chipClass}" style="${chipStyle};flex-shrink:0">${o.outlier_reason.replace(/Asistencia atípicamente /,'')}</span>
+          </div>`}).join('')}
       </div>` : '';
     // Tecos USA/MX toggle
     const tecosToggle = s.equipo==='Tecos' ? `
@@ -724,9 +732,8 @@ function renderTeamCards() {
 function filterTecos(mode, btn, parent) {
   parent.querySelectorAll('.ot-btn').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
-  // Show note about filter
-  let noteEl = parent.nextElementSibling;
-  if(noteEl && noteEl.classList.contains('tecos-filter-note')) noteEl.remove();
+  const tcard = btn.closest('.tcard');
+  tcard.querySelectorAll('.tecos-filter-note').forEach(n=>n.remove());
   if(mode !== 'todos') {
     const note = document.createElement('div');
     note.className = 'tecos-filter-note nota';
@@ -736,7 +743,7 @@ function filterTecos(mode, btn, parent) {
       usa: '🇺🇸 Laredo TX USA — Aforo ~10,718. Partidos con rival de la división norte de USA.',
     };
     note.innerHTML = `<span>ℹ</span><span style="font-size:11px">${labels[mode]}</span>`;
-    btn.closest('.tcard').appendChild(note);
+    tcard.appendChild(note);
   }
 }
 
@@ -782,6 +789,9 @@ function renderOutliersTable() {
   filtered.forEach(o => {
     const zona = STATS.find(s=>s.equipo===o.EQUIPO)?.zona||'';
     const noData = o.outlier_reason.includes('Sin');
+    const isBaja = o.outlier_reason.includes('baja');
+    const chipClass = noData?'warn':isBaja?'warn':'ok';
+    const chipStyle = isBaja?'background:rgba(255,82,82,.1);color:var(--danger);border:1px solid rgba(255,82,82,.3)':'';
     tbody.innerHTML += `<tr>
       <td><span style="font-weight:600;display:flex;align-items:center;gap:6px">
         <div class="bdot ${zona==='Norte'?'n':'s'}"></div>${o.EQUIPO}
@@ -789,8 +799,8 @@ function renderOutliersTable() {
       <td style="font-size:11px;max-width:260px">${o.EVENTOS}</td>
       <td class="mono dim">${o['FECHA EVENTO']}</td>
       <td class="mono">${fmtF(o.Boletos)}</td>
-      <td class="mono" style="color:${noData?'var(--danger)':'var(--norte)'}">${fmtF(o.Escaneados)}</td>
-      <td><span class="chip ${noData?'warn':'ok'}">${o.outlier_reason}</span></td>
+      <td class="mono" style="color:${noData||isBaja?'var(--danger)':'var(--norte)'}">${fmtF(o.Escaneados)}</td>
+      <td><span class="chip ${chipClass}" style="${chipStyle}">${o.outlier_reason.replace(/Asistencia atípicamente /,'')}</span></td>
     </tr>`;
   });
 }
@@ -832,7 +842,150 @@ function renderAsistCharts() {
 }
 
 
-let activeEqPanel = null, activeFilter = 'Todos', panelSortCol = 'ing', panelSortDir = -1;
+let activeEqPanel = null, activeFilter = 'Todos', panelSortCol = 'ing', panelSortDir = -1, activeCanalFilter = 'todos';
+
+// ── VENTAS: SELECCIONAR EQUIPO ──
+let activeVentasEq = 'Charros';
+function selEq(eq, btn) {
+  activeVentasEq = eq;
+  document.querySelectorAll('#ventas > .frow .fb').forEach(b=>b.classList.remove('active'));
+  if(btn) btn.classList.add('active');
+  renderEqDetail(eq);
+}
+
+function renderEqDetail(eq) {
+  const wrap = document.getElementById('eq-detail');
+  if(!wrap || !VENTAS) return;
+  const v = VENTAS[eq];
+  if(!v) { wrap.innerHTML='<div class="card"><div style="color:var(--text3);padding:20px;text-align:center">Sin datos para '+eq+'</div></div>'; return; }
+  const s = STATS.find(s=>s.equipo===eq);
+  const zona = s?.zona||'Norte';
+  const zClass = zona==='Norte'?'n':'s';
+  const zColor = zona==='Norte'?'var(--norte)':'var(--sur)';
+  const zonas = v.zonas||[];
+  const maxZIng = Math.max(...zonas.map(z=>z.ingreso),1);
+  const totalZBol = zonas.reduce((a,z)=>a+z.boletos,0);
+  const totalIng = v.ingreso_total||1;
+  const pctOnlIng = (v.ingreso_online/totalIng*100).toFixed(1);
+  const pctTaqIng = (v.ingreso_taquilla/totalIng*100).toFixed(1);
+  const totalBol = v.total_boletos||1;
+  const pctOnlBol = (v.online/totalBol*100).toFixed(1);
+  const pctTaqBol = (v.taquilla/totalBol*100).toFixed(1);
+  const cortTipos = Object.entries(v.tipo_cortesia||{}).sort((a,b)=>b[1]-a[1]);
+  const maxCort = cortTipos.length>0?cortTipos[0][1]:1;
+
+  wrap.innerHTML = `
+    <div class="card mb" style="border-color:${zColor}40">
+      <div class="chdr">
+        <div style="display:flex;align-items:center;gap:10px">
+          <div class="ctitle" style="margin-bottom:0">Detalle Ventas — ${eq}</div>
+          <span class="chip ${zClass}">${zona}</span>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:18px">
+        <div style="background:var(--bg3);border-radius:6px;padding:12px">
+          <div style="font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--text3)">Boletos Total</div>
+          <div class="mono" style="font-size:18px;font-weight:600;margin-top:4px">${fmtF(v.total_boletos)}</div>
+        </div>
+        <div style="background:var(--bg3);border-radius:6px;padding:12px">
+          <div style="font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--text3)">Ingreso Total</div>
+          <div class="mono" style="font-size:18px;font-weight:600;color:var(--gold);margin-top:4px">$${fmt(v.ingreso_total)}</div>
+        </div>
+        <div style="background:var(--bg3);border-radius:6px;padding:12px">
+          <div style="font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--vendido)">Vendidos</div>
+          <div class="mono" style="font-size:18px;font-weight:600;color:var(--vendido);margin-top:4px">${fmtF(v.vendidos)}</div>
+          <div style="font-size:10px;color:var(--text3);margin-top:2px">${v.pct_vendido}%</div>
+        </div>
+        <div style="background:var(--bg3);border-radius:6px;padding:12px">
+          <div style="font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--promocion)">Promociones</div>
+          <div class="mono" style="font-size:18px;font-weight:600;color:var(--promocion);margin-top:4px">${fmtF(v.promociones)}</div>
+          <div style="font-size:10px;color:var(--text3);margin-top:2px">${v.pct_promocion}%</div>
+        </div>
+        <div style="background:var(--bg3);border-radius:6px;padding:12px">
+          <div style="font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--cortesia)">Cortesías</div>
+          <div class="mono" style="font-size:18px;font-weight:600;color:var(--cortesia);margin-top:4px">${fmtF(v.cortesias)}</div>
+          <div style="font-size:10px;color:var(--text3);margin-top:2px">${v.pct_cortesia}%</div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+        <div>
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text3);margin-bottom:10px">Canal de Venta</div>
+          <div style="margin-bottom:12px">
+            <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--text3);margin-bottom:4px">
+              <span>Ingreso</span><span>$${fmt(v.ingreso_total)}</span>
+            </div>
+            <div style="display:flex;height:18px;border-radius:4px;overflow:hidden">
+              <div style="width:${pctOnlIng}%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:600;color:#fff;min-width:30px">${pctOnlIng}%</div>
+              <div style="width:${pctTaqIng}%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:600;color:var(--text2);min-width:30px">${pctTaqIng}%</div>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:10px;margin-top:3px">
+              <span style="color:var(--accent)">🌐 Online: $${fmt(v.ingreso_online)}</span>
+              <span style="color:var(--text3)">🏟 Taquilla: $${fmt(v.ingreso_taquilla)}</span>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex;justify-content:space-between;font-size:10px;color:var(--text3);margin-bottom:4px">
+              <span>Boletos</span><span>${fmtF(v.total_boletos)}</span>
+            </div>
+            <div style="display:flex;height:18px;border-radius:4px;overflow:hidden">
+              <div style="width:${pctOnlBol}%;background:var(--accent);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:600;color:#fff;min-width:30px">${pctOnlBol}%</div>
+              <div style="width:${pctTaqBol}%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:600;color:var(--text2);min-width:30px">${pctTaqBol}%</div>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:10px;margin-top:3px">
+              <span style="color:var(--accent)">🌐 Online: ${fmtF(v.online)}</span>
+              <span style="color:var(--text3)">🏟 Taquilla: ${fmtF(v.taquilla)}</span>
+            </div>
+          </div>
+          <div style="margin-top:14px;background:var(--bg3);border-radius:6px;padding:10px 12px;display:flex;align-items:center;gap:10px">
+            <span style="font-size:20px">👤</span>
+            <div>
+              <div class="mono" style="font-size:16px;font-weight:600;color:var(--accent)">${fmtF(v.fans_unicos_online)}</div>
+              <div style="font-size:10px;color:var(--text3)">Fans únicos online (por correo)</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text3);margin-bottom:10px">Ingreso por Zona</div>
+          ${zonas.map(z=>{
+            const pctZ = (z.boletos/totalZBol*100).toFixed(1);
+            const avgPrice = z.boletos>0?Math.round(z.ingreso/z.boletos):0;
+            return `<div class="brow" style="margin-bottom:8px">
+              <div class="blabels">
+                <div class="bteam" style="font-size:11px">${z.ZONA}</div>
+                <div class="bpct" style="color:${zColor}">$${fmt(z.ingreso)} · ${fmtF(z.boletos)} bol.</div>
+              </div>
+              <div class="btrack"><div class="bfill" style="width:${z.ingreso/maxZIng*100}%;background:${zColor}"></div></div>
+              <div style="display:flex;justify-content:space-between;font-size:9px;color:var(--text3);margin-top:1px">
+                <span>${pctZ}% de boletos</span>
+                <span>Precio prom: $${fmtF(avgPrice)}</span>
+              </div>
+            </div>`;
+          }).join('')}
+        </div>
+      </div>
+      ${cortTipos.length>0?`
+      <div style="margin-top:18px;border-top:1px solid var(--border);padding-top:14px">
+        <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--text3);margin-bottom:10px">Desglose Cortesías (${fmtF(v.cortesias)} total)</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px 16px">
+          ${cortTipos.map(([tipo,cnt])=>{
+            const pctC = (cnt/v.cortesias*100).toFixed(1);
+            return `<div class="brow" style="margin-bottom:4px">
+              <div class="blabels">
+                <div class="bteam" style="font-size:10px">${tipo}</div>
+                <div class="bpct" style="color:var(--cortesia)">${fmtF(cnt)} (${pctC}%)</div>
+              </div>
+              <div class="btrack"><div class="bfill" style="width:${cnt/maxCort*100}%;background:var(--cortesia)"></div></div>
+            </div>`;
+          }).join('')}
+        </div>
+      </div>`:''}
+    </div>
+  `;
+}
+
+function initVentasDetail() {
+  if(VENTAS) renderEqDetail('Charros');
+}
 
 function renderSalesCharts() {
   const sortedI = Object.entries(VENTAS).sort((a,b)=>b[1].ingreso_total-a[1].ingreso_total);
@@ -927,8 +1080,12 @@ function renderSalesCharts() {
 }
 
 function openPanel(eq) {
-  activeEqPanel = eq; activeFilter = 'Todos'; panelSortCol = 'ing'; panelSortDir = -1;
-  document.querySelectorAll('#game-panel .fb').forEach((b,i)=>{b.classList.toggle('active',i===0);});
+  activeEqPanel = eq; activeFilter = 'Todos'; panelSortCol = 'ing'; panelSortDir = -1; activeCanalFilter = 'todos';
+  const catBtns = document.querySelectorAll('#game-panel .chdr .fb');
+  catBtns.forEach((b,i)=>{if(i<3) b.classList.toggle('active',i===0);});
+  document.getElementById('canal-todos').classList.add('active');
+  document.getElementById('canal-onl').classList.remove('active');
+  document.getElementById('canal-taq').classList.remove('active');
   const zona = STATS.find(s=>s.equipo===eq)?.zona||'Norte';
   document.getElementById('panel-title').textContent = `Partidos — ${eq}`;
   const chip = document.getElementById('panel-chip');
@@ -940,8 +1097,17 @@ function openPanel(eq) {
 function closePanel(){document.getElementById('game-panel').style.display='none';}
 function filterGames(cat,btn){
   activeFilter=cat;
-  document.querySelectorAll('#game-panel .fb').forEach(b=>b.classList.remove('active'));
+  const allBtns = document.querySelectorAll('#game-panel .chdr .fb');
+  allBtns.forEach((b,i)=>{if(i<3) b.classList.remove('active');});
   btn.classList.add('active'); renderPanelGames();
+}
+function filterCanal(canal,btn){
+  activeCanalFilter=canal;
+  ['canal-todos','canal-onl','canal-taq'].forEach(id=>{
+    const el=document.getElementById(id); if(el) el.classList.remove('active');
+  });
+  btn.classList.add('active');
+  renderPanelGames();
 }
 function sortPanel(col){
   if(panelSortCol===col) panelSortDir*=-1; else{panelSortCol=col;panelSortDir=-1;}
@@ -949,23 +1115,27 @@ function sortPanel(col){
 }
 function renderPanelGames(){
   const data = (JUEGOS2[activeEqPanel]||[]).filter(g=>activeFilter==='Todos'||g.c===activeFilter);
-  const sorted = [...data].sort((a,b)=>panelSortDir*(a[panelSortCol]||0)-(b[panelSortCol]||0)*panelSortDir);
+  const ingKey = activeCanalFilter==='online'?'ing_onl':activeCanalFilter==='taquilla'?'ing_taq':'ing';
+  const sKey = panelSortCol==='ing'?ingKey:panelSortCol;
+  const sorted = [...data].sort((a,b)=>panelSortDir*((a[sKey]||0)-(b[sKey]||0)));
   const tbody = document.getElementById('panel-tbody');
-  // Update headers
   const ths = document.querySelectorAll('#game-panel th.s-col');
-  if(ths.length){ths.forEach(th=>{const c=th.dataset.col;th.textContent=th.dataset.label+(panelSortCol===c?(panelSortDir>0?' ↑':' ↓'):'');});}
+  const canalLabel = activeCanalFilter==='online'?'Ingreso Online':activeCanalFilter==='taquilla'?'Ingreso Taquilla':'Ingreso';
+  if(ths.length){ths.forEach(th=>{const c=th.dataset.col;th.textContent=(c==='ing'?canalLabel:th.dataset.label)+(panelSortCol===c?(panelSortDir>0?' ↑':' ↓'):'');});}
   tbody.innerHTML='';
   if(!sorted.length){tbody.innerHTML='<tr><td colspan="6" style="text-align:center;color:var(--text3);padding:20px">Sin partidos en esta categoría</td></tr>';return;}
   sorted.forEach((g,i)=>{
     const cColor=g.c==='Playoffs'?'var(--gold)':'var(--accent)';
+    const displayIng = g[ingKey]||0;
     const onlPct = g.ing>0?Math.round(g.ing_onl/g.ing*100):0;
+    const subLine = activeCanalFilter==='todos'
+      ? `<div style="font-size:10px;color:var(--text3)">onl: $${fmt(g.ing_onl)} (${onlPct}%) · taq: $${fmt(g.ing_taq||0)}</div>`
+      : '';
     tbody.innerHTML+=`<tr>
       <td class="mono dim">${i+1}</td>
       <td style="font-size:12px;max-width:220px">${g.n}</td>
       <td class="mono dim">${g.f}</td>
-      <td class="mono" style="color:var(--gold);cursor:pointer" onclick="sortPanel('ing')" title="Clic para ordenar">$${fmt(g.ing)}
-        <div style="font-size:10px;color:var(--text3)">onl: $${fmt(g.ing_onl)} (${onlPct}%)</div>
-      </td>
+      <td class="mono" style="color:var(--gold)">$${fmt(displayIng)}${subLine}</td>
       <td><span class="chip" style="background:${g.c==='Playoffs'?'rgba(245,200,60,.1)':'rgba(79,127,255,.1)'};color:${cColor};border-color:${cColor}40">${g.c}</span></td>
     </tr>`;
   });
@@ -1071,6 +1241,7 @@ async function loadDashboard() {
     initOverview();
     initEquipos();
     initOutliers();
+    initVentasDetail();
     // initFans(); // Reemplazado por fans_detalle.js
     console.log('✅ Dashboard cargado desde JSONs');
   } catch(err) {
