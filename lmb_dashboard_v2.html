@@ -409,45 +409,31 @@ tr:last-child td{border-bottom:none}
 
   <!-- LIGA KPIs -->
   <div class="g5 mb">
-    <div class="card"><div class="ctitle">Total Fans Online Liga</div><div class="kv" id="f-total">—</div><div class="kl">Usuarios únicos por correo</div></div>
-    <div class="card"><div class="ctitle">Van 1 vez</div><div class="kv" style="color:var(--cortesia)" id="f-1">—</div><div class="kl">% del total online</div></div>
-    <div class="card"><div class="ctitle">Van 2-5 veces</div><div class="kv" style="color:var(--norte)" id="f-25">—</div><div class="kl">Fans recurrentes</div></div>
-    <div class="card"><div class="ctitle">Van 6-10 veces</div><div class="kv" style="color:var(--success)" id="f-610">—</div><div class="kl">Fans frecuentes</div></div>
-    <div class="card"><div class="ctitle">Van +10 veces</div><div class="kv" style="color:var(--gold)" id="f-10">—</div><div class="kl">Fans leales</div></div>
+    <div class="card"><div class="ctitle">Total Fans Online</div><div class="kv" id="fd-total">—</div><div class="kl">Usuarios únicos por correo</div></div>
+    <div class="card"><div class="ctitle">Órdenes Online</div><div class="kv" style="color:var(--accent)" id="fd-ordenes">—</div><div class="kl">Total compras en línea</div></div>
+    <div class="card"><div class="ctitle">Gasto Promedio</div><div class="kv" style="color:var(--gold)" id="fd-gasto-avg">—</div><div class="kl">Por fan online</div></div>
+    <div class="card"><div class="ctitle">Van 1 sola vez</div><div class="kv" style="color:var(--cortesia)" id="fd-f1-pct">—</div><div class="kl">% del total online</div></div>
+    <div class="card"><div class="ctitle">Recurrentes (2+)</div><div class="kv" style="color:var(--success)" id="fd-recurrentes">—</div><div class="kl">Fans que regresan</div></div>
   </div>
 
   <!-- EQUIPO SELECTOR -->
   <div class="frow mb">
     <span class="fl">Equipo:</span>
-    <button class="fb active" onclick="selFansEq('Liga',this)">Liga</button>
-    <button class="fb" onclick="selFansEq('Sultanes',this)">Sultanes</button>
-    <button class="fb" onclick="selFansEq('Charros',this)">Charros</button>
-    <button class="fb" onclick="selFansEq('Toros',this)">Toros</button>
-    <button class="fb" onclick="selFansEq('Saraperos',this)">Saraperos</button>
-    <button class="fb" onclick="selFansEq('Bravos',this)">Bravos</button>
-    <button class="fb" onclick="selFansEq('Dorados',this)">Dorados</button>
-    <button class="fb" onclick="selFansEq('Guerreros',this)">Guerreros</button>
-    <button class="fb" onclick="selFansEq('Rieleros',this)">Rieleros</button>
-    <button class="fb" onclick="selFansEq('Caliente',this)">Caliente</button>
-    <button class="fb" onclick="selFansEq('Tecos',this)">Tecos</button>
+    <button class="fb active" onclick="selFansDetEq('Liga',this)">Liga</button>
+    <button class="fb" onclick="selFansDetEq('Sultanes',this)">Sultanes</button>
+    <button class="fb" onclick="selFansDetEq('Charros',this)">Charros</button>
+    <button class="fb" onclick="selFansDetEq('Toros',this)">Toros</button>
+    <button class="fb" onclick="selFansDetEq('Saraperos',this)">Saraperos</button>
+    <button class="fb" onclick="selFansDetEq('Bravos',this)">Bravos</button>
+    <button class="fb" onclick="selFansDetEq('Dorados',this)">Dorados</button>
+    <button class="fb" onclick="selFansDetEq('Guerreros',this)">Guerreros</button>
+    <button class="fb" onclick="selFansDetEq('Rieleros',this)">Rieleros</button>
+    <button class="fb" onclick="selFansDetEq('Caliente',this)">Caliente</button>
+    <button class="fb" onclick="selFansDetEq('Tecos',this)">Tecos</button>
   </div>
 
-  <div class="g2 mb">
-    <div class="card">
-      <div class="ctitle" id="fans-chart-title">Segmentación por Frecuencia — Liga</div>
-      <div style="height:240px;position:relative"><canvas id="chartFansDonut"></canvas></div>
-    </div>
-    <div class="card">
-      <div class="ctitle">Comparativa Fans Online por Equipo</div>
-      <div style="height:240px;position:relative"><canvas id="chartFansBar"></canvas></div>
-    </div>
-  </div>
-
-  <!-- RETENTION INSIGHT -->
-  <div class="card mb">
-    <div class="ctitle">📊 Oportunidad de Retención — ¿Qué pasa si subimos el % de fans recurrentes?</div>
-    <div id="retention-table" style="margin-top:8px"></div>
-  </div>
+  <!-- CONTENIDO DINÁMICO -->
+  <div id="fans-det-content"></div>
 
   <div class="nota">
     <span>ℹ</span>
@@ -1085,7 +1071,7 @@ async function loadDashboard() {
     initOverview();
     initEquipos();
     initOutliers();
-    initFans();
+    // initFans(); // Reemplazado por fans_detalle.js
     console.log('✅ Dashboard cargado desde JSONs');
   } catch(err) {
     console.error('❌ Error cargando datos:', err);
@@ -1094,5 +1080,6 @@ async function loadDashboard() {
 }
 loadDashboard();
 </script>
+<script src="fans_detalle.js"></script>
 </body>
 </html>

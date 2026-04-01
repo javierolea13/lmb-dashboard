@@ -178,6 +178,68 @@
       "conekta-spei": 499,
       "bmpay": 422,
       "kueski-pay": 96
+    },
+    "compras_por_hora_cat": {
+      "TR": {
+        "0": 240,
+        "1": 77,
+        "10": 1402,
+        "11": 1751,
+        "12": 2002,
+        "13": 2086,
+        "14": 2113,
+        "15": 2315,
+        "16": 2303,
+        "17": 2280,
+        "18": 2261,
+        "19": 2165,
+        "2": 34,
+        "20": 1568,
+        "21": 1348,
+        "22": 1015,
+        "23": 741,
+        "3": 8,
+        "4": 9,
+        "5": 15,
+        "6": 89,
+        "7": 279,
+        "8": 520,
+        "9": 894
+      },
+      "Playoffs": {},
+      "Abono": {
+        "14": 2
+      }
+    },
+    "compras_por_dia_detalle": {
+      "Lunes": {
+        "ordenes": 4301,
+        "ingreso": 1106440.0
+      },
+      "Martes": {
+        "ordenes": 5084,
+        "ingreso": 1228170.0
+      },
+      "Miércoles": {
+        "ordenes": 4351,
+        "ingreso": 1002850.0
+      },
+      "Jueves": {
+        "ordenes": 4821,
+        "ingreso": 1033510.0
+      },
+      "Viernes": {
+        "ordenes": 3600,
+        "ingreso": 806280.0
+      },
+      "Sábado": {
+        "ordenes": 3221,
+        "ingreso": 720490.0
+      },
+      "Domingo": {
+        "ordenes": 2139,
+        "ingreso": 518184.0
+      }
     }
   },
   "Caliente": {
@@ -326,7 +388,13 @@
       "bmpay": 214,
       "conekta-spei": 92,
       "kueski-pay": 24
-    }
+    },
+    "compras_por_hora_cat": {
+      "TR": {},
+      "Playoffs": {},
+      "Abono": {}
+    },
+    "compras_por_dia_detalle": {}
   },
   "Charros": {
     "total_fans_online": 20735,
@@ -482,6 +550,41 @@
       "conekta-oxxo-pay": 3929,
       "conekta-spei": 3422,
       "kueski-pay": 717
+    },
+    "compras_por_hora_cat": {
+      "TR": {},
+      "Playoffs": {},
+      "Abono": {}
+    },
+    "compras_por_dia_detalle": {
+      "Lunes": {
+        "ordenes": 18049,
+        "ingreso": 3266086.0
+      },
+      "Martes": {
+        "ordenes": 16715,
+        "ingreso": 2583097.0
+      },
+      "Miércoles": {
+        "ordenes": 16611,
+        "ingreso": 2630379.0
+      },
+      "Jueves": {
+        "ordenes": 14732,
+        "ingreso": 2624087.0
+      },
+      "Viernes": {
+        "ordenes": 15047,
+        "ingreso": 3073651.0
+      },
+      "Sábado": {
+        "ordenes": 28347,
+        "ingreso": 6614794.0
+      },
+      "Domingo": {
+        "ordenes": 14063,
+        "ingreso": 2603343.0
+      }
     }
   },
   "Dorados": {
@@ -663,6 +766,66 @@
       "conekta-oxxo-pay": 733,
       "conekta-spei": 637,
       "kueski-pay": 23
+    },
+    "compras_por_hora_cat": {
+      "TR": {
+        "0": 597,
+        "1": 166,
+        "10": 1496,
+        "11": 1960,
+        "12": 2370,
+        "13": 2628,
+        "14": 2638,
+        "15": 2648,
+        "16": 2759,
+        "17": 2873,
+        "18": 2925,
+        "19": 2826,
+        "2": 44,
+        "20": 1532,
+        "21": 1143,
+        "22": 1188,
+        "23": 703,
+        "3": 19,
+        "4": 28,
+        "5": 24,
+        "6": 82,
+        "7": 251,
+        "8": 659,
+        "9": 1208
+      },
+      "Playoffs": {},
+      "Abono": {}
+    },
+    "compras_por_dia_detalle": {
+      "Lunes": {
+        "ordenes": 3166,
+        "ingreso": 1028220.0
+      },
+      "Martes": {
+        "ordenes": 4263,
+        "ingreso": 618940.0
+      },
+      "Miércoles": {
+        "ordenes": 4758,
+        "ingreso": 684500.0
+      },
+      "Jueves": {
+        "ordenes": 7499,
+        "ingreso": 928830.0
+      },
+      "Viernes": {
+        "ordenes": 5165,
+        "ingreso": 701660.0
+      },
+      "Sábado": {
+        "ordenes": 5596,
+        "ingreso": 768940.0
+      },
+      "Domingo": {
+        "ordenes": 2440,
+        "ingreso": 338810.0
+      }
     }
   },
   "Guerreros": {
@@ -819,6 +982,41 @@
       "conekta-oxxo-pay": 795,
       "conekta-spei": 328,
       "kueski-pay": 124
+    },
+    "compras_por_hora_cat": {
+      "TR": {},
+      "Playoffs": {},
+      "Abono": {}
+    },
+    "compras_por_dia_detalle": {
+      "Lunes": {
+        "ordenes": 3247,
+        "ingreso": 726300.0
+      },
+      "Martes": {
+        "ordenes": 5393,
+        "ingreso": 1110910.0
+      },
+      "Miércoles": {
+        "ordenes": 4811,
+        "ingreso": 998180.0
+      },
+      "Jueves": {
+        "ordenes": 4740,
+        "ingreso": 1039940.0
+      },
+      "Viernes": {
+        "ordenes": 5517,
+        "ingreso": 1052110.0
+      },
+      "Sábado": {
+        "ordenes": 4030,
+        "ingreso": 776460.0
+      },
+      "Domingo": {
+        "ordenes": 3198,
+        "ingreso": 630756.0
+      }
     }
   },
   "Rieleros": {
@@ -1000,6 +1198,66 @@
       "bmpay": 701,
       "conekta-spei": 236,
       "kueski-pay": 21
+    },
+    "compras_por_hora_cat": {
+      "TR": {
+        "0": 156,
+        "1": 46,
+        "10": 752,
+        "11": 876,
+        "12": 1070,
+        "13": 1107,
+        "14": 1239,
+        "15": 1464,
+        "16": 1642,
+        "17": 1565,
+        "18": 1672,
+        "19": 2263,
+        "2": 29,
+        "20": 958,
+        "21": 727,
+        "22": 626,
+        "23": 382,
+        "3": 23,
+        "4": 18,
+        "5": 18,
+        "6": 58,
+        "7": 144,
+        "8": 316,
+        "9": 487
+      },
+      "Playoffs": {},
+      "Abono": {}
+    },
+    "compras_por_dia_detalle": {
+      "Lunes": {
+        "ordenes": 2410,
+        "ingreso": 391940.0
+      },
+      "Martes": {
+        "ordenes": 3880,
+        "ingreso": 527330.0
+      },
+      "Miércoles": {
+        "ordenes": 2982,
+        "ingreso": 546388.0
+      },
+      "Jueves": {
+        "ordenes": 2791,
+        "ingreso": 571445.0
+      },
+      "Viernes": {
+        "ordenes": 2234,
+        "ingreso": 440890.0
+      },
+      "Sábado": {
+        "ordenes": 1898,
+        "ingreso": 381350.0
+      },
+      "Domingo": {
+        "ordenes": 1443,
+        "ingreso": 246760.0
+      }
     }
   },
   "Saraperos": {
@@ -1181,6 +1439,82 @@
       "conekta-spei": 1321,
       "fiserv-3ds": 1083,
       "kueski-pay": 157
+    },
+    "compras_por_hora_cat": {
+      "TR": {
+        "0": 810,
+        "1": 382,
+        "10": 3429,
+        "11": 3689,
+        "12": 7050,
+        "13": 5285,
+        "14": 5066,
+        "15": 5101,
+        "16": 5436,
+        "17": 5525,
+        "18": 4803,
+        "19": 4234,
+        "2": 192,
+        "20": 3258,
+        "21": 2816,
+        "22": 2568,
+        "23": 1687,
+        "3": 157,
+        "4": 41,
+        "5": 100,
+        "6": 226,
+        "7": 557,
+        "8": 1160,
+        "9": 1886
+      },
+      "Playoffs": {},
+      "Abono": {
+        "10": 2,
+        "12": 8,
+        "13": 5,
+        "14": 4,
+        "15": 6,
+        "16": 3,
+        "17": 8,
+        "18": 6,
+        "19": 9,
+        "20": 3,
+        "21": 4,
+        "22": 2,
+        "23": 6,
+        "7": 1,
+        "8": 6
+      }
+    },
+    "compras_por_dia_detalle": {
+      "Lunes": {
+        "ordenes": 10333,
+        "ingreso": 1942390.0
+      },
+      "Martes": {
+        "ordenes": 8785,
+        "ingreso": 1126305.0
+      },
+      "Miércoles": {
+        "ordenes": 9550,
+        "ingreso": 1211930.0
+      },
+      "Jueves": {
+        "ordenes": 9105,
+        "ingreso": 1312665.0
+      },
+      "Viernes": {
+        "ordenes": 11518,
+        "ingreso": 1788670.0
+      },
+      "Sábado": {
+        "ordenes": 7826,
+        "ingreso": 1071520.0
+      },
+      "Domingo": {
+        "ordenes": 8414,
+        "ingreso": 966685.0
+      }
     }
   },
   "Sultanes": {
@@ -1362,6 +1696,116 @@
       "conekta-oxxo-pay": 8627,
       "kueski-pay": 1362,
       "openpay-3ds": 1335
+    },
+    "compras_por_hora_cat": {
+      "TR": {
+        "0": 3724,
+        "1": 1726,
+        "10": 10387,
+        "11": 12909,
+        "12": 14447,
+        "13": 15415,
+        "14": 16369,
+        "15": 16144,
+        "16": 15945,
+        "17": 15169,
+        "18": 13619,
+        "19": 13417,
+        "2": 916,
+        "20": 11758,
+        "21": 12195,
+        "22": 10557,
+        "23": 7462,
+        "3": 408,
+        "4": 222,
+        "5": 344,
+        "6": 730,
+        "7": 1930,
+        "8": 4278,
+        "9": 7447
+      },
+      "Playoffs": {
+        "0": 3544,
+        "1": 926,
+        "10": 8436,
+        "11": 5606,
+        "12": 6000,
+        "13": 4417,
+        "14": 3890,
+        "15": 3813,
+        "16": 3808,
+        "17": 3318,
+        "18": 2823,
+        "19": 2442,
+        "2": 346,
+        "20": 1878,
+        "21": 5006,
+        "22": 4530,
+        "23": 5235,
+        "3": 209,
+        "4": 225,
+        "5": 301,
+        "6": 641,
+        "7": 932,
+        "8": 1335,
+        "9": 1721
+      },
+      "Abono": {
+        "0": 80,
+        "1": 24,
+        "10": 207,
+        "11": 271,
+        "12": 297,
+        "13": 324,
+        "14": 254,
+        "15": 247,
+        "16": 285,
+        "17": 290,
+        "18": 244,
+        "19": 263,
+        "2": 15,
+        "20": 249,
+        "21": 260,
+        "22": 227,
+        "23": 128,
+        "3": 30,
+        "4": 8,
+        "5": 13,
+        "6": 16,
+        "7": 33,
+        "8": 123,
+        "9": 123
+      }
+    },
+    "compras_por_dia_detalle": {
+      "Lunes": {
+        "ordenes": 47029,
+        "ingreso": 6777244.0
+      },
+      "Martes": {
+        "ordenes": 39250,
+        "ingreso": 5321224.0
+      },
+      "Miércoles": {
+        "ordenes": 41664,
+        "ingreso": 6281186.0
+      },
+      "Jueves": {
+        "ordenes": 41599,
+        "ingreso": 6013137.0
+      },
+      "Viernes": {
+        "ordenes": 45804,
+        "ingreso": 6516410.0
+      },
+      "Sábado": {
+        "ordenes": 37002,
+        "ingreso": 4955887.0
+      },
+      "Domingo": {
+        "ordenes": 30563,
+        "ingreso": 3821610.0
+      }
     }
   },
   "Tecos": {
@@ -1543,6 +1987,91 @@
       "conekta-oxxo-pay": 1359,
       "stripe-3ds": 1116,
       "fiserv-3ds": 688
+    },
+    "compras_por_hora_cat": {
+      "TR": {
+        "0": 123,
+        "1": 81,
+        "10": 989,
+        "11": 1168,
+        "12": 1355,
+        "13": 1584,
+        "14": 1478,
+        "15": 1715,
+        "16": 1849,
+        "17": 1977,
+        "18": 1951,
+        "19": 1299,
+        "2": 12,
+        "20": 877,
+        "21": 730,
+        "22": 482,
+        "23": 230,
+        "3": 21,
+        "4": 7,
+        "5": 38,
+        "6": 95,
+        "7": 212,
+        "8": 348,
+        "9": 708
+      },
+      "Playoffs": {
+        "0": 159,
+        "1": 46,
+        "10": 386,
+        "11": 341,
+        "12": 354,
+        "13": 316,
+        "14": 389,
+        "15": 347,
+        "16": 422,
+        "17": 362,
+        "18": 368,
+        "19": 323,
+        "2": 21,
+        "20": 256,
+        "21": 262,
+        "22": 198,
+        "23": 193,
+        "3": 13,
+        "4": 14,
+        "5": 38,
+        "6": 82,
+        "7": 176,
+        "8": 269,
+        "9": 267
+      },
+      "Abono": {}
+    },
+    "compras_por_dia_detalle": {
+      "Lunes": {
+        "ordenes": 3502,
+        "ingreso": 762072.0
+      },
+      "Martes": {
+        "ordenes": 3931,
+        "ingreso": 701814.0
+      },
+      "Miércoles": {
+        "ordenes": 5230,
+        "ingreso": 930803.0
+      },
+      "Jueves": {
+        "ordenes": 3807,
+        "ingreso": 742722.0
+      },
+      "Viernes": {
+        "ordenes": 3790,
+        "ingreso": 654282.0
+      },
+      "Sábado": {
+        "ordenes": 2695,
+        "ingreso": 428095.0
+      },
+      "Domingo": {
+        "ordenes": 1976,
+        "ingreso": 546928.0
+      }
     }
   },
   "Toros": {
@@ -1724,6 +2253,186 @@
       "bmpay": 767,
       "conekta-spei": 590,
       "kueski-pay": 74
+    },
+    "compras_por_hora_cat": {
+      "TR": {
+        "0": 696,
+        "1": 750,
+        "10": 1413,
+        "11": 1975,
+        "12": 2591,
+        "13": 2597,
+        "14": 3241,
+        "15": 3555,
+        "16": 3846,
+        "17": 4055,
+        "18": 3941,
+        "19": 4339,
+        "2": 223,
+        "20": 3324,
+        "21": 2217,
+        "22": 1934,
+        "23": 1321,
+        "3": 96,
+        "4": 60,
+        "5": 45,
+        "6": 133,
+        "7": 304,
+        "8": 563,
+        "9": 1021
+      },
+      "Playoffs": {
+        "0": 157,
+        "1": 65,
+        "10": 191,
+        "11": 232,
+        "12": 309,
+        "13": 385,
+        "14": 397,
+        "15": 438,
+        "16": 455,
+        "17": 472,
+        "18": 543,
+        "19": 538,
+        "2": 19,
+        "20": 315,
+        "21": 321,
+        "22": 173,
+        "23": 409,
+        "3": 12,
+        "4": 4,
+        "5": 16,
+        "6": 18,
+        "7": 37,
+        "8": 59,
+        "9": 118
+      },
+      "Abono": {
+        "1": 1,
+        "11": 6,
+        "12": 2,
+        "13": 2,
+        "14": 2,
+        "18": 2,
+        "19": 4,
+        "20": 2,
+        "21": 5,
+        "22": 2,
+        "23": 1,
+        "7": 1
+      }
+    },
+    "compras_por_dia_detalle": {
+      "Lunes": {
+        "ordenes": 3669,
+        "ingreso": 855316.0
+      },
+      "Martes": {
+        "ordenes": 5877,
+        "ingreso": 1205809.0
+      },
+      "Miércoles": {
+        "ordenes": 8349,
+        "ingreso": 2420015.0
+      },
+      "Jueves": {
+        "ordenes": 7118,
+        "ingreso": 1904041.0
+      },
+      "Viernes": {
+        "ordenes": 8971,
+        "ingreso": 2030008.0
+      },
+      "Sábado": {
+        "ordenes": 10409,
+        "ingreso": 2147572.0
+      },
+      "Domingo": {
+        "ordenes": 5560,
+        "ingreso": 1209539.0
+      }
     }
-  }
+  },
+  "_liga_top_fans": [
+    {
+      "correo": "iza***@gmail.com",
+      "eventos": 10,
+      "ordenes": 58,
+      "gasto": 102691.0,
+      "plataforma": "iOS",
+      "equipo": "Toros"
+    },
+    {
+      "correo": "jgu***@sytguerra.com",
+      "eventos": 2,
+      "ordenes": 10,
+      "gasto": 95495.0,
+      "plataforma": "iOS",
+      "equipo": "Sultanes"
+    },
+    {
+      "correo": "gio***@segamac.com",
+      "eventos": 1,
+      "ordenes": 10,
+      "gasto": 92250.0,
+      "plataforma": "Web Desktop",
+      "equipo": "Sultanes"
+    },
+    {
+      "correo": "amm***@live.com.mx",
+      "eventos": 3,
+      "ordenes": 16,
+      "gasto": 91200.0,
+      "plataforma": "Web Mobile",
+      "equipo": "Charros"
+    },
+    {
+      "correo": "dan***@gmail.com",
+      "eventos": 1,
+      "ordenes": 12,
+      "gasto": 84120.0,
+      "plataforma": "Web Mobile",
+      "equipo": "Sultanes"
+    },
+    {
+      "correo": "oma***@hotmail.com",
+      "eventos": 2,
+      "ordenes": 9,
+      "gasto": 81000.0,
+      "plataforma": "Android",
+      "equipo": "Dorados"
+    },
+    {
+      "correo": "tor***@gmail.com",
+      "eventos": 1,
+      "ordenes": 10,
+      "gasto": 70100.0,
+      "plataforma": "Web Desktop",
+      "equipo": "Sultanes"
+    },
+    {
+      "correo": "rod***@gmail.com",
+      "eventos": 1,
+      "ordenes": 4,
+      "gasto": 69996.0,
+      "plataforma": "Web Mobile",
+      "equipo": "Sultanes"
+    },
+    {
+      "correo": "agr***@gmail.com",
+      "eventos": 11,
+      "ordenes": 15,
+      "gasto": 65000.0,
+      "plataforma": "Android",
+      "equipo": "Dorados"
+    },
+    {
+      "correo": "cpa***@ic3industrial.com",
+      "eventos": 1,
+      "ordenes": 6,
+      "gasto": 60600.0,
+      "plataforma": "iOS",
+      "equipo": "Dorados"
+    }
+  ]
 }
