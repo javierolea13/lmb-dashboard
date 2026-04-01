@@ -171,7 +171,7 @@ if len(multi_fans) > 0:
     top_fans_list = []
     for correo, d in top_fans_multi:
         parts = correo.split('@')
-        correo_anon = (parts[0][:3] + '***@' + parts[1]) if len(parts)==2 else correo[:3]+'***'
+        correo_anon = correo
         top_fans_list.append({'correo': correo_anon, 'n_equipos': len(d['equipos']),'equipos': sorted(d['equipos']), 'gasto': round(d['gasto'], 2), 'ordenes': d['ordenes']})
     multi_data = {
         'total_multi': len(multi_fans), 'total_fans': len(all_fan_data),
