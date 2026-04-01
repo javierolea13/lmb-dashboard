@@ -4,6 +4,55 @@
     "total_ordenes_online": 27517,
     "avg_gasto": 1210.1,
     "median_gasto": 750.0,
+    "fans_compradores": 5300,
+    "fans_cortesia": 2,
+    "avg_gasto_compradores": 1210.55,
+    "median_gasto_compradores": 750.0,
+    "pct_cortesia_fans": 0.0,
+    "zonas_fans": [
+      {
+        "zona": "Butaca Central",
+        "ordenes": 11280,
+        "ingreso": 2985674.0,
+        "fans_unicos": 2188,
+        "gasto_prom_fan": 1364.57
+      },
+      {
+        "zona": "Butaca 1ra Base",
+        "ordenes": 8807,
+        "ingreso": 1485100.0,
+        "fans_unicos": 1819,
+        "gasto_prom_fan": 816.44
+      },
+      {
+        "zona": "Butaca 3ra Base",
+        "ordenes": 2913,
+        "ingreso": 808650.0,
+        "fans_unicos": 742,
+        "gasto_prom_fan": 1089.82
+      },
+      {
+        "zona": "VIP",
+        "ordenes": 1459,
+        "ingreso": 792500.0,
+        "fans_unicos": 403,
+        "gasto_prom_fan": 1966.5
+      },
+      {
+        "zona": "General 3ra Base",
+        "ordenes": 2220,
+        "ingreso": 268180.0,
+        "fans_unicos": 712,
+        "gasto_prom_fan": 376.66
+      },
+      {
+        "zona": "General 1ra Base",
+        "ordenes": 838,
+        "ingreso": 75820.0,
+        "fans_unicos": 285,
+        "gasto_prom_fan": 266.04
+      }
+    ],
     "frecuencia": {
       "1": {
         "fans": 3852,
@@ -178,68 +227,6 @@
       "conekta-spei": 499,
       "bmpay": 422,
       "kueski-pay": 96
-    },
-    "compras_por_hora_cat": {
-      "TR": {
-        "0": 240,
-        "1": 77,
-        "10": 1402,
-        "11": 1751,
-        "12": 2002,
-        "13": 2086,
-        "14": 2113,
-        "15": 2315,
-        "16": 2303,
-        "17": 2280,
-        "18": 2261,
-        "19": 2165,
-        "2": 34,
-        "20": 1568,
-        "21": 1348,
-        "22": 1015,
-        "23": 741,
-        "3": 8,
-        "4": 9,
-        "5": 15,
-        "6": 89,
-        "7": 279,
-        "8": 520,
-        "9": 894
-      },
-      "Playoffs": {},
-      "Abono": {
-        "14": 2
-      }
-    },
-    "compras_por_dia_detalle": {
-      "Lunes": {
-        "ordenes": 4301,
-        "ingreso": 1106440.0
-      },
-      "Martes": {
-        "ordenes": 5084,
-        "ingreso": 1228170.0
-      },
-      "Miércoles": {
-        "ordenes": 4351,
-        "ingreso": 1002850.0
-      },
-      "Jueves": {
-        "ordenes": 4821,
-        "ingreso": 1033510.0
-      },
-      "Viernes": {
-        "ordenes": 3600,
-        "ingreso": 806280.0
-      },
-      "Sábado": {
-        "ordenes": 3221,
-        "ingreso": 720490.0
-      },
-      "Domingo": {
-        "ordenes": 2139,
-        "ingreso": 518184.0
-      }
     }
   },
   "Caliente": {
@@ -247,6 +234,62 @@
     "total_ordenes_online": 8628,
     "avg_gasto": 832.61,
     "median_gasto": 480.0,
+    "fans_compradores": 1760,
+    "fans_cortesia": 7,
+    "avg_gasto_compradores": 835.92,
+    "median_gasto_compradores": 496.0,
+    "pct_cortesia_fans": 0.4,
+    "zonas_fans": [
+      {
+        "zona": "Central",
+        "ordenes": 5969,
+        "ingreso": 1110120.0,
+        "fans_unicos": 1193,
+        "gasto_prom_fan": 930.53
+      },
+      {
+        "zona": "Lateral Preferente",
+        "ordenes": 905,
+        "ingreso": 128800.0,
+        "fans_unicos": 243,
+        "gasto_prom_fan": 530.04
+      },
+      {
+        "zona": "Lateral",
+        "ordenes": 920,
+        "ingreso": 79288.0,
+        "fans_unicos": 251,
+        "gasto_prom_fan": 315.89
+      },
+      {
+        "zona": "Palco Plata 3ra",
+        "ordenes": 345,
+        "ingreso": 72804.0,
+        "fans_unicos": 81,
+        "gasto_prom_fan": 898.81
+      },
+      {
+        "zona": "Palco Plata 1ra",
+        "ordenes": 261,
+        "ingreso": 52578.0,
+        "fans_unicos": 67,
+        "gasto_prom_fan": 784.75
+      },
+      {
+        "zona": "Palco Bronce 1ra",
+        "ordenes": 117,
+        "ingreso": 14125.0,
+        "fans_unicos": 31,
+        "gasto_prom_fan": 455.65
+      },
+      {
+        "zona": "Palco Bronce 3ra",
+        "ordenes": 111,
+        "ingreso": 13500.0,
+        "fans_unicos": 37,
+        "gasto_prom_fan": 364.86
+      }
+    ],
     "frecuencia": {
       "1": {
         "fans": 1338,
@@ -388,19 +431,90 @@
       "bmpay": 214,
       "conekta-spei": 92,
       "kueski-pay": 24
-    },
-    "compras_por_hora_cat": {
-      "TR": {},
-      "Playoffs": {},
-      "Abono": {}
-    },
-    "compras_por_dia_detalle": {}
+    }
   },
   "Charros": {
     "total_fans_online": 20735,
     "total_ordenes_online": 123564,
     "avg_gasto": 1128.31,
     "median_gasto": 600.0,
+    "fans_compradores": 20690,
+    "fans_cortesia": 45,
+    "avg_gasto_compradores": 1130.76,
+    "median_gasto_compradores": 600.0,
+    "pct_cortesia_fans": 0.2,
+    "zonas_fans": [
+      {
+        "zona": "Premier",
+        "ordenes": 24702,
+        "ingreso": 6899142.4,
+        "fans_unicos": 5264,
+        "gasto_prom_fan": 1310.63
+      },
+      {
+        "zona": "Planta Baja",
+        "ordenes": 30701,
+        "ingreso": 3753411.1,
+        "fans_unicos": 5520,
+        "gasto_prom_fan": 679.97
+      },
+      {
+        "zona": "Planta Alta",
+        "ordenes": 15046,
+        "ingreso": 3409520.0,
+        "fans_unicos": 3174,
+        "gasto_prom_fan": 1074.2
+      },
+      {
+        "zona": "Lateral 1era y 3era",
+        "ordenes": 19592,
+        "ingreso": 2433248.4,
+        "fans_unicos": 4159,
+        "gasto_prom_fan": 585.06
+      },
+      {
+        "zona": "Premier 1era",
+        "ordenes": 5330,
+        "ingreso": 1508373.6,
+        "fans_unicos": 1444,
+        "gasto_prom_fan": 1044.58
+      },
+      {
+        "zona": "Butaca Preferente",
+        "ordenes": 7377,
+        "ingreso": 1185345.6,
+        "fans_unicos": 1978,
+        "gasto_prom_fan": 599.26
+      },
+      {
+        "zona": "Premier 3era",
+        "ordenes": 3801,
+        "ingreso": 1094462.4,
+        "fans_unicos": 1063,
+        "gasto_prom_fan": 1029.6
+      },
+      {
+        "zona": "Lateral Preferente",
+        "ordenes": 4184,
+        "ingreso": 906669.2,
+        "fans_unicos": 1170,
+        "gasto_prom_fan": 774.93
+      },
+      {
+        "zona": "Lateral Alta 1era y 3era",
+        "ordenes": 4563,
+        "ingreso": 851100.0,
+        "fans_unicos": 1177,
+        "gasto_prom_fan": 723.11
+      },
+      {
+        "zona": "Lateral Premier",
+        "ordenes": 4343,
+        "ingreso": 772013.8,
+        "fans_unicos": 1113,
+        "gasto_prom_fan": 693.63
+      }
+    ],
     "frecuencia": {
       "1": {
         "fans": 14479,
@@ -550,41 +664,6 @@
       "conekta-oxxo-pay": 3929,
       "conekta-spei": 3422,
       "kueski-pay": 717
-    },
-    "compras_por_hora_cat": {
-      "TR": {},
-      "Playoffs": {},
-      "Abono": {}
-    },
-    "compras_por_dia_detalle": {
-      "Lunes": {
-        "ordenes": 18049,
-        "ingreso": 3266086.0
-      },
-      "Martes": {
-        "ordenes": 16715,
-        "ingreso": 2583097.0
-      },
-      "Miércoles": {
-        "ordenes": 16611,
-        "ingreso": 2630379.0
-      },
-      "Jueves": {
-        "ordenes": 14732,
-        "ingreso": 2624087.0
-      },
-      "Viernes": {
-        "ordenes": 15047,
-        "ingreso": 3073651.0
-      },
-      "Sábado": {
-        "ordenes": 28347,
-        "ingreso": 6614794.0
-      },
-      "Domingo": {
-        "ordenes": 14063,
-        "ingreso": 2603343.0
-      }
     }
   },
   "Dorados": {
@@ -592,6 +671,48 @@
     "total_ordenes_online": 32887,
     "avg_gasto": 869.47,
     "median_gasto": 400.0,
+    "fans_compradores": 5799,
+    "fans_cortesia": 32,
+    "avg_gasto_compradores": 874.27,
+    "median_gasto_compradores": 400.0,
+    "pct_cortesia_fans": 0.5,
+    "zonas_fans": [
+      {
+        "zona": "Plata",
+        "ordenes": 13091,
+        "ingreso": 2905200.0,
+        "fans_unicos": 2601,
+        "gasto_prom_fan": 1116.96
+      },
+      {
+        "zona": "Preferente",
+        "ordenes": 13202,
+        "ingreso": 1342320.0,
+        "fans_unicos": 2662,
+        "gasto_prom_fan": 504.25
+      },
+      {
+        "zona": "Numerado Derecho",
+        "ordenes": 4322,
+        "ingreso": 349480.0,
+        "fans_unicos": 877,
+        "gasto_prom_fan": 398.49
+      },
+      {
+        "zona": "Oro",
+        "ordenes": 358,
+        "ingreso": 320500.0,
+        "fans_unicos": 106,
+        "gasto_prom_fan": 3023.58
+      },
+      {
+        "zona": "Numerado Izquierdo",
+        "ordenes": 1914,
+        "ingreso": 152400.0,
+        "fans_unicos": 507,
+        "gasto_prom_fan": 300.59
+      }
+    ],
     "frecuencia": {
       "1": {
         "fans": 3944,
@@ -766,66 +887,6 @@
       "conekta-oxxo-pay": 733,
       "conekta-spei": 637,
       "kueski-pay": 23
-    },
-    "compras_por_hora_cat": {
-      "TR": {
-        "0": 597,
-        "1": 166,
-        "10": 1496,
-        "11": 1960,
-        "12": 2370,
-        "13": 2628,
-        "14": 2638,
-        "15": 2648,
-        "16": 2759,
-        "17": 2873,
-        "18": 2925,
-        "19": 2826,
-        "2": 44,
-        "20": 1532,
-        "21": 1143,
-        "22": 1188,
-        "23": 703,
-        "3": 19,
-        "4": 28,
-        "5": 24,
-        "6": 82,
-        "7": 251,
-        "8": 659,
-        "9": 1208
-      },
-      "Playoffs": {},
-      "Abono": {}
-    },
-    "compras_por_dia_detalle": {
-      "Lunes": {
-        "ordenes": 3166,
-        "ingreso": 1028220.0
-      },
-      "Martes": {
-        "ordenes": 4263,
-        "ingreso": 618940.0
-      },
-      "Miércoles": {
-        "ordenes": 4758,
-        "ingreso": 684500.0
-      },
-      "Jueves": {
-        "ordenes": 7499,
-        "ingreso": 928830.0
-      },
-      "Viernes": {
-        "ordenes": 5165,
-        "ingreso": 701660.0
-      },
-      "Sábado": {
-        "ordenes": 5596,
-        "ingreso": 768940.0
-      },
-      "Domingo": {
-        "ordenes": 2440,
-        "ingreso": 338810.0
-      }
     }
   },
   "Guerreros": {
@@ -833,6 +894,48 @@
     "total_ordenes_online": 30936,
     "avg_gasto": 1257.13,
     "median_gasto": 700.0,
+    "fans_compradores": 5003,
+    "fans_cortesia": 36,
+    "avg_gasto_compradores": 1266.17,
+    "median_gasto_compradores": 700.0,
+    "pct_cortesia_fans": 0.7,
+    "zonas_fans": [
+      {
+        "zona": "Central",
+        "ordenes": 19182,
+        "ingreso": 4361270.0,
+        "fans_unicos": 3473,
+        "gasto_prom_fan": 1255.76
+      },
+      {
+        "zona": "Lateral Izquierdo",
+        "ordenes": 6048,
+        "ingreso": 769880.0,
+        "fans_unicos": 1162,
+        "gasto_prom_fan": 662.55
+      },
+      {
+        "zona": "Lateral Derecho",
+        "ordenes": 4276,
+        "ingreso": 759586.0,
+        "fans_unicos": 823,
+        "gasto_prom_fan": 922.95
+      },
+      {
+        "zona": "Palcos Central",
+        "ordenes": 1392,
+        "ingreso": 425680.0,
+        "fans_unicos": 363,
+        "gasto_prom_fan": 1172.67
+      },
+      {
+        "zona": "Palco Terr Izquierdo",
+        "ordenes": 38,
+        "ingreso": 18240.0,
+        "fans_unicos": 9,
+        "gasto_prom_fan": 2026.67
+      }
+    ],
     "frecuencia": {
       "1": {
         "fans": 3100,
@@ -982,41 +1085,6 @@
       "conekta-oxxo-pay": 795,
       "conekta-spei": 328,
       "kueski-pay": 124
-    },
-    "compras_por_hora_cat": {
-      "TR": {},
-      "Playoffs": {},
-      "Abono": {}
-    },
-    "compras_por_dia_detalle": {
-      "Lunes": {
-        "ordenes": 3247,
-        "ingreso": 726300.0
-      },
-      "Martes": {
-        "ordenes": 5393,
-        "ingreso": 1110910.0
-      },
-      "Miércoles": {
-        "ordenes": 4811,
-        "ingreso": 998180.0
-      },
-      "Jueves": {
-        "ordenes": 4740,
-        "ingreso": 1039940.0
-      },
-      "Viernes": {
-        "ordenes": 5517,
-        "ingreso": 1052110.0
-      },
-      "Sábado": {
-        "ordenes": 4030,
-        "ingreso": 776460.0
-      },
-      "Domingo": {
-        "ordenes": 3198,
-        "ingreso": 630756.0
-      }
     }
   },
   "Rieleros": {
@@ -1024,6 +1092,83 @@
     "total_ordenes_online": 17638,
     "avg_gasto": 905.04,
     "median_gasto": 600.0,
+    "fans_compradores": 3423,
+    "fans_cortesia": 9,
+    "avg_gasto_compradores": 907.42,
+    "median_gasto_compradores": 600.0,
+    "pct_cortesia_fans": 0.3,
+    "zonas_fans": [
+      {
+        "zona": "Terreno VIP",
+        "ordenes": 2166,
+        "ingreso": 587230.0,
+        "fans_unicos": 522,
+        "gasto_prom_fan": 1124.96
+      },
+      {
+        "zona": "Butaca Num. L",
+        "ordenes": 3140,
+        "ingreso": 578335.0,
+        "fans_unicos": 716,
+        "gasto_prom_fan": 807.73
+      },
+      {
+        "zona": "Palco Plus",
+        "ordenes": 2724,
+        "ingreso": 444700.0,
+        "fans_unicos": 484,
+        "gasto_prom_fan": 918.8
+      },
+      {
+        "zona": "Palco Terr. 1era.",
+        "ordenes": 2640,
+        "ingreso": 431800.0,
+        "fans_unicos": 640,
+        "gasto_prom_fan": 674.69
+      },
+      {
+        "zona": "Zona VIP",
+        "ordenes": 1611,
+        "ingreso": 427000.0,
+        "fans_unicos": 387,
+        "gasto_prom_fan": 1103.36
+      },
+      {
+        "zona": "Palco Terr. 3ra.",
+        "ordenes": 1811,
+        "ingreso": 288150.0,
+        "fans_unicos": 441,
+        "gasto_prom_fan": 653.4
+      },
+      {
+        "zona": "Preferente 1ra",
+        "ordenes": 1711,
+        "ingreso": 151450.0,
+        "fans_unicos": 406,
+        "gasto_prom_fan": 373.03
+      },
+      {
+        "zona": "Terraza 3ra",
+        "ordenes": 540,
+        "ingreso": 90200.0,
+        "fans_unicos": 118,
+        "gasto_prom_fan": 764.41
+      },
+      {
+        "zona": "Preferente 3ra",
+        "ordenes": 835,
+        "ingreso": 76975.0,
+        "fans_unicos": 212,
+        "gasto_prom_fan": 363.09
+      },
+      {
+        "zona": "Tablitas",
+        "ordenes": 394,
+        "ingreso": 17062.5,
+        "fans_unicos": 76,
+        "gasto_prom_fan": 224.51
+      }
+    ],
     "frecuencia": {
       "1": {
         "fans": 2498,
@@ -1198,66 +1343,6 @@
       "bmpay": 701,
       "conekta-spei": 236,
       "kueski-pay": 21
-    },
-    "compras_por_hora_cat": {
-      "TR": {
-        "0": 156,
-        "1": 46,
-        "10": 752,
-        "11": 876,
-        "12": 1070,
-        "13": 1107,
-        "14": 1239,
-        "15": 1464,
-        "16": 1642,
-        "17": 1565,
-        "18": 1672,
-        "19": 2263,
-        "2": 29,
-        "20": 958,
-        "21": 727,
-        "22": 626,
-        "23": 382,
-        "3": 23,
-        "4": 18,
-        "5": 18,
-        "6": 58,
-        "7": 144,
-        "8": 316,
-        "9": 487
-      },
-      "Playoffs": {},
-      "Abono": {}
-    },
-    "compras_por_dia_detalle": {
-      "Lunes": {
-        "ordenes": 2410,
-        "ingreso": 391940.0
-      },
-      "Martes": {
-        "ordenes": 3880,
-        "ingreso": 527330.0
-      },
-      "Miércoles": {
-        "ordenes": 2982,
-        "ingreso": 546388.0
-      },
-      "Jueves": {
-        "ordenes": 2791,
-        "ingreso": 571445.0
-      },
-      "Viernes": {
-        "ordenes": 2234,
-        "ingreso": 440890.0
-      },
-      "Sábado": {
-        "ordenes": 1898,
-        "ingreso": 381350.0
-      },
-      "Domingo": {
-        "ordenes": 1443,
-        "ingreso": 246760.0
-      }
     }
   },
   "Saraperos": {
@@ -1265,6 +1350,48 @@
     "total_ordenes_online": 65531,
     "avg_gasto": 723.24,
     "median_gasto": 440.0,
+    "fans_compradores": 12971,
+    "fans_cortesia": 54,
+    "avg_gasto_compradores": 726.25,
+    "median_gasto_compradores": 440.0,
+    "pct_cortesia_fans": 0.4,
+    "zonas_fans": [
+      {
+        "zona": "Butaca Central B",
+        "ordenes": 26702,
+        "ingreso": 3781095.0,
+        "fans_unicos": 6143,
+        "gasto_prom_fan": 615.51
+      },
+      {
+        "zona": "Butaca Lateral C",
+        "ordenes": 20365,
+        "ingreso": 2913320.0,
+        "fans_unicos": 4826,
+        "gasto_prom_fan": 603.67
+      },
+      {
+        "zona": "Butaca Lateral A",
+        "ordenes": 12891,
+        "ingreso": 1916615.0,
+        "fans_unicos": 3122,
+        "gasto_prom_fan": 613.91
+      },
+      {
+        "zona": "General-Gradas",
+        "ordenes": 4573,
+        "ingreso": 525135.0,
+        "fans_unicos": 1542,
+        "gasto_prom_fan": 340.55
+      },
+      {
+        "zona": "Area Contenedores",
+        "ordenes": 1000,
+        "ingreso": 284000.0,
+        "fans_unicos": 222,
+        "gasto_prom_fan": 1279.28
+      }
+    ],
     "frecuencia": {
       "1": {
         "fans": 8736,
@@ -1439,82 +1566,6 @@
       "conekta-spei": 1321,
       "fiserv-3ds": 1083,
       "kueski-pay": 157
-    },
-    "compras_por_hora_cat": {
-      "TR": {
-        "0": 810,
-        "1": 382,
-        "10": 3429,
-        "11": 3689,
-        "12": 7050,
-        "13": 5285,
-        "14": 5066,
-        "15": 5101,
-        "16": 5436,
-        "17": 5525,
-        "18": 4803,
-        "19": 4234,
-        "2": 192,
-        "20": 3258,
-        "21": 2816,
-        "22": 2568,
-        "23": 1687,
-        "3": 157,
-        "4": 41,
-        "5": 100,
-        "6": 226,
-        "7": 557,
-        "8": 1160,
-        "9": 1886
-      },
-      "Playoffs": {},
-      "Abono": {
-        "10": 2,
-        "12": 8,
-        "13": 5,
-        "14": 4,
-        "15": 6,
-        "16": 3,
-        "17": 8,
-        "18": 6,
-        "19": 9,
-        "20": 3,
-        "21": 4,
-        "22": 2,
-        "23": 6,
-        "7": 1,
-        "8": 6
-      }
-    },
-    "compras_por_dia_detalle": {
-      "Lunes": {
-        "ordenes": 10333,
-        "ingreso": 1942390.0
-      },
-      "Martes": {
-        "ordenes": 8785,
-        "ingreso": 1126305.0
-      },
-      "Miércoles": {
-        "ordenes": 9550,
-        "ingreso": 1211930.0
-      },
-      "Jueves": {
-        "ordenes": 9105,
-        "ingreso": 1312665.0
-      },
-      "Viernes": {
-        "ordenes": 11518,
-        "ingreso": 1788670.0
-      },
-      "Sábado": {
-        "ordenes": 7826,
-        "ingreso": 1071520.0
-      },
-      "Domingo": {
-        "ordenes": 8414,
-        "ingreso": 966685.0
-      }
     }
   },
   "Sultanes": {
@@ -1522,6 +1573,83 @@
     "total_ordenes_online": 282911,
     "avg_gasto": 826.19,
     "median_gasto": 480.0,
+    "fans_compradores": 48036,
+    "fans_cortesia": 0,
+    "avg_gasto_compradores": 826.19,
+    "median_gasto_compradores": 480.0,
+    "pct_cortesia_fans": 0.0,
+    "zonas_fans": [
+      {
+        "zona": "Primer Nivel",
+        "ordenes": 193189,
+        "ingreso": 26484425.0,
+        "fans_unicos": 33121,
+        "gasto_prom_fan": 799.63
+      },
+      {
+        "zona": "Segundo Nivel",
+        "ordenes": 35338,
+        "ingreso": 4888470.5,
+        "fans_unicos": 9241,
+        "gasto_prom_fan": 529.0
+      },
+      {
+        "zona": "Bleachers",
+        "ordenes": 26835,
+        "ingreso": 3380242.0,
+        "fans_unicos": 7877,
+        "gasto_prom_fan": 429.13
+      },
+      {
+        "zona": "Palco Rojo",
+        "ordenes": 9251,
+        "ingreso": 1499581.0,
+        "fans_unicos": 2404,
+        "gasto_prom_fan": 623.79
+      },
+      {
+        "zona": "Palco Azul",
+        "ordenes": 8597,
+        "ingreso": 1432110.0,
+        "fans_unicos": 2235,
+        "gasto_prom_fan": 640.77
+      },
+      {
+        "zona": "Tercer Nivel",
+        "ordenes": 5595,
+        "ingreso": 836488.0,
+        "fans_unicos": 1915,
+        "gasto_prom_fan": 436.81
+      },
+      {
+        "zona": "2DO NIVEL LATERALES",
+        "ordenes": 1610,
+        "ingreso": 636774.0,
+        "fans_unicos": 666,
+        "gasto_prom_fan": 956.12
+      },
+      {
+        "zona": "1ER NIVEL LATERALES",
+        "ordenes": 95,
+        "ingreso": 139730.1,
+        "fans_unicos": 38,
+        "gasto_prom_fan": 3677.11
+      },
+      {
+        "zona": "3ER NIVEL",
+        "ordenes": 1059,
+        "ingreso": 128606.5,
+        "fans_unicos": 397,
+        "gasto_prom_fan": 323.95
+      },
+      {
+        "zona": "BLEACHERS",
+        "ordenes": 971,
+        "ingreso": 106237.0,
+        "fans_unicos": 346,
+        "gasto_prom_fan": 307.04
+      }
+    ],
     "frecuencia": {
       "1": {
         "fans": 33488,
@@ -1696,116 +1824,6 @@
       "conekta-oxxo-pay": 8627,
       "kueski-pay": 1362,
       "openpay-3ds": 1335
-    },
-    "compras_por_hora_cat": {
-      "TR": {
-        "0": 3724,
-        "1": 1726,
-        "10": 10387,
-        "11": 12909,
-        "12": 14447,
-        "13": 15415,
-        "14": 16369,
-        "15": 16144,
-        "16": 15945,
-        "17": 15169,
-        "18": 13619,
-        "19": 13417,
-        "2": 916,
-        "20": 11758,
-        "21": 12195,
-        "22": 10557,
-        "23": 7462,
-        "3": 408,
-        "4": 222,
-        "5": 344,
-        "6": 730,
-        "7": 1930,
-        "8": 4278,
-        "9": 7447
-      },
-      "Playoffs": {
-        "0": 3544,
-        "1": 926,
-        "10": 8436,
-        "11": 5606,
-        "12": 6000,
-        "13": 4417,
-        "14": 3890,
-        "15": 3813,
-        "16": 3808,
-        "17": 3318,
-        "18": 2823,
-        "19": 2442,
-        "2": 346,
-        "20": 1878,
-        "21": 5006,
-        "22": 4530,
-        "23": 5235,
-        "3": 209,
-        "4": 225,
-        "5": 301,
-        "6": 641,
-        "7": 932,
-        "8": 1335,
-        "9": 1721
-      },
-      "Abono": {
-        "0": 80,
-        "1": 24,
-        "10": 207,
-        "11": 271,
-        "12": 297,
-        "13": 324,
-        "14": 254,
-        "15": 247,
-        "16": 285,
-        "17": 290,
-        "18": 244,
-        "19": 263,
-        "2": 15,
-        "20": 249,
-        "21": 260,
-        "22": 227,
-        "23": 128,
-        "3": 30,
-        "4": 8,
-        "5": 13,
-        "6": 16,
-        "7": 33,
-        "8": 123,
-        "9": 123
-      }
-    },
-    "compras_por_dia_detalle": {
-      "Lunes": {
-        "ordenes": 47029,
-        "ingreso": 6777244.0
-      },
-      "Martes": {
-        "ordenes": 39250,
-        "ingreso": 5321224.0
-      },
-      "Miércoles": {
-        "ordenes": 41664,
-        "ingreso": 6281186.0
-      },
-      "Jueves": {
-        "ordenes": 41599,
-        "ingreso": 6013137.0
-      },
-      "Viernes": {
-        "ordenes": 45804,
-        "ingreso": 6516410.0
-      },
-      "Sábado": {
-        "ordenes": 37002,
-        "ingreso": 4955887.0
-      },
-      "Domingo": {
-        "ordenes": 30563,
-        "ingreso": 3821610.0
-      }
     }
   },
   "Tecos": {
@@ -1813,6 +1831,83 @@
     "total_ordenes_online": 24931,
     "avg_gasto": 1006.49,
     "median_gasto": 397.5,
+    "fans_compradores": 4736,
+    "fans_cortesia": 0,
+    "avg_gasto_compradores": 1006.49,
+    "median_gasto_compradores": 397.5,
+    "pct_cortesia_fans": 0.0,
+    "zonas_fans": [
+      {
+        "zona": "Butaca General",
+        "ordenes": 5777,
+        "ingreso": 1994950.0,
+        "fans_unicos": 1052,
+        "gasto_prom_fan": 1896.34
+      },
+      {
+        "zona": "Butaca Preferente",
+        "ordenes": 3205,
+        "ingreso": 1326900.0,
+        "fans_unicos": 736,
+        "gasto_prom_fan": 1802.85
+      },
+      {
+        "zona": "Gradas",
+        "ordenes": 3367,
+        "ingreso": 770000.0,
+        "fans_unicos": 877,
+        "gasto_prom_fan": 877.99
+      },
+      {
+        "zona": "Box Seat",
+        "ordenes": 9397,
+        "ingreso": 236348.0,
+        "fans_unicos": 1980,
+        "gasto_prom_fan": 119.37
+      },
+      {
+        "zona": "Palcos 3ra",
+        "ordenes": 505,
+        "ingreso": 214700.0,
+        "fans_unicos": 129,
+        "gasto_prom_fan": 1664.34
+      },
+      {
+        "zona": "Palcos 1ra",
+        "ordenes": 408,
+        "ingreso": 169650.0,
+        "fans_unicos": 108,
+        "gasto_prom_fan": 1570.83
+      },
+      {
+        "zona": "Reserved Seat",
+        "ordenes": 1357,
+        "ingreso": 27046.0,
+        "fans_unicos": 376,
+        "gasto_prom_fan": 71.93
+      },
+      {
+        "zona": "Premium Club Box Seat",
+        "ordenes": 219,
+        "ingreso": 11238.0,
+        "fans_unicos": 56,
+        "gasto_prom_fan": 200.68
+      },
+      {
+        "zona": "Standing General Admission",
+        "ordenes": 423,
+        "ingreso": 6345.0,
+        "fans_unicos": 152,
+        "gasto_prom_fan": 41.74
+      },
+      {
+        "zona": "Club Level Access",
+        "ordenes": 175,
+        "ingreso": 6184.0,
+        "fans_unicos": 55,
+        "gasto_prom_fan": 112.44
+      }
+    ],
     "frecuencia": {
       "1": {
         "fans": 3155,
@@ -1987,91 +2082,6 @@
       "conekta-oxxo-pay": 1359,
       "stripe-3ds": 1116,
       "fiserv-3ds": 688
-    },
-    "compras_por_hora_cat": {
-      "TR": {
-        "0": 123,
-        "1": 81,
-        "10": 989,
-        "11": 1168,
-        "12": 1355,
-        "13": 1584,
-        "14": 1478,
-        "15": 1715,
-        "16": 1849,
-        "17": 1977,
-        "18": 1951,
-        "19": 1299,
-        "2": 12,
-        "20": 877,
-        "21": 730,
-        "22": 482,
-        "23": 230,
-        "3": 21,
-        "4": 7,
-        "5": 38,
-        "6": 95,
-        "7": 212,
-        "8": 348,
-        "9": 708
-      },
-      "Playoffs": {
-        "0": 159,
-        "1": 46,
-        "10": 386,
-        "11": 341,
-        "12": 354,
-        "13": 316,
-        "14": 389,
-        "15": 347,
-        "16": 422,
-        "17": 362,
-        "18": 368,
-        "19": 323,
-        "2": 21,
-        "20": 256,
-        "21": 262,
-        "22": 198,
-        "23": 193,
-        "3": 13,
-        "4": 14,
-        "5": 38,
-        "6": 82,
-        "7": 176,
-        "8": 269,
-        "9": 267
-      },
-      "Abono": {}
-    },
-    "compras_por_dia_detalle": {
-      "Lunes": {
-        "ordenes": 3502,
-        "ingreso": 762072.0
-      },
-      "Martes": {
-        "ordenes": 3931,
-        "ingreso": 701814.0
-      },
-      "Miércoles": {
-        "ordenes": 5230,
-        "ingreso": 930803.0
-      },
-      "Jueves": {
-        "ordenes": 3807,
-        "ingreso": 742722.0
-      },
-      "Viernes": {
-        "ordenes": 3790,
-        "ingreso": 654282.0
-      },
-      "Sábado": {
-        "ordenes": 2695,
-        "ingreso": 428095.0
-      },
-      "Domingo": {
-        "ordenes": 1976,
-        "ingreso": 546928.0
-      }
     }
   },
   "Toros": {
@@ -2079,6 +2089,83 @@
     "total_ordenes_online": 49953,
     "avg_gasto": 1252.64,
     "median_gasto": 870.0,
+    "fans_compradores": 9379,
+    "fans_cortesia": 19,
+    "avg_gasto_compradores": 1255.18,
+    "median_gasto_compradores": 870.0,
+    "pct_cortesia_fans": 0.2,
+    "zonas_fans": [
+      {
+        "zona": "Preferente",
+        "ordenes": 17631,
+        "ingreso": 4889430.0,
+        "fans_unicos": 3746,
+        "gasto_prom_fan": 1305.24
+      },
+      {
+        "zona": "Superior",
+        "ordenes": 8335,
+        "ingreso": 2407744.0,
+        "fans_unicos": 1747,
+        "gasto_prom_fan": 1378.22
+      },
+      {
+        "zona": "General Preferente",
+        "ordenes": 6278,
+        "ingreso": 1023723.0,
+        "fans_unicos": 1474,
+        "gasto_prom_fan": 694.52
+      },
+      {
+        "zona": "Preferente1raBase",
+        "ordenes": 3558,
+        "ingreso": 749675.0,
+        "fans_unicos": 837,
+        "gasto_prom_fan": 895.67
+      },
+      {
+        "zona": "Preferente3raBase",
+        "ordenes": 3154,
+        "ingreso": 706905.0,
+        "fans_unicos": 691,
+        "gasto_prom_fan": 1023.02
+      },
+      {
+        "zona": "General Superior",
+        "ordenes": 2965,
+        "ingreso": 526730.0,
+        "fans_unicos": 646,
+        "gasto_prom_fan": 815.37
+      },
+      {
+        "zona": "Jardines",
+        "ordenes": 4491,
+        "ingreso": 498268.0,
+        "fans_unicos": 816,
+        "gasto_prom_fan": 610.62
+      },
+      {
+        "zona": "Superior3raBase",
+        "ordenes": 1535,
+        "ingreso": 426126.0,
+        "fans_unicos": 405,
+        "gasto_prom_fan": 1052.16
+      },
+      {
+        "zona": "Superior1raBase",
+        "ordenes": 1490,
+        "ingreso": 359466.0,
+        "fans_unicos": 380,
+        "gasto_prom_fan": 945.96
+      },
+      {
+        "zona": "Palcos Superior",
+        "ordenes": 284,
+        "ingreso": 144500.0,
+        "fans_unicos": 63,
+        "gasto_prom_fan": 2293.65
+      }
+    ],
     "frecuencia": {
       "1": {
         "fans": 7175,
@@ -2253,186 +2340,6 @@
       "bmpay": 767,
       "conekta-spei": 590,
       "kueski-pay": 74
-    },
-    "compras_por_hora_cat": {
-      "TR": {
-        "0": 696,
-        "1": 750,
-        "10": 1413,
-        "11": 1975,
-        "12": 2591,
-        "13": 2597,
-        "14": 3241,
-        "15": 3555,
-        "16": 3846,
-        "17": 4055,
-        "18": 3941,
-        "19": 4339,
-        "2": 223,
-        "20": 3324,
-        "21": 2217,
-        "22": 1934,
-        "23": 1321,
-        "3": 96,
-        "4": 60,
-        "5": 45,
-        "6": 133,
-        "7": 304,
-        "8": 563,
-        "9": 1021
-      },
-      "Playoffs": {
-        "0": 157,
-        "1": 65,
-        "10": 191,
-        "11": 232,
-        "12": 309,
-        "13": 385,
-        "14": 397,
-        "15": 438,
-        "16": 455,
-        "17": 472,
-        "18": 543,
-        "19": 538,
-        "2": 19,
-        "20": 315,
-        "21": 321,
-        "22": 173,
-        "23": 409,
-        "3": 12,
-        "4": 4,
-        "5": 16,
-        "6": 18,
-        "7": 37,
-        "8": 59,
-        "9": 118
-      },
-      "Abono": {
-        "1": 1,
-        "11": 6,
-        "12": 2,
-        "13": 2,
-        "14": 2,
-        "18": 2,
-        "19": 4,
-        "20": 2,
-        "21": 5,
-        "22": 2,
-        "23": 1,
-        "7": 1
-      }
-    },
-    "compras_por_dia_detalle": {
-      "Lunes": {
-        "ordenes": 3669,
-        "ingreso": 855316.0
-      },
-      "Martes": {
-        "ordenes": 5877,
-        "ingreso": 1205809.0
-      },
-      "Miércoles": {
-        "ordenes": 8349,
-        "ingreso": 2420015.0
-      },
-      "Jueves": {
-        "ordenes": 7118,
-        "ingreso": 1904041.0
-      },
-      "Viernes": {
-        "ordenes": 8971,
-        "ingreso": 2030008.0
-      },
-      "Sábado": {
-        "ordenes": 10409,
-        "ingreso": 2147572.0
-      },
-      "Domingo": {
-        "ordenes": 5560,
-        "ingreso": 1209539.0
-      }
     }
-  },
-  "_liga_top_fans": [
-    {
-      "correo": "iza***@gmail.com",
-      "eventos": 10,
-      "ordenes": 58,
-      "gasto": 102691.0,
-      "plataforma": "iOS",
-      "equipo": "Toros"
-    },
-    {
-      "correo": "jgu***@sytguerra.com",
-      "eventos": 2,
-      "ordenes": 10,
-      "gasto": 95495.0,
-      "plataforma": "iOS",
-      "equipo": "Sultanes"
-    },
-    {
-      "correo": "gio***@segamac.com",
-      "eventos": 1,
-      "ordenes": 10,
-      "gasto": 92250.0,
-      "plataforma": "Web Desktop",
-      "equipo": "Sultanes"
-    },
-    {
-      "correo": "amm***@live.com.mx",
-      "eventos": 3,
-      "ordenes": 16,
-      "gasto": 91200.0,
-      "plataforma": "Web Mobile",
-      "equipo": "Charros"
-    },
-    {
-      "correo": "dan***@gmail.com",
-      "eventos": 1,
-      "ordenes": 12,
-      "gasto": 84120.0,
-      "plataforma": "Web Mobile",
-      "equipo": "Sultanes"
-    },
-    {
-      "correo": "oma***@hotmail.com",
-      "eventos": 2,
-      "ordenes": 9,
-      "gasto": 81000.0,
-      "plataforma": "Android",
-      "equipo": "Dorados"
-    },
-    {
-      "correo": "tor***@gmail.com",
-      "eventos": 1,
-      "ordenes": 10,
-      "gasto": 70100.0,
-      "plataforma": "Web Desktop",
-      "equipo": "Sultanes"
-    },
-    {
-      "correo": "rod***@gmail.com",
-      "eventos": 1,
-      "ordenes": 4,
-      "gasto": 69996.0,
-      "plataforma": "Web Mobile",
-      "equipo": "Sultanes"
-    },
-    {
-      "correo": "agr***@gmail.com",
-      "eventos": 11,
-      "ordenes": 15,
-      "gasto": 65000.0,
-      "plataforma": "Android",
-      "equipo": "Dorados"
-    },
-    {
-      "correo": "cpa***@ic3industrial.com",
-      "eventos": 1,
-      "ordenes": 6,
-      "gasto": 60600.0,
-      "plataforma": "iOS",
-      "equipo": "Dorados"
-    }
-  ]
+  }
 }
