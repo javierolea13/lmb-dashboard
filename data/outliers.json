@@ -1,0 +1,234 @@
+[
+  {
+    "EQUIPO": "Caliente",
+    "EVENTOS": "Paquete Serie Inaugural: Saraperos vs Caliente de Durango (Incluye 3 eventos)",
+    "FECHA EVENTO": "18/04/25",
+    "Boletos": 429,
+    "Escaneados": 0,
+    "outlier_reason": "Asistencia atípicamente baja (429)"
+  },
+  {
+    "EQUIPO": "Caliente",
+    "EVENTOS": "Juego Inaugural: Saraperos vs Caliente de Durango",
+    "FECHA EVENTO": "18/04/25",
+    "Boletos": 3769,
+    "Escaneados": 0,
+    "outlier_reason": "Asistencia atípicamente alta (3,769)"
+  },
+  {
+    "EQUIPO": "Caliente",
+    "EVENTOS": "J1: Sultanes vs Caliente de Durango",
+    "FECHA EVENTO": "09/05/25",
+    "Boletos": 3309,
+    "Escaneados": 0,
+    "outlier_reason": "Asistencia atípicamente alta (3,309)"
+  },
+  {
+    "EQUIPO": "Caliente",
+    "EVENTOS": "J2: Sultanes vs Caliente de Durango",
+    "FECHA EVENTO": "10/05/25",
+    "Boletos": 3200,
+    "Escaneados": 0,
+    "outlier_reason": "Asistencia atípicamente alta (3,200)"
+  },
+  {
+    "EQUIPO": "Caliente",
+    "EVENTOS": "J3: Sultanes vs Caliente de Durango",
+    "FECHA EVENTO": "11/05/25",
+    "Boletos": 3807,
+    "Escaneados": 0,
+    "outlier_reason": "Asistencia atípicamente alta (3,807)"
+  },
+  {
+    "EQUIPO": "Charros",
+    "EVENTOS": "Juego Inaugural: Unión Laguna vs Charros",
+    "FECHA EVENTO": "22/04/25",
+    "Boletos": 6908,
+    "Escaneados": 0,
+    "outlier_reason": "Asistencia atípicamente alta (6,908)"
+  },
+  {
+    "EQUIPO": "Charros",
+    "EVENTOS": "Semifinal J3: Charros vs Unión Laguna",
+    "FECHA EVENTO": "23/08/25",
+    "Boletos": 8374,
+    "Escaneados": 0,
+    "outlier_reason": "Asistencia atípicamente alta (8,374)"
+  },
+  {
+    "EQUIPO": "Charros",
+    "EVENTOS": "Semifinal J4: Charros vs Unión Laguna",
+    "FECHA EVENTO": "25/08/25",
+    "Boletos": 7409,
+    "Escaneados": 0,
+    "outlier_reason": "Asistencia atípicamente alta (7,409)"
+  },
+  {
+    "EQUIPO": "Charros",
+    "EVENTOS": "Final de Zona J1: Charros vs Sultanes",
+    "FECHA EVENTO": "31/08/25",
+    "Boletos": 8058,
+    "Escaneados": 0,
+    "outlier_reason": "Asistencia atípicamente alta (8,058)"
+  },
+  {
+    "EQUIPO": "Charros",
+    "EVENTOS": "Final de Zona J2: Charros vs Sultanes",
+    "FECHA EVENTO": "01/09/25",
+    "Boletos": 6428,
+    "Escaneados": 0,
+    "outlier_reason": "Asistencia atípicamente alta (6,428)"
+  },
+  {
+    "EQUIPO": "Charros",
+    "EVENTOS": "Serie del Rey J3: Diablos vs Charros",
+    "FECHA EVENTO": "13/09/25",
+    "Boletos": 11594,
+    "Escaneados": 0,
+    "outlier_reason": "Asistencia atípicamente alta (11,594)"
+  },
+  {
+    "EQUIPO": "Charros",
+    "EVENTOS": "Serie del Rey J4: Diablos vs Charros",
+    "FECHA EVENTO": "14/09/25",
+    "Boletos": 11662,
+    "Escaneados": 0,
+    "outlier_reason": "Asistencia atípicamente alta (11,662)"
+  },
+  {
+    "EQUIPO": "Dorados",
+    "EVENTOS": "Juego Inaugural: Saraperos vs Dorados",
+    "FECHA EVENTO": "25/04/25",
+    "Boletos": 7275,
+    "Escaneados": 0,
+    "outlier_reason": "Asistencia atípicamente alta (7,275)"
+  },
+  {
+    "EQUIPO": "Dorados",
+    "EVENTOS": "J3: Caliente de Durango vs Dorados",
+    "FECHA EVENTO": "01/05/25",
+    "Boletos": 5518,
+    "Escaneados": 0,
+    "outlier_reason": "Asistencia atípicamente alta (5,518)"
+  },
+  {
+    "EQUIPO": "Dorados",
+    "EVENTOS": "J1: Acereros vs Dorados",
+    "FECHA EVENTO": "09/05/25",
+    "Boletos": 4929,
+    "Escaneados": 0,
+    "outlier_reason": "Asistencia atípicamente alta (4,929)"
+  },
+  {
+    "EQUIPO": "Dorados",
+    "EVENTOS": "J3: Acereros vs Dorados",
+    "FECHA EVENTO": "31/07/25",
+    "Boletos": 4535,
+    "Escaneados": 0,
+    "outlier_reason": "Asistencia atípicamente alta (4,535)"
+  },
+  {
+    "EQUIPO": "Guerreros",
+    "EVENTOS": "05/08/25",
+    "FECHA EVENTO": "J1: Pericos vs Guerreros",
+    "Boletos": 3643,
+    "Escaneados": 0,
+    "outlier_reason": "Asistencia atípicamente alta (3,643)"
+  },
+  {
+    "EQUIPO": "Rieleros",
+    "EVENTOS": "J3: Tecos vs Rieleros",
+    "FECHA EVENTO": "24/07/25",
+    "Boletos": 5193,
+    "Escaneados": 0,
+    "outlier_reason": "Asistencia atípicamente alta (5,193)"
+  },
+  {
+    "EQUIPO": "Rieleros",
+    "EVENTOS": "J1: Caliente vs Rieleros",
+    "FECHA EVENTO": "25/07/25",
+    "Boletos": 64,
+    "Escaneados": 0,
+    "outlier_reason": "Asistencia atípicamente baja (64)"
+  },
+  {
+    "EQUIPO": "Rieleros",
+    "EVENTOS": "J2: Caliente vs Rieleros",
+    "FECHA EVENTO": "26/07/25",
+    "Boletos": 76,
+    "Escaneados": 0,
+    "outlier_reason": "Asistencia atípicamente baja (76)"
+  },
+  {
+    "EQUIPO": "Rieleros",
+    "EVENTOS": "J3: Caliente vs Rieleros",
+    "FECHA EVENTO": "27/07/25",
+    "Boletos": 94,
+    "Escaneados": 0,
+    "outlier_reason": "Asistencia atípicamente baja (94)"
+  },
+  {
+    "EQUIPO": "Rieleros",
+    "EVENTOS": "J3: Saraperos vs Rieleros",
+    "FECHA EVENTO": "31/07/25",
+    "Boletos": 5220,
+    "Escaneados": 0,
+    "outlier_reason": "Asistencia atípicamente alta (5,220)"
+  },
+  {
+    "EQUIPO": "Rieleros",
+    "EVENTOS": "BonoRiel 2025",
+    "FECHA EVENTO": "22/04/25",
+    "Boletos": 295,
+    "Escaneados": 0,
+    "outlier_reason": "Asistencia atípicamente baja (295)"
+  },
+  {
+    "EQUIPO": "Sultanes",
+    "EVENTOS": "ABONO ROJO 2025 LMB 3ER NIVEL Y BLEACHERS: SIN LUGAR ASIGNADO. *SUJETO A DISPONIBILIDAD",
+    "FECHA EVENTO": "31/12/25",
+    "Boletos": 78637,
+    "Escaneados": 0,
+    "outlier_reason": "Asistencia atípicamente alta (78,637)"
+  },
+  {
+    "EQUIPO": "Tecos",
+    "EVENTOS": "J2: Dorados vs Tecos",
+    "FECHA EVENTO": "07/05/25",
+    "Boletos": 3393,
+    "Escaneados": 0,
+    "outlier_reason": "Asistencia atípicamente alta (3,393)"
+  },
+  {
+    "EQUIPO": "Tecos",
+    "EVENTOS": "J1: Charros vs Tecos",
+    "FECHA EVENTO": "24/06/25",
+    "Boletos": 3437,
+    "Escaneados": 0,
+    "outlier_reason": "Asistencia atípicamente alta (3,437)"
+  },
+  {
+    "EQUIPO": "Tecos",
+    "EVENTOS": "J1: Sultanes vs Tecos",
+    "FECHA EVENTO": "04/07/25",
+    "Boletos": 5562,
+    "Escaneados": 0,
+    "outlier_reason": "Asistencia atípicamente alta (5,562)"
+  },
+  {
+    "EQUIPO": "Tecos",
+    "EVENTOS": "Semifinal de Zona J1: Sultanes vs Tecos",
+    "FECHA EVENTO": "20/08/25",
+    "Boletos": 3905,
+    "Escaneados": 0,
+    "outlier_reason": "Asistencia atípicamente alta (3,905)"
+  },
+  {
+    "EQUIPO": "Tecos",
+    "EVENTOS": "Semifinal de Zona J2: Sultanes vs Tecos",
+    "FECHA EVENTO": "21/08/25",
+    "Boletos": 3421,
+    "Escaneados": 0,
+    "outlier_reason": "Asistencia atípicamente alta (3,421)"
+  }
+]

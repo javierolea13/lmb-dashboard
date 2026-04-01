@@ -1,0 +1,754 @@
+{
+  "Bravos": {
+    "equipo": "Bravos",
+    "total_boletos": 155940,
+    "vendidos": 48408,
+    "promociones": 0,
+    "cortesias": 107532,
+    "ingreso_total": 12087240.0,
+    "ingreso_vendidos": 12087240.0,
+    "ingreso_promociones": 0.0,
+    "ingreso_online": 6415924.0,
+    "ingreso_taquilla": 5671316.0,
+    "online": 27517,
+    "taquilla": 128423,
+    "fans_unicos_online": 5302,
+    "frecuencia": {
+      "1 juego": 3852,
+      "2-5 juegos": 1338,
+      "6-10 juegos": 89,
+      "+10 juegos": 23
+    },
+    "zonas": [
+      {
+        "ZONA": "Butaca Central",
+        "boletos": 40282,
+        "ingreso": 4781526.0
+      },
+      {
+        "ZONA": "Butaca 1ra Base",
+        "boletos": 32454,
+        "ingreso": 2310958.0
+      },
+      {
+        "ZONA": "Butaca 3ra Base",
+        "boletos": 18095,
+        "ingreso": 1687525.0
+      },
+      {
+        "ZONA": "VIP",
+        "boletos": 10254,
+        "ingreso": 1471188.0
+      },
+      {
+        "ZONA": "General 3ra Base",
+        "boletos": 34039,
+        "ingreso": 734340.0
+      },
+      {
+        "ZONA": "Parrilladas",
+        "boletos": 1870,
+        "ingreso": 607200.0
+      },
+      {
+        "ZONA": "General 1ra Base",
+        "boletos": 18195,
+        "ingreso": 312030.0
+      },
+      {
+        "ZONA": "Palcos",
+        "boletos": 316,
+        "ingreso": 171406.0
+      }
+    ],
+    "tipo_cortesia": {
+      "Cortesía": 97848,
+      "Damas Gratis": 3530,
+      "2x1": 2596,
+      "Compas Gratis": 1186,
+      "Jersey": 777,
+      "Caballeros Gratis": 577,
+      "Niños Gratis": 380,
+      "Martes_2x1": 277
+    },
+    "pct_vendido": 31.0,
+    "pct_promocion": 0.0,
+    "pct_cortesia": 69.0
+  },
+  "Caliente": {
+    "equipo": "Caliente",
+    "total_boletos": 86733,
+    "vendidos": 42285,
+    "promociones": 0,
+    "cortesias": 44448,
+    "ingreso_total": 6843279.5,
+    "ingreso_vendidos": 6646144.0,
+    "ingreso_promociones": 0.0,
+    "ingreso_online": 1472675.0,
+    "ingreso_taquilla": 5370604.5,
+    "online": 8640,
+    "taquilla": 78093,
+    "fans_unicos_online": 1767,
+    "frecuencia": {
+      "1 juego": 1338,
+      "2-5 juegos": 381,
+      "6-10 juegos": 38,
+      "+10 juegos": 10
+    },
+    "zonas": [
+      {
+        "ZONA": "Central",
+        "boletos": 45377,
+        "ingreso": 4781090.0
+      },
+      {
+        "ZONA": "Lateral Preferente",
+        "boletos": 17271,
+        "ingreso": 952800.0
+      },
+      {
+        "ZONA": "Lateral",
+        "boletos": 20898,
+        "ingreso": 692008.0
+      },
+      {
+        "ZONA": "Palco Plata 3ra",
+        "boletos": 1030,
+        "ingreso": 197004.0
+      },
+      {
+        "ZONA": "Palco Plata 1ra",
+        "boletos": 803,
+        "ingreso": 156165.0
+      },
+      {
+        "ZONA": "Palco Bronce 3ra",
+        "boletos": 312,
+        "ingreso": 36062.5
+      },
+      {
+        "ZONA": "Palco Bronce 1ra",
+        "boletos": 211,
+        "ingreso": 25750.0
+      },
+      {
+        "ZONA": "Palco Platino",
+        "boletos": 446,
+        "ingreso": 2400.0
+      }
+    ],
+    "tipo_cortesia": {
+      "cortesía ": 26752,
+      "Canje de Cupón": 5911,
+      "2x1 Martes Beisbolero": 3335,
+      "3x1": 2624,
+      "Jueves de Ladies Night ": 1274,
+      "Sabado de 2x1": 836,
+      "Jueves de Ladies Night Central ": 732,
+      "Jueves de Ladies Night Lateral": 723
+    },
+    "pct_vendido": 48.8,
+    "pct_promocion": 0.0,
+    "pct_cortesia": 51.2
+  },
+  "Charros": {
+    "equipo": "Charros",
+    "total_boletos": 223034,
+    "vendidos": 173298,
+    "promociones": 0,
+    "cortesias": 49736,
+    "ingreso_total": 29843464.1,
+    "ingreso_vendidos": 29842482.5,
+    "ingreso_promociones": 0.0,
+    "ingreso_online": 23396194.1,
+    "ingreso_taquilla": 6447270.0,
+    "online": 123610,
+    "taquilla": 99424,
+    "fans_unicos_online": 20735,
+    "frecuencia": {
+      "1 juego": 14479,
+      "2-5 juegos": 5442,
+      "6-10 juegos": 617,
+      "+10 juegos": 197
+    },
+    "zonas": [
+      {
+        "ZONA": "Premier",
+        "boletos": 36757,
+        "ingreso": 9167778.4
+      },
+      {
+        "ZONA": "Planta Baja",
+        "boletos": 37946,
+        "ingreso": 4839183.7
+      },
+      {
+        "ZONA": "Planta Alta",
+        "boletos": 18837,
+        "ingreso": 3948235.0
+      },
+      {
+        "ZONA": "Lateral 1era y 3era",
+        "boletos": 43759,
+        "ingreso": 3177923.4
+      },
+      {
+        "ZONA": "Butaca Preferente",
+        "boletos": 18193,
+        "ingreso": 1811153.6
+      },
+      {
+        "ZONA": "Premier 1era",
+        "boletos": 6121,
+        "ingreso": 1645278.6
+      },
+      {
+        "ZONA": "Premier 3era",
+        "boletos": 4615,
+        "ingreso": 1258058.4
+      },
+      {
+        "ZONA": "Lateral Preferente",
+        "boletos": 25013,
+        "ingreso": 1150736.2
+      }
+    ],
+    "tipo_cortesia": {
+      "Cortesia": 35809,
+      "Canje": 5283,
+      "Niños Gratis": 2331,
+      "Cupón cerveza": 1275,
+      "Quema": 845,
+      "CANJE SEGURO DE LLUVIA ": 802,
+      "Liga Bravos $0": 612,
+      "2X1 Estudiantes": 563
+    },
+    "pct_vendido": 77.7,
+    "pct_promocion": 0.0,
+    "pct_cortesia": 22.3
+  },
+  "Dorados": {
+    "equipo": "Dorados",
+    "total_boletos": 106702,
+    "vendidos": 63608,
+    "promociones": 0,
+    "cortesias": 43094,
+    "ingreso_total": 11429669.01,
+    "ingreso_vendidos": 11429669.01,
+    "ingreso_promociones": 0.0,
+    "ingreso_online": 5069900.0,
+    "ingreso_taquilla": 6359769.01,
+    "online": 32887,
+    "taquilla": 73815,
+    "fans_unicos_online": 5831,
+    "frecuencia": {
+      "1 juego": 3944,
+      "2-5 juegos": 1640,
+      "6-10 juegos": 183,
+      "+10 juegos": 64
+    },
+    "zonas": [
+      {
+        "ZONA": "Plata",
+        "boletos": 33355,
+        "ingreso": 4785900.0
+      },
+      {
+        "ZONA": "Preferente",
+        "boletos": 38435,
+        "ingreso": 2536220.0
+      },
+      {
+        "ZONA": "Palcos Dorados",
+        "boletos": 290,
+        "ingreso": 1086000.0
+      },
+      {
+        "ZONA": "Palcos Morados",
+        "boletos": 857,
+        "ingreso": 945999.01
+      },
+      {
+        "ZONA": "Numerado Derecho",
+        "boletos": 19572,
+        "ingreso": 917160.0
+      },
+      {
+        "ZONA": "Oro",
+        "boletos": 2034,
+        "ingreso": 732750.0
+      },
+      {
+        "ZONA": "Numerado Izquierdo",
+        "boletos": 11043,
+        "ingreso": 386240.0
+      },
+      {
+        "ZONA": "Grada Sol",
+        "boletos": 856,
+        "ingreso": 39400.0
+      }
+    ],
+    "tipo_cortesia": {
+      "Cortesia": 35787,
+      "2x1 Tienda Santa Fe": 4192,
+      "2x1": 1502,
+      "Canje": 1170,
+      "CANJE POR LLUVIA": 352,
+      "Adulto": 91
+    },
+    "pct_vendido": 59.6,
+    "pct_promocion": 0.0,
+    "pct_cortesia": 40.4
+  },
+  "Guerreros": {
+    "equipo": "Guerreros",
+    "total_boletos": 104810,
+    "vendidos": 66342,
+    "promociones": 0,
+    "cortesias": 38468,
+    "ingreso_total": 11088766.0,
+    "ingreso_vendidos": 10965056.0,
+    "ingreso_promociones": 0.0,
+    "ingreso_online": 6334656.0,
+    "ingreso_taquilla": 4754110.0,
+    "online": 30936,
+    "taquilla": 73874,
+    "fans_unicos_online": 5039,
+    "frecuencia": {
+      "1 juego": 3100,
+      "2-5 juegos": 1618,
+      "6-10 juegos": 258,
+      "+10 juegos": 63
+    },
+    "zonas": [
+      {
+        "ZONA": "Central",
+        "boletos": 53816,
+        "ingreso": 7260605.0
+      },
+      {
+        "ZONA": "Lateral Izquierdo",
+        "boletos": 29419,
+        "ingreso": 1708700.0
+      },
+      {
+        "ZONA": "Lateral Derecho",
+        "boletos": 18356,
+        "ingreso": 1516491.0
+      },
+      {
+        "ZONA": "Palcos Central",
+        "boletos": 2308,
+        "ingreso": 540850.0
+      },
+      {
+        "ZONA": "Palco Terr Izquierdo",
+        "boletos": 150,
+        "ingreso": 34320.0
+      },
+      {
+        "ZONA": "Palco Terr Derecho",
+        "boletos": 201,
+        "ingreso": 27800.0
+      },
+      {
+        "ZONA": "Palcos Derecho",
+        "boletos": 300,
+        "ingreso": 0.0
+      },
+      {
+        "ZONA": "Palcos Izquierdo",
+        "boletos": 260,
+        "ingreso": 0.0
+      }
+    ],
+    "tipo_cortesia": {
+      "Cortesía": 25847,
+      "Hombres $10 peso. ": 4780,
+      "2x1": 2305,
+      "Adulto": 1874,
+      "Canje Lluvia": 1241,
+      "Niños $50 pesos": 1230,
+      "Niños $10 pesos.": 641,
+      "Dia del Niño": 269
+    },
+    "pct_vendido": 63.3,
+    "pct_promocion": 0.0,
+    "pct_cortesia": 36.7
+  },
+  "Rieleros": {
+    "equipo": "Rieleros",
+    "total_boletos": 121083,
+    "vendidos": 33361,
+    "promociones": 0,
+    "cortesias": 87722,
+    "ingreso_total": 7409991.5,
+    "ingreso_vendidos": 7409991.5,
+    "ingreso_promociones": 0.0,
+    "ingreso_online": 3107262.5,
+    "ingreso_taquilla": 4302729.0,
+    "online": 17646,
+    "taquilla": 103437,
+    "fans_unicos_online": 3432,
+    "frecuencia": {
+      "1 juego": 2498,
+      "2-5 juegos": 840,
+      "6-10 juegos": 77,
+      "+10 juegos": 17
+    },
+    "zonas": [
+      {
+        "ZONA": "Butaca Num. L",
+        "boletos": 24177,
+        "ingreso": 1487985.0
+      },
+      {
+        "ZONA": "Palco Plus",
+        "boletos": 7385,
+        "ingreso": 1093300.0
+      },
+      {
+        "ZONA": "Terreno VIP",
+        "boletos": 4990,
+        "ingreso": 998704.0
+      },
+      {
+        "ZONA": "Zona VIP",
+        "boletos": 7991,
+        "ingreso": 816200.0
+      },
+      {
+        "ZONA": "Palco Terr. 1era.",
+        "boletos": 8220,
+        "ingreso": 750100.0
+      },
+      {
+        "ZONA": "Preferente 1ra",
+        "boletos": 16488,
+        "ingreso": 708600.0
+      },
+      {
+        "ZONA": "Palco Terr. 3ra.",
+        "boletos": 6921,
+        "ingreso": 534750.0
+      },
+      {
+        "ZONA": "Suite",
+        "boletos": 2383,
+        "ingreso": 387940.0
+      }
+    ],
+    "tipo_cortesia": {
+      "Cortesía": 34684,
+      "CORTESIA PASES DOBLES": 19584,
+      "CORTESIA PASE PREMIUM": 11734,
+      "CORTESIA PASE VIP": 4545,
+      "VIERNES DE COMPAS": 4414,
+      "DAMAS GRATIS": 4285,
+      "2X1": 4137,
+      "AFTER OFFICE": 1387
+    },
+    "pct_vendido": 27.6,
+    "pct_promocion": 0.0,
+    "pct_cortesia": 72.4
+  },
+  "Saraperos": {
+    "equipo": "Saraperos",
+    "total_boletos": 130640,
+    "vendidos": 93255,
+    "promociones": 0,
+    "cortesias": 37385,
+    "ingreso_total": 29287767.64,
+    "ingreso_vendidos": 29287767.64,
+    "ingreso_promociones": 0.0,
+    "ingreso_online": 9423415.0,
+    "ingreso_taquilla": 19864352.64,
+    "online": 65559,
+    "taquilla": 65081,
+    "fans_unicos_online": 13025,
+    "frecuencia": {
+      "1 juego": 8736,
+      "2-5 juegos": 3853,
+      "6-10 juegos": 349,
+      "+10 juegos": 87
+    },
+    "zonas": [
+      {
+        "ZONA": "Butaca Central B",
+        "boletos": 45306,
+        "ingreso": 9879520.0
+      },
+      {
+        "ZONA": "Butaca Lateral C",
+        "boletos": 33821,
+        "ingreso": 4842300.0
+      },
+      {
+        "ZONA": "Butaca Lateral A",
+        "boletos": 29656,
+        "ingreso": 4215320.0
+      },
+      {
+        "ZONA": "Palco Nivel 3",
+        "boletos": 456,
+        "ingreso": 3103397.6999999997
+      },
+      {
+        "ZONA": "Suite Terraza",
+        "boletos": 256,
+        "ingreso": 1857600.0
+      },
+      {
+        "ZONA": "Palco Nivel 2",
+        "boletos": 770,
+        "ingreso": 1345398.92
+      },
+      {
+        "ZONA": "General-Gradas",
+        "boletos": 17393,
+        "ingreso": 1247685.0
+      },
+      {
+        "ZONA": "Suite Cerrada",
+        "boletos": 130,
+        "ingreso": 1111996.7999999998
+      }
+    ],
+    "tipo_cortesia": {
+      "Cortesia": 21364,
+      "2x1": 12963,
+      "Patrocinio": 1700,
+      "Boletos Gratis Abonados": 617,
+      "Canje": 561,
+      "2x1 ": 108,
+      "Adulto": 72
+    },
+    "pct_vendido": 71.4,
+    "pct_promocion": 0.0,
+    "pct_cortesia": 28.6
+  },
+  "Sultanes": {
+    "equipo": "Sultanes",
+    "total_boletos": 688260,
+    "vendidos": 302374,
+    "promociones": 0,
+    "cortesias": 385886,
+    "ingreso_total": 64893054.4,
+    "ingreso_vendidos": 54143004.4,
+    "ingreso_promociones": 0.0,
+    "ingreso_online": 39688747.1,
+    "ingreso_taquilla": 25204307.3,
+    "online": 282924,
+    "taquilla": 405336,
+    "fans_unicos_online": 48036,
+    "frecuencia": {
+      "1 juego": 33488,
+      "2-5 juegos": 12747,
+      "6-10 juegos": 1404,
+      "+10 juegos": 397
+    },
+    "zonas": [
+      {
+        "ZONA": "Primer Nivel",
+        "boletos": 308341,
+        "ingreso": 32942569.6
+      },
+      {
+        "ZONA": "Parrilladas",
+        "boletos": 19217,
+        "ingreso": 9520100.3
+      },
+      {
+        "ZONA": "Segundo Nivel",
+        "boletos": 93754,
+        "ingreso": 6996573.5
+      },
+      {
+        "ZONA": "Bleachers",
+        "boletos": 93934,
+        "ingreso": 5468902.0
+      },
+      {
+        "ZONA": "Palco Rojo",
+        "boletos": 19350,
+        "ingreso": 3461102.7
+      },
+      {
+        "ZONA": "Palco Azul",
+        "boletos": 15371,
+        "ingreso": 1736208.0
+      },
+      {
+        "ZONA": "Tercer Nivel",
+        "boletos": 32243,
+        "ingreso": 1605018.0
+      },
+      {
+        "ZONA": "2DO NIVEL LATERALES",
+        "boletos": 7125,
+        "ingreso": 1140658.5
+      }
+    ],
+    "tipo_cortesia": {
+      "COMERCIAL  ": 115772,
+      "Giveaway": 71396,
+      "CORTESIA": 67596,
+      "FORMS ": 38815,
+      "PROMO DEL DIA": 22990,
+      "DIRECCION": 11772,
+      "PASE DOBLE": 9823,
+      "DEPORTIVO": 9002
+    },
+    "pct_vendido": 43.9,
+    "pct_promocion": 0.0,
+    "pct_cortesia": 56.1
+  },
+  "Tecos": {
+    "equipo": "Tecos",
+    "total_boletos": 92277,
+    "vendidos": 61596,
+    "promociones": 0,
+    "cortesias": 30681,
+    "ingreso_total": 9097255.0,
+    "ingreso_vendidos": 9097255.0,
+    "ingreso_promociones": 0.0,
+    "ingreso_online": 4766716.0,
+    "ingreso_taquilla": 4330539.0,
+    "online": 24931,
+    "taquilla": 67346,
+    "fans_unicos_online": 4736,
+    "frecuencia": {
+      "1 juego": 3155,
+      "2-5 juegos": 1370,
+      "6-10 juegos": 166,
+      "+10 juegos": 45
+    },
+    "zonas": [
+      {
+        "ZONA": "Butaca General",
+        "boletos": 11180,
+        "ingreso": 3138950.0
+      },
+      {
+        "ZONA": "Gradas",
+        "boletos": 18679,
+        "ingreso": 2213800.0
+      },
+      {
+        "ZONA": "Butaca Preferente",
+        "boletos": 4955,
+        "ingreso": 1874450.0
+      },
+      {
+        "ZONA": "Box Seat",
+        "boletos": 27980,
+        "ingreso": 575301.0
+      },
+      {
+        "ZONA": "Asadores",
+        "boletos": 2350,
+        "ingreso": 517500.0
+      },
+      {
+        "ZONA": "Palcos 3ra",
+        "boletos": 799,
+        "ingreso": 306750.0
+      },
+      {
+        "ZONA": "Palcos 1ra",
+        "boletos": 736,
+        "ingreso": 238200.0
+      },
+      {
+        "ZONA": "Reserved Seat",
+        "boletos": 19639,
+        "ingreso": 160527.0
+      }
+    ],
+    "tipo_cortesia": {
+      "Convenio": 27570,
+      "Cortesia": 3102,
+      "Adulto": 9
+    },
+    "pct_vendido": 66.8,
+    "pct_promocion": 0.0,
+    "pct_cortesia": 33.2
+  },
+  "Toros": {
+    "equipo": "Toros",
+    "total_boletos": 407776,
+    "vendidos": 347719,
+    "promociones": 0,
+    "cortesias": 60057,
+    "ingreso_total": 83920721.44,
+    "ingreso_vendidos": 80436176.44,
+    "ingreso_promociones": 0.0,
+    "ingreso_online": 11781649.6,
+    "ingreso_taquilla": 72139071.84,
+    "online": 50005,
+    "taquilla": 357771,
+    "fans_unicos_online": 9398,
+    "frecuencia": {
+      "1 juego": 7175,
+      "2-5 juegos": 1990,
+      "6-10 juegos": 180,
+      "+10 juegos": 53
+    },
+    "zonas": [
+      {
+        "ZONA": "Superior",
+        "boletos": 81198,
+        "ingreso": 17249177.9
+      },
+      {
+        "ZONA": "Preferente",
+        "boletos": 58283,
+        "ingreso": 15637196.65
+      },
+      {
+        "ZONA": "FAMILIA JUGADORES",
+        "boletos": 10315,
+        "ingreso": 7250500.0
+      },
+      {
+        "ZONA": "ToroBar",
+        "boletos": 7887,
+        "ingreso": 6689750.0
+      },
+      {
+        "ZONA": "General Preferente",
+        "boletos": 56772,
+        "ingreso": 5299976.0
+      },
+      {
+        "ZONA": "General Superior",
+        "boletos": 50067,
+        "ingreso": 4676260.0
+      },
+      {
+        "ZONA": "Preferente3raBase",
+        "boletos": 22338,
+        "ingreso": 4167839.0
+      },
+      {
+        "ZONA": "Superior3raBase",
+        "boletos": 20625,
+        "ingreso": 3530063.89
+      }
+    ],
+    "tipo_cortesia": {
+      "Cortesía": 38330,
+      "UPGRADE ": 9847,
+      "Dama": 4460,
+      "Niño": 3115,
+      "Canje": 1089,
+      "Adulto": 1024,
+      "ABONADO": 853,
+      "ESTUDIANTE": 484
+    },
+    "pct_vendido": 85.3,
+    "pct_promocion": 0.0,
+    "pct_cortesia": 14.7
+  }
+}
