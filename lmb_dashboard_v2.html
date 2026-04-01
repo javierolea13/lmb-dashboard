@@ -515,7 +515,7 @@ function show(id) {
   // find matching nav item by text content pattern
   niAll.forEach(n => { if(n.onclick && n.onclick.toString().includes(`'${id}'`)) n.classList.add('active'); });
   if(id==='asistencia') renderAsistCharts();
-  if(id==='ventas') renderVentasCharts();
+  if(id==='ventas') // charts already in overview;
 }
 
 // ── INIT OVERVIEW ──
