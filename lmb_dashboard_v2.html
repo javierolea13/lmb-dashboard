@@ -672,12 +672,16 @@ function renderTeamCards() {
     const outHtml = teamOutliers.length ? `
       <div style="padding:10px 15px;border-top:1px solid var(--border)">
         <div style="font-size:9px;text-transform:uppercase;letter-spacing:1px;color:var(--danger);margin-bottom:6px">⚠ Partidos Outlier (${teamOutliers.length})</div>
-        ${teamOutliers.map(o=>`
-          <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;border-bottom:1px solid rgba(37,48,64,.4);font-size:11px">
+        ${teamOutliers.map(o=>{
+          const isBaja = o.outlier_reason.includes('baja');
+          const chipClass = o.outlier_reason.includes('Sin')?'warn':isBaja?'warn':'ok';
+          const chipStyle = isBaja?'background:rgba(255,82,82,.1);color:var(--danger);border:1px solid rgba(255,82,82,.3)':'';
+          return `
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:3px 0;border-bottom:1px solid rgba(37,48,64,.4);font-size:11px;cursor:pointer" onclick="goToTeamPanel('${o.EQUIPO}')">
             <span style="color:var(--text2);flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${o.EVENTOS}</span>
             <span style="color:var(--text3);margin:0 8px;flex-shrink:0">${o['FECHA EVENTO']}</span>
-            <span class="chip ${o.outlier_reason.includes('Sin')?'warn':'ok'}" style="flex-shrink:0">${o.outlier_reason.replace(/Asistencia atípicamente /,'')}</span>
-          </div>`).join('')}
+            <span class="chip ${chipClass}" style="${chipStyle};flex-shrink:0">${o.outlier_reason.replace(/Asistencia atípicamente /,'')}</span>
+          </div>`}).join('')}
       </div>` : '';
     // Tecos USA/MX toggle
     const tecosToggle = s.equipo==='Tecos' ? `
@@ -801,17 +805,25 @@ function renderOutliersTable() {
   filtered.forEach(o => {
     const zona = STATS.find(s=>s.equipo===o.EQUIPO)?.zona||'';
     const noData = o.outlier_reason.includes('Sin');
-    tbody.innerHTML += `<tr>
+    const isBaja = o.outlier_reason.includes('baja');
+    const chipClass = noData?'warn':isBaja?'warn':'ok';
+    const chipStyle = isBaja?'background:rgba(255,82,82,.1);color:var(--danger);border:1px solid rgba(255,82,82,.3)':'';
+    tbody.innerHTML += `<tr style="cursor:pointer" onclick="goToTeamPanel('${o.EQUIPO}')" title="Click para ver partidos de ${o.EQUIPO}">
       <td><span style="font-weight:600;display:flex;align-items:center;gap:6px">
         <div class="bdot ${zona==='Norte'?'n':'s'}"></div>${o.EQUIPO}
       </span></td>
       <td style="font-size:11px;max-width:260px">${o.EVENTOS}</td>
       <td class="mono dim">${o['FECHA EVENTO']}</td>
       <td class="mono">${fmtF(o.Boletos)}</td>
-      <td class="mono" style="color:${noData?'var(--danger)':'var(--norte)'}">${fmtF(o.Escaneados)}</td>
-      <td><span class="chip ${noData?'warn':'ok'}">${o.outlier_reason}</span></td>
+      <td class="mono" style="color:${noData||isBaja?'var(--danger)':'var(--norte)'}">${fmtF(o.Escaneados)}</td>
+      <td><span class="chip ${chipClass}" style="${chipStyle}">${o.outlier_reason.replace(/Asistencia atípicamente /,'')}</span></td>
     </tr>`;
   });
+}
+
+function goToTeamPanel(eq) {
+  show('ventas');
+  openPanel(eq);
 }
 
 // ── ASISTENCIA CHARTS ──
